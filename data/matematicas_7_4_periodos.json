@@ -1,0 +1,273 @@
+{
+  "area": "Matemáticas",
+  "grado": "7",
+  "tipo_malla": "4_periodos",
+  "numero_periodos": 4,
+  "periodos": {
+   "1": [
+  {
+    "componente": "Numérico Variacional",
+    "estandar": "Formulo y resuelvo problemas en situaciones aditivas y multiplicativas, en diferentes contextos y dominios numéricos. Utilizo métodos informales (ensayo y error, complementación) en la solución de ecuaciones.",
+    "dba": [
+      "DBA 1.",
+      "DBA 7."
+    ],
+    "evidencias": [
+      "Describe situaciones en las que los números enteros y racionales con sus operaciones están presentes.",
+      "Utiliza los signos 'positivo' y 'negativo' para describir cantidades relativas con números enteros y racionales.",
+      "Resuelve problemas en los que se involucran variaciones porcentuales.",
+      "Plantea modelos algebraicos, gráficos o numéricos en los que identifica variables y rangos de variación de las variables."
+    ],
+    "saberes": [
+      "Operaciones entre fracciones. División entre dos fracciones.",
+      "Números negativos. Significado, representación y comparación.",
+      "Ecuaciones sencillas."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Espacial Métrico",
+    "estandar": "Predigo y comparo los resultados de aplicar transformaciones rígidas (traslaciones, rotaciones, reflexiones) y homotecias (ampliaciones y reducciones) sobre figuras bidimensionales en situaciones matemáticas y en el arte. Resuelvo y formulo problemas que involucren factores escalares (diseño de maquetas, mapas).",
+    "dba": [
+      "DBA 5.",
+      "DBA 4."
+    ],
+    "evidencias": [
+      "Establece relaciones entre la posición y las vistas de un objeto.",
+      "Identifica los tipos de escalas y selecciona la adecuada para la elaboración de planos de acuerdo con el formato o espacio disponible para dibujar."
+    ],
+    "saberes": [
+      "Translaciones, rotaciones, reflexiones.",
+      "Escalas."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Aleatorio",
+    "estandar": "Resuelvo y formulo problemas a partir de un conjunto de datos presentados en tablas, diagramas de barras, diagramas circulares.",
+    "dba": [
+      "DBA 8."
+    ],
+    "evidencias": [
+      "Plantea preguntas, diseña y realiza un plan para recolección la información pertinente.",
+      "Construye tablas de frecuencia y gráficos (histogramas, polígonos de frecuencia, gráficos de línea, entre otros), para datos agrupados usando, calculadoras o software adecuado."
+    ],
+    "saberes": [
+      "Muestreo aleatorio.",
+      "Representación gráfica de frecuencias absolutas y relativas, para datos agrupados."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  }
+],
+"2": [
+  {
+    "componente": "Numérico Variacional",
+    "estandar": "Resuelvo y formulo problemas cuya solución requiere de la potenciación o radicación. Justifico la pertinencia de un cálculo exacto o aproximado en la solución de un problema y lo razonable o no de las respuestas obtenidas.",
+    "dba": [
+      "DBA 2.",
+      "DBA 7."
+    ],
+    "evidencias": [
+      "Describe y utiliza diferentes algoritmos convencionales y no convencionales al realizar operaciones entre números racionales en sus diferentes representaciones (fracciones y decimales) y los emplea con sentido en la solución de problemas.",
+      "Representa los números enteros y racionales en una recta numérica.",
+      "Estima el valor de una raíz cuadrada y de una potencia.",
+      "Construye representaciones geométricas y pictóricas para ilustrar relaciones entre cantidades.",
+      "Toma decisiones informadas en exploraciones numéricas, algebraicas o gráficas de los modelos matemáticos usados."
+    ],
+    "saberes": [
+      "Enteros, racionales, comparación y operaciones.",
+      "Potenciación y radicación.",
+      "Método de complementación, ensayo y error para solucionar ecuaciones."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Espacial Métrico",
+    "estandar": "Predigo y comparo los resultados de aplicar transformaciones rígidas (traslaciones, rotaciones, reflexiones) y homotecias (ampliaciones y reducciones) sobre figuras bidimensionales en situaciones matemáticas y en el arte. Resuelvo y formulo problemas que involucren factores escalares (diseño de maquetas, mapas).",
+    "dba": [
+      "DBA 5.",
+      "DBA 4."
+    ],
+    "evidencias": [
+      "Reconoce e interpreta la representación de un objeto.",
+      "Expresa la misma medida con diferentes unidades según el contexto."
+    ],
+    "saberes": [
+      "Identificar algunas propiedades geométricas en figuras planas y sólidos.",
+      "Identificar las escalas en un mapa.",
+      "Expresión de medidas con diferentes unidades."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Aleatorio",
+    "estandar": "Uso medidas de tendencia central (media, mediana, moda) para interpretar comportamiento de un conjunto de datos.",
+    "dba": [
+      "DBA 8."
+    ],
+    "evidencias": [
+      "Encuentra e interpreta las medidas de tendencia central y el rango en datos agrupados, empleando herramientas tecnológicas cuando sea posible.",
+      "Analiza la información presentada identificando variaciones, relaciones o tendencias y elabora conclusiones que permiten responder la pregunta planteada."
+    ],
+    "saberes": [
+      "Cálculo de la media, mediana, moda y rango mediante herramientas tecnológicas."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  }
+],
+"3": [
+  {
+    "componente": "Numérico Variacional",
+    "estandar": "Justifico la elección de métodos e instrumentos de cálculo en la resolución de problemas. Utilizo métodos informales (ensayo y error, complementación) en la solución de ecuaciones. Identifico las características de las diversas gráficas cartesianas (de puntos, continuas, formadas por segmentos, etc.) en relación con la situación que representan.",
+    "dba": [
+      "DBA 2.",
+      "DBA 7."
+    ],
+    "evidencias": [
+      "Calcula e interpreta el máximo común divisor y el mínimo común múltiplo entre números enteros.",
+      "Describe procedimientos para calcular el resultado de una operación (suma, resta, multiplicación y división) entre números enteros y racionales.",
+      "Utiliza métodos informales exploratorios para resolver ecuaciones."
+    ],
+    "saberes": [
+      "Máximo común divisor y mínimo común múltiplo.",
+      "Resolver problemas que involucran patrones numéricos o geométricos.",
+      "Perseverar hasta obtener una solución mediante justificación con argumentos intuitivos."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Espacial Métrico",
+    "estandar": "Resuelvo y formulo problemas que involucren relaciones y propiedades de semejanza y congruencia usando representaciones visuales. Identifico características de localización de objetos en sistemas de representación cartesiana y geográfica.",
+    "dba": [
+      "DBA 6.",
+      "DBA 4."
+    ],
+    "evidencias": [
+      "Representa en el plano cartesiano la variación de magnitudes (áreas y perímetro) y con base en la variación explica el comportamiento de situaciones de la vida diaria.",
+      "Interpreta las modificaciones entre el perímetro y el área con un factor de variación respectivo.",
+      "Representa e interpreta situaciones de ampliación y reducción en contextos diversos."
+    ],
+    "saberes": [
+      "Factores de variación en el perímetro y el área.",
+      "Ampliación y reducción mediante uso de escalas."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Aleatorio",
+    "estandar": "Uso modelos (diagramas de árbol, por ejemplo) para discutir y predecir posibilidad de ocurrencia de un evento.",
+    "dba": [
+      "DBA 9."
+    ],
+    "evidencias": [
+      "Elabora tablas o diagramas de árbol para representar las distintas maneras en que un experimento aleatorio puede suceder.",
+      "Usa el principio multiplicativo para calcular el número de resultados posibles."
+    ],
+    "saberes": [
+      "Diagramas de tallo y hojas.",
+      "Diagramas de árbol.",
+      "Principio multiplicativo para determinar la probabilidad de eventos."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  }
+],
+
+"4": [
+  {
+    "componente": "Numérico Variacional",
+    "estandar": "Justifico el uso de representaciones y procedimientos en situaciones de proporcionalidad directa e inversa. Establezco conjeturas sobre propiedades y relaciones de los números, utilizando calculadoras o computadores. Reconozco argumentos combinatorios como herramienta para interpretación de situaciones diversas de conteo.",
+    "dba": [
+      "DBA 3.",
+      "DBA 7."
+    ],
+    "evidencias": [
+      "Realiza operaciones para calcular el número decimal que representa una fracción y viceversa.",
+      "Usa las propiedades distributiva, asociativa, modulativa, del inverso y conmutativa de la suma y la multiplicación en los racionales para proponer diferentes caminos al realizar un cálculo.",
+      "Determina el valor desconocido de una cantidad a partir de las transformaciones de una expresión algebraica.",
+      "Utiliza métodos informales exploratorios para resolver ecuaciones."
+    ],
+    "saberes": [
+      "Proporcionalidad directa e inversa para resolver problemas.",
+      "Representar, comparar y ordenar decimales.",
+      "Uso de propiedades de los números.",
+      "Representar patrones y secuencias usando dibujos o números."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Espacial Métrico",
+    "estandar": "Resuelvo y formulo problemas usando modelos geométricos. Identifico características de localización de objetos en sistemas de representación cartesiana y geográfica. Represento en el plano cartesiano la variación de magnitudes (áreas y perímetro) y con base en la variación explico el comportamiento de situaciones y fenómenos de la vida diaria.",
+    "dba": [
+      "DBA 6.",
+      "DBA 4."
+    ],
+    "evidencias": [
+      "Coordina los cambios de la variación entre el perímetro y la longitud de los lados o el área de una figura.",
+      "Organiza la información (registros tabulares y gráficos) para comprender la relación entre el perímetro y el área.",
+      "Representa e interpreta situaciones de ampliación y reducción en contextos diversos."
+    ],
+    "saberes": [
+      "Modelos geométricos mediante el análisis del perímetro y el área.",
+      "Estimación de medidas."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Aleatorio",
+    "estandar": "Uso modelos (diagramas de árbol, por ejemplo) para discutir y predecir posibilidad de ocurrencia de un evento. Predigo y justifico razonamientos y conclusiones usando información estadística.",
+    "dba": [
+      "DBA 9."
+    ],
+    "evidencias": [
+      "Usa el principio multiplicativo en situaciones aleatorias sencillas y lo representa con tablas o diagramas de árbol.",
+      "Asigna probabilidades a eventos compuestos y los interpreta a partir de propiedades básicas de la probabilidad.",
+      "Interpreta el número de resultados considerando que cuando se cambia de orden no se altera el resultado."
+    ],
+    "saberes": [
+      "Probabilidades de eventos compuestos."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  }
+]
+
+  }
+}
+
+
+

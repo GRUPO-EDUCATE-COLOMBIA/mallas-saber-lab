@@ -1,0 +1,327 @@
+{
+  "area": "Matemáticas",
+  "grado": "10",
+  "tipo_malla": "4_periodos",
+  "numero_periodos": 4,
+  "periodos": {
+  "1": [
+  {
+    "componente": "Numérico Variacional",
+    "estandar": "Analizo representaciones decimales de los números reales para diferenciar entre racionales e irracionales. Analizo las relaciones y propiedades entre las expresiones algebraicas y las gráficas de funciones polinómicas y racionales y de sus derivadas.",
+    "dba": [
+      "DBA 1."
+    ],
+    "evidencias": [
+      "Argumenta la existencia de los números irracionales.",
+      "Utiliza representaciones geométricas de los números irracionales y los ubica en una recta numérica."
+    ],
+    "saberes": [
+      "Sistemas numéricos: naturales, enteros, racionales, reales y complejos.",
+      "Funciones. Representación verbal, algebraica, gráfica y numérica."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Espacial Métrico",
+    "estandar": "Resuelvo y formulo problemas que involucren magnitudes cuyos valores medios se suelen definir indirectamente como razones entre valores de otras magnitudes, como la velocidad media, la aceleración media y la densidad media.",
+    "dba": [
+      "DBA 3."
+    ],
+    "evidencias": [
+      "Reconoce la relación funcional entre variables asociadas a problemas.",
+      "Interpreta y expresa magnitudes definidas como razones entre magnitudes (velocidad, aceleración, etc.), con las unidades respectivas.",
+      "Utiliza e interpreta la razón de cambio para resolver problemas relacionados con magnitudes como velocidad, aceleración."
+    ],
+    "saberes": [
+      "Medición mediante aproximaciones sucesivas.",
+      "Medida de ángulos en radianes. Longitud de un arco y área de un sector circular. Medidas de magnitud relacionales."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Aleatorio",
+    "estandar": "Interpreto y comparo resultados de estudios con información estadística provenientes de medios de comunicación. Interpreto nociones básicas relacionadas con el manejo de información como población, muestra, variable aleatoria, distribución de frecuencias, parámetros y estadígrafos.",
+    "dba": [
+      "DBA 8."
+    ],
+    "evidencias": [
+      "Define la población de la cual va a extraer las muestras.",
+      "Define el tamaño y el método de selección de la muestra.",
+      "Construye gráficas para representar las distribuciones de los datos muestrales y encuentra los estadígrafos adecuados."
+    ],
+    "saberes": [
+      "Representación e interpretación de datos.",
+      "Variables aleatorias, categóricas o continuas."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  }
+],
+"2": [
+  {
+    "componente": "Numérico Variacional",
+    "estandar": "Comparo y contrasto las propiedades de los números (naturales, enteros, racionales y reales) y las de sus relaciones y operaciones para construir, manejar y utilizar apropiadamente los distintos sistemas numéricos. Modelo situaciones de variación periódica con funciones trigonométricas e interpreto y utilizo sus derivadas.",
+    "dba": [
+      "DBA 2.",
+      "DBA 4."
+    ],
+    "evidencias": [
+      "Ordena de menor a mayor o viceversa números reales.",
+      "Describe el efecto que tendría realizar operaciones con números reales (positivos, negativos, mayores o menores que 1).",
+      "Explora, en una situación o fenómeno de variación periódica, valores, condiciones o comportamientos, a través de diferentes representaciones.",
+      "Reconoce el significado de las razones trigonométricas en un triángulo rectángulo para ángulos agudos, en particular seno, coseno y tangente."
+    ],
+    "saberes": [
+      "Sistemas numéricos: naturales, enteros, racionales, reales y complejos.",
+      "Funciones trigonométricas."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Espacial Métrico",
+    "estandar": "Describo y modelo fenómenos periódicos del mundo real usando relaciones y funciones trigonométricas.",
+    "dba": [
+      "DBA 4.",
+      "DBA 7."
+    ],
+    "evidencias": [
+      "Modela fenómenos periódicos a través de funciones trigonométricas.",
+      "Utiliza representaciones gráficas o numéricas para tomar decisiones en problemas prácticos.",
+      "Usa la pendiente de la recta tangente como razón de cambio, la reconoce y verbaliza en representaciones gráficas, numéricas y algebraicas."
+    ],
+    "saberes": [
+      "Modelación de fenómenos periódicos.",
+      "Razón de cambio promedio y razón de cambio instantáneo."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Aleatorio",
+    "estandar": "Propongo inferencias a partir del estudio de muestras probabilísticas. Propone y realiza experimentos aleatorios en contextos de las ciencias naturales o sociales y predice la ocurrencia de eventos en casos con espacio muestral indeterminado.",
+    "dba": [
+      "DBA 10."
+    ],
+    "evidencias": [
+      "Encuentra muestras aleatorias para hacer predicciones sobre el comportamiento de las variables en estudio.",
+      "Plantea una pregunta cuya solución requiera de la realización de un experimento aleatorio.",
+      "Identifica la población y las variables en estudio."
+    ],
+    "saberes": [
+      "Inferencias a partir de encuestas, experimentos o estudios."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  }
+],
+"3": [
+  {
+    "componente": "Numérico Variacional",
+    "estandar": "Utilizo argumentos de la teoría de números para justificar relaciones que involucran números naturales. Modelo situaciones de variación periódica con funciones trigonométricas e interpreto y utilizo sus derivadas.",
+    "dba": [
+      "DBA 2.",
+      "DBA 4."
+    ],
+    "evidencias": [
+      "Utiliza las propiedades de la equivalencia para realizar cálculos con números reales.",
+      "Calcula algunos valores de las razones seno y coseno para ángulos no agudos, auxiliándose de ángulos de referencia inscritos en el círculo unitario.",
+      "Reconoce algunas aplicaciones de las funciones trigonométricas en el estudio de fenómenos diversos de variación periódica."
+    ],
+    "saberes": [
+      "Sistemas numéricos: naturales, enteros, racionales, reales y complejos.",
+      "Funciones logarítmicas."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Espacial Métrico",
+    "estandar": "Describo y modelo fenómenos periódicos del mundo real usando relaciones y funciones trigonométricas.",
+    "dba": [
+      "DBA 4.",
+      "DBA 7."
+    ],
+    "evidencias": [
+      "Modela fenómenos periódicos a través de funciones trigonométricas.",
+      "Utiliza la razón entre magnitudes para tomar decisiones sobre el cambio.",
+      "Relaciona características algebraicas de las funciones, sus gráficas y procesos de aproximación sucesiva."
+    ],
+    "saberes": [
+      "Modelación de fenómenos periódicos.",
+      "Razón de cambio promedio y razón de cambio instantáneo."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Aleatorio",
+    "estandar": "Interpreto conceptos de probabilidad condicional e independencia de eventos.",
+    "dba": [
+      "DBA 10."
+    ],
+    "evidencias": [
+      "Usa la probabilidad frecuencial para interpretar la posibilidad de ocurrencia de un evento dado.",
+      "Infiere o valida la probabilidad de ocurrencia del evento en estudio."
+    ],
+    "saberes": [
+      "Probabilidad condicional."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  }
+],
+"3": [
+  {
+    "componente": "Numérico Variacional",
+    "estandar": "Utilizo argumentos de la teoría de números para justificar relaciones que involucran números naturales. Modelo situaciones de variación periódica con funciones trigonométricas e interpreto y utilizo sus derivadas.",
+    "dba": [
+      "DBA 2.",
+      "DBA 4."
+    ],
+    "evidencias": [
+      "Utiliza las propiedades de la equivalencia para realizar cálculos con números reales.",
+      "Calcula algunos valores de las razones seno y coseno para ángulos no agudos, auxiliándose de ángulos de referencia inscritos en el círculo unitario.",
+      "Reconoce algunas aplicaciones de las funciones trigonométricas en el estudio de fenómenos diversos de variación periódica."
+    ],
+    "saberes": [
+      "Sistemas numéricos: naturales, enteros, racionales, reales y complejos.",
+      "Funciones logarítmicas."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Espacial Métrico",
+    "estandar": "Describo y modelo fenómenos periódicos del mundo real usando relaciones y funciones trigonométricas.",
+    "dba": [
+      "DBA 4.",
+      "DBA 7."
+    ],
+    "evidencias": [
+      "Modela fenómenos periódicos a través de funciones trigonométricas.",
+      "Utiliza la razón entre magnitudes para tomar decisiones sobre el cambio.",
+      "Relaciona características algebraicas de las funciones, sus gráficas y procesos de aproximación sucesiva."
+    ],
+    "saberes": [
+      "Modelación de fenómenos periódicos.",
+      "Razón de cambio promedio y razón de cambio instantáneo."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Aleatorio",
+    "estandar": "Interpreto conceptos de probabilidad condicional e independencia de eventos.",
+    "dba": [
+      "DBA 10."
+    ],
+    "evidencias": [
+      "Usa la probabilidad frecuencial para interpretar la posibilidad de ocurrencia de un evento dado.",
+      "Infiere o valida la probabilidad de ocurrencia del evento en estudio."
+    ],
+    "saberes": [
+      "Probabilidad condicional."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  }
+],
+"4": [
+  {
+    "componente": "Numérico Variacional",
+    "estandar": "Analizo y aplico propiedades de funciones logarítmicas y exponenciales para modelar fenómenos de cambio continuo. Exploro la relación entre crecimiento y decrecimiento en diferentes contextos, interpretando su comportamiento en gráficas y expresiones algebraicas.",
+    "dba": [
+      "DBA 4.",
+      "DBA 7."
+    ],
+    "evidencias": [
+      "Modela situaciones de crecimiento y decrecimiento mediante funciones logarítmicas y exponenciales.",
+      "Compara el comportamiento de las funciones y sus derivadas en relación con la velocidad de cambio.",
+      "Interpreta el significado de la tasa de variación en contextos reales."
+    ],
+    "saberes": [
+      "Funciones exponenciales y logarítmicas.",
+      "Relación entre derivada y pendiente.",
+      "Aplicaciones de modelos de crecimiento y decrecimiento."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Espacial Métrico",
+    "estandar": "Aplico propiedades de la geometría analítica y del cálculo diferencial para resolver problemas de variación y optimización en el plano.",
+    "dba": [
+      "DBA 5.",
+      "DBA 7."
+    ],
+    "evidencias": [
+      "Interpreta gráficamente el comportamiento de funciones y su relación con máximos y mínimos locales.",
+      "Utiliza razones de cambio para plantear y resolver problemas de optimización geométrica.",
+      "Aplica la noción de pendiente como derivada en el análisis de curvas en representaciones cartesianas."
+    ],
+    "saberes": [
+      "Pendiente y derivada.",
+      "Optimización geométrica en contextos reales.",
+      "Interpretación de máximos y mínimos."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Aleatorio",
+    "estandar": "Interpreto e infiero resultados estadísticos aplicando el concepto de probabilidad condicional y distribuciones de probabilidad para justificar decisiones informadas.",
+    "dba": [
+      "DBA 10."
+    ],
+    "evidencias": [
+      "Aplica la probabilidad condicional para analizar relaciones entre eventos dependientes.",
+      "Distingue entre eventos independientes y dependientes en situaciones experimentales.",
+      "Evalúa la validez de estudios estadísticos utilizando medidas de probabilidad y representaciones gráficas."
+    ],
+    "saberes": [
+      "Eventos dependientes e independientes.",
+      "Distribuciones de probabilidad discreta.",
+      "Aplicaciones de la probabilidad condicional."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  }
+]
+  }
+}
+
+
+

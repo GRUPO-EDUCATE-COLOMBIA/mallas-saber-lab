@@ -1,0 +1,275 @@
+{
+  "area": "Matemáticas",
+  "grado": "11",
+  "tipo_malla": "4_periodos",
+  "numero_periodos": 4,
+  "periodos": {
+  "1": [
+  {
+    "componente": "Numérico Variacional",
+    "estandar": "Reconozco la densidad e incompletitud de los números racionales a través de métodos numéricos, geométricos y algebraicos. Utilizo las técnicas de aproximación en procesos infinitos numéricos. Interpreto la noción de derivada como razón de cambio y como valor de la pendiente de la tangente a una curva.",
+    "dba": [
+      "DBA 1.",
+      "DBA 7."
+    ],
+    "evidencias": [
+      "Describe propiedades de los números y las operaciones que son comunes y diferentes en los distintos sistemas numéricos.",
+      "Utiliza la propiedad de densidad para justificar la necesidad de otras notaciones para subconjuntos de los números reales.",
+      "Plantea modelos funcionales en los que identifica variables y rangos de variación de las variables.",
+      "Relaciona el signo de la derivada con características numéricas, geométricas y métricas."
+    ],
+    "saberes": [
+      "Sistemas numéricos: naturales, enteros, racionales, reales y complejos.",
+      "Correspondencia entre los números reales y los puntos de una recta.",
+      "Modelos funcionales.",
+      "Concepto de derivadas."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Espacial Métrico",
+    "estandar": "Reconozco y describo curvas y lugares geométricos. Justifico resultados obtenidos mediante procesos de aproximación sucesiva, rangos de variación y límites en situaciones de medición.",
+    "dba": [
+      "DBA 5.",
+      "DBA 3."
+    ],
+    "evidencias": [
+      "Relaciona la noción derivada con características numéricas, geométricas y métricas.",
+      "Utiliza la derivada para estudiar la covariación entre dos magnitudes y relaciona características de la derivada con características de la función.",
+      "Reconoce magnitudes definidas como razones entre otras magnitudes.",
+      "Interpreta y expresa magnitudes como velocidad y aceleración, con las unidades respectivas."
+    ],
+    "saberes": [
+      "Límites.",
+      "Métodos para hallar las derivadas de diferentes funciones."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Aleatorio",
+    "estandar": "Uso comprensivamente algunas medidas de centralización, localización, dispersión y correlación (percentiles, cuartiles, centralidad, distancia, rango, varianza, covarianza y normalidad). Diseño experimentos aleatorios para estudiar un problema o pregunta.",
+    "dba": [
+      "DBA 9."
+    ],
+    "evidencias": [
+      "En situaciones matemáticas plantea preguntas que indagan por la correlación o la asociación entre variables.",
+      "Define el plan de recolección de la información, incluyendo definición de población y muestra, método para recolectar la información, variables a estudiar."
+    ],
+    "saberes": [
+      "Medidas de centralización, localización, dispersión y correlación."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  }
+],
+"2": [
+  {
+    "componente": "Numérico Variacional",
+    "estandar": "Establezco relaciones y diferencias entre diferentes notaciones de números reales para decidir sobre su uso en una situación dada. Interpreto la noción de derivada como razón de cambio y como valor de la pendiente de la tangente a una curva y desarrollo métodos para hallar derivadas de funciones básicas en contextos matemáticos y no matemáticos.",
+    "dba": [
+      "DBA 2.",
+      "DBA 8."
+    ],
+    "evidencias": [
+      "Justifica la validez de las propiedades de orden de los números reales y las utiliza para resolver problemas analíticos con inecuaciones.",
+      "Encuentra derivadas de funciones, reconoce sus propiedades y las utiliza para resolver problemas.",
+      "Utiliza propiedades del producto de números reales para resolver ecuaciones e inecuaciones.",
+      "Relaciona características algebraicas de las funciones, sus gráficas y procesos de aproximación sucesiva."
+    ],
+    "saberes": [
+      "Inecuaciones y ecuaciones.",
+      "Razones de cambio.",
+      "La derivada y sus aplicaciones."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Espacial Métrico",
+    "estandar": "Identifico características de localización de objetos geométricos en sistemas de representación cartesiana y otros (polares, cilíndricos y esféricos) y, en particular, de las curvas y figuras cónicas.",
+    "dba": [
+      "DBA 4.",
+      "DBA 6."
+    ],
+    "evidencias": [
+      "Modela objetos geométricos en diversos sistemas de coordenadas y realiza comparaciones con respecto a sus modelos.",
+      "Interpreta la rapidez como razón de cambio entre dos cantidades.",
+      "Justifica la precisión de mediciones directas o indirectas de acuerdo con la información suministrada en gráficas y tablas."
+    ],
+    "saberes": [
+      "Coordenadas cartesianas y polares.",
+      "Definiciones y teoremas básicos de la geometría."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Aleatorio",
+    "estandar": "Interpreto conceptos de probabilidad condicional e independencia de eventos. Resuelvo y planteo problemas usando combinaciones, permutaciones y conteo en espacios muestrales determinados.",
+    "dba": [
+      "DBA 10."
+    ],
+    "evidencias": [
+      "Plantea y resuelve problemas en los que se reconoce si dos eventos son o no independientes.",
+      "Usa la probabilidad condicional para comprobar la independencia o dependencia de eventos.",
+      "Propone problemas aplicando técnicas de conteo según el contexto."
+    ],
+    "saberes": [
+      "Probabilidad condicional.",
+      "Aplicaciones de combinaciones y permutaciones."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  }
+],
+"3": [
+  {
+    "componente": "Numérico Variacional",
+    "estandar": "Establezco relaciones y diferencias entre diferentes notaciones de números reales para decidir sobre su uso en una situación dada. Interpreto la derivada como razón de cambio y pendiente de la tangente, desarrollando métodos para hallar derivadas en problemas matemáticos y aplicados.",
+    "dba": [
+      "DBA 2.",
+      "DBA 8."
+    ],
+    "evidencias": [
+      "Justifica la validez de las propiedades de orden de los números reales y las usa en problemas analíticos.",
+      "Interpreta operaciones en diversos dominios numéricos para validar propiedades de ecuaciones e inecuaciones.",
+      "Calcula derivadas de funciones y las relaciona con fenómenos físicos o económicos."
+    ],
+    "saberes": [
+      "Inecuaciones.",
+      "Derivadas y su relación con la física y la economía."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Espacial Métrico",
+    "estandar": "Uso argumentos geométricos para resolver y formular problemas en contextos matemáticos y en otras ciencias, aplicando sistemas de coordenadas y técnicas de medición con diferentes niveles de precisión.",
+    "dba": [
+      "DBA 4.",
+      "DBA 6."
+    ],
+    "evidencias": [
+      "Compara objetos geométricos desde diferentes sistemas de referencia.",
+      "Explora y representa el entorno mediante coordenadas cartesianas, polares o esféricas.",
+      "Establece conclusiones sobre la precisión de mediciones en contextos científicos e industriales."
+    ],
+    "saberes": [
+      "Definiciones y teoremas básicos de la geometría.",
+      "Medición de áreas por debajo de curvas y longitudes en figuras curvas mediante aproximaciones sucesivas."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Aleatorio",
+    "estandar": "Interpreto y aplico conceptos de probabilidad condicional e independencia de eventos, empleando técnicas de conteo y razonamiento estadístico para justificar conclusiones fundamentadas.",
+    "dba": [
+      "DBA 10."
+    ],
+    "evidencias": [
+      "Aplica el teorema de Bayes en contextos de probabilidad condicional.",
+      "Juzga inferencias basadas en estudios estadísticos y argumenta sus conclusiones.",
+      "Evalúa la independencia de eventos mediante el uso de frecuencias relativas y reglas probabilísticas."
+    ],
+    "saberes": [
+      "Teorema de Bayes.",
+      "Razonamiento estadístico y validación de inferencias."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  }
+],
+"4": [
+  {
+    "componente": "Numérico Variacional",
+    "estandar": "Aplico el concepto de derivada y sus propiedades en la resolución de situaciones problema en contextos matemáticos, científicos y económicos. Analizo la continuidad y los límites para interpretar el comportamiento de funciones en distintos intervalos.",
+    "dba": [
+      "DBA 2.",
+      "DBA 8."
+    ],
+    "evidencias": [
+      "Resuelve problemas de optimización empleando derivadas.",
+      "Analiza la continuidad de funciones y su variación mediante límites y derivadas.",
+      "Relaciona el estudio del cambio con fenómenos del mundo real (física, economía, biología)."
+    ],
+    "saberes": [
+      "Límites y continuidad.",
+      "Optimización matemática.",
+      "Aplicaciones de las derivadas en contextos reales."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Espacial Métrico",
+    "estandar": "Relaciono el uso del cálculo integral con problemas de áreas y volúmenes, aplicando razonamientos geométricos y analíticos para estimar medidas en contextos reales.",
+    "dba": [
+      "DBA 5.",
+      "DBA 6."
+    ],
+    "evidencias": [
+      "Emplea métodos de aproximación para determinar el área bajo una curva o la longitud de trayectorias.",
+      "Interpreta la integral definida como acumulación o área neta en diferentes representaciones.",
+      "Aplica estrategias geométrico-analíticas para calcular magnitudes espaciales complejas."
+    ],
+    "saberes": [
+      "Integral definida e indefinida.",
+      "Cálculo de áreas y volúmenes mediante integrales.",
+      "Aplicaciones geométricas del cálculo integral."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Aleatorio",
+    "estandar": "Aplico la estadística inferencial y la probabilidad condicional para analizar datos y justificar decisiones basadas en la evidencia.",
+    "dba": [
+      "DBA 9.",
+      "DBA 10."
+    ],
+    "evidencias": [
+      "Interpreta la relación entre probabilidad teórica y experimental mediante simulaciones o análisis de datos.",
+      "Realiza inferencias basadas en distribuciones de probabilidad y medidas de correlación.",
+      "Evalúa argumentos estadísticos presentes en estudios científicos o medios de comunicación."
+    ],
+    "saberes": [
+      "Distribuciones de probabilidad.",
+      "Inferencia estadística.",
+      "Análisis crítico de datos y conclusiones."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  }
+]
+  }
+}
+
+
+

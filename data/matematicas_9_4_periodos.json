@@ -1,0 +1,277 @@
+{
+  "area": "Matemáticas",
+  "grado": "9",
+  "tipo_malla": "4_periodos",
+  "numero_periodos": 4,
+  "periodos": {
+  "1": [
+  {
+    "componente": "Numérico Variacional",
+    "estandar": "Utilizo la notación científica para representar medidas de cantidades de diferentes magnitudes. Identifico diferentes métodos para solucionar sistemas de ecuaciones lineales.",
+    "dba": [
+      "DBA 1.",
+      "DBA 8."
+    ],
+    "evidencias": [
+      "Considera el error que genera la aproximación de un número real a partir de números racionales.",
+      "Identifica la diferencia entre exactitud y aproximación en las diferentes representaciones de los números reales.",
+      "Construye representaciones geométricas y numéricas de los números reales (con decimales, raíces, razones, y otros símbolos) y realiza conversiones entre ellas.",
+      "Opera con formas simbólicas que representan cantidades.",
+      "Reconoce que las letras pueden representar números y cantidades, y que se pueden operar con ellas y sobre ellas."
+    ],
+    "saberes": [
+      "Notación científica.",
+      "Redondeo de números.",
+      "Representaciones de los números reales.",
+      "Métodos de solución de ecuaciones lineales."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Espacial Métrico",
+    "estandar": "Aplico y justifico criterios de congruencias y semejanza entre triángulos en la resolución y formulación de problemas. Justifico la pertinencia de utilizar unidades de medida estandarizadas en situaciones tomadas de distintas ciencias.",
+    "dba": [
+      "DBA 6.",
+      "DBA 4."
+    ],
+    "evidencias": [
+      "Reconoce regularidades en formas bidimensionales y tridimensionales.",
+      "Explica criterios de semejanza y congruencia a partir del teorema de Thales.",
+      "Estima la capacidad de objetos con superficies redondas.",
+      "Construye cuerpos redondos usando diferentes estrategias."
+    ],
+    "saberes": [
+      "Identificar patrones en formas bidimensionales y tridimensionales.",
+      "Uso del teorema de Thales para la explicación de criterios de semejanza y congruencia.",
+      "Estimar la capacidad de cilindros, conos, esferas.",
+      "Construcción de cuerpos redondos."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Aleatorio",
+    "estandar": "Selecciono y uso algunos métodos estadísticos adecuados al tipo de problema, de información y al nivel de la escala en la que esta se representa (nominal, ordinal, de intervalo o de razón).",
+    "dba": [
+      "DBA 10."
+    ],
+    "evidencias": [
+      "Define el método para recolectar los datos (encuestas, observación o experimento simple) e identifica la población y el tamaño de la muestra del estudio.",
+      "Construye diagramas de caja y a partir de los resultados representados en ellos describe y compara la distribución de un conjunto de datos."
+    ],
+    "saberes": [
+      "Técnicas de muestreo.",
+      "Diagramas de cajas y bigotes."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  }
+],
+"2": [
+  {
+    "componente": "Numérico Variacional",
+    "estandar": "Identifico y utilizo la potenciación, la radicación y la logaritmación para representar situaciones matemáticas y no matemáticas y para resolver problemas. Identifico y utilizo diferentes maneras de definir y medir la pendiente de una curva que representa en el plano cartesiano situaciones de variación.",
+    "dba": [
+      "DBA 8."
+    ],
+    "evidencias": [
+      "Propone y desarrolla expresiones algebraicas en el conjunto de los números reales y utiliza las propiedades de la igualdad y de orden para determinar el conjunto solución de relaciones entre tales expresiones.",
+      "Identifica y utiliza múltiples representaciones de números reales para realizar transformaciones y comparaciones entre expresiones algebraicas.",
+      "Determina y describe relaciones al comparar características de gráficas y expresiones algebraicas o funciones.",
+      "Interpreta expresiones numéricas, algebraicas o gráficas y toma decisiones con base en su interpretación."
+    ],
+    "saberes": [
+      "Relaciones entre potenciación, radicación y logaritmación.",
+      "Representación y cálculos de la pendiente de una línea recta."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Espacial Métrico",
+    "estandar": "Aplico y justifico criterios de congruencias y semejanza entre triángulos en la resolución y formulación de problemas. Justifico la pertinencia de utilizar unidades de medida estandarizadas en situaciones tomadas de distintas ciencias.",
+    "dba": [
+      "DBA 6.",
+      "DBA 4."
+    ],
+    "evidencias": [
+      "Redacta y argumenta procesos llevados a cabo para resolver situaciones de semejanza y congruencia de figuras.",
+      "Compara y representa las relaciones que encuentra de manera experimental entre el volumen y la capacidad de objetos con superficies redondas.",
+      "Explica la pertinencia o no de la solución de un problema de cálculo de área o volumen de acuerdo con las condiciones de la situación."
+    ],
+    "saberes": [
+      "Justificación del uso de teorema de Thales para explicar los criterios de congruencia y semejanza de triángulos.",
+      "Comparación de la capacidad de cuerpos redondos."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Aleatorio",
+    "estandar": "Resuelvo y formulo problemas seleccionando información relevante en conjuntos de datos provenientes de fuentes diversas (prensa, revistas, televisión, experimentos, consultas, entrevistas).",
+    "dba": [
+      "DBA 10."
+    ],
+    "evidencias": [
+      "Compara las distribuciones de los conjuntos de datos a partir de las medidas de tendencia central, las de variación y las de localización.",
+      "Elabora conclusiones para responder el problema planteado."
+    ],
+    "saberes": [
+      "Distribución normal."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  }
+],
+"3": [
+  {
+    "componente": "Numérico Variacional",
+    "estandar": "Identifico y utilizo la potenciación, la radicación y la logaritmación para representar situaciones matemáticas y no matemáticas y para resolver problemas. Analizo en representaciones gráficas cartesianas los comportamientos de cambio de funciones específicas pertenecientes a familias de funciones polinómicas, racionales, exponenciales y logarítmicas.",
+    "dba": [
+      "DBA 3.",
+      "DBA 9."
+    ],
+    "evidencias": [
+      "Determina y utiliza la expresión general de una sucesión para calcular cualquier valor de esta y para compararla con otras sucesiones.",
+      "Valida las conjeturas y explica sus conclusiones.",
+      "Interpreta expresiones numéricas y toma decisiones con base en su interpretación."
+    ],
+    "saberes": [
+      "Expresiones generales de sucesiones numéricas.",
+      "Modelación de procesos infinitos mediante el empleo de diferentes sucesiones.",
+      "Funciones polinómicas.",
+      "Funciones racionales.",
+      "Funciones exponenciales.",
+      "Funciones logarítmicas."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Espacial Métrico",
+    "estandar": "Uso representaciones geométricas para resolver y formular problemas en las matemáticas y en otras disciplinas. Interpreta el espacio de manera analítica a partir de relaciones geométricas que se establecen en trayectorias y desplazamientos de los cuerpos.",
+    "dba": [
+      "DBA 7.",
+      "DBA 5."
+    ],
+    "evidencias": [
+      "Explica y representa gráficamente la variación del movimiento de diferentes objetos.",
+      "Valida la precisión de instrumentos para medir longitudes.",
+      "Propone alternativas para estimar y medir con precisión diferentes magnitudes."
+    ],
+    "saberes": [
+      "Representación gráfica de vectores.",
+      "El uso de teorema de Pitágoras y Thales como estrategias de medición."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Aleatorio",
+    "estandar": "Calculo probabilidad de eventos simples usando métodos diversos (listados, diagramas de árbol, técnicas de conteo).",
+    "dba": [
+      "DBA 11."
+    ],
+    "evidencias": [
+      "Encuentra el número de posibles resultados de experimentos aleatorios, con reemplazo y sin reemplazo, usando técnicas de conteo adecuadas.",
+      "Justifica la elección de un método particular de acuerdo al tipo de situación.",
+      "Encuentra la probabilidad de eventos dados usando razón entre frecuencias."
+    ],
+    "saberes": [
+      "Métodos de muestreo."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  }
+],
+"4": [
+  {
+    "componente": "Numérico Variacional",
+    "estandar": "Identifico y utilizo la potenciación, la radicación y la logaritmación para representar situaciones matemáticas y no matemáticas y para resolver problemas. Analizo los procesos infinitos que subyacen en las notaciones decimales y su relación con las funciones polinómicas, racionales, exponenciales y logarítmicas.",
+    "dba": [
+      "DBA 3.",
+      "DBA 9."
+    ],
+    "evidencias": [
+      "Determina patrones y propone fórmulas generales para modelar situaciones de variación.",
+      "Aplica las propiedades de las funciones para resolver problemas en contextos reales.",
+      "Interpreta los resultados obtenidos mediante la formulación y análisis de modelos matemáticos."
+    ],
+    "saberes": [
+      "Notación decimal e interpretaciones infinitas.",
+      "Modelación de funciones polinómicas, racionales, exponenciales y logarítmicas.",
+      "Relaciones entre expresiones algebraicas y gráficas."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Espacial Métrico",
+    "estandar": "Uso representaciones geométricas y analíticas para resolver problemas asociados con desplazamientos, trayectorias y mediciones en contextos de la vida cotidiana y científica.",
+    "dba": [
+      "DBA 7.",
+      "DBA 5."
+    ],
+    "evidencias": [
+      "Interpreta la forma y orientación de trayectorias basándose en representaciones vectoriales.",
+      "Compara la precisión de diferentes métodos de medición en situaciones experimentales.",
+      "Valida resultados obtenidos al aplicar teoremas geométricos en contextos reales o simulados."
+    ],
+    "saberes": [
+      "Representación vectorial del desplazamiento.",
+      "Comparación y precisión de métodos de medición.",
+      "Aplicación del teorema de Pitágoras y de Thales en problemas métricos."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Aleatorio",
+    "estandar": "Calculo la probabilidad de eventos simples y compuestos, diferenciando entre experimentos con y sin reemplazo. Aplico diversas técnicas de conteo para describir y predecir la ocurrencia de eventos.",
+    "dba": [
+      "DBA 11."
+    ],
+    "evidencias": [
+      "Calcula probabilidades en experimentos aleatorios con igualdad de casos.",
+      "Usa la proporción entre frecuencias para aproximar probabilidades experimentales.",
+      "Analiza la probabilidad en contextos discretos aplicando combinaciones y permutaciones."
+    ],
+    "saberes": [
+      "Espacio muestral discreto y probabilidad clásica.",
+      "Cálculo de probabilidades mediante combinaciones y permutaciones.",
+      "Relación entre experimentos con y sin reemplazo."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  }
+]
+  }
+}
+
+
+

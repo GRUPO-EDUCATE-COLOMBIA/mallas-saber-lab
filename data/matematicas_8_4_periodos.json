@@ -1,0 +1,280 @@
+{
+  "area": "Matemáticas",
+  "grado": "8",
+  "tipo_malla": "4_periodos",
+  "numero_periodos": 4,
+  "periodos": {
+   "1": [
+  {
+    "componente": "Numérico Variacional",
+    "estandar": "Utilizo números reales en sus diferentes representaciones y en diversos contextos. Identifico relaciones entre propiedades de las gráficas y propiedades de las ecuaciones algebraicas. Construyo expresiones algebraicas equivalentes a una expresión algebraica dada.",
+    "dba": [
+      "DBA 1.",
+      "DBA 8."
+    ],
+    "evidencias": [
+      "Utiliza procedimientos geométricos para representar números racionales e irracionales.",
+      "Opera con formas simbólicas y las interpreta.",
+      "Relaciona un cambio en la variable independiente con el cambio correspondiente en la variable dependiente.",
+      "Encuentra valores desconocidos en ecuaciones algebraicas.",
+      "Reconoce y representa relaciones numéricas mediante expresiones algebraicas y encuentra el conjunto de variación de una variable en función del contexto."
+    ],
+    "saberes": [
+      "El significado de los números racionales.",
+      "Expresiones algebraicas equivalentes.",
+      "Ecuaciones algebraicas."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Espacial Métrico",
+    "estandar": "Conjeturo y verifico propiedades de congruencias y semejanzas entre figuras bidimensionales y entre objetos tridimensionales en la solución de problemas. Generalizo procedimientos de cálculo válidos para encontrar el área de regiones planas y el volumen de sólidos.",
+    "dba": [
+      "DBA 6.",
+      "DBA 4."
+    ],
+    "evidencias": [
+      "Utiliza criterios para argumentar la congruencia de dos triángulos.",
+      "Discrimina casos de semejanza de triángulos en situaciones diversas.",
+      "Utiliza lenguaje algebraico para representar el volumen de un prisma en términos de sus aristas.",
+      "Realiza la representación gráfica del desarrollo plano de un prisma."
+    ],
+    "saberes": [
+      "Triángulos congruentes y triángulos semejantes.",
+      "El prisma."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Aleatorio",
+    "estandar": "Reconozco cómo diferentes maneras de presentación de información pueden originar distintas interpretaciones. Interpreto analítica y críticamente información estadística proveniente de diversas fuentes (prensa, revistas, televisión, experimentos, consultas, entrevistas).",
+    "dba": [
+      "DBA 11."
+    ],
+    "evidencias": [
+      "Interpreta información presentada en tablas de frecuencia y gráficos cuyos datos están agrupados en intervalos y decide cuál es la medida de tendencia central que mejor representa el comportamiento de dicho conjunto.",
+      "Interpreta los datos representados en diferentes tablas y gráficos.",
+      "Usa estrategias gráficas o numéricas para encontrar las medidas de tendencia central de un conjunto de datos agrupados."
+    ],
+    "saberes": [
+      "Tabla de frecuencias de datos agrupados."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  }
+],
+"2": [
+  {
+    "componente": "Numérico Variacional",
+    "estandar": "Utilizo números reales en sus diferentes representaciones y en diversos contextos. Uso procesos inductivos y lenguaje algebraico para formular y poner a prueba conjeturas.",
+    "dba": [
+      "DBA 1.",
+      "DBA 9."
+    ],
+    "evidencias": [
+      "Identifica las diferentes representaciones (decimales y no decimales) para argumentar por qué un número es o no racional.",
+      "Opera con formas simbólicas que representan números y encuentra valores desconocidos en ecuaciones numéricas.",
+      "Reconoce patrones numéricos y los describe verbalmente.",
+      "Representa relaciones numéricas mediante expresiones algebraicas y opera con y sobre variables.",
+      "Describe diferentes usos del signo igual (equivalencia, igualdad condicionada) en las expresiones algebraicas.",
+      "Utiliza las propiedades de los conjuntos numéricos para resolver ecuaciones."
+    ],
+    "saberes": [
+      "El significado de los números racionales.",
+      "Expresiones algebraicas.",
+      "Ecuaciones."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Espacial Métrico",
+    "estandar": "Conjeturo y verifico propiedades de congruencias y semejanzas entre figuras bidimensionales y entre objetos tridimensionales en la solución de problemas. Generalizo procedimientos de cálculo válidos para encontrar el área de regiones planas y el volumen de sólidos.",
+    "dba": [
+      "DBA 6.",
+      "DBA 4."
+    ],
+    "evidencias": [
+      "Resuelve problemas que implican aplicación de los criterios de semejanza.",
+      "Estima, calcula y compara volúmenes a partir de las relaciones entre las aristas de un prisma o de otros sólidos.",
+      "Interpreta las expresiones algebraicas que representan el volumen y el área cuando sus dimensiones varían."
+    ],
+    "saberes": [
+      "Criterios de semejanza y congruencia.",
+      "Área y volúmenes en prismas y cilindros."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Aleatorio",
+    "estandar": "Interpreto y utilizo conceptos de media, mediana y moda y explicito sus diferencias en distribuciones de distinta dispersión y asimetría.",
+    "dba": [
+      "DBA 11."
+    ],
+    "evidencias": [
+      "Describe el comportamiento de los datos empleando las medidas de tendencia central y el rango.",
+      "Reconoce cómo varían las medidas de tendencia central y el rango cuando varían los datos."
+    ],
+    "saberes": [
+      "Media, mediana, moda, rango, mínimo y máximo."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  }
+],
+"3": [
+  {
+    "componente": "Numérico Variacional",
+    "estandar": "Utilizo números reales en sus diferentes representaciones y en diversos contextos. Modelo situaciones de variación con funciones polinómicas.",
+    "dba": [
+      "DBA 2.",
+      "DBA 10."
+    ],
+    "evidencias": [
+      "Propone relaciones o modelos funcionales entre variables e identifica y analiza propiedades de covariación entre variables, en contextos numéricos, geométricos y cotidianos.",
+      "Utiliza procedimientos geométricos o aritméticos para construir algunos números irracionales y los ubica en la recta numérica.",
+      "Justifica procedimientos con los cuales se representa geométricamente números racionales y números reales.",
+      "Toma decisiones informadas en exploraciones numéricas, algebraicas o gráficas de los modelos matemáticos usados."
+    ],
+    "saberes": [
+      "El significado de los números racionales.",
+      "Funciones."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Espacial Métrico",
+    "estandar": "Reconozco y contrasto propiedades y relaciones geométricas utilizadas en demostración de teoremas básicos (Pitágoras y Tales). Selecciono y uso técnicas e instrumentos para medir longitudes, áreas de superficies, volúmenes y ángulos con niveles de precisión apropiados.",
+    "dba": [
+      "DBA 7.",
+      "DBA 5."
+    ],
+    "evidencias": [
+      "Describe teoremas y argumenta su validez a través de diferentes recursos (software, tangram, papel, etc.).",
+      "Argumenta la relación pitagórica por medio de construcción al utilizar material concreto.",
+      "Reconoce relaciones geométricas al utilizar el teorema de Pitágoras y Thales, entre otros.",
+      "Estima medidas de volumen con unidades estandarizadas y no estandarizadas.",
+      "Utiliza la relación de las unidades de capacidad con las unidades de volumen (litros, dm3, etc.) en la solución de un problema."
+    ],
+    "saberes": [
+      "Teorema de Pitágoras y Teorema de Tales.",
+      "Volumen y áreas de prismas y cilindros."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Aleatorio",
+    "estandar": "Comparo resultados de experimentos aleatorios con los resultados previstos por un modelo matemático probabilístico. Uso conceptos básicos de probabilidad (espacio muestral, evento, independencia, etc.).",
+    "dba": [
+      "DBA 12."
+    ],
+    "evidencias": [
+      "Hace predicciones sobre la posibilidad de ocurrencia de un evento compuesto e interpreta la predicción a partir del uso de propiedades básicas de la probabilidad.",
+      "Identifica y enumera el espacio muestral de un experimento aleatorio.",
+      "Identifica y enumera los resultados favorables de ocurrencia de un evento indicado."
+    ],
+    "saberes": [
+      "Espacio muestral y eventos."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  }
+],
+"4": [
+  {
+    "componente": "Numérico Variacional",
+    "estandar": "Resuelvo problemas y simplifico cálculos usando propiedades y relaciones de los números reales y de las relaciones y operaciones entre ellos. Modelo situaciones de variación con funciones polinómicas.",
+    "dba": [
+      "DBA 2.",
+      "DBA 3.",
+      "DBA 10."
+    ],
+    "evidencias": [
+      "Reconoce los diferentes usos y significados de las operaciones (convencionales y no convencionales) y del signo igual (relación de equivalencia e igualdad condicionada) y los utiliza para argumentar equivalencias entre expresiones algebraicas y resolver sistemas de ecuaciones.",
+      "Construye varias representaciones (geométrica, decimal o no decimal) de un mismo número racional o irracional.",
+      "Propone y ejecuta procedimientos para resolver una ecuación lineal y sistemas de ecuaciones lineales y argumenta la validez o no de un procedimiento.",
+      "Usa el conjunto solución de una relación (de equivalencia y de orden) para argumentar la validez o no de un procedimiento.",
+      "Relaciona características algebraicas de las funciones, sus gráficas y procesos de aproximación sucesiva."
+    ],
+    "saberes": [
+      "El significado de los números racionales.",
+      "Funciones."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Espacial Métrico",
+    "estandar": "Reconozco y contrasto propiedades y relaciones geométricas utilizadas en demostración de teoremas básicos (Pitágoras y Tales). Selecciono y uso técnicas e instrumentos para medir longitudes, áreas de superficies, volúmenes y ángulos con niveles de precisión apropiados.",
+    "dba": [
+      "DBA 6.",
+      "DBA 7.",
+      "DBA 5."
+    ],
+    "evidencias": [
+      "Compara figuras y argumenta la posibilidad de ser congruentes o semejantes entre sí.",
+      "Aplica el teorema de Pitágoras para calcular la medida de cualquier lado de un triángulo rectángulo.",
+      "Resuelve problemas utilizando teoremas básicos.",
+      "Identifica la posibilidad del error en la medición del volumen haciendo aproximaciones pertinentes al respecto.",
+      "Explora y crea estrategias para calcular el volumen de cuerpos regulares e irregulares."
+    ],
+    "saberes": [
+      "Congruencia y semejanza (justificación mediante argumentos geométricos).",
+      "Teorema de Pitágoras y Teorema de Tales.",
+      "Errores de medición en volumen."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  },
+  {
+    "componente": "Aleatorio",
+    "estandar": "Comparo resultados de experimentos aleatorios con los resultados previstos por un modelo matemático probabilístico. Uso conceptos básicos de probabilidad (espacio muestral, evento, independencia, etc.).",
+    "dba": [
+      "DBA 12."
+    ],
+    "evidencias": [
+      "Asigna la probabilidad de la ocurrencia de un evento usando valores entre 0 y 1.",
+      "Reconoce cuando dos eventos son o no mutuamente excluyentes y les asigna la probabilidad usando la regla de la adición."
+    ],
+    "saberes": [
+      "Frecuencia de ocurrencia como base para el cálculo de la probabilidad.",
+      "Cálculo de probabilidades en espacios muestrales discretos con eventos igualmente probables."
+    ],
+    "socioemocional": null,
+    "diccionario": null,
+    "tareas_dce": null,
+    "fuente": null
+  }
+]
+  }
+}
+
+
+
