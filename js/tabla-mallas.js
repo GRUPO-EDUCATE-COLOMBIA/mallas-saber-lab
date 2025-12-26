@@ -1,88 +1,131 @@
 // js/tabla-mallas.js
 
-// Renderiza resultados como tarjetas verticales
+// Renderiza resultados como TABLAS 2xN por componente
 function renderTablaMallas(items) {
-  const contenedor = document.getElementById('tabla-body');
-  if (!contenedor) return;
+  const tbody = document.getElementById('tabla-body');
+  if (!tbody) return;
 
-  // Usamos el tbody existente como contenedor, pero metemos <tr><td> con tarjetas
-  contenedor.innerHTML = items.map(item => `
-    <tr>
-      <td colspan="9">
-        <div class="malla-card">
-          <div class="malla-card-header">
-            <div>
-              <span class="malla-componente">${item.componente}</span>
-              <!-- Código EBC se agregará luego -->
-            </div>
-            <button type="button" class="btn-copiar" data-copy="1">Copiar</button>
-          </div>
+  tbody.innerHTML = items.map(item => crearTablaComponenteHTML(item)).join('');
 
-          <div class="malla-row">
-            <span class="malla-label">Estandar</span>
-            <div class="malla-content">${item.estandar || ''}</div>
-          </div>
-
-          <div class="malla-row">
-            <span class="malla-label">DBA</span>
-            <div class="malla-content">
-              <ul>
-                ${(item.dba || []).map(d => `<li>${d}</li>`).join('')}
-              </ul>
-            </div>
-          </div>
-
-          <div class="malla-row">
-            <span class="malla-label">Evidencias</span>
-            <div class="malla-content">
-              <ul>
-                ${(item.evidencias || []).map(e => `<li>${e}</li>`).join('')}
-              </ul>
-            </div>
-          </div>
-
-          <div class="malla-row">
-            <span class="malla-label">Saberes</span>
-            <div class="malla-content">
-              <ul>
-                ${(item.saberes || []).map(s => `<li>${s}</li>`).join('')}
-              </ul>
-            </div>
-          </div>
-
-          <div class="malla-row">
-            <span class="malla-label">Socioemocional</span>
-            <div class="malla-content">${item.socioemocional ?? ''}</div>
-          </div>
-
-          <div class="malla-row">
-            <span class="malla-label">Tareas DCE</span>
-            <div class="malla-content">${item.tareas_dce ?? ''}</div>
-          </div>
-
-          <div class="malla-row">
-            <span class="malla-label">Fuente</span>
-            <div class="malla-content">${item.fuente ?? ''}</div>
-          </div>
-        </div>
-      </td>
-    </tr>
-  `).join('');
-
-  // copiar tarjeta completa
-  Array.from(document.querySelectorAll('.btn-copiar')).forEach(btn => {
+  // botones Copiar de cada tabla
+  Array.from(document.querySelectorAll('.btn-copiar-componente')).forEach(btn => {
     btn.addEventListener('click', e => {
-      const card = e.target.closest('.malla-card');
-      copiarCardMalla(card);
+      const tabla = e.target.closest('.tabla-componente');
+      copiarTablaComponente(tabla);
     });
   });
 }
 
-function copiarCardMalla(card) {
-  if (!card) return;
-  const text = card.innerText.replace(/\n\s*\n/g, '\n').trim();
+function crearTablaComponenteHTML(item) {
+  const dba = item.dba || [];
+  const evidencias = item.evidencias || [];
+  const saberes = item.saberes || [];
+
+  return `
+    <tr>
+      <td colspan="9">
+        <table class="tabla-componente">
+          <!-- Fila de encabezado: nombre del componente -->
+          <tr>
+            <th colspan="2" class="componente-header">
+              <span class="componente-nombre">${item.componente || ''}</span>
+              <button type="button" class="btn-copiar-componente">Copiar</button>
+            </th>
+          </tr>
+
+          <!-- ESTANDAR -->
+          <tr>
+            <td class="celda-label">
+              <span class="emoji">📘</span>
+              <span class="texto-label">ESTANDAR</span>
+            </td>
+            <td class="celda-contenido">
+              ${item.estandar || ''}
+            </td>
+          </tr>
+
+          <!-- DBA -->
+          <tr>
+            <td class="celda-label">
+              <span class="emoji">☝️</span>
+              <span class="texto-label">DBA</span>
+            </td>
+            <td class="celda-contenido">
+              <ul>
+                ${dba.map(d => `<li>${d}</li>`).join('')}
+              </ul>
+            </td>
+          </tr>
+
+          <!-- EVIDENCIAS -->
+          <tr>
+            <td class="celda-label">
+              <span class="emoji">✅</span>
+              <span class="texto-label">EVIDENCIAS</span>
+            </td>
+            <td class="celda-contenido">
+              <ul>
+                ${evidencias.map(e => `<li>${e}</li>`).join('')}
+              </ul>
+            </td>
+          </tr>
+
+          <!-- SABERES -->
+          <tr>
+            <td class="celda-label">
+              <span class="emoji">📋</span>
+              <span class="texto-label">SABERES</span>
+            </td>
+            <td class="celda-contenido">
+              <ul>
+                ${saberes.map(s => `<li>${s}</li>`).join('')}
+              </ul>
+            </td>
+          </tr>
+
+          <!-- SOCIOEMOCIONAL -->
+          <tr>
+            <td class="celda-label">
+              <span class="emoji">🧠</span>
+              <span class="texto-label">SOCIOEMOCIONAL</span>
+            </td>
+            <td class="celda-contenido">
+              ${item.socioemocional ?? ''}
+            </td>
+          </tr>
+
+          <!-- TAREAS DCE -->
+          <tr>
+            <td class="celda-label">
+              <span class="emoji">📈</span>
+              <span class="texto-label">TAREAS DCE</span>
+            </td>
+            <td class="celda-contenido">
+              ${item.tareas_dce ?? ''}
+            </td>
+          </tr>
+
+          <!-- FUENTE -->
+          <tr>
+            <td class="celda-label">
+              <span class="emoji">📖</span>
+              <span class="texto-label">FUENTE</span>
+            </td>
+            <td class="celda-contenido">
+              ${item.fuente ?? ''}
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  `;
+}
+
+function copiarTablaComponente(tabla) {
+  if (!tabla) return;
+  const text = tabla.innerText.replace(/\n\s*\n/g, '\n').trim();
   navigator.clipboard.writeText(text).then(() => {
-    card.classList.add('copiable');
-    setTimeout(() => card.classList.remove('copiable'), 800);
+    tabla.classList.add('copiable');
+    setTimeout(() => tabla.classList.remove('copiable'), 800);
   });
 }
