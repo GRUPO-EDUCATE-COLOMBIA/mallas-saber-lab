@@ -1,6 +1,7 @@
 // js/ui-filtros.js
 
 document.addEventListener('DOMContentLoaded', () => {
+
   const areaSel = document.getElementById('area');
   const gradoSel = document.getElementById('grado');
   const periodoSel = document.getElementById('periodo');
@@ -21,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // LISTENERS
-
   document.querySelectorAll('input[name="periodos"]').forEach(radio => {
     radio.addEventListener('change', updatePeriodosUI);
   });
@@ -61,7 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const areaNombre = getSelectedAreaNombre();
     const grado = gradoSel.value;
     const tipo_malla = getSelectedTipoMalla();
-
     if (!areaNombre || !grado || !tipo_malla) return null;
 
     const areaData = window.MallasData?.[areaNombre];
@@ -84,7 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function updatePeriodosUI() {
     const malla = obtenerMallaSeleccionada();
-
     if (!malla) {
       limpiarPeriodosYComponentes();
       return;
@@ -93,12 +91,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const maxPeriodoJSON = malla.numero_periodos || 4;
     const tipo_malla = malla.tipo_malla || getSelectedTipoMalla();
     const maxPeriodoToggle = tipo_malla === "3_periodos" ? 3 : 4;
-
     const max = Math.min(maxPeriodoJSON, maxPeriodoToggle);
 
     periodoSel.innerHTML = '<option value="">Seleccionar</option>';
     for (let i = 1; i <= max; i++) {
-      periodoSel.innerHTML += `<option value="${i}">${i}</option>`;
+      const opt = document.createElement('option');
+      opt.value = String(i);
+      opt.textContent = `${i}° período`;
+      periodoSel.appendChild(opt);
     }
 
     periodoSel.disabled = false;
@@ -119,7 +119,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const nombres = [...new Set(periodoData.map(it => it.componente))];
 
     nombres.forEach(nombre => {
-      compSel.innerHTML += `<option value="${nombre}">${nombre}</option>`;
+      const opt = document.createElement('option');
+      opt.value = nombre;
+      opt.textContent = nombre;
+      compSel.appendChild(opt);
     });
 
     compSel.disabled = false;
@@ -154,6 +157,6 @@ document.addEventListener('DOMContentLoaded', () => {
     resultados.classList.add('mostrar');
   }
 
-  // Inicial básico
+  // Inicial
   limpiarPeriodosYComponentes();
 });
