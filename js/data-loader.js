@@ -15,8 +15,7 @@ function cargarMatematicas4Periodos() {
   const tipo_malla = "4_periodos";
   const promesas = [];
 
-  // ANTES: for (let grado = 1; grado <= 5; grado++)
-  // AHORA: 1 a 11
+  // Cargar grados 1 a 11
   for (let grado = 1; grado <= 11; grado++) {
     const fileName = `data/matematicas_${grado}_4_periodos.json`;
 
@@ -33,7 +32,9 @@ function cargarMatematicas4Periodos() {
         ensureAreaGradeTipo(areaJson, gradoJson, tipoJson);
         window.MallasData[areaJson][gradoJson][tipoJson] = json;
 
-        console.log(`Malla ${areaJson} ${gradoJson}° cargada (tipo: ${tipoJson}, períodos: ${json.numero_periodos})`);
+        console.log(
+          `Malla ${areaJson} ${gradoJson}° cargada (tipo: ${tipoJson}, períodos: ${json.numero_periodos})`
+        );
       })
       .catch(err => {
         console.warn(`No se encontró ${fileName}:`, err.message);
@@ -45,7 +46,7 @@ function cargarMatematicas4Periodos() {
   return Promise.all(promesas);
 }
 
+// Llamada de carga inicial
 cargarMatematicas4Periodos().then(() => {
   console.log("Intento de carga de Matemáticas 1°–11° a 4 períodos completado.");
 });
-
