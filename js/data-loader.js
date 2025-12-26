@@ -53,7 +53,7 @@ const PROMESAS_CARGA = [];
 
 // Matemáticas 1° a 5° malla a 4 períodos
 for (let g = 1; g <= 5; g++) {
-  PROMESAS_CARGA.push(cargarMalla("Matemáticas", g, "4_periodos"));
+  PROMESAS_CARGA.push(cargarMalla("Matematicas", g, "4_periodos"));
 }
 
 // Aquí podrías ir añadiendo más cuando tengas nuevos JSON:
@@ -64,3 +64,4 @@ Promise.all(PROMESAS_CARGA)
   .then(() => {
     console.log("Intento de carga inicial de mallas completado.");
   });
+
