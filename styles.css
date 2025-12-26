@@ -319,3 +319,90 @@ tr.copiable{
   box-shadow:0 0 0 2px rgba(243,147,37,.4);
 }
 
+/* TABLAS 2xN POR COMPONENTE */
+.tabla-componente{
+  width:100%;
+  border-collapse:collapse;
+  margin:0.75rem 0;
+  background:#ffffff;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 4px 14px rgba(0,0,0,.05);
+}
+
+.tabla-componente tr:not(:first-child):nth-child(odd){
+  background:#f9fafb;
+}
+
+.componente-header{
+  background:rgba(17,103,139,0.08); /* azul suave basado en primary-200 */
+  color:var(--color-primary-100);
+  padding:0.75rem 1rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:1rem;
+}
+
+.componente-nombre{
+  font-weight:700;
+}
+
+.btn-copiar-componente{
+  border:1px solid var(--color-primary-300);
+  background:#ffffff;
+  color:var(--color-primary-200);
+  padding:0.25rem 0.75rem;
+  border-radius:999px;
+  font-size:0.8rem;
+  font-family:inherit;
+  cursor:pointer;
+  transition:all .2s;
+}
+
+.btn-copiar-componente:hover{
+  background:var(--color-primary-300);
+  color:#ffffff;
+}
+
+.celda-label{
+  width:160px;
+  padding:0.6rem 0.9rem;
+  vertical-align:top;
+  border-bottom:1px solid #e5e7eb;
+  white-space:nowrap;
+}
+
+.celda-contenido{
+  padding:0.6rem 0.9rem;
+  border-bottom:1px solid #e5e7eb;
+  font-size:0.9rem;
+}
+
+.celda-contenido ul{
+  margin:0;
+  padding-left:1.25rem;
+}
+
+.emoji{
+  margin-right:0.3rem;
+}
+
+.texto-label{
+  font-weight:600;
+  font-size:0.8rem;
+  text-transform:uppercase;
+  letter-spacing:0.4px;
+  color:var(--color-primary-100);
+}
+
+/* realce cuando se copia */
+.tabla-componente.copiable{
+  border:1px solid var(--color-secondary-100);
+  box-shadow:0 0 0 2px rgba(243,147,37,0.35);
+}
+
+/* ocultar cabecera antigua de la tabla principal, ya no necesaria */
+.tabla-container thead{
+  display:none;
+}
