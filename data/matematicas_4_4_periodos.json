@@ -128,10 +128,6 @@
       "fuente": null
       }
     ],
-Para cerrar 4°, aquí van solo los periodos 3 y 4 con dba y evidencias codificados; sustituye en tu archivo original el contenido actual de "3" y "4" dentro de "periodos".
-​
-
-json
 "3": [
   {
     "componente": "Numérico Variacional",
@@ -265,4 +261,5 @@ json
     ]
   }
 }
+
 
