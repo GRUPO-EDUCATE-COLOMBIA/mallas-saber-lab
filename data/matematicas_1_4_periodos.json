@@ -199,13 +199,7 @@
       "fuente": null
     }
   ],
-    Periodo 4 del grado 1 queda así, con DBA y evidencias ajustados al maestro:
-​
-​
-
-json
-{
-  "4": [
+   "4": [
     {
       "componente": "Numérico Variacional",
       "estandar": "Uso representaciones principalmente concretas y pictóricas para explicar el valor de posición en el sistema de numeración decimal. Reconozco y genero equivalencias entre expresiones numéricas y describo cómo cambian los símbolos, aunque el valor siga igual.",
@@ -272,4 +266,5 @@ json
   ]
   }
 }
+
 
