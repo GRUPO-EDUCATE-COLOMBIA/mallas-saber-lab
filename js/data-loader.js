@@ -12,10 +12,11 @@ function cargarMatematicas4Periodos() {
   const areaNombre = "Matemáticas";
   const tipo_malla = "4_periodos";
   const promesas = [];
+  const cargadas = [];
 
   for (let grado = 1; grado <= 11; grado++) {
-    // NOMBRES EXACTOS de tu captura [image:115]
-    const fileName = `data/matematicas/matematicas_${grado}_4_periodos.json`;
+    // RUTA RELATIVA desde raíz del sitio (sin ../)
+    const fileName = `./data/matematicas/matematicas_${grado}_4_periodos.json`;
 
     const p = fetch(fileName)
       .then(r => {
@@ -29,19 +30,20 @@ function cargarMatematicas4Periodos() {
 
         ensureAreaGradeTipo(areaJson, gradoJson, tipoJson);
         window.MallasData[areaJson][gradoJson][tipoJson] = json;
-
-        console.log(
-          `✅ ${areaJson} ${gradoJson}° cargada (períodos: ${json.numero_periodos})`
-        );
+        cargadas.push(gradoJson);
+        
+        console.log(`✅ ${areaJson} ${gradoJson}° cargada (${json.numero_periodos} períodos)`);
       })
       .catch(err => {
-        console.warn(`❌ No se encontró ${fileName}:`, err.message);
+        console.warn(`❌ ${fileName}:`, err.message);
       });
 
     promesas.push(p);
   }
 
-  return Promise.all(promesas);
+  return Promise.all(promesas).then(() => {
+    console.log(`✅ Matemáticas: ${cargadas.length}/11 grados cargados:`, cargadas.join(', '));
+  });
 }
 
 function cargarSocioemocional4Periodos() {
@@ -49,11 +51,11 @@ function cargarSocioemocional4Periodos() {
   const tipo_malla = "4_periodos";
   const promesas = [];
   const grados = [-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+  const cargadas = [];
 
   for (const grado of grados) {
     const gradoStr = grado === -1 ? '-1' : String(grado);
-    // Asumiendo mismo patrón que Matemáticas
-    const fileName = `data/Socioemocional/Socioemocional_${gradoStr}_4_Periodos.json`;
+    const fileName = `./data/Socioemocional/Socioemocional_${gradoStr}_4_Periodos.json`;
 
     const p = fetch(fileName)
       .then(r => {
@@ -67,26 +69,34 @@ function cargarSocioemocional4Periodos() {
 
         ensureAreaGradeTipo(areaJson, gradoJson, tipoJson);
         window.MallasData[areaJson][gradoJson][tipoJson] = json;
-
-        console.log(
-          `✅ ${areaJson} ${gradoJson}° cargada (períodos: ${json.numero_periodos || 4})`
-        );
+        cargadas.push(gradoJson);
+        
+        console.log(`✅ ${areaJson} ${gradoJson}° cargada (${json.numero_periodos || 4} períodos)`);
       })
       .catch(err => {
-        console.warn(`❌ No se encontró ${fileName}:`, err.message);
+        console.warn(`❌ ${fileName}:`, err.message);
       });
 
     promesas.push(p);
   }
 
-  return Promise.all(promesas);
+  return Promise.all(promesas).then(() => {
+    console.log(`✅ Socioemocional: ${cargadas.length}/13 grados cargados:`, cargadas.join(', '));
+  });
 }
 
-// Carga secuencial
-cargarMatematicas4Periodos()
-  .then(() => console.log("✅ Matemáticas completas"))
-  .then(() => cargarSocioemocional4Periodos())
-  .then(() => {
-    console.log("🎉 TODO CARGADO. Áreas:", Object.keys(window.MallasData).length);
-    console.log("Matemáticas disponibles:", Object.keys(window.MallasData.Matemáticas || {}));
-  });
+// Carga paralela para mejor rendimiento
+Promise.all([
+  cargarMatematicas4Periodos(),
+  cargarSocioemocional4Periodos()
+]).then(() => {
+  const areas = Object.keys(window.MallasData);
+  const totalGrados = Object.values(window.MallasData).reduce((sum, area) => 
+    sum + Object.keys(area || {}).length, 0
+  );
+  
+  console.log(`🎉 CARGA COMPLETA ✅`);
+  console.log(`Áreas: ${areas.join(', ')}`);
+  console.log(`Total grados: ${totalGrados}`);
+  console.log('Prueba en consola: window.MallasData.Matemáticas["5"]["4_periodos"]');
+});
