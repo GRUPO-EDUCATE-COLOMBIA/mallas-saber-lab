@@ -1,27 +1,17 @@
 // js/ui-filtros.js
 
 document.addEventListener('DOMContentLoaded', () => {
-  const modalError = document.getElementById('modal-error');
-const btnModalCancelar = document.getElementById('btn-modal-cancelar');
-
-function mostrarErrorConsulta() {
-  if (!modalError) return;
-  modalError.classList.add('mostrar');
-}
-
-if (btnModalCancelar && modalError) {
-  btnModalCancelar.addEventListener('click', () => {
-    modalError.classList.remove('mostrar');
-  });
-}
   const areaSel = document.getElementById('area');
   const gradoSel = document.getElementById('grado');
   const periodoSel = document.getElementById('periodo');
   const compSel = document.getElementById('componente');
   const btnBuscar = document.querySelector('.btn-buscar');
-  const resultados = document.getElementById('resultados');
+  const resultadosNucleo = document.getElementById('resultados-nucleo');
+  const resultadosSocio = document.getElementById('resultados-socio');
+  const modalError = document.getElementById('modal-error');
+  const btnModalCancelar = document.getElementById('btn-modal-cancelar');
 
-  if (!areaSel || !gradoSel || !periodoSel || !compSel || !btnBuscar || !resultados) return;
+  if (!areaSel || !gradoSel || !periodoSel || !compSel || !btnBuscar) return;
 
   // Mapeo de value HTML -> nombre de área en los JSON
   const AREA_MAP = {
@@ -33,6 +23,17 @@ if (btnModalCancelar && modalError) {
     "proyecto-socioemocional": "Proyecto Socioemocional"
   };
 
+  // Modal Error
+  function mostrarErrorConsulta() {
+    if (modalError) modalError.classList.add('mostrar');
+  }
+
+  if (btnModalCancelar) {
+    btnModalCancelar.addEventListener('click', () => {
+      if (modalError) modalError.classList.remove('mostrar');
+    });
+  }
+
   // LISTENERS
   document.querySelectorAll('input[name="periodos"]').forEach(radio => {
     radio.addEventListener('change', updatePeriodosUI);
@@ -40,7 +41,6 @@ if (btnModalCancelar && modalError) {
 
   areaSel.addEventListener('change', () => {
     limpiarPeriodosYComponentes();
-    // Habilitar grados siempre; los datos podrán existir o no
     gradoSel.disabled = false;
   });
 
@@ -73,6 +73,7 @@ if (btnModalCancelar && modalError) {
     const areaNombre = getSelectedAreaNombre();
     const grado = gradoSel.value;
     const tipo_malla = getSelectedTipoMalla();
+    
     if (!areaNombre || !grado || !tipo_malla) return null;
 
     const areaData = window.MallasData?.[areaNombre];
@@ -88,7 +89,6 @@ if (btnModalCancelar && modalError) {
   function limpiarPeriodosYComponentes() {
     periodoSel.innerHTML = '<option value="">Seleccionar</option>';
     periodoSel.disabled = true;
-
     compSel.innerHTML = '<option value="todos">Todos</option>';
     compSel.disabled = true;
   }
@@ -128,7 +128,9 @@ if (btnModalCancelar && modalError) {
     }
 
     const periodoData = malla.periodos?.[periodo] || [];
-    const nombres = [...new Set(periodoData.map(it => it.componente))];
+    const nombres = [...new Set(periodoData.map(it => 
+      getNombreComponente(it, getSelectedAreaNombre())
+    ))];
 
     nombres.forEach(nombre => {
       const opt = document.createElement('option');
@@ -140,6 +142,14 @@ if (btnModalCancelar && modalError) {
     compSel.disabled = false;
   }
 
+  // Determina el nombre del componente según el área
+  function getNombreComponente(item, areaNombre) {
+    if (areaNombre === "Proyecto Socioemocional") {
+      return item.competencia_anual || item.eje_central || "Sin componente";
+    }
+    return item.componente || "Sin componente";
+  }
+
   function consultarMalla() {
     const areaNombre = getSelectedAreaNombre();
     const grado = gradoSel.value;
@@ -147,52 +157,59 @@ if (btnModalCancelar && modalError) {
     const componente = compSel.value;
 
     if (!areaNombre || !grado || !periodo) {
-    if (!areaNombre || !grado || !periodo) {
-  mostrarErrorConsulta();
-  return;
-}
-
-const malla = obtenerMallaSeleccionada();
-if (!malla) {
-  mostrarErrorConsulta();
-  limpiarPeriodosYComponentes();
-  resultados.classList.remove('mostrar');
-  document.getElementById('tabla-body').innerHTML = '';
-  return;
-}
+      mostrarErrorConsulta();
       return;
     }
 
     const malla = obtenerMallaSeleccionada();
     if (!malla) {
-     if (!areaNombre || !grado || !periodo) {
-         mostrarErrorConsulta();
-     return;
-      }
-      const malla = obtenerMallaSeleccionada();
-     if (!malla) {
-         mostrarErrorConsulta();
-         limpiarPeriodosYComponentes();
-         resultados.classList.remove('mostrar');
-         document.getElementById('tabla-body').innerHTML = '';
-      return;
-      }
-      limpiarPeriodosYComponentes();
-      resultados.classList.remove('mostrar');
-      document.getElementById('tabla-body').innerHTML = '';
+      mostrarErrorConsulta();
+      ocultarResultados();
       return;
     }
 
     const periodoData = malla.periodos?.[periodo] || [];
     const items = componente === 'todos'
       ? periodoData
-      : periodoData.filter(it => it.componente === componente);
+      : periodoData.filter(it => 
+          getNombreComponente(it, areaNombre) === componente
+        );
 
-    renderTablaMallas(items);
-    resultados.classList.add('mostrar');
+    if (items.length === 0) {
+      mostrarErrorConsulta();
+      ocultarResultados();
+      return;
+    }
+
+    // Renderizar según el área
+    if (areaNombre === "Proyecto Socioemocional") {
+      if (window.renderSocioemocional) {
+        window.renderSocioemocional(items);
+        mostrarResultadosSocio();
+      }
+    } else {
+      if (window.renderTablaMallas) {
+        window.renderTablaMallas(items);
+        mostrarResultadosNucleo();
+      }
+    }
+  }
+
+  function ocultarResultados() {
+    if (resultadosNucleo) resultadosNucleo.classList.remove('mostrar');
+    if (resultadosSocio) resultadosSocio.classList.remove('mostrar');
+  }
+
+  function mostrarResultadosNucleo() {
+    if (resultadosNucleo) resultadosNucleo.classList.add('mostrar');
+    if (resultadosSocio) resultadosSocio.classList.remove('mostrar');
+  }
+
+  function mostrarResultadosSocio() {
+    if (resultadosSocio) resultadosSocio.classList.add('mostrar');
+    if (resultadosNucleo) resultadosNucleo.classList.remove('mostrar');
   }
 
   // Inicial
   limpiarPeriodosYComponentes();
 });
-
