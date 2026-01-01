@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 5. BOTÓN CONSULTAR
-  btnBuscar.addEventListener('click', () => {
+  function consultarMalla() {
     const areaVal = areaSel.value;
     const config = AREA_CONFIG[areaVal];
     const grado = gradoSel.value;
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const malla = window.MallasData?.[config?.nombre]?.[grado]?.[tipo];
     if (!malla || !periodo) {
-      modalError.classList.add('mostrar');
+      if (modalError) modalError.classList.add('mostrar');
       return;
     }
 
@@ -126,7 +126,6 @@ document.addEventListener('DOMContentLoaded', () => {
     ocultarResultados();
 
     // APLICAR CLASE DE COLOR DINÁMICA
-    // Eliminamos clases previas para que no se mezclen colores
     resNucleo.className = "resultados ocultar"; 
     resSocio.className = "resultados ocultar";
 
@@ -135,13 +134,16 @@ document.addEventListener('DOMContentLoaded', () => {
       if (window.renderSocioemocional) window.renderSocioemocional(items);
     } else {
       resNucleo.classList.add('mostrar', config.clase);
-      if (window.renderTablaMallas) window.renderTablaMallas(items);
+      // CAMBIO CLAVE: Enviamos grado y periodo para el cruce de datos con ECO
+      if (window.renderTablaMallas) window.renderTablaMallas(items, grado, periodo);
     }
-  });
+  }
+
+  btnBuscar.addEventListener('click', consultarMalla);
 
   function ocultarResultados() {
-    resNucleo.classList.replace('mostrar', 'ocultar');
-    resSocio.classList.replace('mostrar', 'ocultar');
+    resNucleo.classList.remove('mostrar');
+    resSocio.classList.remove('mostrar');
   }
 
   function limpiarSelects(selects) {
