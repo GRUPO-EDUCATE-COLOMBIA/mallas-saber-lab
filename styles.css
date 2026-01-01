@@ -140,19 +140,17 @@ main {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  /* Tamaño de fuente aumentado para legibilidad */
   font-size: 1.15rem;
 }
 
 .item-malla {
   background: white;
   border-radius: 12px;
-  overflow: hidden; /* Para que el encabezado respete el radio */
+  overflow: hidden;
   box-shadow: 0 10px 30px rgba(0,0,0,0.05);
   border: 1px solid rgba(0,0,0,0.05);
 }
 
-/* Encabezado del Componente (Primera Fila) */
 .item-malla h3 {
   text-align: center;
   padding: 1rem;
@@ -183,34 +181,116 @@ main {
 
 /* --- CLASES DINÁMICAS POR ÁREA --- */
 
-/* Matemáticas #F07F3C */
 .area-matematicas .item-malla h3 { background-color: #F07F3C; }
-.area-matematicas .item-malla { background-color: rgba(240, 127, 60, 0.06); }
+.area-matematicas .item-malla { background-color: rgba(240, 127, 60, 0.04); }
 .area-matematicas .campo strong { color: #D35400; }
 
-/* Lenguaje #FBBB21 */
 .area-lenguaje .item-malla h3 { background-color: #FBBB21; }
-.area-lenguaje .item-malla { background-color: rgba(251, 187, 33, 0.06); }
+.area-lenguaje .item-malla { background-color: rgba(251, 187, 33, 0.04); }
 .area-lenguaje .campo strong { color: #9A7D0A; }
 
-/* Sociales #3974B9 */
 .area-sociales .item-malla h3 { background-color: #3974B9; }
-.area-sociales .item-malla { background-color: rgba(57, 116, 185, 0.06); }
+.area-sociales .item-malla { background-color: rgba(57, 116, 185, 0.04); }
 .area-sociales .campo strong { color: #1F4E79; }
 
-/* Naturales #95C11F */
 .area-naturales .item-malla h3 { background-color: #95C11F; }
-.area-naturales .item-malla { background-color: rgba(149, 193, 31, 0.06); }
+.area-naturales .item-malla { background-color: rgba(149, 193, 31, 0.04); }
 .area-naturales .campo strong { color: #4D6211; }
 
-/* Ingles #8257A0 */
 .area-ingles .item-malla h3 { background-color: #8257A0; }
-.area-ingles .item-malla { background-color: rgba(130, 87, 160, 0.06); }
+.area-ingles .item-malla { background-color: rgba(130, 87, 160, 0.04); }
 .area-ingles .campo strong { color: #513366; }
 
-/* Socioemocional (Mantiene su estilo) */
 .area-socioemocional .item-malla h3 { background-color: #D94D15; }
 .area-socioemocional .item-malla { background-color: #fffaf5; }
+
+/* --- INTEGRACIÓN PROYECTO ECO --- */
+
+.integracion-eco {
+  margin-top: 2rem !important;
+  padding-top: 1.5rem;
+  border-top: 2px dashed #9B7BB6; /* Púrpura ECO */
+}
+
+.label-eco {
+  color: #9B7BB6 !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+}
+
+.seccion-eco-integrada {
+  background-color: #ffffff;
+  border: 2px solid #9B7BB6;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(155, 123, 182, 0.15);
+}
+
+.eco-badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background-color: #9B7BB6;
+  color: white;
+  padding: 4px 15px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.eco-campo-dato {
+  margin-bottom: 0.8rem;
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+.eco-campo-dato strong {
+  display: inline !important;
+  text-transform: none !important;
+  color: #9B7BB6 !important;
+  font-size: 1.05rem !important;
+  opacity: 1 !important;
+}
+
+/* Botón Diccionario ECO */
+.integracion-diccionario {
+  margin-top: 1rem !important;
+}
+
+.btn-eco-dic {
+  display: inline-block;
+  background-color: #00A19B; /* Teal de la imagen ECO */
+  color: white !important;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 161, 155, 0.3);
+}
+
+.btn-eco-dic:hover {
+  background-color: #17334B;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 161, 155, 0.4);
+}
+
+.dic-link-container {
+  margin-top: 0.8rem;
+}
+
+.texto-vacio {
+  font-style: italic;
+  color: #999;
+  font-size: 1rem;
+}
 
 /* --- MODAL Y OTROS --- */
 .modal-error {
@@ -244,7 +324,6 @@ main {
   cursor: pointer;
 }
 
-/* Cursor de solo lectura para evitar sensación de edición */
 .item-malla, .item-malla * {
   cursor: default;
 }
