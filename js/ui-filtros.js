@@ -1,4 +1,4 @@
-// js/ui-filtros.js - VERSIÓN FINAL
+// js/ui-filtros.js
 
 document.addEventListener('DOMContentLoaded', () => {
   const areaSel = document.getElementById('area');
@@ -6,47 +6,65 @@ document.addEventListener('DOMContentLoaded', () => {
   const periodoSel = document.getElementById('periodo');
   const compSel = document.getElementById('componente');
   const btnBuscar = document.querySelector('.btn-buscar');
-  const resultadosNucleo = document.getElementById('resultados-nucleo');
-  const resultadosSocio = document.getElementById('resultados-socio');
+  const resultados = document.getElementById('resultados');
   const modalError = document.getElementById('modal-error');
   const btnModalCancelar = document.getElementById('btn-modal-cancelar');
 
-  if (!areaSel || !gradoSel || !periodoSel || !compSel || !btnBuscar) return;
+  if (!areaSel || !gradoSel || !periodoSel || !compSel || !btnBuscar || !resultados) return;
 
+  // Mapeo de value HTML -> nombre de área en los JSON
   const AREA_MAP = {
     "matematicas": "Matemáticas",
+    "lenguaje": "Lenguaje",
+    "ciencias-sociales": "Ciencias Sociales y Ciudadanas",
+    "ciencias-naturales": "Ciencias Naturales y Ambiental",
+    "ingles": "Inglés",
     "proyecto-socioemocional": "Proyecto Socioemocional"
   };
 
-  // Modal
+  // Modal Error
   function mostrarErrorConsulta() {
     if (modalError) modalError.classList.add('mostrar');
   }
+
   if (btnModalCancelar) {
     btnModalCancelar.addEventListener('click', () => {
-      modalError.classList.remove('mostrar');
+      if (modalError) modalError.classList.remove('mostrar');
     });
   }
 
-  // Event listeners
+  // LISTENERS
   document.querySelectorAll('input[name="periodos"]').forEach(radio => {
     radio.addEventListener('change', updatePeriodosUI);
   });
+
   areaSel.addEventListener('change', () => {
-    limpiarFiltros();
+    limpiarPeriodosYComponentes();
     gradoSel.disabled = false;
   });
-  gradoSel.addEventListener('change', updatePeriodosUI);
-  periodoSel.addEventListener('change', updateComponentesUI);
-  btnBuscar.addEventListener('click', consultarMalla);
 
+  gradoSel.addEventListener('change', () => {
+    updatePeriodosUI();
+  });
+
+  periodoSel.addEventListener('change', () => {
+    updateComponentesUI();
+  });
+
+  btnBuscar.addEventListener('click', () => {
+    consultarMalla();
+  });
+
+  // FUNCIONES
   function getSelectedTipoMalla() {
     const r = document.querySelector('input[name="periodos"]:checked');
-    return r?.value === "3" ? "3_periodos" : "4_periodos";
+    if (!r) return null;
+    return r.value === "3" ? "3_periodos" : "4_periodos";
   }
 
   function getSelectedAreaNombre() {
-    return AREA_MAP[areaSel.value] || null;
+    const val = areaSel.value;
+    return AREA_MAP[val] || null;
   }
 
   function obtenerMallaSeleccionada() {
@@ -55,10 +73,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const tipo_malla = getSelectedTipoMalla();
     if (!areaNombre || !grado || !tipo_malla) return null;
 
-    return window.MallasData?.[areaNombre]?.[grado]?.[tipo_malla] || null;
+    const areaData = window.MallasData?.[areaNombre];
+    if (!areaData) return null;
+
+    const gradoData = areaData[grado];
+    if (!gradoData) return null;
+
+    const malla = gradoData[tipo_malla];
+    return malla || null;
   }
 
-  function limpiarFiltros() {
+  function limpiarPeriodosYComponentes() {
     periodoSel.innerHTML = '<option value="">Seleccionar</option>';
     periodoSel.disabled = true;
     compSel.innerHTML = '<option value="todos">Todos</option>';
@@ -68,18 +93,23 @@ document.addEventListener('DOMContentLoaded', () => {
   function updatePeriodosUI() {
     const malla = obtenerMallaSeleccionada();
     if (!malla) {
-      limpiarFiltros();
+      limpiarPeriodosYComponentes();
       return;
     }
 
-    const max = Math.min(malla.numero_periodos || 4, 4);
+    const maxPeriodoJSON = malla.numero_periodos || 4;
+    const tipo_malla = malla.tipo_malla || getSelectedTipoMalla();
+    const maxPeriodoToggle = tipo_malla === "3_periodos" ? 3 : 4;
+    const max = Math.min(maxPeriodoJSON, maxPeriodoToggle);
+
     periodoSel.innerHTML = '<option value="">Seleccionar</option>';
     for (let i = 1; i <= max; i++) {
       const opt = document.createElement('option');
-      opt.value = i;
+      opt.value = String(i);
       opt.textContent = `${i}° período`;
       periodoSel.appendChild(opt);
     }
+
     periodoSel.disabled = false;
     updateComponentesUI();
   }
@@ -96,25 +126,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const periodoData = malla.periodos?.[periodo] || [];
     const nombres = [...new Set(periodoData.map(it => it.componente))];
-    
+
     nombres.forEach(nombre => {
       const opt = document.createElement('option');
       opt.value = nombre;
       opt.textContent = nombre;
       compSel.appendChild(opt);
     });
-    compSel.disabled = false;
-  }
 
-  function ocultarResultados() {
-    if (resultadosNucleo) resultadosNucleo.classList.remove('mostrar');
-    if (resultadosSocio) resultadosSocio.classList.remove('mostrar');
+    compSel.disabled = false;
   }
 
   function consultarMalla() {
     const areaNombre = getSelectedAreaNombre();
     const grado = gradoSel.value;
     const periodo = periodoSel.value;
+    const componente = compSel.value;
 
     if (!areaNombre || !grado || !periodo) {
       mostrarErrorConsulta();
@@ -124,32 +151,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const malla = obtenerMallaSeleccionada();
     if (!malla) {
       mostrarErrorConsulta();
-      ocultarResultados();
+      resultados.classList.remove('mostrar');
+      document.getElementById('tabla-body').innerHTML = '';
       return;
     }
 
     const periodoData = malla.periodos?.[periodo] || [];
-    const componente = compSel.value;
-    const items = componente === 'todos' 
-      ? periodoData 
+    const items = componente === 'todos'
+      ? periodoData
       : periodoData.filter(it => it.componente === componente);
 
-    if (items.length === 0) {
-      mostrarErrorConsulta();
-      return;
-    }
-
-    // Renderizar según área
-    if (areaNombre === "Proyecto Socioemocional" && window.renderSocioemocional) {
-      window.renderSocioemocional(items);
-      if (resultadosSocio) resultadosSocio.classList.add('mostrar');
-      if (resultadosNucleo) resultadosNucleo.classList.remove('mostrar');
-    } else if (window.renderTablaMallas) {
-      window.renderTablaMallas(items);
-      if (resultadosNucleo) resultadosNucleo.classList.add('mostrar');
-      if (resultadosSocio) resultadosSocio.classList.remove('mostrar');
-    }
+    // CORRECCIÓN CLAVE: Llamar función global
+    window.renderTablaMallas(items);
+    resultados.classList.add('mostrar');
   }
 
-  limpiarFiltros();
+  // Inicial
+  limpiarPeriodosYComponentes();
 });
