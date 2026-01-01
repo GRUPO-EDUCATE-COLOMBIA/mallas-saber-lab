@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Buscador de Mallas Curriculares - GEC</title>
+  <!-- Mantengo la fuente y el estilo original -->
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,8 +15,19 @@
   </header>
 
   <main>
-    <!-- Filtros -->
+    <!-- Sección de Filtros Reordenada -->
     <section id="filtros" class="filtros">
+      
+      <!-- 1. Mallas A (Estructura de períodos) -->
+      <div class="filtro-grupo">
+        <label>Mallas a</label>
+        <div class="radios-periodos">
+          <label><input type="radio" name="periodos" value="3"> 3 períodos</label>
+          <label><input type="radio" name="periodos" value="4" checked> 4 períodos</label>
+        </div>
+      </div>
+
+      <!-- 2. Área -->
       <div class="filtro-grupo">
         <label for="area">Área</label>
         <select id="area">
@@ -28,6 +41,7 @@
         </select>
       </div>
 
+      <!-- 3. Grado -->
       <div class="filtro-grupo">
         <label for="grado">Grado</label>
         <select id="grado" disabled>
@@ -48,14 +62,7 @@
         </select>
       </div>
 
-      <div class="filtro-grupo">
-        <label>Mallas a</label>
-        <div class="radios-periodos">
-          <label><input type="radio" name="periodos" value="3"> 3 períodos</label>
-          <label><input type="radio" name="periodos" value="4" checked> 4 períodos</label>
-        </div>
-      </div>
-
+      <!-- 4. Período -->
       <div class="filtro-grupo">
         <label for="periodo">Período</label>
         <select id="periodo" disabled>
@@ -63,6 +70,7 @@
         </select>
       </div>
 
+      <!-- 5. Componente -->
       <div class="filtro-grupo">
         <label for="componente">Componente</label>
         <select id="componente" disabled>
@@ -70,16 +78,19 @@
         </select>
       </div>
 
+      <!-- Botón de Acción -->
       <button class="btn-buscar">Consultar</button>
     </section>
 
-    <!-- Resultados Núcleo Común -->
+    <!-- Resultados Núcleo Común (Matemáticas, Lenguaje, etc.) -->
     <section id="resultados-nucleo" class="resultados ocultar">
-      <div id="tabla-body-nucleo" class="tabla-body"></div>
+      <!-- Corregido a id="tabla-body" para coincidir con render-nucleo.js -->
+      <div id="tabla-body" class="tabla-body"></div>
     </section>
 
     <!-- Resultados Socioemocional -->
     <section id="resultados-socio" class="resultados ocultar">
+      <!-- Coincide con render-socio.js -->
       <div id="tabla-body-socio" class="tabla-body"></div>
     </section>
   </main>
@@ -93,11 +104,11 @@
     </div>
   </div>
 
-<script src="js/data-loader.js"></script>
-<script src="js/render-nucleo.js"></script>  <!-- ← AGREGAR ESTA LÍNEA -->
-<script src="js/ui-filtros.js"></script>
+  <!-- Carga de Scripts (Ordenados por jerarquía y sin duplicados) -->
+  <script src="js/data-loader.js"></script>
   <script src="js/render-nucleo.js"></script>
   <script src="js/render-socio.js"></script>
+  <script src="js/ui-filtros.js"></script>
+
 </body>
 </html>
-
