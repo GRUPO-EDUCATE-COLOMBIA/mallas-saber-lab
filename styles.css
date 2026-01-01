@@ -40,7 +40,7 @@ main {
   padding: 1.5rem 1rem;
 }
 
-/* --- SECCIÓN DE FILTROS (DISEÑO HORIZONTAL) --- */
+/* --- SECCIÓN DE FILTROS (DISEÑO HORIZONTAL Y STICKY) --- */
 .filtros {
   background: white;
   padding: 1.2rem 2rem;
@@ -53,6 +53,12 @@ main {
   align-items: flex-end;
   justify-content: center;
   gap: 1.2rem;
+
+  /* Efecto Sticky: Se queda fijo arriba al desplazar */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 3px solid #54BBAB;
 }
 
 .filtro-grupo {
@@ -78,11 +84,6 @@ main {
   background: white;
   transition: border-color 0.3s;
   cursor: pointer;
-}
-
-.filtros select:focus {
-  outline: none;
-  border-color: #11678B;
 }
 
 .radios-periodos {
@@ -118,18 +119,13 @@ main {
 
 .btn-buscar:hover {
   background: #17334B;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(17, 103, 139, 0.3);
 }
 
 /* --- CONTENEDORES DE RESULTADOS --- */
 .resultados {
   display: none;
-  /* Bloqueo de selección y copia */
   user-select: none;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
 }
 
 .resultados.mostrar {
@@ -179,43 +175,20 @@ main {
   opacity: 0.8;
 }
 
-/* --- CLASES DINÁMICAS POR ÁREA --- */
+/* --- INTEGRACIÓN PROYECTO ECO (NUEVA FILA SEPARADORA) --- */
 
-.area-matematicas .item-malla h3 { background-color: #F07F3C; }
-.area-matematicas .item-malla { background-color: rgba(240, 127, 60, 0.04); }
-.area-matematicas .campo strong { color: #D35400; }
-
-.area-lenguaje .item-malla h3 { background-color: #FBBB21; }
-.area-lenguaje .item-malla { background-color: rgba(251, 187, 33, 0.04); }
-.area-lenguaje .campo strong { color: #9A7D0A; }
-
-.area-sociales .item-malla h3 { background-color: #3974B9; }
-.area-sociales .item-malla { background-color: rgba(57, 116, 185, 0.04); }
-.area-sociales .campo strong { color: #1F4E79; }
-
-.area-naturales .item-malla h3 { background-color: #95C11F; }
-.area-naturales .item-malla { background-color: rgba(149, 193, 31, 0.04); }
-.area-naturales .campo strong { color: #4D6211; }
-
-.area-ingles .item-malla h3 { background-color: #8257A0; }
-.area-ingles .item-malla { background-color: rgba(130, 87, 160, 0.04); }
-.area-ingles .campo strong { color: #513366; }
-
-.area-socioemocional .item-malla h3 { background-color: #D94D15; }
-.area-socioemocional .item-malla { background-color: #fffaf5; }
-
-/* --- INTEGRACIÓN PROYECTO ECO --- */
-
-.integracion-eco {
-  margin-top: 2rem !important;
-  padding-top: 1.5rem;
-  border-top: 2px dashed #9B7BB6; /* Púrpura ECO */
-}
-
-.label-eco {
-  color: #9B7BB6 !important;
-  font-weight: 700 !important;
-  opacity: 1 !important;
+.fila-separador-eco {
+  background-color: #f3e5f5; /* Morado muy suave */
+  color: #9B7BB6;
+  text-align: center;
+  padding: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 1rem;
+  border-top: 1px solid #d1c4e9;
+  border-bottom: 1px solid #d1c4e9;
+  margin: 1rem -2rem; /* Se extiende a los bordes de la card */
 }
 
 .seccion-eco-integrada {
@@ -223,9 +196,9 @@ main {
   border: 2px solid #9B7BB6;
   border-radius: 12px;
   padding: 1.5rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   position: relative;
-  box-shadow: 0 4px 12px rgba(155, 123, 182, 0.15);
+  box-shadow: 0 4px 12px rgba(155, 123, 182, 0.1);
 }
 
 .eco-badge {
@@ -238,61 +211,38 @@ main {
   border-radius: 50px;
   font-size: 0.8rem;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.eco-campo-dato {
-  margin-bottom: 0.8rem;
-  font-size: 1.05rem;
-  line-height: 1.4;
 }
 
 .eco-campo-dato strong {
+  color: #9B7BB6 !important;
+  opacity: 1 !important;
   display: inline !important;
   text-transform: none !important;
-  color: #9B7BB6 !important;
-  font-size: 1.05rem !important;
-  opacity: 1 !important;
-}
-
-/* Botón Diccionario ECO */
-.integracion-diccionario {
-  margin-top: 1rem !important;
 }
 
 .btn-eco-dic {
   display: inline-block;
-  background-color: #00A19B; /* Teal de la imagen ECO */
+  background-color: #00A19B;
   color: white !important;
   text-decoration: none;
   padding: 12px 25px;
   border-radius: 8px;
   font-weight: 700;
-  font-size: 1rem;
-  transition: all 0.3s ease;
   text-transform: uppercase;
-  border: none;
-  box-shadow: 0 4px 10px rgba(0, 161, 155, 0.3);
 }
 
-.btn-eco-dic:hover {
-  background-color: #17334B;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(0, 161, 155, 0.4);
-}
+/* CLASES DE AREA */
+.area-matematicas .item-malla h3 { background-color: #F07F3C; }
+.area-matematicas .item-malla { background-color: rgba(240, 127, 60, 0.04); }
+.area-matematicas .campo strong { color: #D35400; }
 
-.dic-link-container {
-  margin-top: 0.8rem;
-}
+.area-lenguaje .item-malla h3 { background-color: #FBBB21; }
+.area-sociales .item-malla h3 { background-color: #3974B9; }
+.area-naturales .item-malla h3 { background-color: #95C11F; }
+.area-ingles .item-malla h3 { background-color: #8257A0; }
+.area-socioemocional .item-malla h3 { background-color: #D94D15; }
 
-.texto-vacio {
-  font-style: italic;
-  color: #999;
-  font-size: 1rem;
-}
-
-/* --- MODAL Y OTROS --- */
+/* MODAL */
 .modal-error {
   display: none;
   position: fixed;
@@ -305,25 +255,3 @@ main {
 }
 
 .modal-error.mostrar { display: flex; }
-
-.modal-error-contenido {
-  background: white;
-  padding: 3rem;
-  border-radius: 15px;
-  text-align: center;
-  max-width: 450px;
-}
-
-.btn-modal-cancelar {
-  background: #c0392b;
-  color: white;
-  border: none;
-  padding: 0.8rem 2rem;
-  border-radius: 8px;
-  margin-top: 1.5rem;
-  cursor: pointer;
-}
-
-.item-malla, .item-malla * {
-  cursor: default;
-}
