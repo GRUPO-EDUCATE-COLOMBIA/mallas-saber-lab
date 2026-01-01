@@ -1,18 +1,25 @@
 // js/render-socio.js
 
-// Función global para renderizar mallas del Proyecto Socioemocional
+/**
+ * Renderiza la malla del Proyecto Socioemocional.
+ * Mapea las claves específicas de este JSON (Habilidades, eje_central, etc.)
+ */
 window.renderSocioemocional = function(items) {
   const container = document.getElementById('tabla-body-socio');
   if (!container) return;
 
-  if (items.length === 0) {
-    container.innerHTML = '<p class="sin-resultados">No se encontraron resultados.</p>';
+  // Limpiar contenido previo
+  container.innerHTML = '';
+
+  if (!items || items.length === 0) {
+    container.innerHTML = '<p class="sin-resultados">No se encontraron resultados para esta selección socioemocional.</p>';
     return;
   }
 
+  // Generar el HTML vertical adaptado a Socioemocional
   container.innerHTML = items.map(item => `
     <div class="item-malla socioemocional">
-      <h3>${item.competencia_anual || 'Sin competencia anual'}</h3>
+      <h3>${item.competencia_anual || 'Autonomía y Responsabilidad'}</h3>
       
       ${item.estandar ? `
         <div class="campo">
@@ -38,64 +45,58 @@ window.renderSocioemocional = function(items) {
       ${item.Habilidades && item.Habilidades.length > 0 ? `
         <div class="campo">
           <strong>Habilidades:</strong>
-          <ul>${item.Habilidades.map(habilidad => `<li>${habilidad}</li>`).join('')}</ul>
+          <ul>
+            ${item.Habilidades.map(h => `<li>${h}</li>`).join('')}
+          </ul>
         </div>
       ` : ''}
       
-      ${item["evidencias_de_desempeno"] && item["evidencias_de_desempeno"].length > 0 ? `
+      ${item.evidencias_de_desempeno && item.evidencias_de_desempeno.length > 0 ? `
         <div class="campo">
-          <strong>Evidencias de desempeño:</strong>
-          <ul>${item["evidencias_de_desempeno"].map(ev => `<li>${ev}</li>`).join('')}</ul>
+          <strong>Evidencias de Desempeño:</strong>
+          <ul>
+            ${item.evidencias_de_desempeno.map(ev => `<li>${ev}</li>`).join('')}
+          </ul>
         </div>
       ` : ''}
       
-      ${item["orientacion_bateria"] ? `
-        <div class="campo fuente">
+      ${item.orientacion_bateria ? `
+        <div class="campo">
           <strong>Orientación Batería:</strong>
-          <div>${item["orientacion_bateria"]}</div>
+          <div>${item.orientacion_bateria}</div>
         </div>
       ` : ''}
     </div>
   `).join('');
 
-  // Hacer todas las cards seleccionables para copiar
+  // Funcionalidad de copia para Socioemocional
   document.querySelectorAll('.item-malla.socioemocional').forEach(card => {
     card.addEventListener('click', function() {
-      selectText(this);
+      copiarContenidoSocio(this);
     });
   });
 };
 
-function selectText(element) {
-  const range = document.createRange();
-  range.selectNodeContents(element);
-  const selection = window.getSelection();
-  selection.removeAllRanges();
-  selection.addRange(range);
-  
+/**
+ * Copia el contenido con feedback visual en tonos naranja (temática socioemocional)
+ */
+function copiarContenidoSocio(elemento) {
+  const seleccion = window.getSelection();
+  const rango = document.createRange();
+  rango.selectNodeContents(elemento);
+  seleccion.removeAllRanges();
+  seleccion.addRange(rango);
+
   try {
     document.execCommand('copy');
-    // Feedback visual (naranja para socioemocional)
-    element.style.background = '#fff3e0';
+    const colorOriginal = elemento.style.backgroundColor;
+    // Feedback: Naranja muy claro acorde al CSS
+    elemento.style.backgroundColor = '#fff3e0'; 
     setTimeout(() => {
-      element.style.background = '';
+      elemento.style.backgroundColor = colorOriginal;
+      seleccion.removeAllRanges();
     }, 1000);
   } catch (err) {
-    console.warn('No se pudo copiar automáticamente');
+    console.error('No se pudo copiar');
   }
-}
-
-// Estilo para "sin resultados" (reutilizado)
-if (!document.querySelector('style[data-sin-resultados]')) {
-  const style = document.createElement('style');
-  style.textContent = `
-    .sin-resultados {
-      text-align: center;
-      padding: 2rem;
-      color: #6c757d;
-      font-style: italic;
-    }
-  `;
-  style.setAttribute('data-sin-resultados', 'true');
-  document.head.appendChild(style);
 }
