@@ -1,194 +1,131 @@
 // js/ui-filtros.js
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Captura de elementos del DOM
   const areaSel = document.getElementById('area');
   const gradoSel = document.getElementById('grado');
   const periodoSel = document.getElementById('periodo');
   const compSel = document.getElementById('componente');
   const btnBuscar = document.querySelector('.btn-buscar');
-  
-  // Contenedores de resultados (Marcos)
   const resNucleo = document.getElementById('resultados-nucleo');
   const resSocio = document.getElementById('resultados-socio');
-  
   const modalError = document.getElementById('modal-error');
-  const btnModalCancelar = document.getElementById('btn-modal-cancelar');
 
-  // Validación de existencia de elementos críticos
-  if (!areaSel || !gradoSel || !periodoSel || !compSel || !btnBuscar) return;
-
-  // Mapeo exacto entre el valor del HTML y la llave en window.MallasData (JSON)
   const AREA_MAP = {
     "matematicas": "Matemáticas",
-    "lenguaje": "Lenguaje",
-    "ciencias-sociales": "Ciencias Sociales y Ciudadanas",
-    "ciencias-naturales": "Ciencias Naturales y Ambiental",
-    "ingles": "Inglés",
     "proyecto-socioemocional": "Proyecto Socioemocional"
   };
 
-  // --- MANEJO DE EVENTOS ---
-
-  // 1. Cambio en Mallas A (3 o 4 períodos)
-  document.querySelectorAll('input[name="periodos"]').forEach(radio => {
-    radio.addEventListener('change', () => {
-      updatePeriodosUI();
-    });
-  });
-
-  // 2. Cambio en Área
+  // 1. EVENTO: CAMBIO DE ÁREA
   areaSel.addEventListener('change', () => {
-    limpiarSelects([gradoSel, periodoSel, compSel]);
-    gradoSel.disabled = false;
-    ocultarTodosLosResultados();
-  });
-
-  // 3. Cambio en Grado
-  gradoSel.addEventListener('change', () => {
-    updatePeriodosUI();
-    ocultarTodosLosResultados();
-  });
-
-  // 4. Cambio en Período
-  periodoSel.addEventListener('change', () => {
-    updateComponentesUI();
-  });
-
-  // 5. Botón Consultar
-  btnBuscar.addEventListener('click', () => {
-    consultarMalla();
-  });
-
-  // --- LÓGICA DE APOYO ---
-
-  function getSelectedTipoMalla() {
-    const r = document.querySelector('input[name="periodos"]:checked');
-    return r ? (r.value === "3" ? "3_periodos" : "4_periodos") : "4_periodos";
-  }
-
-  function getSelectedAreaNombre() {
-    return AREA_MAP[areaSel.value] || null;
-  }
-
-  /**
-   * Obtiene el objeto de datos desde window.MallasData
-   */
-  function obtenerMallaData() {
-    const area = getSelectedAreaNombre();
-    const grado = gradoSel.value;
-    const tipo = getSelectedTipoMalla();
-
-    if (!area || !grado || !tipo) return null;
+    const areaNombre = AREA_MAP[areaSel.value];
+    ocultarResultados();
     
-    // Navegación en la estructura: Área -> Grado -> Tipo
-    return window.MallasData?.[area]?.[grado]?.[tipo] || null;
-  }
-
-  function updatePeriodosUI() {
-    const malla = obtenerMallaData();
-    if (!malla) {
-      limpiarSelects([periodoSel, compSel]);
+    if (!areaNombre || !window.MallasData[areaNombre]) {
+      gradoSel.disabled = true;
       return;
     }
 
-    const max = malla.numero_periodos || 4;
-    periodoSel.innerHTML = '<option value="">Seleccionar</option>';
+    // Extraer grados disponibles en el JSON cargado
+    const gradosDisponibles = Object.keys(window.MallasData[areaNombre]);
     
-    for (let i = 1; i <= max; i++) {
+    gradoSel.innerHTML = '<option value="">Seleccionar</option>';
+    gradosDisponibles.sort((a, b) => a - b).forEach(grado => {
+      const opt = document.createElement('option');
+      opt.value = grado;
+      opt.textContent = (grado === "0") ? "Transición (0)" : (grado === "-1" ? "Jardín (-1)" : grado + "°");
+      gradoSel.appendChild(opt);
+    });
+
+    gradoSel.disabled = false;
+    periodoSel.disabled = true;
+    compSel.disabled = true;
+  });
+
+  // 2. EVENTO: CAMBIO DE GRADO
+  gradoSel.addEventListener('change', updatePeriodosUI);
+
+  // 3. EVENTO: CAMBIO DE PERIODO
+  periodoSel.addEventListener('change', updateComponentesUI);
+
+  function updatePeriodosUI() {
+    const area = AREA_MAP[areaSel.value];
+    const grado = gradoSel.value;
+    const tipo = document.querySelector('input[name="periodos"]:checked').value === "3" ? "3_periodos" : "4_periodos";
+
+    const malla = window.MallasData?.[area]?.[grado]?.[tipo];
+    
+    if (!malla) {
+      periodoSel.disabled = true;
+      return;
+    }
+
+    periodoSel.innerHTML = '<option value="">Seleccionar</option>';
+    for (let i = 1; i <= malla.numero_periodos; i++) {
       const opt = document.createElement('option');
       opt.value = String(i);
       opt.textContent = `${i}° período`;
       periodoSel.appendChild(opt);
     }
     periodoSel.disabled = false;
-    updateComponentesUI();
+    compSel.disabled = true;
   }
 
   function updateComponentesUI() {
+    const area = AREA_MAP[areaSel.value];
+    const grado = gradoSel.value;
+    const tipo = document.querySelector('input[name="periodos"]:checked').value === "3" ? "3_periodos" : "4_periodos";
     const periodo = periodoSel.value;
-    const malla = obtenerMallaData();
-    
+
+    const malla = window.MallasData?.[area]?.[grado]?.[tipo];
+    const items = malla?.periodos?.[periodo] || [];
+
     compSel.innerHTML = '<option value="todos">Todos</option>';
-
-    if (!malla || !periodo) {
-      compSel.disabled = true;
-      return;
-    }
-
-    const periodoData = malla.periodos?.[periodo] || [];
+    const nombres = [...new Set(items.map(it => it.componente || it.competencia))];
     
-    // Extraer nombres únicos de componentes o competencias
-    const nombres = [...new Set(periodoData.map(it => it.componente || it.competencia))];
-
-    nombres.forEach(nombre => {
-      if (nombre) {
-        const opt = document.createElement('option');
-        opt.value = nombre;
-        opt.textContent = nombre;
-        compSel.appendChild(opt);
-      }
+    nombres.forEach(n => {
+      const opt = document.createElement('option');
+      opt.value = n; opt.textContent = n;
+      compSel.appendChild(opt);
     });
     compSel.disabled = false;
   }
 
-  /**
-   * FUNCIÓN PRINCIPAL DE CONSULTA
-   */
-  function consultarMalla() {
+  // 4. BOTÓN CONSULTAR
+  btnBuscar.addEventListener('click', () => {
     const areaVal = areaSel.value;
-    const areaNombre = getSelectedAreaNombre();
+    const areaNombre = AREA_MAP[areaVal];
+    const grado = gradoSel.value;
+    const tipo = document.querySelector('input[name="periodos"]:checked').value === "3" ? "3_periodos" : "4_periodos";
     const periodo = periodoSel.value;
     const componente = compSel.value;
-    const malla = obtenerMallaData();
 
-    if (!areaNombre || !periodo || !malla) {
-      if (modalError) modalError.classList.add('mostrar');
+    const malla = window.MallasData?.[areaNombre]?.[grado]?.[tipo];
+    if (!malla || !periodo) {
+      modalError.classList.add('mostrar');
       return;
     }
 
-    const periodoData = malla.periodos?.[periodo] || [];
-    const items = componente === 'todos'
-      ? periodoData
-      : periodoData.filter(it => (it.componente === componente || it.competencia === componente));
+    const items = componente === "todos" 
+      ? malla.periodos[periodo] 
+      : malla.periodos[periodo].filter(it => (it.componente === componente || it.competencia === componente));
 
-    ocultarTodosLosResultados();
+    ocultarResultados();
 
-    // DECISIÓN DE RENDERIZADO:
     if (areaVal === "proyecto-socioemocional") {
-      // 1. Mostrar marco socioemocional
-      resSocio.classList.remove('ocultar');
       resSocio.classList.add('mostrar');
-      // 2. Llamar a su render específico
-      if (window.renderSocioemocional) window.renderSocioemocional(items);
+      window.renderSocioemocional(items);
     } else {
-      // 1. Mostrar marco núcleo común
-      resNucleo.classList.remove('ocultar');
       resNucleo.classList.add('mostrar');
-      // 2. Llamar al render de mallas académicas
-      if (window.renderTablaMallas) window.renderTablaMallas(items);
+      window.renderTablaMallas(items);
     }
+  });
+
+  function ocultarResultados() {
+    resNucleo.classList.remove('mostrar');
+    resSocio.classList.remove('mostrar');
   }
 
-  function limpiarSelects(selects) {
-    selects.forEach(s => {
-      if (s.id === 'componente') {
-        s.innerHTML = '<option value="todos">Todos</option>';
-      } else {
-        s.innerHTML = '<option value="">Seleccionar</option>';
-      }
-      s.disabled = true;
-    });
-  }
-
-  function ocultarTodosLosResultados() {
-    resNucleo.classList.replace('mostrar', 'ocultar');
-    resSocio.classList.replace('mostrar', 'ocultar');
-  }
-
-  if (btnModalCancelar) {
-    btnModalCancelar.addEventListener('click', () => {
-      modalError.classList.remove('mostrar');
-    });
-  }
+  document.getElementById('btn-modal-cancelar').addEventListener('click', () => {
+    modalError.classList.remove('mostrar');
+  });
 });
