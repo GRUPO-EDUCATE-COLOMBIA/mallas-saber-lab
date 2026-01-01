@@ -10,29 +10,43 @@ document.addEventListener('DOMContentLoaded', () => {
   const resSocio = document.getElementById('resultados-socio');
   const modalError = document.getElementById('modal-error');
 
-  const AREA_MAP = {
-    "matematicas": "Matemáticas",
-    "proyecto-socioemocional": "Proyecto Socioemocional"
+  // Mapeo detallado para vincular HTML -> JSON -> CSS
+  const AREA_CONFIG = {
+    "matematicas": { nombre: "Matemáticas", clase: "area-matematicas" },
+    "lenguaje": { nombre: "Lenguaje", clase: "area-lenguaje" },
+    "ciencias-sociales": { nombre: "Ciencias Sociales y Ciudadanas", clase: "area-sociales" },
+    "ciencias-naturales": { nombre: "Ciencias Naturales y Ambiental", clase: "area-naturales" },
+    "ingles": { nombre: "Inglés", clase: "area-ingles" },
+    "proyecto-socioemocional": { nombre: "Proyecto Socioemocional", clase: "area-socioemocional" }
   };
 
-  // 1. EVENTO: CAMBIO DE ÁREA
+  // 1. Bloqueo de menú contextual (Clic derecho) en resultados para evitar copia
+  [resNucleo, resSocio].forEach(contenedor => {
+    contenedor.addEventListener('contextmenu', e => e.preventDefault());
+  });
+
+  // 2. EVENTO: CAMBIO DE ÁREA
   areaSel.addEventListener('change', () => {
-    const areaNombre = AREA_MAP[areaSel.value];
+    const config = AREA_CONFIG[areaSel.value];
     ocultarResultados();
     
-    if (!areaNombre || !window.MallasData[areaNombre]) {
+    if (!config || !window.MallasData[config.nombre]) {
       gradoSel.disabled = true;
+      limpiarSelects([gradoSel, periodoSel, compSel]);
       return;
     }
 
-    // Extraer grados disponibles en el JSON cargado
-    const gradosDisponibles = Object.keys(window.MallasData[areaNombre]);
+    // Extraer grados disponibles dinámicamente del JSON cargado
+    const gradosDisponibles = Object.keys(window.MallasData[config.nombre]);
     
     gradoSel.innerHTML = '<option value="">Seleccionar</option>';
     gradosDisponibles.sort((a, b) => a - b).forEach(grado => {
       const opt = document.createElement('option');
       opt.value = grado;
-      opt.textContent = (grado === "0") ? "Transición (0)" : (grado === "-1" ? "Jardín (-1)" : grado + "°");
+      // Formateo de nombres de grados
+      if (grado === "0") opt.textContent = "Transición (0)";
+      else if (grado === "-1") opt.textContent = "Jardín (-1)";
+      else opt.textContent = grado + "°";
       gradoSel.appendChild(opt);
     });
 
@@ -41,21 +55,21 @@ document.addEventListener('DOMContentLoaded', () => {
     compSel.disabled = true;
   });
 
-  // 2. EVENTO: CAMBIO DE GRADO
+  // 3. EVENTO: CAMBIO DE GRADO -> Actualiza Períodos
   gradoSel.addEventListener('change', updatePeriodosUI);
 
-  // 3. EVENTO: CAMBIO DE PERIODO
+  // 4. EVENTO: CAMBIO DE PERIODO -> Actualiza Componentes
   periodoSel.addEventListener('change', updateComponentesUI);
 
   function updatePeriodosUI() {
-    const area = AREA_MAP[areaSel.value];
+    const config = AREA_CONFIG[areaSel.value];
     const grado = gradoSel.value;
     const tipo = document.querySelector('input[name="periodos"]:checked').value === "3" ? "3_periodos" : "4_periodos";
 
-    const malla = window.MallasData?.[area]?.[grado]?.[tipo];
+    const malla = window.MallasData?.[config.nombre]?.[grado]?.[tipo];
     
     if (!malla) {
-      periodoSel.disabled = true;
+      limpiarSelects([periodoSel, compSel]);
       return;
     }
 
@@ -71,18 +85,18 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function updateComponentesUI() {
-    const area = AREA_MAP[areaSel.value];
+    const config = AREA_CONFIG[areaSel.value];
     const grado = gradoSel.value;
     const tipo = document.querySelector('input[name="periodos"]:checked').value === "3" ? "3_periodos" : "4_periodos";
     const periodo = periodoSel.value;
 
-    const malla = window.MallasData?.[area]?.[grado]?.[tipo];
+    const malla = window.MallasData?.[config.nombre]?.[grado]?.[tipo];
     const items = malla?.periodos?.[periodo] || [];
 
     compSel.innerHTML = '<option value="todos">Todos</option>';
     const nombres = [...new Set(items.map(it => it.componente || it.competencia))];
     
-    nombres.forEach(n => {
+    nombres.sort().forEach(n => {
       const opt = document.createElement('option');
       opt.value = n; opt.textContent = n;
       compSel.appendChild(opt);
@@ -90,16 +104,16 @@ document.addEventListener('DOMContentLoaded', () => {
     compSel.disabled = false;
   }
 
-  // 4. BOTÓN CONSULTAR
+  // 5. BOTÓN CONSULTAR
   btnBuscar.addEventListener('click', () => {
     const areaVal = areaSel.value;
-    const areaNombre = AREA_MAP[areaVal];
+    const config = AREA_CONFIG[areaVal];
     const grado = gradoSel.value;
     const tipo = document.querySelector('input[name="periodos"]:checked').value === "3" ? "3_periodos" : "4_periodos";
     const periodo = periodoSel.value;
     const componente = compSel.value;
 
-    const malla = window.MallasData?.[areaNombre]?.[grado]?.[tipo];
+    const malla = window.MallasData?.[config?.nombre]?.[grado]?.[tipo];
     if (!malla || !periodo) {
       modalError.classList.add('mostrar');
       return;
@@ -111,18 +125,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     ocultarResultados();
 
+    // APLICAR CLASE DE COLOR DINÁMICA
+    // Eliminamos clases previas para que no se mezclen colores
+    resNucleo.className = "resultados ocultar"; 
+    resSocio.className = "resultados ocultar";
+
     if (areaVal === "proyecto-socioemocional") {
-      resSocio.classList.add('mostrar');
-      window.renderSocioemocional(items);
+      resSocio.classList.add('mostrar', config.clase);
+      if (window.renderSocioemocional) window.renderSocioemocional(items);
     } else {
-      resNucleo.classList.add('mostrar');
-      window.renderTablaMallas(items);
+      resNucleo.classList.add('mostrar', config.clase);
+      if (window.renderTablaMallas) window.renderTablaMallas(items);
     }
   });
 
   function ocultarResultados() {
-    resNucleo.classList.remove('mostrar');
-    resSocio.classList.remove('mostrar');
+    resNucleo.classList.replace('mostrar', 'ocultar');
+    resSocio.classList.replace('mostrar', 'ocultar');
+  }
+
+  function limpiarSelects(selects) {
+    selects.forEach(s => {
+      s.innerHTML = s.id === "componente" ? '<option value="todos">Todos</option>' : '<option value="">Seleccionar</option>';
+      s.disabled = true;
+    });
   }
 
   document.getElementById('btn-modal-cancelar').addEventListener('click', () => {
