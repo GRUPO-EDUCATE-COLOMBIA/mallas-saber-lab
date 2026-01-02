@@ -15,10 +15,9 @@
   </header>
 
   <main>
-    <!-- Sección de Filtros Horizontales y Sticky -->
+    <!-- SECCIÓN DE FILTROS (STICKY) -->
     <section id="filtros" class="filtros">
       
-      <!-- 1. Estructura de Mallas -->
       <div class="filtro-grupo">
         <label>Mallas a</label>
         <div class="radios-periodos">
@@ -27,7 +26,6 @@
         </div>
       </div>
 
-      <!-- 2. Área -->
       <div class="filtro-grupo">
         <label for="area">Área</label>
         <select id="area">
@@ -41,7 +39,6 @@
         </select>
       </div>
 
-      <!-- 3. Grado -->
       <div class="filtro-grupo">
         <label for="grado">Grado</label>
         <select id="grado" disabled>
@@ -49,7 +46,6 @@
         </select>
       </div>
 
-      <!-- 4. Período -->
       <div class="filtro-grupo">
         <label for="periodo">Período</label>
         <select id="periodo" disabled>
@@ -57,7 +53,6 @@
         </select>
       </div>
 
-      <!-- 5. Componente -->
       <div class="filtro-grupo">
         <label for="componente">Componente</label>
         <select id="componente" disabled>
@@ -65,29 +60,35 @@
         </select>
       </div>
 
-      <!-- Botones de Acción -->
       <div class="botones-container">
         <button class="btn-buscar">Consultar</button>
-        <button id="btn-progresion" class="btn-progresion" disabled>Progresión del Aprendizaje</button>
+        <button id="btn-progresion" class="btn-progresion" disabled>Progresión Vertical</button>
       </div>
     </section>
 
-    <!-- Resultados Áreas Académicas -->
-    <section id="resultados-nucleo" class="resultados ocultar">
-      <div id="tabla-body" class="tabla-body"></div>
-    </section>
+    <!-- MEJORA 3 Y 5: HERRAMIENTAS DE RESULTADOS (Buscador e Impresión) -->
+    <div id="herramientas-resultados" class="herramientas-ocultas">
+      <div class="buscador-caja">
+        <input type="text" id="input-busqueda" placeholder="🔍 Filtrar por palabra clave (ej: fracciones, emociones)...">
+      </div>
+      <button id="btn-imprimir" class="btn-secundario">🖨️ Generar Ficha de Consulta</button>
+    </div>
 
-    <!-- Resultados Proyecto Socioemocional -->
-    <section id="resultados-socio" class="resultados ocultar">
-      <div id="tabla-body-socio" class="tabla-body"></div>
+    <!-- MEJORA 4: INDICADOR DE CARGA (SPINNER) -->
+    <div id="loading-overlay" class="loading-oculto">
+      <div class="spinner"></div>
+      <p>Cargando información curricular...</p>
+    </div>
+
+    <!-- CONTENEDOR UNIFICADO DE RESULTADOS -->
+    <section id="resultados-principal" class="resultados ocultar">
+      <div id="contenedor-malla" class="tabla-body"></div>
     </section>
   </main>
 
-  <!-- VENTANA DE PROGRESIÓN (OVERLAY) -->
+  <!-- OVERLAY DE PROGRESIÓN -->
   <div id="overlay-progresion" class="overlay-progresion ocultar">
     <div class="progresion-container">
-      
-      <!-- Encabezado de Progresión -->
       <div class="progresion-header">
         <div class="progresion-titulo-texto">
           <h2>Progresión de Aprendizajes: <span id="prog-area-txt"></span></h2>
@@ -95,27 +96,20 @@
         </div>
         <button id="btn-cerrar-progresion" class="btn-cerrar-overlay">Cerrar Vista</button>
       </div>
-
-      <!-- Navegación de Grados -->
       <div class="progresion-navegacion">
         <button id="prog-prev" class="btn-nav"> &larr; Grados Anteriores</button>
-        <div class="info-ciclo" class="info-ciclo">Visualizando secuencia de 3 grados</div>
+        <div class="info-ciclo">Visualizando secuencia de 3 grados</div>
         <button id="prog-next" class="btn-nav">Grados Siguientes &rarr;</button>
       </div>
-
-      <!-- Cuerpo Comparativo de 3 Columnas -->
       <div class="progresion-columnas">
-        <!-- Columna Anterior -->
         <div class="col-prog" id="col-grado-prev">
           <div class="col-header">Grado Anterior</div>
           <div class="col-content" id="cont-grado-prev"></div>
         </div>
-        <!-- Columna Actual -->
         <div class="col-prog actual" id="col-grado-actual">
           <div class="col-header">Grado Seleccionado</div>
           <div class="col-content" id="cont-grado-actual"></div>
         </div>
-        <!-- Columna Siguiente -->
         <div class="col-prog" id="col-grado-next">
           <div class="col-header">Grado Siguiente</div>
           <div class="col-content" id="cont-grado-next"></div>
@@ -124,22 +118,21 @@
     </div>
   </div>
 
-  <!-- Modal de Error -->
+  <!-- MODAL DE ERROR -->
   <div id="modal-error" class="modal-error">
     <div class="modal-error-contenido">
-      <h2>Mensaje de error</h2>
-      <p>Revise los parámetros de consulta y vuelva a intentarlo.</p>
-      <button id="btn-modal-cancelar" class="btn-modal-cancelar">Cancelar</button>
+      <h2>Error de Consulta</h2>
+      <p>Asegúrese de seleccionar todos los campos requeridos.</p>
+      <button id="btn-modal-cancelar" class="btn-modal-cancelar">Entendido</button>
     </div>
   </div>
 
-  <!-- SCRIPTS - CARGA MODULAR -->
-  <script src="js/config.js"></script>          <!-- 1. Configuración de Áreas y Colores -->
-  <script src="js/data-loader.js"></script>     <!-- 2. Motor de Carga Universal -->
-  <script src="js/render-nucleo.js"></script>   <!-- 3. Dibujado Académico + ECO -->
-  <script src="js/render-socio.js"></script>    <!-- 4. Dibujado Socioemocional -->
-  <script src="js/render-progresion.js"></script><!-- 5. Motor de Progresión Vertical -->
-  <script src="js/ui-filtros.js"></script>      <!-- 6. Controlador de Interfaz -->
+  <!-- CARGA MODULAR ACTUALIZADA -->
+  <script src="js/config.js"></script>
+  <script src="js/data-loader.js"></script>
+  <script src="js/render-engine.js"></script> <!-- Motor Unificado -->
+  <script src="js/render-progresion.js"></script>
+  <script src="js/ui-filtros.js"></script>
 
 </body>
 </html>
