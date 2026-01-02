@@ -13,37 +13,53 @@ function ensureAreaGradeTipo(area, grado, tipo) {
 }
 
 /**
- * Carga los archivos JSON de Matemáticas
- * CORRECCIÓN: Se ajustó el inicio del ciclo a 0 para incluir Transición.
+ * Carga los archivos JSON de Matemáticas (0 a 11)
  */
 function cargarMatematicas4Periodos() {
   const areaNombre = "Matemáticas";
   const tipo_malla = "4_periodos";
   const promesas = [];
 
-  // CAMBIO CLAVE: Empezamos en 0 para cargar matematicas_0_4_periodos.json
   for (let grado = 0; grado <= 11; grado++) {
     const gradoStr = String(grado);
     const fileName = `data/matematicas/matematicas_${gradoStr}_4_periodos.json`;
 
     const p = fetch(fileName)
-      .then(r => {
-        if (!r.ok) throw new Error(`HTTP ${r.status}`);
-        return r.json();
-      })
+      .then(r => { if (!r.ok) throw new Error(); return r.json(); })
       .then(json => {
-        // Blindaje: Usamos gradoStr (nombre archivo) para asegurar la posición correcta
         ensureAreaGradeTipo(areaNombre, gradoStr, tipo_malla);
         window.MallasData[areaNombre][gradoStr][tipo_malla] = json;
         console.log(`✅ Matemáticas ${gradoStr}° cargada`);
       })
-      .catch(err => {
-        // Solo mostramos advertencia si el archivo realmente debería existir
-        if (grado >= 0) {
-          console.warn(`⚠️ No se halló o hubo error en: ${fileName}`);
-        }
-      });
+      .catch(() => {}); // Fallo silencioso si no existe el archivo aún
+    promesas.push(p);
+  }
+  return Promise.all(promesas);
+}
 
+/**
+ * NUEVA FUNCIÓN: Carga los archivos JSON de Lenguaje (0 a 11)
+ */
+function cargarLenguaje4Periodos() {
+  const areaNombre = "Lenguaje";
+  const tipo_malla = "4_periodos";
+  const promesas = [];
+
+  for (let grado = 0; grado <= 11; grado++) {
+    const gradoStr = String(grado);
+    // IMPORTANTE: Se asume que la carpeta se llama 'lenguaje' y el archivo 'lenguaje_...'
+    const fileName = `data/lenguaje/lenguaje_${gradoStr}_4_periodos.json`;
+
+    const p = fetch(fileName)
+      .then(r => { if (!r.ok) throw new Error(); return r.json(); })
+      .then(json => {
+        ensureAreaGradeTipo(areaNombre, gradoStr, tipo_malla);
+        window.MallasData[areaNombre][gradoStr][tipo_malla] = json;
+        console.log(`✅ Lenguaje ${gradoStr}° cargada`);
+      })
+      .catch(() => {
+        // console.warn(`⚠️ No se halló Lenguaje: ${fileName}`);
+      });
     promesas.push(p);
   }
   return Promise.all(promesas);
@@ -68,16 +84,17 @@ function cargarSocioemocional4Periodos() {
         window.MallasData[areaNombre][gradoStr][tipo_malla] = json;
         console.log(`✅ Proyecto Socioemocional ${gradoStr}° cargada`);
       })
-      .catch(() => console.warn(`⚠️ No se halló Socioemocional: ${fileName}`));
+      .catch(() => {});
     promesas.push(p);
   });
   return Promise.all(promesas);
 }
 
-// Ejecución de carga inicial
+// Ejecución de carga inicial en paralelo
 Promise.all([
   cargarMatematicas4Periodos(),
+  cargarLenguaje4Periodos(), // ACTIVACIÓN DE LENGUAJE
   cargarSocioemocional4Periodos()
 ]).then(() => {
-  console.log("🚀 VINCULACIÓN FINALIZADA");
+  console.log("🚀 VINCULACIÓN FINALIZADA - ÁREAS DISPONIBLES CARGADAS");
 });
