@@ -31,7 +31,7 @@ function cargarMatematicas4Periodos() {
         window.MallasData[areaNombre][gradoStr][tipo_malla] = json;
         console.log(`✅ Matemáticas ${gradoStr}° cargada`);
       })
-      .catch(() => {}); // Fallo silencioso si no existe el archivo aún
+      .catch(() => {});
     promesas.push(p);
   }
   return Promise.all(promesas);
@@ -47,7 +47,6 @@ function cargarLenguaje4Periodos() {
 
   for (let grado = 0; grado <= 11; grado++) {
     const gradoStr = String(grado);
-    // IMPORTANTE: Se asume que la carpeta se llama 'lenguaje' y el archivo 'lenguaje_...'
     const fileName = `data/lenguaje/lenguaje_${gradoStr}_4_periodos.json`;
 
     const p = fetch(fileName)
@@ -57,9 +56,7 @@ function cargarLenguaje4Periodos() {
         window.MallasData[areaNombre][gradoStr][tipo_malla] = json;
         console.log(`✅ Lenguaje ${gradoStr}° cargada`);
       })
-      .catch(() => {
-        // console.warn(`⚠️ No se halló Lenguaje: ${fileName}`);
-      });
+      .catch(() => {});
     promesas.push(p);
   }
   return Promise.all(promesas);
@@ -93,7 +90,7 @@ function cargarSocioemocional4Periodos() {
 // Ejecución de carga inicial en paralelo
 Promise.all([
   cargarMatematicas4Periodos(),
-  cargarLenguaje4Periodos(), // ACTIVACIÓN DE LENGUAJE
+  cargarLenguaje4Periodos(),
   cargarSocioemocional4Periodos()
 ]).then(() => {
   console.log("🚀 VINCULACIÓN FINALIZADA - ÁREAS DISPONIBLES CARGADAS");
