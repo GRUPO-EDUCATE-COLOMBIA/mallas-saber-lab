@@ -1,9 +1,5 @@
 // js/render-progresion.js
 
-/**
- * Motor de Progresión de Aprendizajes con Puente Pedagógico Blindado.
- * Resuelve el conflicto de nombres de componentes entre Preescolar y Primaria.
- */
 window.ProgresionMotor = (function() {
   
   let estado = {
@@ -19,9 +15,15 @@ window.ProgresionMotor = (function() {
   const btnNext = document.getElementById('prog-next');
   const txtArea = document.getElementById('prog-area-txt');
   const txtComp = document.getElementById('prog-comp-txt');
+  
   const contPrev = document.getElementById('cont-grado-prev');
   const contActual = document.getElementById('cont-grado-actual');
   const contNext = document.getElementById('cont-grado-next');
+  
+  const colPrev = document.getElementById('col-grado-prev');
+  const colActual = document.getElementById('col-grado-actual');
+  const colNext = document.getElementById('col-grado-next');
+
   const labelPrev = document.querySelector('#col-grado-prev .col-header');
   const labelActual = document.querySelector('#col-grado-actual .col-header');
   const labelNext = document.querySelector('#col-grado-next .col-header');
@@ -43,39 +45,67 @@ window.ProgresionMotor = (function() {
     txtArea.textContent = estado.area;
     txtComp.textContent = estado.componente;
 
-    const gPrev = calcularGradoRelativo(g, -1);
-    const gActual = String(g);
-    const gNext = calcularGradoRelativo(g, 1);
+    // --- LÓGICA DE EXCEPCIÓN PARA PREESCOLAR ---
+    if (g <= 0) {
+      // Modo Preescolar: 2 Columnas
+      colNext.style.display = 'none'; // Ocultamos la 3ra columna
+      
+      if (g === -1) { // JARDÍN
+        dibujarColumna(contPrev, labelPrev, "-1");
+        dibujarColumna(contActual, labelActual, "0");
+        labelActual.textContent = "Transición (0)";
+      } else { // TRANSICIÓN
+        dibujarColumna(contPrev, labelPrev, "0");
+        dibujarColumna(contActual, labelActual, "1");
+        labelActual.textContent = "Grado 1° (Puente)";
+      }
+      
+      btnPrev.disabled = (g === -1);
+      btnNext.disabled = true; // Bloqueamos avanzar para forzar selección de componente en 1°
+      
+      const msg = g === 0 
+        ? "Para avanzar a 2°, cierre esta vista y seleccione un componente académico en Grado 1°."
+        : "Secuencia de Preescolar.";
+      document.querySelector('.info-ciclo').textContent = msg;
 
-    dibujarColumna(contPrev, labelPrev, gPrev);
-    dibujarColumna(contActual, labelActual, gActual);
-    dibujarColumna(contNext, labelNext, gNext);
+    } else {
+      // Modo Primaria/Bachillerato: 3 Columnas Normales
+      colNext.style.display = 'flex';
+      
+      const gPrev = calcularGradoRelativo(g, -1);
+      const gActual = String(g);
+      const gNext = calcularGradoRelativo(g, 1);
 
-    btnPrev.disabled = (g <= -1);
-    btnNext.disabled = (g >= 11);
+      dibujarColumna(contPrev, labelPrev, gPrev);
+      dibujarColumna(contActual, labelActual, gActual);
+      dibujarColumna(contNext, labelNext, gNext);
+
+      btnPrev.disabled = false;
+      btnNext.disabled = (g >= 11);
+      document.querySelector('.info-ciclo').textContent = "Visualizando secuencia de 3 grados";
+    }
   }
 
   function dibujarColumna(contenedor, etiqueta, gradoStr) {
     contenedor.innerHTML = '';
     if (gradoStr === null) {
       etiqueta.textContent = "---";
-      contenedor.innerHTML = '<p class="texto-vacio">Fin de la secuencia.</p>';
       return;
     }
 
     etiqueta.textContent = formatearNombreGrado(gradoStr);
 
-    // Determinamos si el grado que estamos dibujando es preescolar
     const esPreescolar = (gradoStr === "0" || gradoStr === "-1");
+    // Si estamos en preescolar O si estamos viendo el Grado 1 desde Transición, 
+    // usamos una lógica de "Muestra todo"
     const datosAnuales = obtenerDatosAnuales(gradoStr, esPreescolar);
 
     if (datosAnuales.length === 0) {
-      contenedor.innerHTML = '<p class="texto-vacio">No se halló información para este componente.</p>';
+      contenedor.innerHTML = '<p class="texto-vacio">No se halló información.</p>';
     } else {
       datosAnuales.forEach(texto => {
         const item = document.createElement('div');
         item.className = 'prog-estandar-item';
-        // Diferenciamos visualmente si es DBA o Estándar
         item.innerHTML = esPreescolar ? `<strong>DBA:</strong> ${texto}` : texto;
         contenedor.appendChild(item);
       });
@@ -88,35 +118,25 @@ window.ProgresionMotor = (function() {
 
     let acumulado = [];
     
-    // PRIMERA PASADA: Intentar filtrar por componente
     Object.keys(malla.periodos).forEach(pNum => {
-      const itemsPeriodo = malla.periodos[pNum];
-      itemsPeriodo.forEach(it => {
+      malla.periodos[pNum].forEach(it => {
         if (esPreescolar) {
-          // Preescolar siempre es INTEGRAL (ignora el nombre del componente)
           if (it.dba) {
             if (Array.isArray(it.dba)) acumulado.push(...it.dba);
             else acumulado.push(it.dba);
           }
         } else {
-          // Primaria/Bachillerato: Intenta filtrar por el componente seleccionado
-          if (it.componente === estado.componente && it.estandar) {
+          // Si el grado central es Transición y miramos Grado 1, traemos todo (Puente)
+          if (estado.gradoCentral === 0 && gradoStr === "1") {
+            if (it.estandar) acumulado.push(it.estandar);
+          } 
+          // Si es Primaria normal, filtramos por componente
+          else if (it.componente === estado.componente && it.estandar) {
             acumulado.push(it.estandar);
           }
         }
       });
     });
-
-    // SEGUNDA PASADA: "EL PUENTE PARA GRADO 1°"
-    // Si estamos en Grado 1 y la lista está vacía (porque el componente viene de preescolar),
-    // mostramos TODOS los estándares de Grado 1 para que la columna no esté vacía.
-    if (gradoStr === "1" && acumulado.length === 0) {
-      Object.keys(malla.periodos).forEach(pNum => {
-        malla.periodos[pNum].forEach(it => {
-          if (it.estandar) acumulado.push(it.estandar);
-        });
-      });
-    }
 
     return [...new Set(acumulado)];
   }
