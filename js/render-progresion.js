@@ -1,4 +1,4 @@
-// js/render-progresion.js - v5.3 (Motor de Progresión de estándares por grados)
+// js/render-progresion.js - v5.6 (Motor de Progresión de estándares por grados)
 
 window.ProgresionMotor = (function() {
   
@@ -23,10 +23,9 @@ window.ProgresionMotor = (function() {
   const colNext = contNext.closest('.col-prog');
 
   /**
-   * Abre el overlay y dispara el renderizado
+   * Abre el overlay de progresión
    */
   async function abrir(areaNombre, grado, componente) {
-    // Buscar el ID técnico del área para navegación
     const areaId = Object.keys(window.APP_CONFIG.AREAS).find(
       k => window.APP_CONFIG.AREAS[k].nombre === areaNombre
     );
@@ -37,24 +36,29 @@ window.ProgresionMotor = (function() {
     estado.componente = componente;
     estado.tipo = document.querySelector('input[name="periodos"]:checked').value === "3" ? "3_periodos" : "4_periodos";
     
-    // VISIBILIDAD GARANTIZADA: Usamos la clase maestra definida en CSS
+    // VISIBILIDAD FORZADA
+    overlay.style.display = 'flex'; 
     overlay.classList.add('mostrar-flex');
     renderizar();
   }
 
+  /**
+   * Cierra el overlay
+   */
   function cerrar() {
+    overlay.style.display = 'none';
     overlay.classList.remove('mostrar-flex');
   }
 
   /**
-   * Lógica de renderizado de 3 columnas
+   * Renderiza las 3 columnas de comparación
    */
   function renderizar() {
     const g = estado.gradoCentral;
     txtArea.textContent = `${estado.areaNombre} - COMPONENTE: ${estado.componente}`;
 
     if (g <= 0) {
-      // Caso Preescolar y Puente
+      // Lógica Preescolar e Inicio de Primaria
       colNext.style.display = 'none'; 
       if (g === -1) { 
         dibujarColumna(contPrev, "-1");
@@ -67,7 +71,7 @@ window.ProgresionMotor = (function() {
       btnPrev.disabled = (g === -1);
       btnNext.disabled = true; 
     } else {
-      // Caso Primaria/Bachillerato Estándar
+      // Lógica Primaria y Bachillerato
       colNext.style.display = 'flex';
       document.querySelector('#col-grado-actual .col-header').textContent = "Grado Actual";
       
@@ -84,6 +88,9 @@ window.ProgresionMotor = (function() {
     }
   }
 
+  /**
+   * Dibuja los ítems de aprendizaje en una columna
+   */
   function dibujarColumna(contenedor, gradoStr) {
     const header = contenedor.previousElementSibling;
     contenedor.innerHTML = '';
@@ -95,27 +102,24 @@ window.ProgresionMotor = (function() {
     }
 
     header.textContent = formatearNombre(gradoStr);
-    
     const esPreescolar = (gradoStr === "0" || gradoStr === "-1");
     const datos = obtenerDatosAnuales(gradoStr, esPreescolar);
     
     if (datos.length === 0) {
-      contenedor.innerHTML = `<p class="texto-vacio">Sin estándares para este componente.</p>`;
+      contenedor.innerHTML = `<p class="texto-vacio">Sin registros para este grado.</p>`;
     } else {
       datos.forEach(texto => {
         const div = document.createElement('div');
         div.className = 'prog-estandar-item';
-        div.style.marginBottom = "15px";
-        div.style.padding = "15px";
-        div.style.borderLeft = "4px solid #54BBAB";
-        div.style.backgroundColor = "#fff";
-        div.style.fontSize = "1.1rem"; // Fuente adaptada
         div.innerHTML = esPreescolar ? `<strong>DBA:</strong> ${texto}` : texto;
         contenedor.appendChild(div);
       });
     }
   }
 
+  /**
+   * Extrae DBA o Estándares según el grado y componente
+   */
   function obtenerDatosAnuales(gradoStr, esPreescolar) {
     const malla = window.MallasData?.[estado.areaNombre]?.[gradoStr]?.[estado.tipo];
     if (!malla || !malla.periodos) return [];
@@ -129,7 +133,7 @@ window.ProgresionMotor = (function() {
             else acumulado.push(it.dba);
           }
         } else {
-          // Si estamos viendo el puente o coincide el componente, guardamos el estándar
+          // Si estamos en el puente de transición a 1° o el componente coincide
           if ((estado.gradoCentral === 0 && gradoStr === "1") || (it.componente === estado.componente)) {
             if (it.estandar) acumulado.push(it.estandar);
           }
@@ -145,7 +149,7 @@ window.ProgresionMotor = (function() {
     return `Grado ${g}°`;
   }
 
-  // Navegación asíncrona para Lazy Loading
+  // Navegación con carga bajo demanda
   btnPrev.onclick = async () => {
     estado.gradoCentral--;
     await asegurarDatosGrado(estado.areaId, String(estado.gradoCentral - 1));
