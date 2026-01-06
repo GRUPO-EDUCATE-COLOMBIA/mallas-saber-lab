@@ -1,5 +1,9 @@
 // js/render-engine.js
 
+/**
+ * MOTOR DE RENDERIZADO UNIFICADO v4.1
+ * Gestiona acordeones con pulso, cruce de subcarpetas y botones institucionales.
+ */
 window.RenderEngine = (function() {
 
   const containerMalla = document.getElementById('contenedor-malla');
@@ -9,11 +13,16 @@ window.RenderEngine = (function() {
 
   let contextoActual = { areaId: '', grado: '', periodo: '' };
 
+  /**
+   * FUNCIÓN MAESTRA DE DIBUJADO
+   */
   function renderizar(items, areaId, grado, periodo) {
     contextoActual = { areaId, grado, periodo };
-    resPrincipal.classList.remove('ocultar-inicial');
-    resPrincipal.classList.add('mostrar');
-    herramientas.classList.remove('ocultar-inicial');
+
+    // Activar visibilidad de capas usando las nuevas clases del CSS v4.1
+    resPrincipal.classList.add('mostrar-block');
+    herramientas.classList.add('mostrar-flex');
+    
     dibujarHTML(items);
     vincularAcordeones();
   }
@@ -21,7 +30,7 @@ window.RenderEngine = (function() {
   function dibujarHTML(items) {
     containerMalla.innerHTML = '';
     if (!items || items.length === 0) {
-      containerMalla.innerHTML = '<p class="sin-resultados">No se hallaron registros.</p>';
+      containerMalla.innerHTML = '<p class="sin-resultados">No se hallaron registros coincidentes.</p>';
       return;
     }
     containerMalla.innerHTML = items.map(item => {
@@ -33,26 +42,29 @@ window.RenderEngine = (function() {
     }).join('');
   }
 
+  /**
+   * PLANTILLA ACADÉMICA: Cruce con subcarpeta 'tareas_dce' y Proyecto ECO
+   */
   function plantillaAcademica(item, grado, periodo) {
-    // 1. Cruce Socioemocional
-    const socioData = window.MallasData?.["Proyecto Socioemocional"]?.[grado]?.["4_periodos"]?.periodos?.[periodo];
+    const tipo = window.APP_CONFIG.TIPO_MALLA;
+    
+    // 1. Cruce con Proyecto ECO
+    const socioData = window.MallasData?.["Proyecto Socioemocional"]?.[grado]?.[tipo]?.periodos?.[periodo];
     const infoSocio = socioData && socioData.length > 0 ? socioData[0] : null;
 
-    // 2. Cruce DCE (Metodología) - Búsqueda Insensible a Mayúsculas/Minúsculas
+    // 2. Cruce con Orientación Metodológica (Tareas en subcarpeta)
     const nombreArea = window.APP_CONFIG.AREAS[contextoActual.areaId].nombre;
-    const areaT = `Tareas_DCE_${nombreArea}`;
-    const tareasPeriodo = window.MallasData?.[areaT]?.[grado]?.["4_periodos"]?.periodos?.[periodo];
+    const llaveT = `Tareas_DCE_${nombreArea}`;
+    const tareasPeriodo = window.MallasData?.[llaveT]?.[grado]?.[tipo]?.periodos?.[periodo];
     
-    let orientacionDCE = item.tareas_dce || null;
+    let contenidoDCE = item.tareas_dce || null;
 
     if (tareasPeriodo) {
-      // Normalizamos el nombre del componente para la búsqueda
-      const compBuscado = (item.componente || '').toLowerCase().trim();
-      // Buscamos la llave que coincida
-      const llaveEncontrada = Object.keys(tareasPeriodo).find(k => k.toLowerCase().trim() === compBuscado);
-      if (llaveEncontrada) {
-        orientacionDCE = tareasPeriodo[llaveEncontrada];
-      }
+      // Normalización para asegurar el cruce exacto de nombres
+      const norm = (t) => String(t).toLowerCase().trim().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      const compBuscado = norm(item.componente || '');
+      const llaveEncontrada = Object.keys(tareasPeriodo).find(k => norm(k) === compBuscado);
+      if (llaveEncontrada) contenidoDCE = tareasPeriodo[llaveEncontrada];
     }
 
     return `
@@ -64,21 +76,23 @@ window.RenderEngine = (function() {
           <div class="campo"><strong>Evidencias:</strong><div>${Array.isArray(item.evidencias) ? item.evidencias.join('<br><br>') : (item.evidencias || '')}</div></div>
           <div class="campo"><strong>Saberes:</strong><div>${Array.isArray(item.saberes) ? item.saberes.join(' • ') : (item.saberes || '')}</div></div>
 
-          ${orientacionDCE ? `
+          <!-- ACORDEÓN DCE (METODOLOGÍA) -->
+          ${contenidoDCE ? `
             <div class="contenedor-acordeon">
-              <div class="acordeon-header" tabindex="0">
+              <div class="acordeon-header">
                 <div class="acordeon-icono-btn dce-color">💡</div>
                 <div class="acordeon-titulo dce-texto">Caja de Orientaciones Metodológicas</div>
               </div>
               <div class="acordeon-panel">
-                <div class="contenido-interno">${orientacionDCE}</div>
+                <div class="contenido-interno">${contenidoDCE}</div>
               </div>
             </div>
           ` : ''}
 
+          <!-- ACORDEÓN ECO (TRANSVERSAL) -->
           ${infoSocio ? `
             <div class="contenedor-acordeon">
-              <div class="acordeon-header" tabindex="0">
+              <div class="acordeon-header">
                 <div class="acordeon-icono-btn eco-color">🧠</div>
                 <div class="acordeon-titulo eco-texto">Responsabilidad Socioemocional Proyecto ECO</div>
               </div>
@@ -93,6 +107,7 @@ window.RenderEngine = (function() {
             </div>
           ` : ''}
 
+          <!-- BOTÓN DICCIONARIO (TEAL) -->
           <div class="dic-link-container">
             <a href="eco/diccionario/eco_dic_${grado}.html" target="_blank" class="btn-eco-dic">Consultar Diccionario ECO</a>
           </div>
@@ -119,6 +134,7 @@ window.RenderEngine = (function() {
       header.onclick = function() {
         const panel = this.nextElementSibling;
         const estaAbierto = panel.classList.contains('abierto');
+        // Limpieza: cerramos otros acordeones del mismo bloque
         const padre = this.closest('.item-malla-contenido');
         padre.querySelectorAll('.acordeon-panel').forEach(p => p.classList.remove('abierto'));
         if (!estaAbierto) panel.classList.add('abierto');
@@ -128,9 +144,13 @@ window.RenderEngine = (function() {
 
   function setCargando(estado) {
     if (!loading) return;
-    estado ? loading.classList.remove('ocultar-inicial') : loading.classList.add('ocultar-inicial');
+    if (estado) {
+      loading.classList.add('mostrar-flex');
+      resPrincipal.classList.remove('mostrar-block');
+    } else {
+      loading.classList.remove('mostrar-flex');
+    }
   }
 
   return { renderizar, setCargando };
-
 })();
