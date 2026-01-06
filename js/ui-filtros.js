@@ -1,48 +1,50 @@
 // js/ui-filtros.js
 
+/**
+ * CONTROLADOR DE INTERFAZ (UI) v4.0
+ * Gestiona la lógica de filtros y la visibilidad de capas (Modales/Overlays).
+ */
 document.addEventListener('DOMContentLoaded', () => {
+  // Elementos de Selección
   const areaSel = document.getElementById('area');
   const gradoSel = document.getElementById('grado');
   const periodoSel = document.getElementById('periodo');
   const compSel = document.getElementById('componente');
+  
+  // Botones y Capas
   const btnBuscar = document.querySelector('.btn-buscar');
   const btnProgresion = document.getElementById('btn-progresion');
   const resPrincipal = document.getElementById('resultados-principal');
   const herramientas = document.getElementById('herramientas-resultados');
   const modalError = document.getElementById('modal-error');
+  const btnModalCancelar = document.getElementById('btn-modal-cancelar');
 
+  // Inicialización: Asegurar que nada se vea al cargar
   if (modalError) modalError.classList.remove('mostrar');
+  if (resPrincipal) resPrincipal.classList.add('ocultar-inicial');
+  if (herramientas) herramientas.classList.add('ocultar-inicial');
+
+  // --- EVENTOS DE USUARIO ---
 
   // 1. Cambio de Área
   areaSel.addEventListener('change', () => {
     const areaId = areaSel.value;
     const config = window.APP_CONFIG.AREAS[areaId];
     
-    // Ocultar resultados previos
-    resPrincipal.classList.add('ocultar');
-    herramientas.classList.add('herramientas-ocultas');
+    resetInterfazCompleta();
 
-    if (!config) {
+    if (!config || !window.MallasData[config.nombre]) {
       gradoSel.disabled = true;
       limpiarSelects([gradoSel, periodoSel, compSel]);
+      validarBotones();
       return;
     }
 
-    // BLINDAJE: Verificar si el área ya cargó en memoria
-    const areaData = window.MallasData[config.nombre];
-    
-    if (!areaData || Object.keys(areaData).length === 0) {
-      gradoSel.innerHTML = '<option value="">Cargando datos...</option>';
-      gradoSel.disabled = true;
-      console.warn(`⏳ Los datos de ${config.nombre} aún se están descargando o no existen.`);
-      return;
-    }
-
-    // Población de Grados
-    const gradosCargados = Object.keys(areaData);
+    // Poblar grados cargados en memoria
+    const gradosDisponibles = Object.keys(window.MallasData[config.nombre]);
     gradoSel.innerHTML = '<option value="">Seleccionar</option>';
     
-    gradosCargados.sort((a, b) => a - b).forEach(g => {
+    gradosDisponibles.sort((a, b) => a - b).forEach(g => {
       const opt = document.createElement('option');
       opt.value = g;
       if (g === "0") opt.textContent = "Transición (0)";
@@ -71,37 +73,39 @@ document.addEventListener('DOMContentLoaded', () => {
   // 4. Cambio de Componente
   compSel.addEventListener('change', validarBotones);
 
-  // 5. Botón Consultar
+  // 5. Botón Consultar: Acción Principal
   btnBuscar.addEventListener('click', () => {
     const areaId = areaSel.value;
     const config = window.APP_CONFIG.AREAS[areaId];
-    const tipo = document.querySelector('input[name="periodos"]:checked').value === "3" ? "3_periodos" : "4_periodos";
+    const tipo = obtenerTipoMalla();
     const periodo = periodoSel.value;
     const grado = gradoSel.value;
 
     const malla = window.MallasData?.[config?.nombre]?.[grado]?.[tipo];
 
     if (!malla || !periodo) {
-      modalError.classList.add('mostrar');
+      if (modalError) modalError.classList.add('mostrar');
       return;
     }
 
+    // Activar flujo de carga
     window.RenderEngine.setCargando(true);
 
     setTimeout(() => {
-      const todosLosItems = malla.periodos[periodo] || [];
+      const itemsPeriodo = malla.periodos[periodo] || [];
       const itemsFiltrados = compSel.value === "todos" 
-        ? todosLosItems 
-        : todosLosItems.filter(it => (it.componente === compSel.value || it.competencia === compSel.value));
+        ? itemsPeriodo 
+        : itemsPeriodo.filter(it => (it.componente === compSel.value || it.competencia === compSel.value));
 
       window.RenderEngine.renderizar(itemsFiltrados, areaId, grado, periodo);
       window.RenderEngine.setCargando(false);
       
+      // Aplicar color dinámico del área
       resPrincipal.className = `resultados mostrar ${config.clase}`;
     }, 400); 
   });
 
-  // 6. Botón Progresión
+  // 6. Botón Progresión (Alineación Vertical)
   if (btnProgresion) {
     btnProgresion.addEventListener('click', () => {
       const config = window.APP_CONFIG.AREAS[areaSel.value];
@@ -109,9 +113,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // --- LÓGICA INTERNA ---
+
   function updatePeriodosUI() {
-    const config = window.APP_CONFIG.AREAS[areaSel.value];
-    const tipo = document.querySelector('input[name="periodos"]:checked').value === "3" ? "3_periodos" : "4_periodos";
+    const areaId = areaSel.value;
+    const config = window.APP_CONFIG.AREAS[areaId];
+    const tipo = obtenerTipoMalla();
     const malla = window.MallasData?.[config.nombre]?.[gradoSel.value]?.[tipo];
     
     if (!malla) {
@@ -131,13 +138,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function updateComponentesUI() {
-    const config = window.APP_CONFIG.AREAS[areaSel.value];
-    const tipo = document.querySelector('input[name="periodos"]:checked').value === "3" ? "3_periodos" : "4_periodos";
-    const periodo = periodoSel.value;
+    const areaId = areaSel.value;
+    const config = window.APP_CONFIG.AREAS[areaId];
+    const tipo = obtenerTipoMalla();
     const malla = window.MallasData?.[config.nombre]?.[gradoSel.value]?.[tipo];
     
-    const items = malla?.periodos?.[periodo] || [];
+    const items = malla?.periodos?.[periodoSel.value] || [];
     compSel.innerHTML = '<option value="todos">Todos</option>';
+    
     const nombres = [...new Set(items.map(it => it.componente || it.competencia))];
     nombres.sort().forEach(n => {
       const opt = document.createElement('option');
@@ -147,10 +155,22 @@ document.addEventListener('DOMContentLoaded', () => {
     compSel.disabled = false;
   }
 
+  function obtenerTipoMalla() {
+    const radio = document.querySelector('input[name="periodos"]:checked');
+    return radio && radio.value === "3" ? "3_periodos" : "4_periodos";
+  }
+
   function validarBotones() {
     if (btnProgresion) {
+      // Requisito: Área + Grado + Componente específico
       btnProgresion.disabled = !(areaSel.value && gradoSel.value && compSel.value && compSel.value !== 'todos');
     }
+  }
+
+  function resetInterfazCompleta() {
+    resPrincipal.classList.add('ocultar-inicial');
+    resPrincipal.classList.remove('mostrar');
+    herramientas.classList.add('ocultar-inicial');
   }
 
   function limpiarSelects(selects) {
@@ -160,9 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  if (document.getElementById('btn-modal-cancelar')) {
-    document.getElementById('btn-modal-cancelar').addEventListener('click', () => {
-      modalError.classList.remove('mostrar');
-    });
+  if (btnModalCancelar) {
+    btnModalCancelar.addEventListener('click', () => modalError.classList.remove('mostrar'));
   }
 });
