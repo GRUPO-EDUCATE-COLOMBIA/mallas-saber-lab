@@ -1,11 +1,12 @@
+// js/ui-filtros.js v5.5 - FINAL STABLE
 document.addEventListener('DOMContentLoaded', () => {
   const areaSel = document.getElementById('area');
   const gradoSel = document.getElementById('grado');
   const periodoSel = document.getElementById('periodo');
   const compSel = document.getElementById('componente');
   const btnBuscar = document.querySelector('.btn-buscar');
+  const btnProg = document.getElementById('btn-progresion');
 
-  // Cargar grados al inicio desde el Config
   areaSel.addEventListener('change', () => {
     gradoSel.innerHTML = '<option value="">Seleccionar</option>';
     window.APP_CONFIG.GRADOS.forEach(g => {
@@ -27,13 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   periodoSel.addEventListener('change', async () => {
     window.RenderEngine.setCargando(true);
-    // DESCARGA LOS DATOS AQUÍ
     await asegurarDatosGrado(areaSel.value, gradoSel.value);
     
-    // Poblar componentes
     const config = window.APP_CONFIG.AREAS[areaSel.value];
-    const tipo = window.APP_CONFIG.TIPO_MALLA;
-    const malla = window.MallasData[config.nombre][gradoSel.value][tipo];
+    const malla = window.MallasData[config.nombre][gradoSel.value][window.APP_CONFIG.TIPO_MALLA];
     const items = malla.periodos[periodoSel.value] || [];
     
     compSel.innerHTML = '<option value="todos">Todos</option>';
@@ -41,19 +39,23 @@ document.addEventListener('DOMContentLoaded', () => {
       if(n) { const opt = document.createElement('option'); opt.value = n; opt.textContent = n; compSel.appendChild(opt); }
     });
     compSel.disabled = false;
+    btnProg.disabled = false; // ACTIVAR PROGRESIÓN
     window.RenderEngine.setCargando(false);
   });
 
   btnBuscar.addEventListener('click', () => {
     const config = window.APP_CONFIG.AREAS[areaSel.value];
-    const tipo = window.APP_CONFIG.TIPO_MALLA;
-    const malla = window.MallasData[config.nombre][gradoSel.value][tipo];
+    const malla = window.MallasData[config.nombre][gradoSel.value][window.APP_CONFIG.TIPO_MALLA];
     const items = malla.periodos[periodoSel.value] || [];
     const filtrados = compSel.value === "todos" ? items : items.filter(it => (it.componente || it.competencia) === compSel.value);
 
     window.RenderEngine.renderizar(filtrados, areaSel.value, gradoSel.value, periodoSel.value);
-    
-    const resPrincipal = document.getElementById('resultados-principal');
-    resPrincipal.className = `resultados mostrar-block ${config.clase}`;
+    document.getElementById('resultados-principal').className = `resultados mostrar-block ${config.clase}`;
+  });
+
+  // BOTÓN PROGRESIÓN VINCULADO
+  btnProg.addEventListener('click', () => {
+    const config = window.APP_CONFIG.AREAS[areaSel.value];
+    window.ProgresionMotor.abrir(config.nombre, gradoSel.value, compSel.value);
   });
 });
