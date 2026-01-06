@@ -1,111 +1,80 @@
-/* styles.css - Mallas Curriculares Nacionales - v5.2 (Restaurada) */
+/* styles.css - v5.2 STABLE - FIX TOTAL */
 
 :root {
-  --eco-purple: #9B7BB6;
-  --eco-teal: #00A19B;
-  --eco-dark: #17334B;
-  --eco-green: #54BBAB;
+  --eco-purple: #9B7BB6; --eco-teal: #00A19B; --eco-dark: #17334B; --eco-green: #54BBAB;
 }
 
-/* --- REGLAS BASE --- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Barlow Condensed', sans-serif; background: #f4f7f9; color: var(--eco-dark); }
 
-body {
-  font-family: 'Barlow Condensed', sans-serif;
-  background: #f4f7f9;
-  min-height: 100vh;
-  color: var(--eco-dark);
-  line-height: 1.6;
-}
-
-/* --- BLOQUEO DE SEGURIDAD --- */
-.overlay-progresion, .modal-error-full, .ocultar-inicial, .resultados, .loading-oculto {
-  display: none !important; 
-}
+.overlay-progresion, .modal-error-full, .ocultar-inicial, .resultados { display: none !important; }
 .mostrar-flex { display: flex !important; }
 .mostrar-block { display: block !important; }
 
-/* --- HEADER AZUL SATINADO (V-GLASS) --- */
+/* HEADER SATINADO */
 header {
-  text-align: center;
-  padding: 2rem 1rem;
+  text-align: center; padding: 2rem 1rem;
   background: linear-gradient(180deg, #1a5b96 0%, #0d3d66 50%, #082b4a 100%);
-  color: white;
-  position: relative;
-  overflow: hidden;
-  border-bottom: 3px solid rgba(255, 255, 255, 0.3);
-  box-shadow: inset 0 -8px 15px rgba(0,0,0,0.4), 0 5px 15px rgba(0,0,0,0.3);
+  color: white; position: relative; overflow: hidden;
+  box-shadow: inset 0 -5px 15px rgba(0,0,0,0.4), 0 5px 15px rgba(0,0,0,0.2);
 }
-
-header::before {
-  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 50%;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%);
-  pointer-events: none; z-index: 1;
-}
-
 header::after {
   content: ""; position: absolute; top: 0; left: -100%; width: 40%; height: 100%;
   background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0) 100%);
-  transform: skewX(-25deg); animation: barrido-satinado 8s infinite ease-in-out; z-index: 1;
+  transform: skewX(-25deg); animation: barrido-satinado 8s infinite;
 }
-
 @keyframes barrido-satinado { 0% { left: -100%; } 30% { left: 150%; } 100% { left: 150%; } }
-
-header h1 { font-size: 2.5rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; position: relative; z-index: 2; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
 
 main { max-width: 1200px; margin: 0 auto; padding: 1.5rem 1rem; }
 
-/* --- FILTROS ESTÁNDAR (STABLE) --- */
+/* FILTROS */
 .filtros {
-  background: white;
-  padding: 1.2rem 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-  margin-bottom: 1.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  justify-content: center;
-  gap: 1.2rem;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  border-bottom: 3px solid var(--eco-green);
+  background: white; padding: 1.2rem 2rem; border-radius: 12px;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 1.2rem;
+  position: sticky; top: 0; z-index: 1000; border-bottom: 3px solid var(--eco-green);
 }
-
 .filtro-grupo { display: flex; flex-direction: column; gap: 0.3rem; min-width: 160px; }
 .filtros label { font-weight: 700; font-size: 0.85rem; text-transform: uppercase; }
-.filtros select { padding: 0.6rem; border: 2px solid #e1e5e9; border-radius: 8px; font-size: 1rem; font-family: 'Barlow Condensed'; cursor: pointer; }
+.filtros select { padding: 0.6rem; border: 2px solid #e1e5e9; border-radius: 8px; font-family: 'Barlow Condensed'; }
 
-.botones-container { display: flex; gap: 0.8rem; }
-.btn-buscar, .btn-progresion, .btn-secundario {
-  height: 44px; border: none; border-radius: 8px; font-weight: 700; cursor: pointer;
-  padding: 0 1.5rem; transition: all 0.3s; font-family: 'Barlow Condensed'; font-size: 1.05rem;
+/* HERRAMIENTAS - BOTÓN A LA DERECHA */
+#herramientas-resultados { 
+  display: flex; 
+  justify-content: flex-end; /* Alineación a la derecha */
+  margin-bottom: 1rem; 
 }
-.btn-buscar { background: #11678B; color: white; }
-.btn-progresion { background: var(--eco-purple); color: white; }
 
-/* --- RESULTADOS --- */
-.item-malla { 
-  background: white; border-radius: 15px; overflow: hidden; 
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 2rem;
-}
+.btn-buscar { background: #11678B; color: white; height: 44px; padding: 0 1.5rem; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; }
+.btn-secundario { background: var(--eco-teal); color: white; height: 44px; padding: 0 1.5rem; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; }
+.btn-progresion { background: var(--eco-purple); color: white; height: 44px; padding: 0 1.5rem; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; }
+
+/* RESULTADOS Y COLORES */
+.item-malla { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 2rem; }
 .item-malla h3 { text-align: center; padding: 1.2rem; font-size: 1.5rem; color: white; text-transform: uppercase; }
+
+.area-matematicas .item-malla h3 { background-color: #F07F3C; }
+.area-lenguaje .item-malla h3 { background-color: #FBBB21; }
+.area-sociales .item-malla h3 { background-color: #3974B9; }
+.area-naturales .item-malla h3 { background-color: #95C11F; }
+.area-ingles .item-malla h3 { background-color: #8257A0; }
+
 .item-malla-contenido { padding: 1.5rem 2.5rem; }
+.campo { margin-bottom: 1.2rem; }
+.campo strong { display: block; font-size: 0.9rem; color: #888; text-transform: uppercase; }
 
-/* --- BOTÓN DICCIONARIO --- */
-.btn-eco-dic {
-  display: inline-block !important; background-color: var(--eco-teal) !important; color: white !important;
-  text-decoration: none !important; padding: 12px 25px !important; border-radius: 8px !important; font-weight: 700 !important;
-  text-transform: uppercase !important; box-shadow: 0 4px 12px rgba(0, 161, 155, 0.3) !important;
+/* ACORDEONES E ICONOS */
+.contenedor-acordeon { margin-top: 1.2rem; border-top: 1px solid #eee; padding-top: 1.2rem; }
+.acordeon-header { display: flex; align-items: center; cursor: pointer; padding: 8px; }
+.acordeon-icono-btn {
+  width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  color: white; margin-right: 15px; font-size: 1.2rem; animation: pulso 2s infinite;
 }
+@keyframes pulso { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+.dce-color { background-color: #F07F3C; }
+.eco-color { background-color: var(--eco-purple); }
+.acordeon-panel { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; }
+.acordeon-panel.abierto { max-height: 1500px; padding: 1rem 0; }
+.contenido-interno { background: #fafafa; border-radius: 12px; padding: 1.5rem; border: 1px solid #eee; }
 
-/* --- ARQUITECTURA DE IMPRESIÓN (FIX) --- */
-@media print {
-  html, body { margin: 0 !important; padding: 0 !important; background: white !important; }
-  * { position: static !important; overflow: visible !important; }
-  header, .filtros, .botones-container, #herramientas-resultados, .btn-eco-dic { display: none !important; }
-  .acordeon-panel { max-height: none !important; display: block !important; }
-  .print-only-header { display: block !important; text-align: center; border-bottom: 2px solid #000; }
-}
-.print-only-header { display: none; }
+/* BOTÓN DICCIONARIO */
+.btn-eco-dic { display: inline-block !important; background: var(--eco-teal) !important; color: white !important; padding: 10px 20px !important; border-radius: 8px !important; text-decoration: none !important; font-weight: 700 !important; margin-top: 1rem; }
