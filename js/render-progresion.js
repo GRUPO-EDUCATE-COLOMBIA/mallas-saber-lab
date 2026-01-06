@@ -1,11 +1,10 @@
-// js/render-progresion.js - v5.0 (Motor de Alineación Asíncrono)
+// js/render-progresion.js - v5.3 (Motor de Progresión de estándares por grados)
 
 window.ProgresionMotor = (function() {
   
-  // Estado extendido para soportar Lazy Loading durante la navegación
   let estado = { 
-    areaId: '',      // ej: 'matematicas'
-    areaNombre: '',  // ej: 'Matemáticas'
+    areaId: '',      
+    areaNombre: '',  
     gradoCentral: 0, 
     componente: '', 
     tipo: '4_periodos' 
@@ -17,8 +16,6 @@ window.ProgresionMotor = (function() {
   const btnNext = document.getElementById('prog-next');
   
   const txtArea = document.getElementById('prog-area-txt');
-  const txtComp = document.getElementById('prog-comp-txt');
-  
   const contPrev = document.getElementById('cont-grado-prev');
   const contActual = document.getElementById('cont-grado-actual');
   const contNext = document.getElementById('cont-grado-next');
@@ -26,10 +23,10 @@ window.ProgresionMotor = (function() {
   const colNext = contNext.closest('.col-prog');
 
   /**
-   * Abre el overlay y asegura que los datos existan
+   * Abre el overlay y dispara el renderizado
    */
   async function abrir(areaNombre, grado, componente) {
-    // Encontrar el ID del área para futuras descargas
+    // Buscar el ID técnico del área para navegación
     const areaId = Object.keys(window.APP_CONFIG.AREAS).find(
       k => window.APP_CONFIG.AREAS[k].nombre === areaNombre
     );
@@ -38,8 +35,9 @@ window.ProgresionMotor = (function() {
     estado.areaNombre = areaNombre;
     estado.gradoCentral = parseInt(grado);
     estado.componente = componente;
-    estado.tipo = obtenerTipoMalla();
+    estado.tipo = document.querySelector('input[name="periodos"]:checked').value === "3" ? "3_periodos" : "4_periodos";
     
+    // VISIBILIDAD GARANTIZADA: Usamos la clase maestra definida en CSS
     overlay.classList.add('mostrar-flex');
     renderizar();
   }
@@ -49,15 +47,14 @@ window.ProgresionMotor = (function() {
   }
 
   /**
-   * Renderizado con validación de existencia de datos
+   * Lógica de renderizado de 3 columnas
    */
   function renderizar() {
     const g = estado.gradoCentral;
-    txtArea.textContent = estado.areaNombre;
-    txtComp.textContent = `COMPONENTE: ${estado.componente}`;
+    txtArea.textContent = `${estado.areaNombre} - COMPONENTE: ${estado.componente}`;
 
-    // LÓGICA DE PUENTE PEDAGÓGICO
     if (g <= 0) {
+      // Caso Preescolar y Puente
       colNext.style.display = 'none'; 
       if (g === -1) { 
         dibujarColumna(contPrev, "-1");
@@ -69,10 +66,11 @@ window.ProgresionMotor = (function() {
       }
       btnPrev.disabled = (g === -1);
       btnNext.disabled = true; 
-      document.querySelector('.info-ciclo').textContent = "Secuencia de Preescolar Integral";
     } else {
-      // LÓGICA ESTÁNDAR DE 3 COLUMNAS
+      // Caso Primaria/Bachillerato Estándar
       colNext.style.display = 'flex';
+      document.querySelector('#col-grado-actual .col-header').textContent = "Grado Actual";
+      
       const gPrev = (g - 1 < -1) ? null : String(g - 1);
       const gActual = String(g);
       const gNext = (g + 1 > 11) ? null : String(g + 1);
@@ -83,7 +81,6 @@ window.ProgresionMotor = (function() {
       
       btnPrev.disabled = (g <= -1);
       btnNext.disabled = (g >= 11);
-      document.querySelector('.info-ciclo').textContent = "Visualizando secuencia de 3 grados";
     }
   }
 
@@ -99,23 +96,20 @@ window.ProgresionMotor = (function() {
 
     header.textContent = formatearNombre(gradoStr);
     
-    // Verificación de seguridad: ¿Los datos están en memoria?
-    const datosCargados = window.MallasData?.[estado.areaNombre]?.[gradoStr]?.[estado.tipo];
-    
-    if (!datosCargados) {
-      contenedor.innerHTML = `<div class="spinner-mini"></div><p class="texto-vacio">Cargando datos...</p>`;
-      return;
-    }
-
     const esPreescolar = (gradoStr === "0" || gradoStr === "-1");
     const datos = obtenerDatosAnuales(gradoStr, esPreescolar);
     
     if (datos.length === 0) {
-      contenedor.innerHTML = `<p class="texto-vacio">No hay registros para este componente.</p>`;
+      contenedor.innerHTML = `<p class="texto-vacio">Sin estándares para este componente.</p>`;
     } else {
       datos.forEach(texto => {
         const div = document.createElement('div');
         div.className = 'prog-estandar-item';
+        div.style.marginBottom = "15px";
+        div.style.padding = "15px";
+        div.style.borderLeft = "4px solid #54BBAB";
+        div.style.backgroundColor = "#fff";
+        div.style.fontSize = "1.1rem"; // Fuente adaptada
         div.innerHTML = esPreescolar ? `<strong>DBA:</strong> ${texto}` : texto;
         contenedor.appendChild(div);
       });
@@ -135,11 +129,9 @@ window.ProgresionMotor = (function() {
             else acumulado.push(it.dba);
           }
         } else {
-          if (estado.gradoCentral === 0 && gradoStr === "1") {
+          // Si estamos viendo el puente o coincide el componente, guardamos el estándar
+          if ((estado.gradoCentral === 0 && gradoStr === "1") || (it.componente === estado.componente)) {
             if (it.estandar) acumulado.push(it.estandar);
-          } 
-          else if (it.componente === estado.componente && it.estandar) {
-            acumulado.push(it.estandar);
           }
         }
       });
@@ -153,30 +145,16 @@ window.ProgresionMotor = (function() {
     return `Grado ${g}°`;
   }
 
-  function obtenerTipoMalla() {
-    const radio = document.querySelector('input[name="periodos"]:checked');
-    return radio && radio.value === "3" ? "3_periodos" : "4_periodos";
-  }
-
-  // --- NAVEGACIÓN ASÍNCRONA (Lazy Loading Integrado) ---
-
+  // Navegación asíncrona para Lazy Loading
   btnPrev.onclick = async () => {
     estado.gradoCentral--;
-    const gNecesario = String(estado.gradoCentral - 1);
-    // Aseguramos el grado que entrará a la vista por la izquierda
-    if (estado.gradoCentral >= 0) {
-      await asegurarDatosGrado(estado.areaId, gNecesario);
-    }
+    await asegurarDatosGrado(estado.areaId, String(estado.gradoCentral - 1));
     renderizar();
   };
 
   btnNext.onclick = async () => {
     estado.gradoCentral++;
-    const gNecesario = String(estado.gradoCentral + 1);
-    // Aseguramos el grado que entrará a la vista por la derecha
-    if (estado.gradoCentral < 11) {
-      await asegurarDatosGrado(estado.areaId, gNecesario);
-    }
+    await asegurarDatosGrado(estado.areaId, String(estado.gradoCentral + 1));
     renderizar();
   };
 
