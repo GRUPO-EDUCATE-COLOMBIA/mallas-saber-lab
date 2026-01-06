@@ -1,8 +1,15 @@
-// js/render-progresion.js
+// js/render-progresion.js - v5.0 (Motor de Alineación Asíncrono)
 
 window.ProgresionMotor = (function() {
   
-  let estado = { area: '', gradoCentral: 0, componente: '', tipo: '4_periodos' };
+  // Estado extendido para soportar Lazy Loading durante la navegación
+  let estado = { 
+    areaId: '',      // ej: 'matematicas'
+    areaNombre: '',  // ej: 'Matemáticas'
+    gradoCentral: 0, 
+    componente: '', 
+    tipo: '4_periodos' 
+  };
 
   const overlay = document.getElementById('overlay-progresion');
   const btnCerrar = document.getElementById('btn-cerrar-progresion');
@@ -19,58 +26,60 @@ window.ProgresionMotor = (function() {
   const colNext = contNext.closest('.col-prog');
 
   /**
-   * Abre el overlay de progresión
-   * Sincronizado con las clases de visibilidad del styles.css v4.1
+   * Abre el overlay y asegura que los datos existan
    */
-  function abrir(area, grado, componente) {
-    estado.area = area;
+  async function abrir(areaNombre, grado, componente) {
+    // Encontrar el ID del área para futuras descargas
+    const areaId = Object.keys(window.APP_CONFIG.AREAS).find(
+      k => window.APP_CONFIG.AREAS[k].nombre === areaNombre
+    );
+
+    estado.areaId = areaId;
+    estado.areaNombre = areaNombre;
     estado.gradoCentral = parseInt(grado);
     estado.componente = componente;
+    estado.tipo = obtenerTipoMalla();
     
-    // CORRECCIÓN TÉCNICA: Usamos 'mostrar-flex' para anular el display:none !important
     overlay.classList.add('mostrar-flex');
     renderizar();
   }
 
-  /**
-   * Cierra el overlay y limpia el estado visual
-   */
   function cerrar() {
     overlay.classList.remove('mostrar-flex');
   }
 
   /**
-   * Renderiza las 3 columnas comparativas
+   * Renderizado con validación de existencia de datos
    */
   function renderizar() {
     const g = estado.gradoCentral;
-    txtArea.textContent = estado.area;
+    txtArea.textContent = estado.areaNombre;
     txtComp.textContent = `COMPONENTE: ${estado.componente}`;
 
-    // LÓGICA DE PUENTE PEDAGÓGICO (Preescolar a Primaria)
+    // LÓGICA DE PUENTE PEDAGÓGICO
     if (g <= 0) {
       colNext.style.display = 'none'; 
       if (g === -1) { 
-        dibujarColumna(contPrev, null, "-1");
-        dibujarColumna(contActual, null, "0");
+        dibujarColumna(contPrev, "-1");
+        dibujarColumna(contActual, "0");
       } else { 
-        dibujarColumna(contPrev, null, "0");
-        dibujarColumna(contActual, null, "1");
+        dibujarColumna(contPrev, "0");
+        dibujarColumna(contActual, "1");
         document.querySelector('#col-grado-actual .col-header').textContent = "Grado 1° (Puente)";
       }
       btnPrev.disabled = (g === -1);
       btnNext.disabled = true; 
       document.querySelector('.info-ciclo').textContent = "Secuencia de Preescolar Integral";
     } else {
-      // LÓGICA DE ALINEACIÓN VERTICAL ESTÁNDAR
+      // LÓGICA ESTÁNDAR DE 3 COLUMNAS
       colNext.style.display = 'flex';
       const gPrev = (g - 1 < -1) ? null : String(g - 1);
       const gActual = String(g);
       const gNext = (g + 1 > 11) ? null : String(g + 1);
       
-      dibujarColumna(contPrev, null, gPrev);
-      dibujarColumna(contActual, null, gActual);
-      dibujarColumna(contNext, null, gNext);
+      dibujarColumna(contPrev, gPrev);
+      dibujarColumna(contActual, gActual);
+      dibujarColumna(contNext, gNext);
       
       btnPrev.disabled = (g <= -1);
       btnNext.disabled = (g >= 11);
@@ -78,10 +87,7 @@ window.ProgresionMotor = (function() {
     }
   }
 
-  /**
-   * Dibuja el contenido de cada columna individualmente
-   */
-  function dibujarColumna(contenedor, etiqueta, gradoStr) {
+  function dibujarColumna(contenedor, gradoStr) {
     const header = contenedor.previousElementSibling;
     contenedor.innerHTML = '';
     
@@ -92,27 +98,32 @@ window.ProgresionMotor = (function() {
     }
 
     header.textContent = formatearNombre(gradoStr);
+    
+    // Verificación de seguridad: ¿Los datos están en memoria?
+    const datosCargados = window.MallasData?.[estado.areaNombre]?.[gradoStr]?.[estado.tipo];
+    
+    if (!datosCargados) {
+      contenedor.innerHTML = `<div class="spinner-mini"></div><p class="texto-vacio">Cargando datos...</p>`;
+      return;
+    }
+
     const esPreescolar = (gradoStr === "0" || gradoStr === "-1");
     const datos = obtenerDatosAnuales(gradoStr, esPreescolar);
     
     if (datos.length === 0) {
-      contenedor.innerHTML = `<p class="texto-vacio">No hay datos registrados para este componente.</p>`;
+      contenedor.innerHTML = `<p class="texto-vacio">No hay registros para este componente.</p>`;
     } else {
       datos.forEach(texto => {
         const div = document.createElement('div');
         div.className = 'prog-estandar-item';
-        // En preescolar mostramos DBAs, en primaria Estándares
         div.innerHTML = esPreescolar ? `<strong>DBA:</strong> ${texto}` : texto;
         contenedor.appendChild(div);
       });
     }
   }
 
-  /**
-   * Filtra y deduplica los aprendizajes de todo el año
-   */
   function obtenerDatosAnuales(gradoStr, esPreescolar) {
-    const malla = window.MallasData?.[estado.area]?.[gradoStr]?.[estado.tipo];
+    const malla = window.MallasData?.[estado.areaNombre]?.[gradoStr]?.[estado.tipo];
     if (!malla || !malla.periodos) return [];
     
     let acumulado = [];
@@ -124,18 +135,15 @@ window.ProgresionMotor = (function() {
             else acumulado.push(it.dba);
           }
         } else {
-          // Si estamos viendo el puente desde transición, mostramos todo el estándar de 1°
           if (estado.gradoCentral === 0 && gradoStr === "1") {
             if (it.estandar) acumulado.push(it.estandar);
           } 
-          // Si no, filtramos estrictamente por el componente seleccionado
           else if (it.componente === estado.componente && it.estandar) {
             acumulado.push(it.estandar);
           }
         }
       });
     });
-    // Deduplicación para evitar ruido visual
     return [...new Set(acumulado)];
   }
 
@@ -145,10 +153,34 @@ window.ProgresionMotor = (function() {
     return `Grado ${g}°`;
   }
 
-  // Vinculación de eventos de control
+  function obtenerTipoMalla() {
+    const radio = document.querySelector('input[name="periodos"]:checked');
+    return radio && radio.value === "3" ? "3_periodos" : "4_periodos";
+  }
+
+  // --- NAVEGACIÓN ASÍNCRONA (Lazy Loading Integrado) ---
+
+  btnPrev.onclick = async () => {
+    estado.gradoCentral--;
+    const gNecesario = String(estado.gradoCentral - 1);
+    // Aseguramos el grado que entrará a la vista por la izquierda
+    if (estado.gradoCentral >= 0) {
+      await asegurarDatosGrado(estado.areaId, gNecesario);
+    }
+    renderizar();
+  };
+
+  btnNext.onclick = async () => {
+    estado.gradoCentral++;
+    const gNecesario = String(estado.gradoCentral + 1);
+    // Aseguramos el grado que entrará a la vista por la derecha
+    if (estado.gradoCentral < 11) {
+      await asegurarDatosGrado(estado.areaId, gNecesario);
+    }
+    renderizar();
+  };
+
   btnCerrar.onclick = cerrar;
-  btnPrev.onclick = () => { estado.gradoCentral--; renderizar(); };
-  btnNext.onclick = () => { estado.gradoCentral++; renderizar(); };
 
   return { abrir };
 })();
