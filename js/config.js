@@ -1,13 +1,11 @@
-// js/config.js - v5.6 (Configuración Maestra)
-
+// FILE: js/config.js | VERSION: v7.2 Stable
 /**
- * CONFIGURACIÓN GLOBAL DEL APLICATIVO
- * Centraliza la identidad visual y la estructura de archivos.
+ * CONFIGURACIÓN MAESTRA DEL PROYECTO ECO
+ * Centraliza la identidad de las áreas y el universo de grados.
  */
 
 window.APP_CONFIG = {
-  
-  // 1. ÁREAS NACIONALES: Configuración de colores, rutas e identidad
+  // ÁREAS: Definición de rutas y colores institucionales
   AREAS: {
     "matematicas": {
       nombre: "Matemáticas",
@@ -47,15 +45,16 @@ window.APP_CONFIG = {
     "proyecto-socioemocional": {
       nombre: "Proyecto Socioemocional",
       clase: "area-socioemocional",
-      color: "#9B7BB6", // Color Púrpura ECO
+      color: "#9B7BB6",
       carpeta: "Socioemocional",
       prefijo: "Socioemocional"
     }
   },
 
-  // 2. UNIVERSO DE GRADOS: Define qué niveles buscará el cargador
+  // Universo de grados soportados
   GRADOS: ["-1", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"],
 
-  // 3. ESTRUCTURA ACADÉMICA: Sufijo de los archivos JSON por defecto
+  // Estructura por defecto
   TIPO_MALLA: "4_periodos"
 };
+// END OF FILE: js/config.js | VERSION: v7.2 Stable
