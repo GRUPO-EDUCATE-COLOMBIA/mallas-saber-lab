@@ -1,4 +1,4 @@
-<!-- FILE: index.html | VERSION: v7.0 Stable -->
+<!-- FILE: index.html | VERSION: v7.1 Stable -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -16,14 +16,12 @@
   </header>
 
   <main id="main-eco">
-    <!-- Encabezado exclusivo para Impresión -->
     <div id="print-header" class="print-only-header">
       <h1 style="font-size: 2rem; border-bottom: 2px solid #000; padding-bottom: 5px;">REPORTE CURRICULAR NACIONAL</h1>
       <p style="margin-top: 5px;">Plataforma ECO - Grupo Edúcate Colombia</p>
       <p id="print-fecha-txt"></p>
     </div>
 
-    <!-- SECCIÓN DE FILTROS -->
     <section id="filtros" class="filtros no-print">
       <div class="filtro-grupo">
         <label>Mallas a</label>
@@ -67,13 +65,11 @@
       </div>
     </section>
 
-    <!-- SPINNER -->
     <div id="loading-overlay" class="loading-overlay no-print">
       <div class="spinner"></div>
       <p>Procesando información...</p>
     </div>
 
-    <!-- CONTENEDOR DE RESULTADOS -->
     <section id="resultados-principal" class="resultados">
       <div id="herramientas-resultados" class="contenedor-herramientas-reporte no-print">
         <button id="btn-imprimir" class="btn-secundario">🖨️ Imprimir Ficha de Consulta</button>
@@ -82,7 +78,6 @@
     </section>
   </main>
 
-  <!-- MODAL DE PROGRESIÓN -->
   <div id="overlay-progresion" class="overlay-progresion no-print">
     <div class="progresion-container">
       <div class="progresion-header">
@@ -102,7 +97,6 @@
     </div>
   </div>
 
-  <!-- NOTIFICACIONES -->
   <div id="modal-notificacion" class="modal-notificacion no-print">
     <div class="modal-notificacion-contenido">
       <span class="modal-icono">⚠️</span>
@@ -122,4 +116,4 @@
   <script src="js/print-engine.js"></script>
 </body>
 </html>
-<!-- END OF FILE: index.html | VERSION: v7.0 Stable -->
+<!-- END OF FILE: index.html | VERSION: v7.1 Stable -->
