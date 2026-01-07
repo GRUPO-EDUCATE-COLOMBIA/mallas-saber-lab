@@ -1,4 +1,4 @@
-<!-- FILE: index.html | VERSION: v6.5 Stable -->
+<!-- FILE: index.html | VERSION: v6.6 Stable -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,15 +10,16 @@
 </head>
 <body>
   
-  <header>
+  <header id="header-principal">
     <h1>Mallas Curriculares Nacionales</h1>
     <p>Grupo Edúcate Colombia - Dirección de Pedagogía</p>
   </header>
 
   <main>
-    <div class="print-only-header">
-      <h1>REPORTE CURRICULAR NACIONAL</h1>
-      <p>Generado por: Plataforma ECO - Grupo Edúcate Colombia</p>
+    <!-- Encabezado exclusivo para Impresión -->
+    <div id="print-header" class="print-only-header">
+      <h1 style="font-size: 2rem; border-bottom: 2px solid #000; padding-bottom: 10px;">REPORTE CURRICULAR NACIONAL</h1>
+      <p style="margin-top: 10px;">Generado por: Plataforma ECO - Grupo Edúcate Colombia</p>
       <p id="print-fecha-txt"></p>
     </div>
 
@@ -46,23 +47,17 @@
 
       <div class="filtro-grupo">
         <label for="grado">GRADO</label>
-        <select id="grado" disabled>
-          <option value="">Seleccionar</option>
-        </select>
+        <select id="grado" disabled><option value="">Seleccionar</option></select>
       </div>
 
       <div class="filtro-grupo">
         <label for="periodo">PERÍODO</label>
-        <select id="periodo" disabled>
-          <option value="">Seleccionar</option>
-        </select>
+        <select id="periodo" disabled><option value="">Seleccionar</option></select>
       </div>
 
       <div class="filtro-grupo">
         <label for="componente">COMPONENTE</label>
-        <select id="componente" disabled>
-          <option value="todos">Todos</option>
-        </select>
+        <select id="componente" disabled><option value="todos">Todos</option></select>
       </div>
 
       <div class="botones-container">
@@ -73,10 +68,10 @@
 
     <div id="loading-overlay" class="ocultar-inicial">
       <div class="spinner"></div>
-      <p>Procesando información curricular...</p>
+      <p>Procesando información...</p>
     </div>
 
-    <section id="resultados-principal" class="resultados ocultar-inicial">
+    <section id="resultados-principal" class="resultados">
       <div id="herramientas-resultados" class="contenedor-herramientas-reporte">
         <button id="btn-imprimir" class="btn-secundario">🖨️ Imprimir Ficha</button>
       </div>
@@ -84,10 +79,11 @@
     </section>
   </main>
 
+  <!-- MODAL DE PROGRESIÓN -->
   <div id="overlay-progresion" class="overlay-progresion">
     <div class="progresion-container">
       <div class="progresion-header">
-        <h2 id="prog-area-txt">PROGRESIÓN DE APRENDIZAJES</h2>
+        <h2 id="prog-area-txt">PROGRESIÓN</h2>
         <button id="btn-cerrar-progresion" class="btn-cerrar-overlay">Cerrar</button>
       </div>
       <div class="progresion-navegacion">
@@ -107,8 +103,8 @@
     <div class="modal-notificacion-contenido">
       <span class="modal-icono">⚠️</span>
       <h2 id="modal-titulo">Atención</h2>
-      <p id="modal-mensaje">Mensaje de error.</p>
-      <button id="btn-cerrar-modal" class="btn-buscar">Entendido</button>
+      <p id="modal-mensaje"></p>
+      <button id="btn-cerrar-modal" class="btn-buscar" style="margin-top:20px;">Entendido</button>
     </div>
   </div>
 
@@ -120,7 +116,6 @@
   <script src="js/render-progresion.js"></script>
   <script src="js/ui-filtros.js"></script>
   <script src="js/print-engine.js"></script>
-
 </body>
 </html>
-<!-- END OF FILE: index.html | VERSION: v6.5 Stable -->
+<!-- END OF FILE: index.html | VERSION: v6.6 Stable -->
