@@ -1,120 +1,4 @@
-/* style/* --- REDISEÑO PREMIUM PROGRESIÓN v6.0 --- */
-
-/* Fondo oscuro con desenfoque para centrar la atención */
-.overlay-progresion {
-  display: none;
-  position: fixed;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: rgba(13, 61, 102, 0.9); /* Azul profundo translúcido */
-  backdrop-filter: blur(8px);
-  z-index: 2000;
-  padding: 20px;
-  justify-content: center; align-items: center;
-}
-
-/* Contenedor principal */
-.progresion-container {
-  background: #f4f7f9;
-  width: 98%; max-width: 1400px;
-  height: 90vh;
-  border-radius: 20px;
-  display: flex; flex-direction: column;
-  overflow: hidden;
-  box-shadow: 0 25px 50px rgba(0,0,0,0.5);
-}
-
-/* Encabezado Satinado del Modal */
-.progresion-header {
-  background: linear-gradient(180deg, #1a5b96 0%, #082b4a 100%);
-  color: white; padding: 1.2rem 2rem;
-  display: flex; justify-content: space-between; align-items: center;
-  border-bottom: 4px solid var(--eco-green);
-}
-
-.progresion-header h2 { 
-  font-size: 1.5rem; text-transform: uppercase; letter-spacing: 1px; 
-}
-
-/* Barra de Navegación entre Ciclos */
-.progresion-navegacion {
-  background: white;
-  padding: 10px;
-  display: flex; justify-content: center; align-items: center;
-  gap: 20px; border-bottom: 1px solid #ddd;
-}
-
-.btn-nav {
-  background: var(--eco-dark); color: white;
-  border: none; width: 40px; height: 40px;
-  border-radius: 50%; cursor: pointer;
-  font-size: 1.2rem; display: flex; align-items: center; justify-content: center;
-  transition: all 0.3s ease;
-}
-
-.btn-nav:hover:not(:disabled) { background: var(--eco-green); transform: scale(1.1); }
-.btn-nav:disabled { opacity: 0.3; cursor: not-allowed; }
-
-.info-ciclo { font-weight: 700; color: var(--eco-dark); text-transform: uppercase; font-size: 0.9rem; }
-
-/* Columnas de Grados */
-.progresion-columnas {
-  display: flex; flex: 1; overflow-x: auto;
-  padding: 20px; gap: 20px; background: #e9ecef;
-}
-
-.col-prog {
-  flex: 1; min-width: 350px;
-  background: white; border-radius: 15px;
-  display: flex; flex-direction: column;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-  border: 1px solid #dee2e6;
-}
-
-/* Header de cada columna */
-.col-header {
-  background: #ffffff; padding: 15px;
-  text-align: center; font-weight: 700;
-  font-size: 1.3rem; color: #1a5b96;
-  border-bottom: 3px solid #eee;
-  border-radius: 15px 15px 0 0;
-}
-
-/* Columna del grado que el usuario consultó (Destacada) */
-.col-prog.actual {
-  border: 3px solid var(--eco-green);
-  transform: scale(1.02);
-  z-index: 10;
-}
-.col-prog.actual .col-header { background: #e8f5f3; color: #006b5d; }
-
-/* Contenido de los estándares */
-.col-content {
-  padding: 20px; overflow-y: auto; flex: 1;
-}
-
-/* Item individual de aprendizaje */
-.prog-estandar-item {
-  background: #f8f9fa;
-  border-left: 5px solid var(--eco-teal);
-  padding: 15px; margin-bottom: 15px;
-  border-radius: 0 10px 10px 0;
-  font-size: 1.05rem; line-height: 1.5;
-  color: #333; box-shadow: 2px 2px 5px rgba(0,0,0,0.02);
-}
-
-/* Botón Cerrar */
-.btn-cerrar-overlay {
-  background: #ff4d4d; color: white; border: none;
-  padding: 8px 20px; border-radius: 5px; cursor: pointer;
-  font-weight: 700; text-transform: uppercase;
-  transition: background 0.3s;
-}
-.btn-cerrar-overlay:hover { background: #cc0000; }
-
-/* Scrollbar Personalizado para las columnas */
-.col-content::-webkit-scrollbar { width: 6px; }
-.col-content::-webkit-scrollbar-track { background: #f1f1f1; }
-.col-content::-webkit-scrollbar-thumb { background: #ccc; border-radius: 10px; }s.css - v5.8 FINAL STABLE - FIX IMPRESIÓN Y ECO */
+/* styles.css - v6.1 STABLE - HITO 1 COMPLETE */
 
 :root {
   --eco-purple: #9B7BB6; --eco-teal: #00A19B; --eco-dark: #17334B; --eco-green: #54BBAB;
@@ -122,283 +6,109 @@
 
 /* --- REGLAS BASE --- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Barlow Condensed', sans-serif; background: #f4f7f9; font-size: 1.2rem; }
+body { font-family: 'Barlow Condensed', sans-serif; background: #f4f7f9; font-size: 1.2rem; line-height: 1.4; }
 
-.overlay-progresion, .modal-error-full, .ocultar-inicial, .resultados { display: none !important; }
+.ocultar-inicial, .resultados { display: none !important; }
 .mostrar-flex { display: flex !important; }
 .mostrar-block { display: block !important; }
 
-/* --- HEADER SATINADO AZUL --- */
+/* --- HEADER REDUCIDO (HITO 1) --- */
 header {
-  text-align: center; padding: 2.5rem 1rem;
+  text-align: center; padding: 1rem;
   background: linear-gradient(180deg, #1a5b96 0%, #0d3d66 50%, #082b4a 100%);
-  color: white; position: relative; overflow: hidden;
-  box-shadow: inset 0 -5px 15px rgba(0,0,0,0.4), 0 5px 15px rgba(0,0,0,0.2);
+  color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
-header::after {
-  content: ""; position: absolute; top: 0; left: -100%; width: 40%; height: 100%;
-  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0) 100%);
-  transform: skewX(-25deg); animation: barrido-satinado 8s infinite;
-}
-@keyframes barrido-satinado { 0% { left: -100%; } 30% { left: 150%; } 100% { left: 150%; } }
+header h1 { font-size: 1.6rem; text-transform: uppercase; }
+header p { font-size: 0.9rem; opacity: 0.8; }
 
-main { max-width: 1300px; margin: 0 auto; padding: 1.5rem 1rem; }
+main { max-width: 1300px; margin: 0 auto; padding: 1rem; }
 
-/* --- FILTROS --- */
+/* --- FILTROS NO FIJOS --- */
 .filtros {
-  background: white; padding: 1.5rem 2rem; border-radius: 12px;
-  display: flex; flex-wrap: wrap; justify-content: center; gap: 1.2rem;
-  position: sticky; top: 0; z-index: 1000; border-bottom: 3px solid var(--eco-green);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  background: white; padding: 1.2rem; border-radius: 12px;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;
+  margin-bottom: 1.5rem; border-bottom: 3px solid var(--eco-green);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
-.filtro-grupo { display: flex; flex-direction: column; gap: 0.3rem; min-width: 170px; }
-.filtros label { font-weight: 700; font-size: 0.9rem; text-transform: uppercase; color: #555; }
-.filtros select { padding: 0.7rem; border: 2px solid #e1e5e9; border-radius: 8px; font-family: 'Barlow Condensed'; font-size: 1.1rem; }
+.filtro-grupo { display: flex; flex-direction: column; gap: 0.2rem; min-width: 150px; }
+.filtros label { font-weight: 700; font-size: 0.85rem; text-transform: uppercase; color: #555; }
+.filtros select { padding: 0.6rem; border: 2px solid #e1e5e9; border-radius: 8px; font-family: 'Barlow Condensed'; font-size: 1.1rem; }
 
-/* BOTÓN IMPRESIÓN A LA DERECHA */
-#herramientas-resultados { display: flex; justify-content: flex-end; margin-bottom: 1rem; }
+.radios-periodos { display: flex; gap: 10px; font-size: 0.9rem; margin-top: 5px; }
 
-/* BOTONES */
-.btn-buscar { background: #11678B; color: white; height: 48px; padding: 0 1.8rem; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 1.1rem; }
-.btn-secundario { background: var(--eco-teal); color: white; height: 48px; padding: 0 1.8rem; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; }
-.btn-progresion { background: var(--eco-purple); color: white; height: 48px; padding: 0 1.8rem; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; }
+/* --- BOTONES --- */
+.botones-container { display: flex; align-items: flex-end; gap: 10px; }
+.btn-buscar { background: #11678B; color: white; height: 45px; padding: 0 1.5rem; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 1.1rem; }
+.btn-secundario { background: var(--eco-teal); color: white; height: 40px; padding: 0 1.2rem; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; }
 
-/* RESULTADOS */
-.item-malla { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 2.5rem; }
-.item-malla h3 { text-align: center; padding: 1.5rem; font-size: 1.8rem; color: white; text-transform: uppercase; }
+/* Botón Progresión con Estado Inhabilitado */
+.btn-progresion { background: var(--eco-purple); color: white; height: 45px; padding: 0 1.5rem; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; }
+.btn-progresion:disabled { background: #ccc !important; cursor: not-allowed; opacity: 0.6; }
 
-/* COLORES ÁREAS */
+/* --- RESULTADOS --- */
+.contenedor-herramientas-reporte { display: flex; justify-content: flex-end; padding: 10px 0; margin-bottom: 1rem; border-bottom: 1px solid #eee; }
+.item-malla { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 2rem; border: 1px solid #eee; }
+.item-malla h3 { text-align: center; padding: 1rem; font-size: 1.6rem; color: white; text-transform: uppercase; }
+
+/* Colores Áreas */
 .area-matematicas .item-malla h3 { background-color: #F07F3C; }
 .area-lenguaje .item-malla h3 { background-color: #FBBB21; }
 .area-sociales .item-malla h3 { background-color: #3974B9; }
 .area-naturales .item-malla h3 { background-color: #95C11F; }
 .area-ingles .item-malla h3 { background-color: #8257A0; }
-.area-socioemocional .item-malla h3 { background-color: var(--eco-purple); } /* FIX ECO COLOR */
+.area-socioemocional .item-malla h3 { background-color: var(--eco-purple); }
 
-.item-malla-contenido { padding: 2rem 3rem; }
-.campo { margin-bottom: 1.5rem; }
-.campo strong { display: block; font-size: 1rem; color: #888; text-transform: uppercase; margin-bottom: 0.4rem; }
+.item-malla-contenido { padding: 1.5rem 2.5rem; }
+.campo { margin-bottom: 1.2rem; }
+.campo strong { display: block; font-size: 0.9rem; color: #888; text-transform: uppercase; margin-bottom: 0.3rem; }
 
-/* ACORDEONES */
-.contenedor-acordeon { margin-top: 1.5rem; border-top: 1px solid #eee; padding-top: 1.5rem; }
-.acordeon-header { display: flex; align-items: center; cursor: pointer; padding: 10px; border-radius: 50px; }
-.acordeon-header:hover { background: #f8f9fa; }
-.acordeon-icono-btn {
-  width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
-  color: white; margin-right: 20px; font-size: 1.4rem; animation: pulso 2.5s infinite;
+/* --- SPINNER DE CARGA --- */
+#loading-overlay {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(255,255,255,0.85); z-index: 5000;
+  display: none; flex-direction: column; align-items: center; justify-content: center;
 }
-@keyframes pulso { 0% { transform: scale(1); } 50% { transform: scale(1.08); } 100% { transform: scale(1); } }
-.acordeon-panel { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; }
-.acordeon-panel.abierto { max-height: 2500px; padding: 1.5rem 0; }
-.contenido-interno { background: #fcfcfc; border-radius: 12px; padding: 2rem; border: 1px solid #eee; }
-
-/* DICCIONARIO */
-.btn-eco-dic { display: inline-block !important; background: var(--eco-teal) !important; color: white !important; padding: 15px 30px !important; border-radius: 8px !important; text-decoration: none !important; font-weight: 700 !important; margin-top: 1.5rem; }
-
-/* --- ARQUITECTURA DE IMPRESIÓN (FIX PAGINA EN BLANCO) --- */
-@media print {
-  /* Reseteo absoluto para eliminar la página en blanco inicial */
-  html, body { 
-    margin: 0 !important; 
-    padding: 0 !important; 
-    background: white !important; 
-    height: auto !important;
-  }
-  
-  main { 
-    margin: 0 !important; 
-    padding: 0 !important; 
-    max-width: 100% !important; 
-  }
-
-  header, .filtros, #herramientas-resultados, .btn-eco-dic, .botones-container { 
-    display: none !important; 
-  }
-
-  .print-only-header { 
-    display: block !important; 
-    text-align: center; 
-    padding-top: 0 !important; /* Iniciar al borde superior */
-    margin-bottom: 2rem; 
-    border-bottom: 2px solid #000; 
-  }
-
-  .item-malla { 
-    break-inside: avoid; 
-    border: 1px solid #ccc !important; 
-    box-shadow: none !important;
-  }
-
-  .acordeon-panel { 
-    max-height: none !important; 
-    display: block !important; 
-    opacity: 1 !important;
-  }
+.spinner {
+  width: 60px; height: 60px; border: 6px solid #f3f3f3;
+  border-top: 6px solid var(--eco-green); border-radius: 50%;
+  animation: spin 1s linear infinite; margin-bottom: 15px;
 }
-.print-only-header { display: none; }
-/* --- FIX MODAL PROGRESIÓN --- */
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+/* --- BOTÓN FLOTANTE TOP --- */
+.btn-flotante-top {
+  display: none; position: fixed; bottom: 30px; right: 30px;
+  width: 55px; height: 55px; background: var(--eco-green);
+  color: white; border: none; border-radius: 50%; font-size: 1.6rem;
+  cursor: pointer; box-shadow: 0 5px 15px rgba(0,0,0,0.3); z-index: 3000;
+}
+
+/* --- MODAL PROGRESIÓN PREMIUM --- */
 .overlay-progresion {
-    display: none; /* Se activa con JS */
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0,0,0,0.85);
-    z-index: 9999;
-    justify-content: center; align-items: center;
-    backdrop-filter: blur(5px);
+  display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(13, 61, 102, 0.9); backdrop-filter: blur(8px); z-index: 4000;
+  padding: 20px; justify-content: center; align-items: center;
 }
-
 .progresion-container {
-    background: white;
-    width: 95%; height: 90%;
-    border-radius: 15px;
-    display: flex; flex-direction: column;
-    overflow: hidden;
-    position: relative;
+  background: #f4f7f9; width: 98%; max-width: 1400px; height: 90vh;
+  border-radius: 20px; display: flex; flex-direction: column; overflow: hidden;
 }
-
-.progresion-header {
-    background: var(--eco-dark);
-    color: white; padding: 1.5rem;
-    display: flex; justify-content: space-between; align-items: center;
-}
-
-.progresion-columnas {
-    display: flex; flex: 1; overflow-x: auto; gap: 10px; padding: 20px;
-    background: #e9ecef;
-}
-
-.col-prog {
-    flex: 1; min-width: 300px; background: white;
-    border-radius: 10px; display: flex; flex-direction: column;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.col-header {
-    background: #f8f9fa; padding: 15px; text-align: center;
-    font-weight: 700; border-bottom: 2px solid var(--eco-green);
-}
-
-.col-content { padding: 15px; overflow-y: auto; flex: 1; font-size: 0.95rem; }
-
-.prog-estandar-item {
-    background: #fdfdfd; border: 1px solid #eee;
-    padding: 10px; margin-bottom: 10px; border-radius: 5px;
-    line-height: 1.4;
-}
-/* --- REDISEÑO PREMIUM PROGRESIÓN v6.0 --- */
-
-/* Fondo oscuro con desenfoque para centrar la atención */
-.overlay-progresion {
-  display: none;
-  position: fixed;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: rgba(13, 61, 102, 0.9); /* Azul profundo translúcido */
-  backdrop-filter: blur(8px);
-  z-index: 2000;
-  padding: 20px;
-  justify-content: center; align-items: center;
-}
-
-/* Contenedor principal */
-.progresion-container {
-  background: #f4f7f9;
-  width: 98%; max-width: 1400px;
-  height: 90vh;
-  border-radius: 20px;
-  display: flex; flex-direction: column;
-  overflow: hidden;
-  box-shadow: 0 25px 50px rgba(0,0,0,0.5);
-}
-
-/* Encabezado Satinado del Modal */
 .progresion-header {
   background: linear-gradient(180deg, #1a5b96 0%, #082b4a 100%);
-  color: white; padding: 1.2rem 2rem;
-  display: flex; justify-content: space-between; align-items: center;
-  border-bottom: 4px solid var(--eco-green);
+  color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center;
 }
+.progresion-columnas { display: flex; flex: 1; overflow-x: auto; padding: 20px; gap: 20px; background: #e9ecef; }
+.col-prog { flex: 1; min-width: 350px; background: white; border-radius: 15px; display: flex; flex-direction: column; border: 1px solid #dee2e6; }
+.col-prog.actual { border: 3px solid var(--eco-green); transform: scale(1.02); z-index: 10; }
+.col-header { padding: 15px; text-align: center; font-weight: 700; font-size: 1.2rem; border-bottom: 2px solid #eee; }
+.col-content { padding: 20px; overflow-y: auto; flex: 1; }
+.prog-estandar-item { background: #f8f9fa; border-left: 5px solid var(--eco-teal); padding: 12px; margin-bottom: 12px; border-radius: 0 8px 8px 0; font-size: 1rem; }
 
-.progresion-header h2 { 
-  font-size: 1.5rem; text-transform: uppercase; letter-spacing: 1px; 
+/* --- IMPRESIÓN --- */
+@media print {
+  header, .filtros, .btn-flotante-top, .contenedor-herramientas-reporte { display: none !important; }
+  .print-only-header { display: block !important; text-align: center; border-bottom: 2px solid #000; margin-bottom: 20px; }
+  .item-malla { break-inside: avoid; border: 1px solid #ccc !important; box-shadow: none !important; }
+  body { background: white !important; }
 }
-
-/* Barra de Navegación entre Ciclos */
-.progresion-navegacion {
-  background: white;
-  padding: 10px;
-  display: flex; justify-content: center; align-items: center;
-  gap: 20px; border-bottom: 1px solid #ddd;
-}
-
-.btn-nav {
-  background: var(--eco-dark); color: white;
-  border: none; width: 40px; height: 40px;
-  border-radius: 50%; cursor: pointer;
-  font-size: 1.2rem; display: flex; align-items: center; justify-content: center;
-  transition: all 0.3s ease;
-}
-
-.btn-nav:hover:not(:disabled) { background: var(--eco-green); transform: scale(1.1); }
-.btn-nav:disabled { opacity: 0.3; cursor: not-allowed; }
-
-.info-ciclo { font-weight: 700; color: var(--eco-dark); text-transform: uppercase; font-size: 0.9rem; }
-
-/* Columnas de Grados */
-.progresion-columnas {
-  display: flex; flex: 1; overflow-x: auto;
-  padding: 20px; gap: 20px; background: #e9ecef;
-}
-
-.col-prog {
-  flex: 1; min-width: 350px;
-  background: white; border-radius: 15px;
-  display: flex; flex-direction: column;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-  border: 1px solid #dee2e6;
-}
-
-/* Header de cada columna */
-.col-header {
-  background: #ffffff; padding: 15px;
-  text-align: center; font-weight: 700;
-  font-size: 1.3rem; color: #1a5b96;
-  border-bottom: 3px solid #eee;
-  border-radius: 15px 15px 0 0;
-}
-
-/* Columna del grado que el usuario consultó (Destacada) */
-.col-prog.actual {
-  border: 3px solid var(--eco-green);
-  transform: scale(1.02);
-  z-index: 10;
-}
-.col-prog.actual .col-header { background: #e8f5f3; color: #006b5d; }
-
-/* Contenido de los estándares */
-.col-content {
-  padding: 20px; overflow-y: auto; flex: 1;
-}
-
-/* Item individual de aprendizaje */
-.prog-estandar-item {
-  background: #f8f9fa;
-  border-left: 5px solid var(--eco-teal);
-  padding: 15px; margin-bottom: 15px;
-  border-radius: 0 10px 10px 0;
-  font-size: 1.05rem; line-height: 1.5;
-  color: #333; box-shadow: 2px 2px 5px rgba(0,0,0,0.02);
-}
-
-/* Botón Cerrar */
-.btn-cerrar-overlay {
-  background: #ff4d4d; color: white; border: none;
-  padding: 8px 20px; border-radius: 5px; cursor: pointer;
-  font-weight: 700; text-transform: uppercase;
-  transition: background 0.3s;
-}
-.btn-cerrar-overlay:hover { background: #cc0000; }
-
-/* Scrollbar Personalizado para las columnas */
-.col-content::-webkit-scrollbar { width: 6px; }
-.col-content::-webkit-scrollbar-track { background: #f1f1f1; }
-.col-content::-webkit-scrollbar-thumb { background: #ccc; border-radius: 10px; }
+.print-only-header { display: none; }
