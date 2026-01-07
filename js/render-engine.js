@@ -1,4 +1,4 @@
-// FILE: js/render-engine.js | VERSION: v6.9 Stable
+// FILE: js/render-engine.js | VERSION: v7.2 Stable
 
 window.RenderEngine = (function() {
   const containerMalla = document.getElementById('contenedor-malla');
@@ -13,7 +13,6 @@ window.RenderEngine = (function() {
   function renderizar(items, areaId, grado, periodo) {
     const resSec = document.getElementById('resultados-principal');
     if (resSec) resSec.classList.add('mostrar-block');
-    
     if (!containerMalla) return;
 
     containerMalla.innerHTML = items.map(item => {
@@ -29,14 +28,19 @@ window.RenderEngine = (function() {
     const tipo = window.APP_CONFIG.TIPO_MALLA;
     const configArea = window.APP_CONFIG.AREAS[areaId];
     const colorArea = configArea.color;
-
-    const llaveT = `Tareas_DCE_${configArea.nombre}`;
-    const dceData = window.MallasData[llaveT]?.[grado]?.[tipo];
+    
+    // INTEGRIDAD: Uso de llaves normalizadas para el cruce de datos
+    const llaveNormal = normalizarTexto(configArea.nombre);
+    
+    // Cruce DCE (Metodología)
+    const llaveDCE = `tareas_dce_${llaveNormal}`;
+    const dceData = window.MallasData[llaveDCE]?.[grado]?.[tipo];
     const dcePer = dceData?.periodos?.find(p => String(p.periodo_id) === String(periodo));
-    const infoDCE = dcePer?.componentes?.find(c => c.nombre === (item.componente || item.competencia));
+    const infoDCE = dcePer?.componentes?.find(c => normalizarTexto(c.nombre) === normalizarTexto(item.componente || item.competencia));
 
-    const nombreEco = window.APP_CONFIG.AREAS["proyecto-socioemocional"].nombre;
-    const ecoData = window.MallasData[nombreEco]?.[grado]?.[tipo];
+    // Cruce ECO (Socioemocional Transversal)
+    const llaveEcoNormal = normalizarTexto(window.APP_CONFIG.AREAS["proyecto-socioemocional"].nombre);
+    const ecoData = window.MallasData[llaveEcoNormal]?.[grado]?.[tipo];
     const ecoPer = ecoData?.periodos?.[periodo];
     const infoECO = ecoPer && ecoPer.length > 0 ? ecoPer[0] : null;
 
@@ -52,6 +56,7 @@ window.RenderEngine = (function() {
           <div class="campo"><strong>Evidencias de Aprendizaje:</strong><div>${validarDato(item.evidencias)}</div></div>
           <div class="campo"><strong>Saberes / Contenidos:</strong><div>${validarDato(item.saberes)}</div></div>
 
+          <!-- BLOQUE INTEGRACIÓN DCE -->
           <div class="franja-integracion integracion-dce">
             <span style="font-size:1.6rem; margin-right:15px;">💡</span> GUÍA DIDÁCTICA: ${infoDCE ? infoDCE.la_estrategia : 'Capa Metodológica'}
           </div>
@@ -69,6 +74,7 @@ window.RenderEngine = (function() {
             <div class="campo"><strong>Un Refuerzo:</strong><div>${validarDato(infoDCE?.un_refuerzo)}</div></div>
           </div>
 
+          <!-- BLOQUE INTEGRACIÓN ECO -->
           <div class="franja-integracion integracion-eco">
             <span style="font-size:1.6rem; margin-right:15px;">🧠</span> RESPONSABILIDAD SOCIOEMOCIONAL ECO
           </div>
@@ -79,7 +85,6 @@ window.RenderEngine = (function() {
           </div>
 
           <div style="text-align:center; margin-top:2.5rem;">
-            <!-- CLASE btn-eco-dic PARA EL ESTILO DE BOTÓN -->
             <a href="eco/diccionario/eco_dic_${grado}.html" target="_blank" class="btn-eco-dic">Consultar Diccionario ECO</a>
           </div>
         </div>
@@ -113,4 +118,4 @@ window.RenderEngine = (function() {
 
   return { renderizar, setCargando };
 })();
-// END OF FILE: js/render-engine.js | VERSION: v6.9 Stable
+// END OF FILE: js/render-engine.js | VERSION: v7.2 Stable
