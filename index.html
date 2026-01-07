@@ -1,4 +1,4 @@
-<!-- FILE: index.html | VERSION: v6.7 Stable -->
+<!-- FILE: index.html | VERSION: v6.8 Stable -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -16,14 +16,12 @@
   </header>
 
   <main>
-    <!-- Encabezado exclusivo para Impresión -->
     <div id="print-header" class="print-only-header">
-      <h1 style="font-size: 2rem; border-bottom: 2px solid #000; padding-bottom: 10px;">REPORTE CURRICULAR NACIONAL</h1>
-      <p style="margin-top: 10px;">Generado por: Plataforma ECO - Grupo Edúcate Colombia</p>
+      <h1>REPORTE CURRICULAR NACIONAL</h1>
+      <p>Generado por: Plataforma ECO - Grupo Edúcate Colombia</p>
       <p id="print-fecha-txt"></p>
     </div>
 
-    <!-- SECCIÓN DE FILTROS -->
     <section id="filtros" class="filtros">
       <div class="filtro-grupo">
         <label>Mallas a</label>
@@ -67,15 +65,12 @@
       </div>
     </section>
 
-    <!-- SPINNER DE CARGA -->
     <div id="loading-overlay" class="ocultar-inicial">
       <div class="spinner"></div>
       <p>Procesando información...</p>
     </div>
 
-    <!-- CONTENEDOR DE RESULTADOS -->
     <section id="resultados-principal" class="resultados">
-      <!-- Botón de Impresión Restaurado a la Derecha con Estilo -->
       <div id="herramientas-resultados" class="contenedor-herramientas-reporte">
         <button id="btn-imprimir" class="btn-secundario">🖨️ Imprimir Ficha de Consulta</button>
       </div>
@@ -103,7 +98,7 @@
     </div>
   </div>
 
-  <!-- NOTIFICACIONES -->
+  <!-- MODAL DE NOTIFICACIONES (FIX POSICIÓN) -->
   <div id="modal-notificacion" class="modal-notificacion">
     <div class="modal-notificacion-contenido">
       <span class="modal-icono">⚠️</span>
@@ -123,4 +118,4 @@
   <script src="js/print-engine.js"></script>
 </body>
 </html>
-<!-- END OF FILE: index.html | VERSION: v6.7 Stable -->
+<!-- END OF FILE: index.html | VERSION: v6.8 Stable -->
