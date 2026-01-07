@@ -1,4 +1,4 @@
-// FILE: js/ui-filtros.js | VERSION: v6.2 Stable
+// FILE: js/ui-filtros.js | VERSION: v6.3 Stable
 document.addEventListener('DOMContentLoaded', () => {
   const areaSel = document.getElementById('area');
   const gradoSel = document.getElementById('grado');
@@ -7,75 +7,51 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnBuscar = document.getElementById('btn-buscar');
   const btnProg = document.getElementById('btn-progresion');
   const btnTop = document.getElementById('btn-top');
-  const radioPeriodos = document.querySelectorAll('input[name="periodos"]');
+  
+  const modal = document.getElementById('modal-notificacion');
+  const modalMsg = document.getElementById('modal-mensaje');
+  const btnCerrarModal = document.getElementById('btn-cerrar-modal');
 
-  // INICIALIZACIÓN DE ESTADOS
-  validarEstadoBotones();
+  // Inicialización
+  btnProg.disabled = true;
 
-  // 1. BOTÓN VOLVER ARRIBA
-  window.onscroll = function() {
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-      btnTop.style.display = "block";
-    } else {
-      btnTop.style.display = "none";
-    }
-  };
-
-  btnTop.onclick = function() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  // 2. FUNCIÓN DE VALIDACIÓN DE ESTADOS
-  function validarEstadoBotones() {
-    const areaCargada = areaSel.value;
-    const gradoCargado = gradoSel.value;
-    // El botón se habilita solo si ambos tienen selección
-    btnProg.disabled = !(areaCargada && gradoCargado);
+  function mostrarError(mensaje) {
+    modalMsg.textContent = mensaje;
+    modal.style.display = 'flex';
   }
 
-  // 3. EVENTOS DE SELECTORES
-  radioPeriodos.forEach(radio => {
-    radio.addEventListener('change', (e) => {
-      window.APP_CONFIG.TIPO_MALLA = e.target.value === "3" ? "3_periodos" : "4_periodos";
-      if (areaSel.value) {
-        gradoSel.value = "";
-        periodoSel.innerHTML = '<option value="">Seleccionar</option>';
-        periodoSel.disabled = true;
-      }
-      validarEstadoBotones();
-    });
-  });
+  btnCerrarModal.onclick = () => modal.style.display = 'none';
+
+  window.onscroll = () => {
+    btnTop.style.display = (window.scrollY > 300) ? "block" : "none";
+  };
+
+  btnTop.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
   areaSel.addEventListener('change', () => {
     gradoSel.innerHTML = '<option value="">Seleccionar</option>';
-    if (!areaSel.value) {
-        gradoSel.disabled = true;
-    } else {
-        window.APP_CONFIG.GRADOS.forEach(g => {
-          const opt = document.createElement('option'); opt.value = g;
-          opt.textContent = g === "0" ? "Transición (0)" : (g === "-1" ? "Jardín (-1)" : g + "°");
-          gradoSel.appendChild(opt);
-        });
-        gradoSel.disabled = false;
+    if (areaSel.value) {
+      window.APP_CONFIG.GRADOS.forEach(g => {
+        const opt = document.createElement('option'); opt.value = g;
+        opt.textContent = g === "0" ? "Transición (0)" : (g === "-1" ? "Jardín (-1)" : g + "°");
+        gradoSel.appendChild(opt);
+      });
+      gradoSel.disabled = false;
     }
-    periodoSel.disabled = true;
-    compSel.disabled = true;
-    validarEstadoBotones();
+    btnProg.disabled = !(areaSel.value && gradoSel.value);
   });
 
   gradoSel.addEventListener('change', () => {
-    if (!gradoSel.value) {
-        periodoSel.disabled = true;
-    } else {
-        const numMax = window.APP_CONFIG.TIPO_MALLA === "3_periodos" ? 3 : 4;
-        periodoSel.innerHTML = '<option value="">Seleccionar</option>';
-        for (let i = 1; i <= numMax; i++) {
-          const opt = document.createElement('option'); opt.value = String(i); opt.textContent = `${i}° período`;
-          periodoSel.appendChild(opt);
-        }
-        periodoSel.disabled = false;
+    periodoSel.innerHTML = '<option value="">Seleccionar</option>';
+    if (gradoSel.value) {
+      const max = window.APP_CONFIG.TIPO_MALLA === "3_periodos" ? 3 : 4;
+      for (let i = 1; i <= max; i++) {
+        const opt = document.createElement('option'); opt.value = i; opt.textContent = `${i}° periodo`;
+        periodoSel.appendChild(opt);
+      }
+      periodoSel.disabled = false;
     }
-    validarEstadoBotones();
+    btnProg.disabled = !(areaSel.value && gradoSel.value);
   });
 
   periodoSel.addEventListener('change', async () => {
@@ -85,65 +61,55 @@ document.addEventListener('DOMContentLoaded', () => {
     if (exito) {
       const areaNom = window.APP_CONFIG.AREAS[areaSel.value].nombre;
       const tipo = window.APP_CONFIG.TIPO_MALLA;
-      const malla = window.MallasData[areaNom][gradoSel.value][tipo];
-      const items = malla.periodos[periodoSel.value] || [];
+      const items = window.MallasData[areaNom][gradoSel.value][tipo].periodos[periodoSel.value] || [];
       compSel.innerHTML = '<option value="todos">Todos</option>';
       [...new Set(items.map(it => it.componente || it.competencia))].forEach(n => {
-        if(n) { const opt = document.createElement('option'); opt.value = n; opt.textContent = n; compSel.appendChild(opt); }
+        const opt = document.createElement('option'); opt.value = n; opt.textContent = n; compSel.appendChild(opt);
       });
       compSel.disabled = false;
+    } else {
+      mostrarError("El archivo de este grado no se encuentra disponible en el servidor.");
     }
     window.RenderEngine.setCargando(false);
   });
 
-  // 4. ACCIÓN DE CONSULTA (REFORZADA)
   btnBuscar.addEventListener('click', () => {
-    const areaId = areaSel.value;
-    const grado = gradoSel.value;
-    const periodo = periodoSel.value;
-
-    if (!areaId || !grado || !periodo) {
-        alert("Por favor, seleccione todos los campos antes de consultar.");
-        return;
+    if (!areaSel.value || !gradoSel.value || !periodoSel.value) {
+      mostrarError("Revise los criterios de consulta: Debe seleccionar Área, Grado y Periodo.");
+      return;
     }
-
-    const config = window.APP_CONFIG.AREAS[areaId];
+    const config = window.APP_CONFIG.AREAS[areaSel.value];
     const tipo = window.APP_CONFIG.TIPO_MALLA;
-    
-    // Verificación de existencia de datos en memoria
-    if (!window.MallasData[config.nombre] || !window.MallasData[config.nombre][grado]) {
-        alert("Los datos aún no se han cargado. Por favor, espere un momento o reintente.");
-        return;
+    const malla = window.MallasData[config.nombre]?.[gradoSel.value]?.[tipo];
+
+    if (!malla) {
+      mostrarError("Error crítico: No se pudieron recuperar los datos del servidor.");
+      return;
     }
 
-    const malla = window.MallasData[config.nombre][grado][tipo];
-    const items = malla.periodos[periodo] || [];
+    const items = malla.periodos[periodoSel.value] || [];
     const filtrados = compSel.value === "todos" ? items : items.filter(it => (it.componente || it.competencia) === compSel.value);
     
-    window.RenderEngine.renderizar(filtrados, areaId, grado, periodo);
-    
-    const resPrincipal = document.getElementById('resultados-principal');
-    resPrincipal.classList.add('mostrar-block');
-    resPrincipal.className = `resultados mostrar-block ${config.clase}`;
-    
-    // Desplazamiento automático para ver resultados
-    setTimeout(() => {
-        window.scrollBy({ top: 250, behavior: 'smooth' });
-    }, 100);
+    window.RenderEngine.renderizar(filtrados, areaSel.value, gradoSel.value, periodoSel.value);
+    document.getElementById('resultados-principal').classList.add('mostrar-block');
+    window.scrollBy({ top: 200, behavior: 'smooth' });
   });
 
   btnProg.addEventListener('click', async () => {
     window.RenderEngine.setCargando(true);
-    const areaId = areaSel.value;
-    const config = window.APP_CONFIG.AREAS[areaId];
-    const gCentral = parseInt(gradoSel.value);
-    let gradosCarga = [String(gCentral)];
-    if (gCentral > 1) gradosCarga.push(String(gCentral - 1));
-    if (gCentral < 11) gradosCarga.push(String(gCentral + 1));
-    if (gCentral <= 0) gradosCarga.push("-1", "0", "1");
-    await Promise.all(gradosCarga.map(g => asegurarDatosGrado(areaId, g)));
-    window.ProgresionMotor.abrir(config.nombre, gradoSel.value, compSel.value);
+    const g = parseInt(gradoSel.value);
+    const grados = [String(g)];
+    if (g > 1) grados.push(String(g - 1));
+    if (g < 11) grados.push(String(g + 1));
+    if (g <= 0) grados.push("-1", "0", "1");
+
+    try {
+      await Promise.all(grados.map(gr => asegurarDatosGrado(areaSel.value, gr)));
+      window.ProgresionMotor.abrir(window.APP_CONFIG.AREAS[areaSel.value].nombre, gradoSel.value, compSel.value);
+    } catch {
+      mostrarError("No se pudieron cargar todos los grados para la progresión.");
+    }
     window.RenderEngine.setCargando(false);
   });
 });
-// END OF FILE: js/ui-filtros.js | VERSION: v6.2 Stable
+// END OF FILE: js/ui-filtros.js | VERSION: v6.3 Stable
