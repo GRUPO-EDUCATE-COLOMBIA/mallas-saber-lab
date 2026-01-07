@@ -1,4 +1,4 @@
-<!-- FILE: index.html | VERSION: v6.1 Stable -->
+<!-- FILE: index.html | VERSION: v6.2 Stable -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -22,6 +22,7 @@
       <p id="print-fecha-txt"></p>
     </div>
 
+    <!-- SECCIÓN DE FILTROS -->
     <section id="filtros" class="filtros">
       <div class="filtro-grupo">
         <label>Mallas a</label>
@@ -66,16 +67,18 @@
       </div>
 
       <div class="botones-container">
-        <button class="btn-buscar">🔍 Consultar</button>
-        <button id="btn-progresion" class="btn-progresion" disabled title="Seleccione área y grado para habilitar">Progresión de estándares</button>
+        <button id="btn-buscar" class="btn-buscar">🔍 Consultar</button>
+        <button id="btn-progresion" class="btn-progresion" disabled>Progresión de estándares</button>
       </div>
     </section>
 
+    <!-- SPINNER DE CARGA -->
     <div id="loading-overlay" class="ocultar-inicial">
       <div class="spinner"></div>
       <p>Procesando información curricular...</p>
     </div>
 
+    <!-- CONTENEDOR DE RESULTADOS -->
     <section id="resultados-principal" class="resultados ocultar-inicial">
       <div class="contenedor-herramientas-reporte">
         <button id="btn-imprimir" class="btn-secundario">🖨️ Imprimir Ficha de Consulta</button>
@@ -89,11 +92,6 @@
       <div class="progresion-header">
         <h2 id="prog-area-txt">PROGRESIÓN DE APRENDIZAJES</h2>
         <button id="btn-cerrar-progresion" class="btn-cerrar-overlay">Cerrar</button>
-      </div>
-      <div class="progresion-navegacion">
-        <button id="prog-prev" class="btn-nav">←</button>
-        <span class="info-ciclo">Secuencia Curricular</span>
-        <button id="prog-next" class="btn-nav">→</button>
       </div>
       <div class="progresion-columnas">
         <div class="col-prog" id="col-grado-prev"><div class="col-header">Grado Anterior</div><div id="cont-grado-prev" class="col-content"></div></div>
@@ -114,4 +112,4 @@
 
 </body>
 </html>
-<!-- END OF FILE: index.html | VERSION: v6.1 Stable -->
+<!-- END OF FILE: index.html | VERSION: v6.2 Stable -->
