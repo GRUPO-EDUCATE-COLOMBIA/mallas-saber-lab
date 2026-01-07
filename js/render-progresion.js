@@ -1,4 +1,4 @@
-// FILE: js/render-progresion.js | VERSION: v6.6 Stable
+// FILE: js/render-progresion.js | VERSION: v6.8 Stable
 
 window.ProgresionMotor = (function() {
   let estado = { areaId: '', areaNombre: '', gradoCentral: 0, componente: '', tipo: '4_periodos' };
@@ -8,6 +8,7 @@ window.ProgresionMotor = (function() {
   const btnPrev = document.getElementById('prog-prev');
   const btnNext = document.getElementById('prog-next');
   const txtArea = document.getElementById('prog-area-txt');
+  
   const contPrev = document.getElementById('cont-grado-prev');
   const contActual = document.getElementById('cont-grado-actual');
   const contNext = document.getElementById('cont-grado-next');
@@ -20,7 +21,6 @@ window.ProgresionMotor = (function() {
     estado.componente = componente;
     estado.tipo = window.APP_CONFIG.TIPO_MALLA;
 
-    // FIX: Aplicar clase para mostrar como flex
     overlay.classList.add('mostrar-flex');
     renderizar();
   }
@@ -31,7 +31,7 @@ window.ProgresionMotor = (function() {
 
   function renderizar() {
     const g = estado.gradoCentral;
-    txtArea.textContent = `${estado.areaNombre.toUpperCase()} - ${estado.componente}`;
+    txtArea.textContent = `${estado.areaNombre.toUpperCase()} - COMPONENTE: ${estado.componente}`;
 
     const gPrev = (g - 1 < -1) ? null : String(g - 1);
     const gActual = String(g);
@@ -52,16 +52,18 @@ window.ProgresionMotor = (function() {
     
     if (gradoStr === null) {
       if (header) header.textContent = "---";
-      contenedor.innerHTML = '<p style="text-align:center; padding-top:20px; color:#999;">Fin de ciclo.</p>';
+      contenedor.innerHTML = '<p style="text-align:center; padding-top:20px; color:#999;">Fin de secuencia.</p>';
       return;
     }
 
     if (header) header.textContent = formatearNombre(gradoStr);
+    
+    // REGLA PEDAGÓGICA CRÍTICA: Preescolar usa DBA, el resto usa Estándares.
     const esPreescolar = (gradoStr === "0" || gradoStr === "-1");
     const datos = obtenerAprendizajesAnuales(gradoStr, esPreescolar);
     
     if (datos.length === 0) {
-      contenedor.innerHTML = '<p style="text-align:center; padding:20px; color:#888;">No hay datos para este componente.</p>';
+      contenedor.innerHTML = '<p style="text-align:center; padding:20px; color:#888;">No hay datos disponibles.</p>';
     } else {
       datos.forEach(texto => {
         const div = document.createElement('div');
@@ -75,10 +77,15 @@ window.ProgresionMotor = (function() {
   function obtenerAprendizajesAnuales(gradoStr, esPreescolar) {
     const malla = window.MallasData?.[estado.areaNombre]?.[gradoStr]?.[estado.tipo];
     if (!malla || !malla.periodos) return [];
+    
     let acumulado = [];
     Object.keys(malla.periodos).forEach(p => {
       malla.periodos[p].forEach(it => {
-        if (it.componente === estado.componente || it.competencia === estado.componente || (estado.gradoCentral === 0 && gradoStr === "1")) {
+        // En el puente de Transición (0) a Primero (1), mostramos todo el grado 1 para comparar.
+        const coincideComponente = (it.componente === estado.componente || it.competencia === estado.componente);
+        const esPuenteTransicion = (estado.gradoCentral === 0 && gradoStr === "1");
+
+        if (coincideComponente || esPuenteTransicion) {
           const campo = esPreescolar ? it.dba : it.estandar;
           if (campo) {
             if (Array.isArray(campo)) acumulado.push(...campo);
@@ -87,7 +94,7 @@ window.ProgresionMotor = (function() {
         }
       });
     });
-    return [...new Set(acumulado)].filter(t => t && t.trim() !== "");
+    return [...new Set(acumulado)].filter(t => t && String(t).trim() !== "");
   }
 
   function formatearNombre(g) {
@@ -116,4 +123,4 @@ window.ProgresionMotor = (function() {
 
   return { abrir };
 })();
-// END OF FILE: js/render-progresion.js | VERSION: v6.6 Stable
+// END OF FILE: js/render-progresion.js | VERSION: v6.8 Stable
