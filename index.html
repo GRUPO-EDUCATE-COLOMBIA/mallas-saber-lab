@@ -1,4 +1,4 @@
-<!-- FILE: index.html | VERSION: v6.8 Stable -->
+<!-- FILE: index.html | VERSION: v6.9 Stable -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,19 +10,21 @@
 </head>
 <body>
   
-  <header id="header-principal">
+  <header id="header-principal" class="no-print">
     <h1>Mallas Curriculares Nacionales</h1>
     <p>Grupo Edúcate Colombia - Dirección de Pedagogía</p>
   </header>
 
   <main>
+    <!-- Encabezado exclusivo para Impresión (Forzado al inicio del papel) -->
     <div id="print-header" class="print-only-header">
-      <h1>REPORTE CURRICULAR NACIONAL</h1>
-      <p>Generado por: Plataforma ECO - Grupo Edúcate Colombia</p>
+      <h1 style="font-size: 2rem; border-bottom: 2px solid #000; padding-bottom: 5px;">REPORTE CURRICULAR NACIONAL</h1>
+      <p style="margin-top: 5px;">Plataforma ECO - Grupo Edúcate Colombia</p>
       <p id="print-fecha-txt"></p>
     </div>
 
-    <section id="filtros" class="filtros">
+    <!-- SECCIÓN DE FILTROS -->
+    <section id="filtros" class="filtros no-print">
       <div class="filtro-grupo">
         <label>Mallas a</label>
         <div class="radios-periodos">
@@ -65,13 +67,15 @@
       </div>
     </section>
 
-    <div id="loading-overlay" class="ocultar-inicial">
+    <!-- SPINNER DE CARGA (FIX: POSICIÓN FIJA) -->
+    <div id="loading-overlay" class="loading-overlay ocultar-inicial no-print">
       <div class="spinner"></div>
-      <p>Procesando información...</p>
+      <p>Procesando información curricular...</p>
     </div>
 
+    <!-- CONTENEDOR DE RESULTADOS -->
     <section id="resultados-principal" class="resultados">
-      <div id="herramientas-resultados" class="contenedor-herramientas-reporte">
+      <div id="herramientas-resultados" class="contenedor-herramientas-reporte no-print">
         <button id="btn-imprimir" class="btn-secundario">🖨️ Imprimir Ficha de Consulta</button>
       </div>
       <div id="contenedor-malla" class="tabla-body"></div>
@@ -79,7 +83,7 @@
   </main>
 
   <!-- MODAL DE PROGRESIÓN -->
-  <div id="overlay-progresion" class="overlay-progresion">
+  <div id="overlay-progresion" class="overlay-progresion no-print">
     <div class="progresion-container">
       <div class="progresion-header">
         <h2 id="prog-area-txt">PROGRESIÓN DE APRENDIZAJES</h2>
@@ -98,8 +102,8 @@
     </div>
   </div>
 
-  <!-- MODAL DE NOTIFICACIONES (FIX POSICIÓN) -->
-  <div id="modal-notificacion" class="modal-notificacion">
+  <!-- NOTIFICACIONES -->
+  <div id="modal-notificacion" class="modal-notificacion no-print">
     <div class="modal-notificacion-contenido">
       <span class="modal-icono">⚠️</span>
       <h2 id="modal-titulo">Atención</h2>
@@ -108,7 +112,7 @@
     </div>
   </div>
 
-  <button id="btn-top" class="btn-flotante-top">↑</button>
+  <button id="btn-top" class="btn-flotante-top no-print">↑</button>
 
   <script src="js/config.js"></script>
   <script src="js/data-loader.js"></script>
@@ -118,4 +122,4 @@
   <script src="js/print-engine.js"></script>
 </body>
 </html>
-<!-- END OF FILE: index.html | VERSION: v6.8 Stable -->
+<!-- END OF FILE: index.html | VERSION: v6.9 Stable -->
