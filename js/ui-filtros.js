@@ -1,19 +1,18 @@
-// js/ui-filtros.js - v6.1 STABLE (Hito 1: Navegación y Control)
-
+// FILE: js/ui-filtros.js | VERSION: v6.2 Stable
 document.addEventListener('DOMContentLoaded', () => {
-  // Elementos del DOM
   const areaSel = document.getElementById('area');
   const gradoSel = document.getElementById('grado');
   const periodoSel = document.getElementById('periodo');
   const compSel = document.getElementById('componente');
-  const btnBuscar = document.querySelector('.btn-buscar');
+  const btnBuscar = document.getElementById('btn-buscar');
   const btnProg = document.getElementById('btn-progresion');
   const btnTop = document.getElementById('btn-top');
   const radioPeriodos = document.querySelectorAll('input[name="periodos"]');
 
-  /**
-   * 1. GESTIÓN DE VOLVER ARRIBA (TOP)
-   */
+  // INICIALIZACIÓN DE ESTADOS
+  validarEstadoBotones();
+
+  // 1. BOTÓN VOLVER ARRIBA
   window.onscroll = function() {
     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
       btnTop.style.display = "block";
@@ -26,21 +25,18 @@ document.addEventListener('DOMContentLoaded', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  /**
-   * 2. VALIDACIÓN DE ESTADO DE BOTONES
-   * Habilita progresión solo si hay área y grado.
-   */
+  // 2. FUNCIÓN DE VALIDACIÓN DE ESTADOS
   function validarEstadoBotones() {
-    btnProg.disabled = !(areaSel.value && gradoSel.value);
+    const areaCargada = areaSel.value;
+    const gradoCargado = gradoSel.value;
+    // El botón se habilita solo si ambos tienen selección
+    btnProg.disabled = !(areaCargada && gradoCargado);
   }
 
-  /**
-   * 3. GESTIÓN DE PERIODOS (3 vs 4)
-   */
+  // 3. EVENTOS DE SELECTORES
   radioPeriodos.forEach(radio => {
     radio.addEventListener('change', (e) => {
       window.APP_CONFIG.TIPO_MALLA = e.target.value === "3" ? "3_periodos" : "4_periodos";
-      // Reiniciar selectores dependientes
       if (areaSel.value) {
         gradoSel.value = "";
         periodoSel.innerHTML = '<option value="">Seleccionar</option>';
@@ -50,9 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /**
-   * 4. CAMBIO DE ÁREA
-   */
   areaSel.addEventListener('change', () => {
     gradoSel.innerHTML = '<option value="">Seleccionar</option>';
     if (!areaSel.value) {
@@ -70,9 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
     validarEstadoBotones();
   });
 
-  /**
-   * 5. CAMBIO DE GRADO
-   */
   gradoSel.addEventListener('change', () => {
     if (!gradoSel.value) {
         periodoSel.disabled = true;
@@ -88,21 +78,15 @@ document.addEventListener('DOMContentLoaded', () => {
     validarEstadoBotones();
   });
 
-  /**
-   * 6. CARGA DE DATOS AL SELECCIONAR PERIODO
-   */
   periodoSel.addEventListener('change', async () => {
     if (!periodoSel.value) return;
-    
     window.RenderEngine.setCargando(true);
     const exito = await asegurarDatosGrado(areaSel.value, gradoSel.value);
-    
     if (exito) {
       const areaNom = window.APP_CONFIG.AREAS[areaSel.value].nombre;
       const tipo = window.APP_CONFIG.TIPO_MALLA;
       const malla = window.MallasData[areaNom][gradoSel.value][tipo];
       const items = malla.periodos[periodoSel.value] || [];
-      
       compSel.innerHTML = '<option value="todos">Todos</option>';
       [...new Set(items.map(it => it.componente || it.competencia))].forEach(n => {
         if(n) { const opt = document.createElement('option'); opt.value = n; opt.textContent = n; compSel.appendChild(opt); }
@@ -112,47 +96,54 @@ document.addEventListener('DOMContentLoaded', () => {
     window.RenderEngine.setCargando(false);
   });
 
-  /**
-   * 7. CONSULTAR
-   */
+  // 4. ACCIÓN DE CONSULTA (REFORZADA)
   btnBuscar.addEventListener('click', () => {
     const areaId = areaSel.value;
     const grado = gradoSel.value;
     const periodo = periodoSel.value;
-    if (!areaId || !grado || !periodo) return;
+
+    if (!areaId || !grado || !periodo) {
+        alert("Por favor, seleccione todos los campos antes de consultar.");
+        return;
+    }
 
     const config = window.APP_CONFIG.AREAS[areaId];
     const tipo = window.APP_CONFIG.TIPO_MALLA;
+    
+    // Verificación de existencia de datos en memoria
+    if (!window.MallasData[config.nombre] || !window.MallasData[config.nombre][grado]) {
+        alert("Los datos aún no se han cargado. Por favor, espere un momento o reintente.");
+        return;
+    }
+
     const malla = window.MallasData[config.nombre][grado][tipo];
     const items = malla.periodos[periodo] || [];
     const filtrados = compSel.value === "todos" ? items : items.filter(it => (it.componente || it.competencia) === compSel.value);
-
+    
     window.RenderEngine.renderizar(filtrados, areaId, grado, periodo);
     
     const resPrincipal = document.getElementById('resultados-principal');
     resPrincipal.classList.add('mostrar-block');
     resPrincipal.className = `resultados mostrar-block ${config.clase}`;
     
-    // Scrollear un poco hacia abajo para mostrar que hay resultados
-    window.scrollBy({ top: 150, behavior: 'smooth' });
+    // Desplazamiento automático para ver resultados
+    setTimeout(() => {
+        window.scrollBy({ top: 250, behavior: 'smooth' });
+    }, 100);
   });
 
-  /**
-   * 8. PROGRESIÓN
-   */
   btnProg.addEventListener('click', async () => {
     window.RenderEngine.setCargando(true);
     const areaId = areaSel.value;
     const config = window.APP_CONFIG.AREAS[areaId];
     const gCentral = parseInt(gradoSel.value);
-    
     let gradosCarga = [String(gCentral)];
     if (gCentral > 1) gradosCarga.push(String(gCentral - 1));
     if (gCentral < 11) gradosCarga.push(String(gCentral + 1));
     if (gCentral <= 0) gradosCarga.push("-1", "0", "1");
-
     await Promise.all(gradosCarga.map(g => asegurarDatosGrado(areaId, g)));
     window.ProgresionMotor.abrir(config.nombre, gradoSel.value, compSel.value);
     window.RenderEngine.setCargando(false);
   });
 });
+// END OF FILE: js/ui-filtros.js | VERSION: v6.2 Stable
