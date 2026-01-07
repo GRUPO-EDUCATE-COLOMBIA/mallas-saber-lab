@@ -1,4 +1,4 @@
-/* FILE: styles.css | VERSION: v7.0 Stable */
+/* FILE: styles.css | VERSION: v7.1 Stable */
 
 :root {
   --eco-purple: #9B7BB6; --eco-teal: #00A19B; --eco-dark: #17334B; --eco-green: #54BBAB;
@@ -50,15 +50,25 @@ main { max-width: 1300px; margin: 0 auto; padding: 1.5rem; }
 
 .btn-eco-dic { display: inline-block !important; background: var(--eco-teal) !important; color: white !important; padding: 12px 25px !important; text-decoration: none !important; border-radius: 10px !important; font-weight: 700 !important; margin-top: 1rem !important; }
 
-/* FIX PROGRESIÓN 3 COLUMNAS */
+/* MODAL PROGRESIÓN */
 .overlay-progresion { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(13, 61, 102, 0.95); backdrop-filter: blur(8px); z-index: 9000; justify-content: center; align-items: center; padding: 20px; }
 .overlay-progresion.mostrar-flex { display: flex !important; }
 .progresion-container { background: white; width: 95%; height: 90vh; border-radius: 25px; display: flex; flex-direction: column; overflow: hidden; }
+
+/* Header Modal con Botón Cerrar Estilizado */
 .progresion-header { background: var(--eco-dark); color: white; padding: 1.2rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+
+/* FIX: BOTÓN CERRAR REDISEÑADO */
+.btn-cerrar-overlay { 
+  background: #ff4d4d; color: white; border: none; padding: 8px 18px; 
+  border-radius: 8px; font-weight: 700; text-transform: uppercase; 
+  cursor: pointer; font-family: 'Barlow Condensed'; transition: background 0.2s;
+}
+.btn-cerrar-overlay:hover { background: #cc0000; }
+
 .progresion-navegacion { background: #f8f9fa; padding: 12px; display: flex; justify-content: center; gap: 25px; border-bottom: 1px solid #eee; }
 .btn-nav { background: var(--eco-dark); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; }
 
-/* USO DE GRID PARA ASEGURAR 3 COLUMNAS */
 .progresion-columnas { display: grid; grid-template-columns: 1fr 1fr 1fr; flex: 1; overflow-y: hidden; padding: 20px; gap: 20px; background: #e9ecef; }
 .col-prog { background: white; border-radius: 15px; border: 1px solid #eee; display: flex; flex-direction: column; height: 100%; overflow: hidden; }
 .col-header { padding: 15px; text-align: center; font-weight: 700; background: #fdfdfd; border-bottom: 3px solid #eee; }
@@ -72,30 +82,14 @@ main { max-width: 1300px; margin: 0 auto; padding: 1.5rem; }
 
 .btn-flotante-top { display: none; position: fixed; bottom: 25px; right: 25px; width: 50px; height: 50px; background: var(--eco-green); color: white; border: none; border-radius: 50%; font-size: 1.5rem; cursor: pointer; z-index: 3000; }
 
-/* --- FIX IMPRESIÓN DEFINITIVO (PÁGINA EN BLANCO) --- */
+/* IMPRESIÓN SIN HOJA EN BLANCO */
 @media print {
-  /* Ocultar todo lo innecesario de forma absoluta */
-  .no-print, header, .filtros, .btn-flotante-top, .contenedor-herramientas-reporte, .modal-notificacion, .overlay-progresion, .loading-overlay { 
-    display: none !important;
-  }
-  
-  /* Reset total del flujo de página */
+  .no-print, header, .filtros, .btn-flotante-top, .contenedor-herramientas-reporte, .modal-notificacion, .overlay-progresion, .loading-overlay { display: none !important; }
   html, body { background: white !important; margin: 0 !important; padding: 0 !important; height: auto !important; width: 100% !important; }
-  
-  /* Mover el main al borde superior */
   main { position: absolute !important; top: 0 !important; left: 0 !important; width: 100% !important; margin: 0 !important; padding: 0 !important; }
-
-  /* Encabezado pegado al tope */
-  .print-only-header { 
-    display: block !important; 
-    text-align: center; 
-    margin: 0 0 20px 0 !important; 
-    padding: 10px 0 !important; 
-    border-bottom: 2px solid #000;
-  }
-
+  .print-only-header { display: block !important; text-align: center; margin: 0 0 20px 0 !important; padding: 10px 0 !important; border-bottom: 2px solid #000; }
   .item-malla { break-inside: avoid; border: 2px solid #000 !important; box-shadow: none !important; margin: 15px 0 !important; }
   .franja-integracion { color: black !important; border: 1px solid #000; background: #eee !important; margin-left: 0; margin-right: 0; }
   .contenedor-integracion { margin-left: 0; margin-right: 0; border: 1px solid #eee; background: white !important; }
 }
-/* END OF FILE: styles.css | VERSION: v7.0 Stable */
+/* END OF FILE: styles.css | VERSION: v7.1 Stable */
