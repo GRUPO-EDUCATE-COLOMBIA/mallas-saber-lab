@@ -1,4 +1,4 @@
-// FILE: js/render-engine.js | VERSION: v6.5 Stable
+// FILE: js/render-engine.js | VERSION: v6.7 Stable
 
 window.RenderEngine = (function() {
   const containerMalla = document.getElementById('contenedor-malla');
@@ -11,8 +11,8 @@ window.RenderEngine = (function() {
   }
 
   function renderizar(items, areaId, grado, periodo) {
-    const herramientas = document.getElementById('herramientas-resultados');
-    if (herramientas) herramientas.classList.add('mostrar-flex');
+    const resSec = document.getElementById('resultados-principal');
+    if (resSec) resSec.classList.add('mostrar-block');
     
     if (!containerMalla) return;
 
@@ -25,16 +25,13 @@ window.RenderEngine = (function() {
     }).join('');
   }
 
-  /**
-   * PLANTILLA ACADÉMICA CON FRANJAS DE INTEGRACIÓN
-   */
   function plantillaAcademica(item, areaId, grado, periodo) {
     const tipo = window.APP_CONFIG.TIPO_MALLA;
-    const nombreArea = window.APP_CONFIG.AREAS[areaId].nombre;
-    const colorArea = window.APP_CONFIG.AREAS[areaId].color;
+    const configArea = window.APP_CONFIG.AREAS[areaId];
+    const colorArea = configArea.color;
 
     // DATA JOINING: Capa DCE
-    const llaveT = `Tareas_DCE_${nombreArea}`;
+    const llaveT = `Tareas_DCE_${configArea.nombre}`;
     const dceData = window.MallasData[llaveT]?.[grado]?.[tipo];
     const dcePer = dceData?.periodos?.find(p => String(p.periodo_id) === String(periodo));
     const infoDCE = dcePer?.componentes?.find(c => c.nombre === (item.componente || item.competencia));
@@ -47,23 +44,21 @@ window.RenderEngine = (function() {
 
     return `
       <div class="item-malla">
-        <!-- FRANJA DE TÍTULO PRINCIPAL (ACADÉMICA) -->
         <div class="franja-titulo-principal" style="background-color: ${colorArea};">
             ${item.componente || item.competencia || 'General'}
         </div>
         
         <div class="item-malla-contenido">
-          <!-- BLOQUE ACADÉMICO -->
           <div class="campo"><strong>Estándar Curricular:</strong><div>${validarDato(item.estandar)}</div></div>
           <div class="campo"><strong>DBA:</strong><div>${validarDato(item.dba)}</div></div>
           <div class="campo"><strong>Evidencias de Aprendizaje:</strong><div>${validarDato(item.evidencias)}</div></div>
           <div class="campo"><strong>Saberes / Contenidos:</strong><div>${validarDato(item.saberes)}</div></div>
 
-          <!-- FRANJA INTEGRACIÓN DCE -->
+          <!-- BLOQUE INTEGRACIÓN DCE (METODOLOGÍA) -->
           <div class="franja-integracion integracion-dce">
-            <span class="franja-icono">💡</span> GUÍA DIDÁCTICA: ${infoDCE ? infoDCE.la_estrategia : 'En proceso'}
+            <span style="font-size:1.6rem; margin-right:15px;">💡</span> GUÍA DIDÁCTICA: ${infoDCE ? infoDCE.la_estrategia : 'Capa Metodológica'}
           </div>
-          <div class="contenedor-integracion" style="border-left: 8px solid #54BBAB;">
+          <div class="contenedor-integracion" style="border-left: 10px solid var(--eco-green);">
             <div class="campo"><strong>Reto Sugerido:</strong><div>${validarDato(infoDCE?.un_reto_sugerido)}</div></div>
             <div class="campo"><strong>Ruta de Exploración:</strong>
                 <ul style="margin-left:25px; list-style:square;">
@@ -77,21 +72,18 @@ window.RenderEngine = (function() {
             <div class="campo"><strong>Un Refuerzo:</strong><div>${validarDato(infoDCE?.un_refuerzo)}</div></div>
           </div>
 
-          <!-- FRANJA INTEGRACIÓN ECO -->
+          <!-- BLOQUE INTEGRACIÓN ECO (SOCIOEMOCIONAL) -->
           <div class="franja-integracion integracion-eco">
-            <span class="franja-icono">🧠</span> RESPONSABILIDAD SOCIOEMOCIONAL ECO
+            <span style="font-size:1.6rem; margin-right:15px;">🧠</span> RESPONSABILIDAD SOCIOEMOCIONAL ECO
           </div>
-          <div class="contenedor-integracion" style="border-left: 8px solid #9B7BB6;">
+          <div class="contenedor-integracion" style="border-left: 10px solid var(--eco-purple);">
             <div class="campo"><strong>Eje Central:</strong><div>${validarDato(infoECO?.eje_central)}</div></div>
             <div class="campo"><strong>Habilidades a Desarrollar:</strong><div>${validarDato(infoECO?.Habilidades)}</div></div>
             <div class="campo"><strong>Evidencias de Desempeño:</strong><div>${validarDato(infoECO?.evidencias_de_desempeno)}</div></div>
           </div>
 
-          <div style="margin-top: 2rem; text-align: center;">
-            <a href="eco/diccionario/eco_dic_${grado}.html" target="_blank" class="btn-eco-dic" 
-               style="background:var(--eco-teal); color:white; padding:15px 25px; text-decoration:none; border-radius:8px; font-weight:700;">
-               Consultar Diccionario ECO
-            </a>
+          <div style="text-align:center; margin-top:2.5rem;">
+            <a href="eco/diccionario/eco_dic_${grado}.html" target="_blank" class="btn-eco-dic">Consultar Diccionario ECO</a>
           </div>
         </div>
       </div>
@@ -107,13 +99,10 @@ window.RenderEngine = (function() {
         <div class="item-malla-contenido">
           <div class="campo"><strong>Estandar de Formación:</strong> <div>${validarDato(item.estandar)}</div></div>
           <div class="campo"><strong>Eje Central:</strong> <div>${validarDato(item.eje_central)}</div></div>
-          <div class="campo"><strong>Habilidades:</strong> <div style="background:#f8f4fb; padding:20px; border-radius:10px; border:1px solid #eee;">${validarDato(item.Habilidades)}</div></div>
-          <div class="campo"><strong>Evidencias ECO:</strong> <div>${validarDato(item.evidencias_de_desempeno)}</div></div>
-          <div style="text-align:center; margin-top:2rem;">
-            <a href="eco/diccionario/eco_dic_${grado}.html" target="_blank" class="btn-eco-dic" 
-               style="background:var(--eco-teal); color:white; padding:15px 25px; text-decoration:none; border-radius:8px; font-weight:700;">
-               Consultar Diccionario ECO
-            </a>
+          <div class="campo"><strong>Habilidades ECO:</strong> <div style="background:#f9f6fc; padding:20px; border-radius:12px; border:1px solid #eee;">${validarDato(item.Habilidades)}</div></div>
+          <div class="campo"><strong>Evidencias de Desempeño:</strong> <div>${validarDato(item.evidencias_de_desempeno)}</div></div>
+          <div style="text-align:center; margin-top:2.5rem;">
+            <a href="eco/diccionario/eco_dic_${grado}.html" target="_blank" class="btn-eco-dic">Consultar Diccionario ECO</a>
           </div>
         </div>
       </div>
@@ -127,4 +116,4 @@ window.RenderEngine = (function() {
 
   return { renderizar, setCargando };
 })();
-// END OF FILE: js/render-engine.js | VERSION: v6.5 Stable
+// END OF FILE: js/render-engine.js | VERSION: v6.7 Stable
