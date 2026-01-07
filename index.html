@@ -1,3 +1,4 @@
+<!-- FILE: index.html | VERSION: v6.1 Stable -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -15,14 +16,12 @@
   </header>
 
   <main>
-    <!-- Encabezado para Impresión (Oculto en web) -->
     <div class="print-only-header">
       <h1 id="print-titulo-area">REPORTE CURRICULAR NACIONAL</h1>
       <p>Generado por: Plataforma ECO - Grupo Edúcate Colombia</p>
       <p id="print-fecha-txt"></p>
     </div>
 
-    <!-- SECCIÓN DE FILTROS (Ahora fluye con el scroll) -->
     <section id="filtros" class="filtros">
       <div class="filtro-grupo">
         <label>Mallas a</label>
@@ -72,15 +71,12 @@
       </div>
     </section>
 
-    <!-- INDICADOR DE CARGA (Restaurado visualmente) -->
     <div id="loading-overlay" class="ocultar-inicial">
       <div class="spinner"></div>
       <p>Procesando información curricular...</p>
     </div>
 
-    <!-- CONTENEDOR DE RESULTADOS -->
     <section id="resultados-principal" class="resultados ocultar-inicial">
-      <!-- Botón Impresión Reubicado -->
       <div class="contenedor-herramientas-reporte">
         <button id="btn-imprimir" class="btn-secundario">🖨️ Imprimir Ficha de Consulta</button>
       </div>
@@ -88,7 +84,6 @@
     </section>
   </main>
 
-  <!-- OVERLAY PROGRESIÓN -->
   <div id="overlay-progresion" class="overlay-progresion">
     <div class="progresion-container">
       <div class="progresion-header">
@@ -108,10 +103,8 @@
     </div>
   </div>
 
-  <!-- Botón Flotante Top -->
   <button id="btn-top" class="btn-flotante-top" title="Volver arriba">↑</button>
 
-  <!-- SCRIPTS -->
   <script src="js/config.js"></script>
   <script src="js/data-loader.js"></script>
   <script src="js/render-engine.js"></script>
@@ -121,3 +114,4 @@
 
 </body>
 </html>
+<!-- END OF FILE: index.html | VERSION: v6.1 Stable -->
