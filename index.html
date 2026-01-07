@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mallas Curriculares Nacionales - GEC</title>
-  <!-- Fuente Institucional -->
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -23,19 +22,16 @@
       <p id="print-fecha-txt"></p>
     </div>
 
-    <!-- SECCIÓN DE FILTROS -->
+    <!-- SECCIÓN DE FILTROS (Ahora fluye con el scroll) -->
     <section id="filtros" class="filtros">
-      
-      <!-- 1. Períodos -->
       <div class="filtro-grupo">
         <label>Mallas a</label>
         <div class="radios-periodos">
-          <label><input type="radio" name="periodos" value="3"> 3 PERÍODOS</label>
-          <label><input type="radio" name="periodos" value="4" checked> 4 PERÍODOS</label>
+          <label><input type="radio" name="periodos" value="3"> 3 P.</label>
+          <label><input type="radio" name="periodos" value="4" checked> 4 P.</label>
         </div>
       </div>
 
-      <!-- 2. Área (RESTAURADA) -->
       <div class="filtro-grupo">
         <label for="area">ÁREA</label>
         <select id="area">
@@ -49,7 +45,6 @@
         </select>
       </div>
 
-      <!-- 3. Grado -->
       <div class="filtro-grupo">
         <label for="grado">GRADO</label>
         <select id="grado" disabled>
@@ -57,7 +52,6 @@
         </select>
       </div>
 
-      <!-- 4. Período -->
       <div class="filtro-grupo">
         <label for="periodo">PERÍODO</label>
         <select id="periodo" disabled>
@@ -65,7 +59,6 @@
         </select>
       </div>
 
-      <!-- 5. Componente -->
       <div class="filtro-grupo">
         <label for="componente">COMPONENTE</label>
         <select id="componente" disabled>
@@ -73,19 +66,13 @@
         </select>
       </div>
 
-      <!-- BOTONES DE ACCIÓN -->
       <div class="botones-container">
-        <button class="btn-buscar">Consultar</button>
-        <button id="btn-progresion" class="btn-progresion" disabled>Progresión de estándares por grados</button>
+        <button class="btn-buscar">🔍 Consultar</button>
+        <button id="btn-progresion" class="btn-progresion" disabled title="Seleccione área y grado para habilitar">Progresión de estándares</button>
       </div>
     </section>
 
-    <!-- HERRAMIENTAS DE RESULTADOS -->
-    <div id="herramientas-resultados" class="ocultar-inicial">
-      <button id="btn-imprimir" class="btn-secundario">🖨️ Generar Ficha de Consulta</button>
-    </div>
-
-    <!-- INDICADOR DE CARGA -->
+    <!-- INDICADOR DE CARGA (Restaurado visualmente) -->
     <div id="loading-overlay" class="ocultar-inicial">
       <div class="spinner"></div>
       <p>Procesando información curricular...</p>
@@ -93,6 +80,10 @@
 
     <!-- CONTENEDOR DE RESULTADOS -->
     <section id="resultados-principal" class="resultados ocultar-inicial">
+      <!-- Botón Impresión Reubicado -->
+      <div class="contenedor-herramientas-reporte">
+        <button id="btn-imprimir" class="btn-secundario">🖨️ Imprimir Ficha de Consulta</button>
+      </div>
       <div id="contenedor-malla" class="tabla-body"></div>
     </section>
   </main>
@@ -116,6 +107,9 @@
       </div>
     </div>
   </div>
+
+  <!-- Botón Flotante Top -->
+  <button id="btn-top" class="btn-flotante-top" title="Volver arriba">↑</button>
 
   <!-- SCRIPTS -->
   <script src="js/config.js"></script>
