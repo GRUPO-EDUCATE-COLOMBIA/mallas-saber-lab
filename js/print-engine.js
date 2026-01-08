@@ -1,28 +1,35 @@
-// FILE: js/print-engine.js | VERSION: v6.6 Stable
+// FILE: js/print-engine.js | VERSION: v7.8 Stable
 
 document.addEventListener('DOMContentLoaded', () => {
   const btnImprimir = document.getElementById('btn-imprimir');
   
   if (btnImprimir) {
     btnImprimir.addEventListener('click', () => {
+      // 1. Captura de metadatos de los selectores
       const areaSelect = document.getElementById('area');
       const gradoSelect = document.getElementById('grado');
       const periodoSelect = document.getElementById('periodo');
       
       const fechaTxt = document.getElementById('print-fecha-txt');
       
-      const nombreArea = areaSelect.options[areaSelect.selectedIndex]?.text || "";
-      const nombreGrado = gradoSelect.options[gradoSelect.selectedIndex]?.text || "";
-      const nombrePeriodo = periodoSelect.options[periodoSelect.selectedIndex]?.text || "";
+      // 2. Obtención de textos seleccionados
+      const areaNom = areaSelect.options[areaSelect.selectedIndex]?.text || "No especificada";
+      const gradoNom = gradoSelect.options[gradoSelect.selectedIndex]?.text || "No especificado";
+      const periodoNom = periodoSelect.options[periodoSelect.selectedIndex]?.text || "";
       
       const ahora = new Date();
-      fechaTxt.textContent = `Área: ${nombreArea} | Grado: ${nombreGrado} | Periodo: ${nombrePeriodo} | Fecha: ${ahora.toLocaleDateString()}`;
+      const fechaFormateada = ahora.toLocaleDateString() + ' ' + ahora.toLocaleTimeString();
 
-      // Pequeña espera para asegurar que el DOM se actualice antes de imprimir
+      // 3. Población del encabezado oculto
+      if (fechaTxt) {
+          fechaTxt.innerHTML = `<strong>ÁREA:</strong> ${areaNom} | <strong>GRADO:</strong> ${gradoNom} | <strong>PERIODO:</strong> ${periodoNom} <br> <strong>FECHA DE CONSULTA:</strong> ${fechaFormateada}`;
+      }
+
+      // 4. Disparo del diálogo de impresión con pequeña espera para sincronía
       setTimeout(() => {
           window.print();
-      }, 300);
+      }, 400);
     });
   }
 });
-// END OF FILE: js/print-engine.js | VERSION: v6.6 Stable
+// END OF FILE: js/print-engine.js | VERSION: v7.8 Stable
