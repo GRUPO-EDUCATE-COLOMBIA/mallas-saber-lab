@@ -1,87 +1,111 @@
 {
   "area": "Matemáticas",
   "grado": "0",
-  "tipo_malla": "4_periodos",
-  "numero_periodos": 4,
-  "periodos": {
-    "1": [
-      {
-        "componente": "Lógico - matemáticas",
-        "estandar": "Prop. 3: Las niñas y los niños disfrutan aprender; exploran y se relacionan con el mundo para comprenderlo y construirlo.",
-        "dba": [
-          "(Lógico - matemáticas) DBA-0-Prop.3-16: Determina la cantidad de objetos que conforman una colección, al establecer relaciones de correspondencia y acciones de juntar y separar."
-        ],
-        "evidencias": [
-          "DBA-0-Prop.3-16-EV-1: Determina cuántos objetos conforman una colección a partir de: la percepción global, la enumeración y la correspondencia uno a uno."
-        ],
-        "saberes": [
-          "Números: Reconocimiento de la grafía y cantidad (1-10).",
-          "Clasificación: Un atributo."
-        ],
-        "socioemocional": null,
-        "diccionario": null,
-        "fuente": null
-      }
-    ],
-    "2": [
-      {
-        "componente": "Lógico - matemáticas",
-        "estandar": "Prop. 3: Las niñas y los niños disfrutan aprender; exploran y se relacionan con el mundo para comprenderlo y construirlo.",
-        "dba": [
-          "(Lógico - matemáticas) DBA-0-Prop.3-15: Compara, ordena, clasifica objetos e identifica patrones de acuerdo con diferentes criterios."
-        ],
-        "evidencias": [
-          "DBA-0-Prop.3-15-EV-3: Clasifica colecciones de objetos de acuerdo a sus atributos (por la funcionalidad, por el sabor, por la tonalidad, por el peso, entre otras).",
-          "DBA-0-Prop.3-15-EV-1: Identifica el patrón que conforma una secuencia (pollo-gato-pollo) y puede continuarla (pollo-gato-pollo-gato)."
-        ],
-        "saberes": [
-          "Lógica: Clasificación por Doble Atributo. Patrones de repetición.",
-          "Espacial: Figuras geométricas 2D. Relación grafía-cantidad hasta 15."
-        ],
-        "socioemocional": null,
-        "diccionario": null,
-        "fuente": null
-      }
-    ],
-    "3": [
-      {
-        "componente": "Lógico - matemáticas",
-        "estandar": "Prop. 3: Las niñas y los niños disfrutan aprender; exploran y se relacionan con el mundo para comprenderlo y construirlo.",
-        "dba": [
-          "(Lógico - matemáticas) DBA-0-Prop.3-16: Determina la cantidad de objetos que conforman una colección, al establecer relaciones de correspondencia y acciones de juntar y separar."
-        ],
-        "evidencias": [
-          "DBA-0-Prop.3-16-EV-3: Comprende situaciones que implican agregar y quitar, y propone procedimientos basados en la manipulación de objetos concretos o representaciones gráficas.",
-          "DBA-0-Prop.3-14-EV-1: Mide objetos utilizando patrones de medida no convencionales (número de pasos que hay entre un lugar y otro, la palma de la mano, lanas, cordones, recipientes, entre otros)."
-        ],
-        "saberes": [
-          "Operaciones: Conceptos de 'juntar', 'quitar' (Pre-Álgebra).",
-          "Medición: Unidades no estandarizadas y comparación de magnitudes (longitud, peso)."
-        ],
-        "socioemocional": null,
-        "diccionario": null,
-        "fuente": null
-      }
-    ],
-    "4": [
-      {
-        "componente": "Lógico - matemáticas",
-        "estandar": "Prop. 3: Las niñas y los niños disfrutan aprender; exploran y se relacionan con el mundo para comprenderlo y construirlo.",
-        "dba": [
-          "(Lógico - matemáticas) DBA-0-Prop.3-16: Determina la cantidad de objetos que conforman una colección, al establecer relaciones de correspondencia y acciones de juntar y separar."
-        ],
-        "evidencias": [
-          "DBA-0-Prop.3-16-EV-2: Compara colecciones de objetos y determina: ¿cuántos hay?, ¿en dónde hay más?, ¿en dónde hay menos?, ¿cuántos hacen falta para tener la misma cantidad?, ¿cuántos le sobran?, entre otras."
-        ],
-        "saberes": [
-          "Síntesis: Conteo avanzado (hasta 30).",
-          "Estadística: Tablas de frecuencia simple (Aleatorio).",
-          "Prueba de Madurez."
-        ],
-        "socioemocional": null,
-        "diccionario": null,
-        "fuente": null
-      }
-    ]
-  }
+  "nombre_archivo": "t_matematicas_0_4_periodos.json",
+  "periodos": [
+    {
+      "periodo_id": 1,
+      "guias_por_componente": [
+        {
+          "componente": "Lógico - matemáticas",
+          "guia_didactica": {
+            "la_estrategia": "El Tesoro de los Números y Grupos",
+            "un_reto_sugerido": "Determinar cuántos objetos hay en una colección mezclada y clasificarlos bajo un solo atributo.",
+            "ruta_de_exploracion": {
+              "explorar": "Juegos de mesa utilizando dados y conteo para avanzar, fomentando la percepción global de cantidades pequeñas.",
+              "visual": "Organización de 'estaciones de clasificación' con materiales sueltos (piedras, tapas, bloques) para separar por un atributo.",
+              "produccion": "Construcción de colecciones de 1 a 10 elementos, asociando cada grupo con su grafía numérica correspondiente."
+            },
+            "para_pensar": [
+              "¿Cómo podemos saber cuántos hay sin contar de uno en uno?",
+              "¿Qué característica elegiste para separar tus objetos en grupos?"
+            ],
+            "pistas_del_exito": [
+              "El estudiante realiza correspondencia uno a uno al contar colecciones físicas.",
+              "Identifica y nombra correctamente los números del 1 al 10 en diferentes contextos."
+            ],
+            "un_refuerzo": "Actividades de secuenciación numérica para preparar el concepto de cardinalidad requerido en Grado 1°."
+          }
+        }
+      ]
+    },
+    {
+      "periodo_id": 2,
+      "guias_por_componente": [
+        {
+          "componente": "Lógico - matemáticas",
+          "guia_didactica": {
+            "la_estrategia": "Arquitectos de Patrones y Espacio",
+            "un_reto_sugerido": "Identificar y continuar un patrón de repetición complejo y reconocer figuras 2D en los objetos del salón.",
+            "ruta_de_exploracion": {
+              "explorar": "Uso de bloques lógicos para resolver retos de clasificación por doble criterio (ej. color y forma).",
+              "visual": "Búsqueda activa de figuras geométricas (círculos, cuadrados, triángulos) en el entorno escolar.",
+              "produccion": "Creación de patrones rítmicos y artísticos (ej. pollo-gato-pollo) para decorar un espacio del aula."
+            },
+            "para_pensar": [
+              "¿Qué sigue en nuestra secuencia para que no se pierda el orden?",
+              "¿En qué se parecen un cuaderno y un rectángulo?"
+            ],
+            "pistas_del_exito": [
+              "Clasifica objetos de acuerdo a dos atributos simultáneos de forma consistente.",
+              "Relaciona grafías numéricas con cantidades de objetos hasta el número 15."
+            ],
+            "un_refuerzo": "Ejercicios de regularidades para preparar el pensamiento variacional (patrones) que se profundiza en Grado 1°."
+          }
+        }
+      ]
+    },
+    {
+      "periodo_id": 3,
+      "guias_por_componente": [
+        {
+          "componente": "Lógico - matemáticas",
+          "guia_didactica": {
+            "la_estrategia": "Ingenieros de la Medida y la Tienda Mágica",
+            "un_reto_sugerido": "Medir el largo del salón usando pasos y resolver situaciones de 'agregar' y 'quitar' productos en un juego de roles.",
+            "ruta_de_exploracion": {
+              "explorar": "Misión de medición: utilizar patrones no convencionales (palmas, lanas, cordones) para comparar tamaños de objetos.",
+              "visual": "Comparación visual y táctil de magnitudes (¿cuál pesa más?, ¿cuál es más largo?) usando balanzas sencillas.",
+              "produccion": "Juego de roles 'La Tienda': realizar intercambios de productos que impliquen juntar y separar colecciones concretas."
+            },
+            "para_pensar": [
+              "¿Por qué el salón mide más pasos de niño que pasos de profesor?",
+              "¿Si agrego tres manzanas a mi canasta, tengo más o menos que antes?"
+            ],
+            "pistas_del_exito": [
+              "Propone procedimientos manuales para resolver situaciones de suma y resta sencilla (agregar/quitar).",
+              "Utiliza vocabulario de medida (largo, corto, pesado, liviano) de forma adecuada."
+            ],
+            "un_refuerzo": "Fortalecer las estrategias de resolución de problemas aditivos como prerrequisito para el Grado 1°."
+          }
+        }
+      ]
+    },
+    {
+      "periodo_id": 4,
+      "guias_por_componente": [
+        {
+          "componente": "Lógico - matemáticas",
+          "guia_didactica": {
+            "la_estrategia": "La Feria del Conteo y los Datos",
+            "un_reto_sugerido": "Organizar los resultados de un juego de feria en una tabla de frecuencia y contar hasta 30 objetos.",
+            "ruta_de_exploracion": {
+              "explorar": "Conteo avanzado de materiales del aula hasta el 30, comparando dónde hay más y dónde hay menos.",
+              "visual": "Registro de datos en tablas de frecuencia simple (ej. cuántos niños ganaron cada juego de la feria).",
+              "produccion": "Proyecto Final: Diseño de un juego de feria que exija a los participantes contar y comparar sus puntos."
+            },
+            "para_pensar": [
+              "¿Cuántos nos hacen falta para que todos tengamos la misma cantidad?",
+              "¿Qué juego fue el favorito según nuestra tabla de resultados?"
+            ],
+            "pistas_del_exito": [
+              "Domina el principio de cardinalidad al determinar el total de una colección grande.",
+              "Compara colecciones e identifica diferencias cuantitativas (sobran, faltan)."
+            ],
+            "un_refuerzo": "Aplicación del Protocolo de Tránsito para validar el dominio de operaciones lógicas antes del inicio de primaria."
+          }
+        }
+      ]
+    }
+  ]
 }
