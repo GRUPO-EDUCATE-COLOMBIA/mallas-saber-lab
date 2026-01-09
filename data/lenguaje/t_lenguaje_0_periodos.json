@@ -1,0 +1,111 @@
+{
+  "area": "Lenguaje",
+  "grado": "0",
+  "nombre_archivo": "t_lenguaje_0_4_periodos.json",
+  "periodos": [
+    {
+      "periodo_id": 1,
+      "guias_por_componente": [
+        {
+          "componente": "Habilidades comunicativas",
+          "guia_didactica": {
+            "la_estrategia": "El Espejo de mis Trazos (Identidad y Expresión)",
+            "un_reto_sugerido": "Crear un autorretrato detallado y demostrar control en el agarre del lápiz a través de diferentes texturas.",
+            "ruta_de_exploracion": {
+              "explorar": "Taller sensorial de grafomotricidad usando bandejas de arena, plastilina y pintura dactilar para fortalecer la pinza y el trazo libre.",
+              "visual": "Observación y descripción de rasgos físicos frente al espejo para identificar emociones y plasmarlas en el papel.",
+              "produccion": "Elaboración de pinturas y figuras modeladas que representen pensamientos y emociones personales."
+            },
+            "para_pensar": [
+              "¿Qué historia cuenta mi dibujo hoy?",
+              "¿Por qué mis manos son mis mejores herramientas para crear?"
+            ],
+            "pistas_del_exito": [
+              "El dibujo muestra una intención clara de representar la realidad o el sentimiento.",
+              "El estudiante demuestra un agarre del lápiz funcional y controlado (madurez de pinza)."
+            ],
+            "un_refuerzo": "Ejercicios de psicomotricidad fina como ensartado y rasgado para preparar la escritura formal de Grado 1°."
+          }
+        }
+      ]
+    },
+    {
+      "periodo_id": 2,
+      "guias_por_componente": [
+        {
+          "componente": "Habilidades comunicativas",
+          "guia_didactica": {
+            "la_estrategia": "La Sinfonía de las Vocales (Conciencia Fonológica)",
+            "un_reto_sugerido": "Segmentar palabras por sílabas usando el cuerpo y reconocer visualmente las 5 vocales en el entorno.",
+            "ruta_de_exploracion": {
+              "explorar": "Juegos rítmicos de zapateo y palmas para dividir palabras en unidades sonoras (segmentación silábica).",
+              "visual": "Lectura de poemas y rondas infantiles para identificar palabras que riman por su sonido final.",
+              "produccion": "Creación de rótulos ilustrados con las vocales para marcar objetos dentro del salón de clases."
+            },
+            "para_pensar": [
+              "¿Cuántos saltos necesito para decir mi nombre por partes?",
+              "¿Qué vocales suenan igual en 'casa' y 'taza'?"
+            ],
+            "pistas_del_exito": [
+              "Aplica correctamente la segmentación silábica mediante movimientos corporales.",
+              "Distingue y nombra las vocales asociándolas con su sonido correspondiente."
+            ],
+            "un_refuerzo": "Utilizar cajas de sonidos donde los niños clasifiquen objetos según la vocal con la que inicia su nombre."
+          }
+        }
+      ]
+    },
+    {
+      "periodo_id": 3,
+      "guias_por_componente": [
+        {
+          "componente": "Habilidades comunicativas",
+          "guia_didactica": {
+            "la_estrategia": "El Taller Mágico de las Letras (Fonemas M-P-S-L)",
+            "un_reto_sugerido": "Identificar sonidos consonánticos iniciales y escribir etiquetas funcionales para los juegos del salón.",
+            "ruta_de_exploracion": {
+              "explorar": "Juegos de 'Veo-veo' fonológico enfocados en los fonemas M, P, S y L presentes en el aula.",
+              "visual": "Identificación de logotipos y textos del entorno escolar para asociar sonidos con letras convencionales.",
+              "produccion": "Escritura de rótulos y etiquetas para una 'Tienda de juego', usando grafías propias que se acercan a las letras reales."
+            },
+            "para_pensar": [
+              "¿Cómo suena la primera letra de la palabra 'Mamá'?",
+              "¿Para qué nos sirve ponerle nombres a las cosas de nuestra tienda?"
+            ],
+            "pistas_del_exito": [
+              "Aísla y reconoce fonemas consonánticos iniciales en palabras dadas.",
+              "El intento de escritura muestra una correspondencia inicial entre sonido y grafía."
+            ],
+            "un_refuerzo": "Actividades de trazo dirigido en renglón grande para consolidar el control espacial de la escritura."
+          }
+        }
+      ]
+    },
+    {
+      "periodo_id": 4,
+      "guias_por_componente": [
+        {
+          "componente": "Habilidades comunicativas",
+          "guia_didactica": {
+            "la_estrategia": "El Gran Libro de nuestras Historias (Síntesis y Narración)",
+            "un_reto_sugerido": "Escribir el nombre propio sin apoyo visual y crear un relato secuencial basado en imágenes.",
+            "ruta_de_exploracion": {
+              "explorar": "Análisis e interpretación de diferentes registros (cuentos, páginas web, pinturas) para formular hipótesis sobre lo que dicen.",
+              "visual": "Uso de la Escala de Madurez para validar el nivel de hipótesis lectora y la interpretación de imágenes.",
+              "produccion": "Proyecto final: Creación de un 'Libro del Curso' o 'Álbum de Recetas' integrando dibujos y textos propios."
+            },
+            "para_pensar": [
+              "¿Qué pasaría en nuestra historia si el personaje principal cambia de lugar?",
+              "¿Por qué es importante que todos sepan escribir su nombre?"
+            ],
+            "pistas_del_exito": [
+              "Escribe su nombre propio utilizando las letras convencionales que conoce.",
+              "Crea historias coherentes y formula preguntas basadas en la lectura de imágenes."
+            ],
+            "un_refuerzo": "Aplicación del Protocolo de Tránsito para validar los prerrequisitos críticos (fonología y motricidad) antes del ingreso a Grado 1°."
+          }
+        }
+      ]
+    }
+  ]
+}
