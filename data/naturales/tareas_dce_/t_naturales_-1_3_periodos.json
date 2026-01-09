@@ -1,0 +1,85 @@
+{
+  "area": "Ciencias Naturales",
+  "grado": "-1",
+  "nombre_archivo": "t_naturales_-1_3_periodos.json",
+  "periodos": [
+    {
+      "periodo_id": 1,
+      "guias_por_componente": [
+        {
+          "componente": "Exploración del medio",
+          "guia_didactica": {
+            "la_estrategia": "Mi Cuerpo, mi Primer Laboratorio",
+            "un_reto_sugerido": "Descubrir tres objetos ocultos en la 'Bolsa del Misterio' usando solo el tacto y describir si son suaves o ásperos.",
+            "ruta_de_exploracion": {
+              "explorar": "Juegos sensoriales con texturas, olores y sabores. Masajes y reconocimiento de las partes del cuerpo frente al espejo.",
+              "visual": "Uso de lupas para observar detalles de las manos, ojos y objetos pequeños del salón.",
+              "produccion": "Creación de un autorretrato táctil pegando materiales de diferentes texturas en las partes del cuerpo dibujadas."
+            },
+            "para_pensar": [
+              "¿Qué parte de mi cuerpo me ayuda a saber si la sopa está caliente?",
+              "¿Podemos reconocer a un amigo solo por su voz?"
+            ],
+            "pistas_del_exito": [
+              "Nombra correctamente al menos 4 partes de su cuerpo y su función básica.",
+              "Identifica sensaciones táctiles opuestas (liso/áspero) de forma independiente."
+            ],
+            "un_refuerzo": "Actividades de esquema corporal para preparar la lateralidad y los sentidos de Grado 0°."
+          }
+        }
+      ]
+    },
+    {
+      "periodo_id": 2,
+      "guias_por_componente": [
+        {
+          "componente": "Exploración del medio",
+          "guia_didactica": {
+            "la_estrategia": "Exploradores de la Vida Silvestre",
+            "un_reto_sugerido": "Sembrar una semilla 'mágica' y explicar qué necesita para crecer durante la semana.",
+            "ruta_de_exploracion": {
+              "explorar": "Caminata por el patio para buscar insectos, flores y hojas. Observación de animales domésticos y sus sonidos.",
+              "visual": "Clasificación de láminas de animales en 'salvajes' (viven en la selva) y 'amigos' (viven en casa).",
+              "produccion": "Construcción de un pequeño jardín en el salón y modelado en plastilina de su animal favorito."
+            },
+            "para_pensar": [
+              "¿Por qué las plantas no pueden caminar como nosotros para buscar comida?",
+              "¿Qué sonido hace el perro cuando está feliz?"
+            ],
+            "pistas_del_exito": [
+              "Reconoce que el agua y la luz son 'la comida' de las plantas.",
+              "Imita movimientos y sonidos de animales diferenciando su tamaño (grande/pequeño)."
+            ],
+            "un_refuerzo": "Experiencias de cuidado de seres vivos para fomentar la responsabilidad y la observación biológica."
+          }
+        }
+      ]
+    },
+    {
+      "periodo_id": 3,
+      "guias_por_componente": [
+        {
+          "componente": "Exploración del medio",
+          "guia_didactica": {
+            "la_estrategia": "Guardianes del Agua y el Cielo",
+            "un_reto_sugerido": "Hacer una carrera de barcos de papel para descubrir qué objetos flotan y cómo cuidar el agua de los ríos.",
+            "ruta_de_exploracion": {
+              "explorar": "Experimentos de flotación con diversos objetos y observación de los cambios del clima (sol/lluvia).",
+              "visual": "Uso de pictogramas para registrar el tiempo atmosférico y observar imágenes del planeta Tierra.",
+              "produccion": "Taller de reciclaje: transformar cajas de cartón en juguetes y jornada de limpieza del salón."
+            },
+            "para_pensar": [
+              "¿A dónde se va el sol cuando aparece la luna?",
+              "¿Qué podemos hacer para que el agua del planeta siempre esté limpia?"
+            ],
+            "pistas_del_exito": [
+              "Clasifica objetos en 'pesados' y 'livianos' basándose en la experimentación física.",
+              "Identifica acciones de cuidado ambiental como botar la basura en su lugar."
+            ],
+            "un_refuerzo": "Introducción a la causa-consecuencia y hábitos ecológicos como cierre del proceso hacia Transición."
+          }
+        }
+      ]
+    }
+  ]
+}
