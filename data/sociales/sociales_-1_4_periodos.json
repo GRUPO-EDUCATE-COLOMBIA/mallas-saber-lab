@@ -1,33 +1,23 @@
 {
-  "area": "sociales",
+  "area": "Ciencias Sociales",
   "grado": "-1",
   "tipo_malla": "4_periodos",
   "numero_periodos": 4,
   "periodos": {
     "1": [
       {
-        "habilidad": "Identidad Personal y\nEmocional",
-        "estandar": "Prop. 1: Las niñas y los niños\nconstruyen su identidad en relación con\nlos otros; se sienten queridos, y valoran\npositivamente pertenecer a una familia,\ncultura y mundo. [P1]",
+        "componente": "Identidad y relaciones sociales",
+        "estandar": "Prop. 1: Las niñas y los niños construyen su identidad en relación con los otros; se sienten queridos, y valoran positivamente pertenecer a una familia, cultura y mundo. [P1]",
         "dba": [
-          "DBA-0-Prop.1-3: Identifica y valora las",
-          "características corporales y emocionales en sí",
-          "mismo y en los demás."
+          "(Identidad Personal y Emocional) DBA-0-Prop.1-3: Identifica y valora las características corporales y emocionales en sí mismo y en los demás."
         ],
         "evidencias": [
-          "DBA-0-Prop.1-3-EV-2: Representa su cuerpo a través",
-          "de diferentes lenguajes artísticos (dibujo, danza).",
-          "DBA-0-Prop.1-3-EV-3: Manifiesta sus gustos y",
-          "disgustos frente a situaciones."
+          "DBA-0-Prop.1-3-EV-2: Representa su cuerpo a través de diferentes lenguajes artísticos (dibujo, danza).",
+          "DBA-0-Prop.1-3-EV-3: Manifiesta sus gustos y disgustos frente a situaciones."
         ],
         "saberes": [
-          "Reconocimiento de Emociones",
-          "Básicas (alegría, tristeza, rabia).",
-          "Esquema corporal. Gustos y",
-          "preferencias."
+          "Reconocimiento de Emociones Básicas (alegría, tristeza, rabia). Esquema corporal. Gustos y preferencias."
         ],
-        "sugerencias_metodologicas": "Arte y Juego Dramático (D-2247):\n1. El Espejo Mágico: Exploración de expresiones faciales.\n2. Dibujo de Identidad: Autorretratos y dibujo del cuerpo.\n3. Cuentos de Emociones: Lectura y dramatización de\nhistorias que nombren sentimientos (NTI 1).",
-        "articulacion_grado_0": "Habilidad Fundacional: Base para la Regulación\nEmocional (nombrar el sentimiento) y\nel Autoconocimiento (DBA-0-Prop.1-3 en\nTransición).",
-        "criterios_evaluacion_formativa": "",
         "socioemocional": null,
         "diccionario": null,
         "fuente": null
@@ -35,27 +25,18 @@
     ],
     "2": [
       {
-        "habilidad": "Pertenencia y Roles Sociales",
-        "estandar": "Prop. 1: Las niñas y los niños\nconstruyen su identidad en relación con\nlos otros... [P1]",
+        "componente": "Identidad y relaciones sociales",
+        "estandar": "Prop. 1: Las niñas y los niños construyen su identidad en relación con los otros... [P1]",
         "dba": [
-          "DBA-0-Prop.1-4: Reconoce que es parte de una",
-          "familia, de una comunidad y un territorio con",
-          "costumbres, valores y tradiciones."
+          "(Pertenencia y Roles Sociales) DBA-0-Prop.1-4: Reconoce que es parte de una familia, de una comunidad y un territorio con costumbres, valores y tradiciones."
         ],
         "evidencias": [
-          "DBA-0-Prop.1-4-EV-1: Identifica características del",
-          "lugar donde vive.",
-          "DBA-0-Prop.1-4-EV-3: Describe roles de personas de",
-          "su familia y entorno cercano."
+          "DBA-0-Prop.1-4-EV-1: Identifica características del lugar donde vive.",
+          "DBA-0-Prop.1-4-EV-3: Describe roles de personas de su familia y entorno cercano."
         ],
         "saberes": [
-          "Roles básicos de la familia y oficios.",
-          "Pertenencia a un grupo (familia,",
-          "Jardín)."
+          "Roles básicos de la familia y oficios. Pertenencia a un grupo (familia, Jardín)."
         ],
-        "sugerencias_metodologicas": "Juego Dramático y Exploración (D-2247):\n1. Juego de Roles: Simulación de roles familiares (mamá,\npapá, hermanos) y oficios simples (bombero, cocinero).\n2. Exploración del Entorno: Compartir fotos o dibujos de su\ncasa/barrio para identificar sus características.\n3. Literatura: Cuentos sobre las funciones de los miembros de\nla comunidad.",
-        "articulacion_grado_0": "Habilidad Fundacional: Base para el Análisis de\nOrganizaciones Sociales y la Noción de Roles\nSociales (DBA-0-Prop.1-4 en Transición).",
-        "criterios_evaluacion_formativa": "",
         "socioemocional": null,
         "diccionario": null,
         "fuente": null
@@ -63,24 +44,17 @@
     ],
     "3": [
       {
-        "habilidad": "Convivencia y Regulación\nSocial Inicial",
-        "estandar": "Prop. 1: Las niñas y los niños\nconstruyen su identidad en relación con\nlos otros... [P1]",
+        "componente": "Identidad y relaciones sociales",
+        "estandar": "Prop. 1: Las niñas y los niños construyen su identidad en relación con los otros... [P1]",
         "dba": [
-          "DBA-0-Prop.1-6: Demuestra consideración y",
-          "respeto al relacionarse con otros."
+          "(Convivencia y Regulación Social Inicial) DBA-0-Prop.1-6: Demuestra consideración y respeto al relacionarse con otros."
         ],
         "evidencias": [
-          "DBA-0-Prop.1-6-EV-2: Asume actitudes colaborativas",
-          "y solidarias en las actividades en las que participa."
+          "DBA-0-Prop.1-6-EV-2: Asume actitudes colaborativas y solidarias en las actividades en las que participa."
         ],
         "saberes": [
-          "Juego Paralelo. Alternancia de",
-          "materiales y turnos. Colaboración y",
-          "Solidaridad."
+          "Juego Paralelo. Alternancia de materiales y turnos. Colaboración y Solidaridad."
         ],
-        "sugerencias_metodologicas": "Juego y Participación (D-2247):\n1. Acuerdos Visuales: Construcción participativa de 2-3\nnormas básicas del aula (con pictogramas).\n2. Juegos Cooperativos: Rondas y juegos que exijan\nque todos participen y esperen el turno (sin empujar).\n3. Rincón de Materiales: Practicar la alternancia de\nmateriales y el respeto por el espacio del compañero (Juego\nParalelo).",
-        "articulacion_grado_0": "Habilidad Fundacional: Base del Respeto por el\nEspacio y la Negociación Simple. (Prepara la\nConstrucción Colectiva de Acuerdos en\nTransición, DBA-0-Prop.1-6).",
-        "criterios_evaluacion_formativa": "",
         "socioemocional": null,
         "diccionario": null,
         "fuente": null
@@ -88,28 +62,19 @@
     ],
     "4": [
       {
-        "habilidad": "Iniciativa, Constancia y Toma\nde Decisiones",
-        "estandar": "Prop. 1: Las niñas y los niños\nconstruyen su identidad en relación con\nlos otros... [P1]",
+        "componente": "Identidad y relaciones sociales",
+        "estandar": "Prop. 1: Las niñas y los niños construyen su identidad en relación con los otros... [P1]",
         "dba": [
-          "DBA-0-Prop.1-1: Toma decisiones frente a",
-          "algunas situaciones cotidianas."
+          "(Iniciativa, Constancia y Toma de Decisiones) DBA-0-Prop.1-1: Toma decisiones frente a algunas situaciones cotidianas."
         ],
         "evidencias": [
-          "DBA-0-Prop.1-1-EV-2: Muestra iniciativa en la",
-          "realización de actividades.",
-          "DBA-0-Prop.1-1-EV-3: Demuestra constancia al",
-          "realizar sus actividades.",
-          "DBA-0-Prop.1-1-EV-4: Anticipa algunas consecuencias",
-          "de las decisiones que toma."
+          "DBA-0-Prop.1-1-EV-2: Muestra iniciativa en la realización de actividades.",
+          "DBA-0-Prop.1-1-EV-3: Demuestra constancia al realizar sus actividades.",
+          "DBA-0-Prop.1-1-EV-4: Anticipa algunas consecuencias de las decisiones que toma."
         ],
         "saberes": [
-          "Iniciativa. Constancia (atención",
-          "sostenida 10-15 min). Justificación de",
-          "preferencias."
+          "Iniciativa. Constancia (atención sostenida 10-15 min). Justificación de preferencias."
         ],
-        "sugerencias_metodologicas": "Exploración del Medio (D-2247):\n1. Tiempo de Rincones: Permitir la elección autónoma de la\nactividad para fomentar la iniciativa y la concentración.\n2. Retos de Constancia: Asignar tareas sencillas que requieran\nun mínimo de tiempo (ej. armar un rompecabezas de 4\npiezas).\n3. Resolución de Problemas Simples: Dar opciones de\nelección de vestimenta o materiales, pidiendo justificación\nsimple.",
-        "articulacion_grado_0": "Habilidad Fundacional: Base de la Iniciativa y la\nAutonomía. (Prerrequisito para la Toma de\nDecisiones y Constancia requerida en\nTransición, DBA-0-Prop.1-1).",
-        "criterios_evaluacion_formativa": "",
         "socioemocional": null,
         "diccionario": null,
         "fuente": null
