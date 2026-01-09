@@ -1,0 +1,111 @@
+{
+  "area": "Ciencias Naturales",
+  "grado": "0",
+  "nombre_archivo": "t_naturales_0_4_periodos.json",
+  "periodos": [
+    {
+      "periodo_id": 1,
+      "guias_por_componente": [
+        {
+          "componente": "Exploración del medio",
+          "guia_didactica": {
+            "la_estrategia": "El Laboratorio de los Sentidos",
+            "un_reto_sugerido": "Identificar y describir las propiedades táctiles de objetos desconocidos utilizando al menos 3 adjetivos sensoriales.",
+            "ruta_de_exploracion": {
+              "explorar": "Taller sensorial 'La Caja del Misterio': introducir las manos en cajas con diferentes texturas y olores para adivinar qué hay dentro.",
+              "visual": "Observación detallada de objetos del entorno para identificar características visibles y formular preguntas sobre su funcionamiento.",
+              "produccion": "Clasificación de objetos del salón por su textura (suave, áspero, liso, rugoso) y creación de un mural táctil."
+            },
+            "para_pensar": [
+              "¿Qué pasaría si solo pudiéramos conocer el mundo a través de nuestras manos?",
+              "¿Por qué algunos objetos huelen o se sienten de forma diferente a otros?"
+            ],
+            "pistas_del_exito": [
+              "Describe objetos utilizando un vocabulario sensorial rico (al menos 3 adjetivos por objeto).",
+              "Participa activamente en la exploración, demostrando curiosidad por el funcionamiento de las cosas."
+            ],
+            "un_refuerzo": "Actividades de caracterización sensorial para preparar el reconocimiento de propiedades físicas que se verá en Grado 1°."
+          }
+        }
+      ]
+    },
+    {
+      "periodo_id": 2,
+      "guias_por_componente": [
+        {
+          "componente": "Exploración del medio",
+          "guia_didactica": {
+            "la_estrategia": "Cazadores de Vida y Materia",
+            "un_reto_sugerido": "Clasificar elementos de la naturaleza en seres vivos e inertes aplicando los criterios de alimentación y crecimiento.",
+            "ruta_de_exploracion": {
+              "explorar": "Caminata por el patio escolar para recolectar 'tesoros de la naturaleza' (piedras, hojas secas, insectos, flores).",
+              "visual": "Comparación lúdica de materiales para identificar propiedades básicas como dureza (duro/blando) o resistencia.",
+              "produccion": "Creación de un museo de aula donde se clasifiquen las colecciones según si necesitan comer y crecer o si son objetos inertes."
+            },
+            "para_pensar": [
+              "¿En qué se parece un niño a una planta y en qué se diferencian de una piedra?",
+              "¿Para qué nos sirve saber si un material es duro o blando antes de construir algo?"
+            ],
+            "pistas_del_exito": [
+              "Aplica criterios biológicos (crece, come, respira) para diferenciar seres vivos de objetos inertes.",
+              "Distingue y nombra correctamente al menos 3 tipos de materiales según sus propiedades físicas."
+            ],
+            "un_refuerzo": "Ejercicios de clasificación de seres vivos e inertes como base para el estudio formal de la biología en Grado 1°."
+          }
+        }
+      ]
+    },
+    {
+      "periodo_id": 3,
+      "guias_por_componente": [
+        {
+          "componente": "Exploración del medio",
+          "guia_didactica": {
+            "la_estrategia": "Guardianes de la Semilla Mágica",
+            "un_reto_sugerido": "Realizar un experimento de siembra y registrar gráficamente los cambios observados en el ciclo de vida de la planta.",
+            "ruta_de_exploracion": {
+              "explorar": "Proyecto de germinación: sembrar una semilla y formular hipótesis sobre qué necesita para crecer (causa-consecuencia).",
+              "visual": "Observación diaria del experimento y creación de una bitácora con registros gráficos (dibujos) del crecimiento.",
+              "produccion": "Explicación del ciclo de vida de la planta ante los compañeros utilizando sus propios registros audiovisuales o sonoros."
+            },
+            "para_pensar": [
+              "¿Qué crees que pasará si nuestra planta no recibe luz del sol?",
+              "¿Cómo cambió la semilla desde el primer día hasta hoy?"
+            ],
+            "pistas_del_exito": [
+              "Formula preguntas de interés que pueden ser verificadas a través de la observación.",
+              "Realiza registros gráficos detallados que muestran la evolución del fenómeno observado."
+            ],
+            "un_refuerzo": "Desarrollo de habilidades de indagación y registro necesarias para los laboratorios de ciencias de Grado 1°."
+          }
+        }
+      ]
+    },
+    {
+      "periodo_id": 4,
+      "guias_por_componente": [
+        {
+          "componente": "Exploración del medio",
+          "guia_didactica": {
+            "la_estrategia": "Pequeños Ingenieros de Materiales",
+            "un_reto_sugerido": "Transformar un objeto del entorno para darle un nuevo uso, justificando la elección de materiales según su impermeabilidad o dureza.",
+            "ruta_de_exploracion": {
+              "explorar": "Reto de construcción: armar y desarmar objetos cotidianos para descubrir cómo funcionan por dentro.",
+              "visual": "Análisis de materiales impermeables y resistentes para decidir cuáles sirven para protegerse de la lluvia o soportar peso.",
+              "produccion": "Creación de un prototipo o invento que resuelva una necesidad del salón, transformando materiales reciclables."
+            },
+            "para_pensar": [
+              "¿Por qué no hacemos paraguas de papel o zapatos de plastilina?",
+              "¿Qué otras cosas podemos crear si desarmamos una caja de cartón?"
+            ],
+            "pistas_del_exito": [
+              "Justifica la elección de un material basándose en sus propiedades funcionales específicas.",
+              "Demuestra habilidades de síntesis al aplicar lo aprendido sobre indagación en la creación de su invento."
+            ],
+            "un_refuerzo": "Validación de la capacidad de selección de materiales según propiedades físicas como preparación para el Grado 1°."
+          }
+        }
+      ]
+    }
+  ]
+}
