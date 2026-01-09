@@ -1,5 +1,4 @@
-// FILE: js/render-engine.js | VERSION: v7.6 Stable
-
+// FILE: js/render-engine.js | VERSION: v7.9 Stable (Estructura B)
 window.RenderEngine = (function() {
   const containerMalla = document.getElementById('contenedor-malla');
 
@@ -21,43 +20,42 @@ window.RenderEngine = (function() {
     }).join('');
   }
 
-  /**
-   * PLANTILLA ACADÉMICA CON FICHAS DOBLES DE CIERRE
-   */
   function plantillaAcademica(item, areaId, grado, periodo) {
     const tipo = window.APP_CONFIG.TIPO_MALLA;
     const config = window.APP_CONFIG.AREAS[areaId];
     const llaveNormal = normalizarTexto(config.nombre);
     
-    // CRUCE DCE (Normalizado)
+    // 1. CRUCE DCE (Actualizado a Estructura B)
     const llaveDCE = `tareas_dce_${llaveNormal}`;
     const dceData = window.MallasData[llaveDCE]?.[grado]?.[tipo];
+    
+    // Se busca en guias_por_componente usando la nueva ruta
     const dcePer = dceData?.periodos?.find(p => String(p.periodo_id) === String(periodo));
-    const infoDCE = dcePer?.componentes?.find(c => normalizarTexto(c.nombre) === normalizarTexto(item.componente || item.competencia));
+    const rawDCE = dcePer?.guias_por_componente?.find(c => normalizarTexto(c.componente) === normalizarTexto(item.componente || item.competencia));
+    
+    // Referencia directa al objeto de datos para no repetir la ruta
+    const infoDCE = rawDCE?.guia_didactica;
 
-    // CRUCE ECO (Normalizado)
+    // 2. CRUCE ECO (Sin cambios, se mantiene lo que funciona)
     const llaveEco = normalizarTexto(window.APP_CONFIG.AREAS["proyecto-socioemocional"].nombre);
     const ecoPer = window.MallasData[llaveEco]?.[grado]?.[tipo]?.periodos?.[periodo];
     const infoECO = (ecoPer && Array.isArray(ecoPer) && ecoPer.length > 0) ? ecoPer[0] : null;
 
     return `
       <div class="item-malla">
-        <!-- FRANJA DE TÍTULO PRINCIPAL -->
         <div class="franja-titulo-principal" style="background-color: ${config.color};">
             ${item.componente || item.competencia || 'General'}
         </div>
         
         <div class="item-malla-contenido">
-          <!-- BLOQUE ACADÉMICO -->
           <div class="campo"><strong>Estándar Curricular:</strong><div>${validarDato(item.estandar)}</div></div>
           <div class="campo"><strong>DBA:</strong><div>${validarDato(item.dba)}</div></div>
           <div class="campo"><strong>Evidencias de Aprendizaje:</strong><div>${validarDato(item.evidencias)}</div></div>
           <div class="campo"><strong>Saberes / Contenidos:</strong><div>${validarDato(item.saberes)}</div></div>
 
-          <!-- CONTENEDOR DE FICHAS DOBLES DE CIERRE (HITO 3) -->
           <div class="contenedor-fichas-cierre">
             
-            <!-- FICHA 1: GUÍA DIDÁCTICA (DCE) -->
+            <!-- FICHA 1: GUÍA DIDÁCTICA (DCE) - ACTUALIZADA A NUEVA RUTA -->
             <div class="ficha-cierre ficha-dce">
               <div class="ficha-header ficha-header-dce">
                 <span>💡</span> GUÍA DIDÁCTICA: ${infoDCE ? infoDCE.la_estrategia : 'En proceso'}
@@ -77,7 +75,7 @@ window.RenderEngine = (function() {
               </div>
             </div>
 
-            <!-- FICHA 2: RESPONSABILIDAD ECO (ECO) -->
+            <!-- FICHA 2: RESPONSABILIDAD ECO (ECO) - SE MANTIENE IGUAL -->
             <div class="ficha-cierre ficha-eco">
               <div class="ficha-header ficha-header-eco">
                 <span>🧠</span> RESPONSABILIDAD SOCIOEMOCIONAL ECO
@@ -89,7 +87,7 @@ window.RenderEngine = (function() {
               </div>
             </div>
 
-          </div><!-- Fin Contenedor Fichas -->
+          </div>
 
           <div style="text-align:center; margin-top:2rem;">
             <a href="eco/diccionario/eco_dic_${grado}.html" target="_blank" class="btn-eco-dic">Consultar Diccionario ECO</a>
@@ -125,4 +123,3 @@ window.RenderEngine = (function() {
 
   return { renderizar, setCargando };
 })();
-// END OF FILE: js/render-engine.js | VERSION: v7.6 Stable
