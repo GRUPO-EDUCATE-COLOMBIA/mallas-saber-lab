@@ -1,4 +1,4 @@
-// FILE: js/ui-filtros.js | VERSION: v7.5 Stable
+// FILE: js/ui-filtros.js | VERSION: v7.9 Stable (Estructura B)
 document.addEventListener('DOMContentLoaded', () => {
   const areaSel = document.getElementById('area');
   const gradoSel = document.getElementById('grado');
@@ -54,13 +54,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const llaveNormal = normalizarTexto(configArea.nombre);
       const tipo = window.APP_CONFIG.TIPO_MALLA;
       
-      // PRUEBA DE ESCRITORIO: Acceso seguro a los datos normalizados
       const dataGrado = window.MallasData[llaveNormal]?.[gradoSel.value]?.[tipo];
       
       if (dataGrado && dataGrado.periodos && dataGrado.periodos[periodoSel.value]) {
         const items = dataGrado.periodos[periodoSel.value];
         compSel.innerHTML = '<option value="todos">Todos</option>';
         
+        // Extracción limpia de componentes
         const componentesUnicos = [...new Set(items.map(it => it.componente || it.competencia))];
         componentesUnicos.forEach(n => {
           if (n) {
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mostrarError("El periodo seleccionado no tiene datos en el archivo.");
       }
     } else {
-      mostrarError("No se pudo cargar el archivo de este grado. Verifique su existencia.");
+      mostrarError("No se pudo cargar el archivo. Verifique su existencia.");
     }
     window.RenderEngine.setCargando(false);
   });
@@ -106,14 +106,16 @@ document.addEventListener('DOMContentLoaded', () => {
     window.RenderEngine.setCargando(true);
     const g = parseInt(gradoSel.value);
     const grados = [String(g)];
+    // Lógica de adyacencia para progresión
     if (g > 1) grados.push(String(g - 1));
     if (g < 11) grados.push(String(g + 1));
     if (g <= 0) grados.push("-1", "0", "1");
+    
     try {
       await Promise.all(grados.map(gr => asegurarDatosGrado(areaSel.value, gr)));
       window.ProgresionMotor.abrir(window.APP_CONFIG.AREAS[areaSel.value].nombre, gradoSel.value, compSel.value);
     } catch {
-      mostrarError("Error al cargar la progresión.");
+      mostrarError("Error al cargar la secuencia de progresión.");
     }
     window.RenderEngine.setCargando(false);
   });
@@ -121,4 +123,3 @@ document.addEventListener('DOMContentLoaded', () => {
   window.onscroll = () => { btnTop.style.display = (window.scrollY > 300) ? "block" : "none"; };
   btnTop.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 });
-// END OF FILE: js/ui-filtros.js | VERSION: v7.5 Stable
