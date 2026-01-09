@@ -1,32 +1,22 @@
 {
-  "area": "lenguaje",
+  "area": "Lenguaje",
   "grado": "-1",
   "tipo_malla": "4_periodos",
   "numero_periodos": 4,
   "periodos": {
     "1": [
       {
-        "habilidad": "Expresión, Trazo y\nPsicomotricidad\nFina",
-        "estandar": "Prop. 2: Las niñas y los niños son comunicadores activos\nde sus ideas, sentimientos y emociones; expresan,\nimaginan y representan su realidad. [P2]",
+        "componente": "Habilidades comunicativas",
+        "estandar": "Prop. 2: Las niñas y los niños son comunicadores activos de sus ideas, sentimientos y emociones; expresan, imaginan y representan su realidad. [P2]",
         "dba": [
-          "DBA-0-Prop.2-7: Expresa y representa",
-          "lo que observa, siente, piensa e",
-          "imagina, a través del juego, la música,",
-          "el dibujo y la expresión corporal."
+          "(Expresión, Trazo y Psicomotricidad Fina) DBA-0-Prop.2-7: Expresa y representa lo que observa, siente, piensa e imagina, a través del juego, la música, el dibujo y la expresión corporal."
         ],
         "evidencias": [
-          "DBA-0-Prop.2-7-EV-2: Dramatiza diálogos con",
-          "juguetes."
+          "DBA-0-Prop.2-7-EV-2: Dramatiza diálogos con juguetes."
         ],
         "saberes": [
-          "Gráfico/Motor: Agarre funcional",
-          "(pinza de tres dedos). Garabateo",
-          "con intención. Control del espacio",
-          "físico."
+          "Gráfico/Motor: Agarre funcional (pinza de tres dedos). Garabateo con intención. Control del espacio físico."
         ],
-        "sugerencias_metodologicas": "Arte y Juego (D-2247): 1. Taller de\nExpresión: Uso de arcilla o plastilina para\nmodelar emociones y figuras. 2. Mural\nLibre: Trabajar en formatos verticales y grandes\ncon herramientas gruesas (ceras, pinceles) para\nfomentar el agarre y el trazo amplio. 3. Juego\nDramático: Jugar a roles simples (familia) para\npracticar la expresión oral (P2).",
-        "articulacion_grado_0": "Habilidad Fundacional: Base de la Psicomotricidad Fina y\nel Control Motor Fino necesario para el trazo dirigido de\nTransición. (Prepara el DBA-0-Prop.2-7 en Transición).",
-        "criterios_evaluacion_formativa": "1. Agarre y Pinza: ¿Demuestra agarre funcional\n(tres dedos) del crayón? 2. Expresión Oral: ¿Utiliza\nfrases completas y vocabulario adecuado a su\nedad para comunicar sus necesidades? 3.\nDramatización: ¿Participa en juegos de roles\nsimples?",
         "socioemocional": null,
         "diccionario": null,
         "fuente": null
@@ -34,33 +24,20 @@
     ],
     "2": [
       {
-        "habilidad": "Conciencia Sonoro-\nRítmica y Sentido\ndel Escrito",
-        "estandar": "Prop. 2: Las niñas y los niños son comunicadores activos\nde sus ideas, sentimientos y emociones... [P2] Prop. 3:\nLas niñas y los niños disfrutan aprender... [P3]",
+        "componente": "Habilidades comunicativas",
+        "estandar": "Prop. 2: Las niñas y los niños son comunicadores activos de sus ideas, sentimientos y emociones... [P2] Prop. 3: Las niñas y los niños disfrutan aprender... [P3]",
         "dba": [
-          "DBA-0-Prop.2-8: Identifica las",
-          "relaciones sonoras en el lenguaje",
-          "oral. DBA-0-Prop.2-9: Establece",
-          "relaciones e interpreta imágenes,",
-          "letras, objetos..."
+          "(Conciencia Sonoro-Rítmica y Sentido del Escrito) DBA-0-Prop.2-8: Identifica las relaciones sonoras en el lenguaje oral.",
+          "(Conciencia Sonoro-Rítmica y Sentido del Escrito) DBA-0-Prop.2-9: Establece relaciones e interpreta imágenes, letras, objetos..."
         ],
         "evidencias": [
-          "DBA-0-Prop.2-8-EV-1: Identifica palabras que",
-          "riman en juegos (música, rondas, poesía). DBA-0-",
-          "Prop.2-8-EV-3: Establece asociaciones entre los",
-          "sonidos onomatopéyicos del entorno. DBA-0-",
-          "Prop.2-9-EV-3: Explora diferentes tipos de texto y",
-          "reconoce su propósito."
+          "DBA-0-Prop.2-8-EV-1: Identifica palabras que riman en juegos (música, rondas, poesía).",
+          "DBA-0-Prop.2-8-EV-3: Establece asociaciones entre los sonidos onomatopéyicos del entorno.",
+          "DBA-0-Prop.2-9-EV-3: Explora diferentes tipos de texto y reconoce su propósito."
         ],
         "saberes": [
-          "Fonología Inicial: Rimas.",
-          "Onomatopeyas. Sonidos",
-          "vocálicos. Literacidad: Reconocimie",
-          "nto de logos, rótulos y textos",
-          "funcionales."
+          "Fonología Inicial: Rimas. Onomatopeyas. Sonidos vocálicos. Literacidad: Reconocimiento de logos, rótulos y textos funcionales."
         ],
-        "sugerencias_metodologicas": "Literatura y Exploración (D-2247): 1. Juegos de\nRimas: Lectura de poesía y canciones que\nenfatizan los sonidos finales (Rimas). 2.\nExploración Auditiva: Juegos para discriminar\nsonidos de animales y objetos\n(onomatopeyas). 3. Biblioteca\nFuncional: Rotulación en el aula y lectura de\nrótulos conocidos (P3).",
-        "articulacion_grado_0": "Habilidad Fundacional CRÍTICA: Base para\nla Segmentación Silábica y la Conciencia Fonológica de\nVocales (DBA-0-Prop.2-8 en Transición).",
-        "criterios_evaluacion_formativa": "1. Conciencia Rítmica: ¿Identifica la rima de\npalabras en el contexto de la música o poesía? 2.\nDiscriminación Auditiva: ¿Logra distinguir sonidos\ndel entorno y onomatopeyas? 3. Sentido del\nEscrito: ¿Asocia un texto o rótulo con un\npropósito (Ej. la lista de asistencia dice quién\nvino)?",
         "socioemocional": null,
         "diccionario": null,
         "fuente": null
@@ -68,35 +45,20 @@
     ],
     "3": [
       {
-        "habilidad": "Narración,\nSecuencia y\nAproximación al\nCódigo",
-        "estandar": "Prop. 2: Las niñas y los niños son comunicadores activos\nde sus ideas, sentimientos y emociones... [P2]",
+        "componente": "Habilidades comunicativas",
+        "estandar": "Prop. 2: Las niñas y los niños son comunicadores activos de sus ideas, sentimientos y emociones... [P2]",
         "dba": [
-          "DBA-0-Prop.2-7: Expresa y representa",
-          "lo que observa, siente...",
-          "(narración). DBA-0-Prop.2-",
-          "10: Expresa ideas, intereses y",
-          "emociones a través de sus propias",
-          "grafías y formas semejantes a las",
-          "letras convencionales..."
+          "(Narración, Secuencia y Aproximación al Código) DBA-0-Prop.2-7: Expresa y representa lo que observa, siente... (narración).",
+          "(Narración, Secuencia y Aproximación al Código) DBA-0-Prop.2-10: Expresa ideas, intereses y emociones a través de sus propias grafías y formas semejantes a las letras convencionales..."
         ],
         "evidencias": [
-          "DBA-0-Prop.2-7-EV-2: Dramatiza diálogos con",
-          "juguetes. DBA-0-Prop.2-10-EV-3: Escribe su",
-          "nombre propio con las letras que conoce. DBA-0-",
-          "Prop.2-10-EV-1: Se interesa por saber cómo se",
-          "escriben las palabras que escucha."
+          "DBA-0-Prop.2-7-EV-2: Dramatiza diálogos con juguetes.",
+          "DBA-0-Prop.2-10-EV-3: Escribe su nombre propio con las letras que conoce.",
+          "DBA-0-Prop.2-10-EV-1: Se interesa por saber cómo se escriben las palabras que escucha."
         ],
         "saberes": [
-          "Narración: Secuencia temporal",
-          "simple (inicio-fin). Identidad",
-          "Escrita: Nombre",
-          "propio. Gráfico: Trazado de líneas",
-          "simples (vertical/horizontal) y",
-          "círculos."
+          "Narración: Secuencia temporal simple (inicio-fin). Identidad Escrita: Nombre propio. Gráfico: Trazado de líneas simples (vertical/horizontal) y círculos."
         ],
-        "sugerencias_metodologicas": "Literatura y Juego (D-2247): 1. Lectura\nDialógica: Hacer pausas en el cuento para que el\nniño prediga la secuencia de eventos\n(causalidad). 2. Rincón de la\nEscritura: Implementar rutinas diarias de\nescritura del nombre propio y trazos dirigidos\nsimples (copia de figuras geométricas básicas).",
-        "articulacion_grado_0": "Habilidad Fundacional: Base de la Secuencia Narrativa y\nel Trazo Dirigido. (Prerrequisito para la Narración\nSecuencial y la Madurez Gráfica de Transición).",
-        "criterios_evaluacion_formativa": "1. Narración: ¿Narra un evento (personal o de\ncuento) siguiendo un orden lógico (inicio-fin)? 2.\nIdentidad Escrita: ¿Escribe su nombre de forma\nreconocible? ¿Logra copiar líneas\nverticales/horizontales?",
         "socioemocional": null,
         "diccionario": null,
         "fuente": null
@@ -104,32 +66,19 @@
     ],
     "4": [
       {
-        "habilidad": "Consolidación\nFonológica y\nMotora",
-        "estandar": "Prop. 2: Las niñas y los niños son comunicadores activos\nde sus ideas, sentimientos y emociones... [P2] Prop. 3:\nLas niñas y los niños disfrutan aprender... [P3]",
+        "componente": "Habilidades comunicativas",
+        "estandar": "Prop. 2: Las niñas y los niños son comunicadores activos de sus ideas, sentimientos y emociones... [P2] Prop. 3: Las niñas y los niños disfrutan aprender... [P3]",
         "dba": [
-          "DBA-0-Prop.2-8: Identifica las",
-          "relaciones sonoras en el lenguaje",
-          "oral. DBA-0-Prop.2-9: Establece",
-          "relaciones e interpreta imágenes,",
-          "letras, objetos..."
+          "(Consolidación Fonológica y Motora) DBA-0-Prop.2-8: Identifica las relaciones sonoras en el lenguaje oral.",
+          "(Consolidación Fonológica y Motora) DBA-0-Prop.2-9: Establece relaciones e interpreta imágenes, letras, objetos..."
         ],
         "evidencias": [
-          "DBA-0-Prop.2-8-EV-2: Sigue y construye juegos de",
-          "segmentación de palabras orales a través de las",
-          "palmas. DBA-0-Prop.2-9-EV-1: Lee imágenes, hace",
-          "preguntas, formula ideas y crea historias a",
-          "propósito de lo que percibe en diferentes",
-          "registros."
+          "DBA-0-Prop.2-8-EV-2: Sigue y construye juegos de segmentación de palabras orales a través de las palmas.",
+          "DBA-0-Prop.2-9-EV-1: Lee imágenes, hace preguntas, formula ideas y crea historias a propósito de lo que percibe en diferentes registros."
         ],
         "saberes": [
-          "Síntesis: Segmentación silábica",
-          "(conteo con palmas). Vocabulario",
-          "amplio. Uso funcional del",
-          "dibujo/escrito."
+          "Síntesis: Segmentación silábica (conteo con palmas). Vocabulario amplio. Uso funcional del dibujo/escrito."
         ],
-        "sugerencias_metodologicas": "Proyecto de Síntesis (D-2247): 1. Proyecto \"Mi\nHistoria\": Creación de un libro o álbum final\ndonde el niño dibuja y \"escribe\" con sus grafías\nuna secuencia narrativa. 2. Evaluación\nLúdica: Juegos de segmentación silábica con\nmovimiento. 3. Visita de\nArticulación: Intercambio con el aula de\nTransición.",
-        "articulacion_grado_0": "Validación FINAL: Afianzamiento de la Conciencia\nRítmica/Silábica y la Secuencia Narrativa.\n(Aseguramiento de los prerrequisitos clave para la\ntransición).",
-        "criterios_evaluacion_formativa": "1. Conciencia Silábica: ¿Logra segmentar la\nmayoría de las palabras en sílabas usando\npalmadas? 2. Madurez Gráfica: ¿Usa el trazo con\nintención y con el agarre correcto? 3. Hipótesis\nLectora: ¿Logra hacer una predicción sobre el\ncontenido de un texto o logo conocido?",
         "socioemocional": null,
         "diccionario": null,
         "fuente": null
