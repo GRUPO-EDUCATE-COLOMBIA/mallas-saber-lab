@@ -1,0 +1,111 @@
+{
+  "area": "Lenguaje",
+  "grado": "-1",
+  "nombre_archivo": "t_lenguaje_-1_4_periodos.json",
+  "periodos": [
+    {
+      "periodo_id": 1,
+      "guias_por_componente": [
+        {
+          "componente": "Habilidades comunicativas",
+          "guia_didactica": {
+            "la_estrategia": "El Mural de mis Primeros Trazos",
+            "un_reto_sugerido": "Modelar una figura que represente una emoción y demostrar el agarre de pinza de tres dedos en un mural de gran formato.",
+            "ruta_de_exploracion": {
+              "explorar": "Taller de expresión sensorial utilizando arcilla o plastilina para modelar libremente figuras y emociones.",
+              "visual": "Trabajo en murales libres verticales y de gran tamaño utilizando ceras y pinceles gruesos para fomentar el trazo amplio.",
+              "produccion": "Sesiones de juego dramático representando roles familiares simples para practicar la expresión oral y el diálogo."
+            },
+            "para_pensar": [
+              "¿Qué forma tiene mi alegría cuando la dibujo en el muro?",
+              "¿Cómo mis tres dedos ayudan al crayón a bailar en el papel?"
+            ],
+            "pistas_del_exito": [
+              "Demuestra un agarre funcional (pinza de tres dedos) al utilizar crayones o pinceles.",
+              "Participa activamente en dramatizaciones con juguetes o juegos de roles."
+            ],
+            "un_refuerzo": "Fortalecer la base de la psicomotricidad fina necesaria para el trazo dirigido que se requerirá en Grado 0°."
+          }
+        }
+      ]
+    },
+    {
+      "periodo_id": 2,
+      "guias_por_componente": [
+        {
+          "componente": "Habilidades comunicativas",
+          "guia_didactica": {
+            "la_estrategia": "El Eco de las Rimas y los Logos",
+            "un_reto_sugerido": "Identificar rimas en canciones y reconocer el propósito de al menos tres rótulos o logos del salón.",
+            "ruta_de_exploracion": {
+              "explorar": "Exploración auditiva mediante juegos de discriminación de sonidos de animales y objetos del entorno (onomatopeyas).",
+              "visual": "Recorridos por el aula para identificar rótulos, nombres propios y logos conocidos en la biblioteca funcional.",
+              "produccion": "Lectura de poesía y canto de rondas infantiles enfatizando y exagerando las rimas y sonidos finales."
+            },
+            "para_pensar": [
+              "¿Qué palabras suenan parecido al final, como 'canción' y 'avión'?",
+              "¿Para qué nos sirve que la lista de asistencia tenga nuestros nombres escritos?"
+            ],
+            "pistas_del_exito": [
+              "Identifica correctamente la rima de palabras sencillas en canciones o poemas.",
+              "Asocia un texto o rótulo con su propósito funcional (ej. identifica dónde dice su nombre)."
+            ],
+            "un_refuerzo": "Actividades críticas de conciencia rítmica para preparar la segmentación silábica de Transición."
+          }
+        }
+      ]
+    },
+    {
+      "periodo_id": 3,
+      "guias_por_componente": [
+        {
+          "componente": "Habilidades comunicativas",
+          "guia_didactica": {
+            "la_estrategia": "El Rincón de mi Nombre y mis Historias",
+            "un_reto_sugerido": "Narrar una historia corta con inicio y fin, y escribir su nombre propio de forma reconocible.",
+            "ruta_de_exploracion": {
+              "explorar": "Sesiones de lectura dialógica donde se invita al niño a predecir qué pasará después en la historia.",
+              "visual": "Observación y copia de líneas simples (horizontales, verticales) y círculos en el rincón de la escritura.",
+              "produccion": "Práctica diaria de la escritura del nombre propio utilizando diversas grafías y letras conocidas."
+            },
+            "para_pensar": [
+              "¿Qué pasó primero y qué pasó al final en el cuento de hoy?",
+              "¿Cuáles son las letras que forman mi nombre?"
+            ],
+            "pistas_del_exito": [
+              "Logra narrar un evento siguiendo un orden lógico secuencial (inicio - fin).",
+              "Escribe su nombre de forma reconocible y logra copiar figuras geométricas básicas."
+            ],
+            "un_refuerzo": "Ejercicios de trazo dirigido para desarrollar la madurez gráfica necesaria en el siguiente grado."
+          }
+        }
+      ]
+    },
+    {
+      "periodo_id": 4,
+      "guias_por_componente": [
+        {
+          "componente": "Habilidades comunicativas",
+          "guia_didactica": {
+            "la_estrategia": "Mi Álbum de Historias Finales",
+            "un_reto_sugerido": "Segmentar palabras en sílabas usando palmadas y realizar predicciones sobre el contenido de imágenes.",
+            "ruta_de_exploracion": {
+              "explorar": "Juegos de segmentación silábica integrando el movimiento corporal y el conteo con palmas.",
+              "visual": "Análisis de imágenes y logos complejos para realizar hipótesis de lectura basadas en lo que perciben.",
+              "produccion": "Proyecto 'Mi Historia': Creación de un álbum final donde el niño combina dibujos y sus propias grafías narrativas."
+            },
+            "para_pensar": [
+              "¿Cuántas palmadas tiene la palabra 'mariposa'?",
+              "¿Qué crees que dice este dibujo antes de que lo leamos?"
+            ],
+            "pistas_del_exito": [
+              "Segmenta la mayoría de las palabras cotidianas en sílabas mediante palmadas.",
+              "Formula preguntas y crea historias coherentes a partir de la lectura de imágenes."
+            ],
+            "un_refuerzo": "Realizar una visita de articulación al aula de Transición para familiarizarse con el nuevo entorno escolar."
+          }
+        }
+      ]
+    }
+  ]
+}
