@@ -3,5 +3,86 @@
   "grado": "-1",
   "tipo_malla": "4_periodos",
   "numero_periodos": 4,
-  "periodos": {}
+  "periodos": {
+    "1": [
+      {
+        "componente": "Exploración del medio",
+        "estandar": "Prop. 1: Las niñas y los niños construyen su identidad... Prop. 2: Las niñas y los niños son comunicadores activos de sus ideas, sentimientos y emociones.",
+        "dba": [
+          "(Cuerpo y Sentidos) DBA-0-Prop.1-1: Reconoce que es un ser único en relación con los demás.",
+          "(Cuerpo y Sentidos) DBA-0-Prop.3-13: Usa diferentes herramientas y objetos con variadas posibilidades."
+        ],
+        "evidencias": [
+          "Identifica y nombra las partes principales de su cuerpo (cabeza, tronco, extremidades).",
+          "Explora el entorno usando sus sentidos (olfato, tacto, gusto, vista, oído) y describe sensaciones simples."
+        ],
+        "saberes": [
+          "Autoconocimiento: Mi cuerpo por fuera. Los sentidos: ¿Cómo descubro el mundo?"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "fuente": null
+      }
+    ],
+    "2": [
+      {
+        "componente": "Exploración del medio",
+        "estandar": "Prop. 3: Las niñas y los niños disfrutan aprender; exploran y se relacionan con el mundo para comprenderlo y construirlo.",
+        "dba": [
+          "(Seres Vivos) DBA-0-Prop.3-11: Crea situaciones y propone alternativas de solución a problemas cotidianos a partir de sus conocimientos.",
+          "(Seres Vivos) DBA-0-Prop.3-15: Compara, ordena, clasifica objetos e identifica patrones."
+        ],
+        "evidencias": [
+          "Reconoce que las plantas y los animales son seres vivos que necesitan agua y alimento.",
+          "Identifica animales de su entorno inmediato y describe características notables (tamaño, color, sonidos)."
+        ],
+        "saberes": [
+          "Naturaleza: Las plantas (partes básicas). Animales de mi entorno: domésticos y salvajes."
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "fuente": null
+      }
+    ],
+    "3": [
+      {
+        "componente": "Exploración del medio",
+        "estandar": "Prop. 3: Las niñas y los niños disfrutan aprender; exploran y se relacionan con el mundo para comprenderlo y construirlo.",
+        "dba": [
+          "(Materia y Objetos) DBA-0-Prop.3-12: Establece relaciones entre las causas y consecuencias de los acontecimientos.",
+          "(Materia y Objetos) DBA-0-Prop.3-13: Usa diferentes herramientas y objetos con variadas posibilidades."
+        ],
+        "evidencias": [
+          "Diferencia objetos por su peso (pesado/liviano) y textura (liso/áspero).",
+          "Experimenta con el agua y descubre qué objetos flotan y cuáles se hunden."
+        ],
+        "saberes": [
+          "Mundo Físico: Estados del agua (líquido/hielo). Propiedades de los objetos: peso, tamaño y textura."
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "fuente": null
+      }
+    ],
+    "4": [
+      {
+        "componente": "Exploración del medio",
+        "estandar": "Prop. 3: Las niñas y los niños disfrutan aprender; exploran y se relacionan con el mundo para comprenderlo y construirlo.",
+        "dba": [
+          "(Tierra y Universo) DBA-0-Prop.3-14: Construye nociones de espacio, tiempo y medida a través de experiencias cotidianas.",
+          "(Ecología) DBA-0-Prop.3-11: Propone alternativas de solución a problemas cotidianos (cuidado del medio ambiente)."
+        ],
+        "evidencias": [
+          "Identifica fenómenos naturales del día y la noche (Sol, Luna, lluvia).",
+          "Participa en actividades de cuidado del medio ambiente (recogida de basura, ahorro de agua)."
+        ],
+        "saberes": [
+          "Cuidado Ambiental: Reducir y Reutilizar. El Clima: El sol, la lluvia y el viento."
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "fuente": null
+      }
+    ]
+  }
 }
