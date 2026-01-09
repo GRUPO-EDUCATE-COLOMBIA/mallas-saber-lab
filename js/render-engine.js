@@ -1,4 +1,3 @@
-// FILE: js/render-engine.js | VERSION: v7.9 Stable (Estructura B + UX)
 window.RenderEngine = (function() {
   const containerMalla = document.getElementById('contenedor-malla');
 
@@ -11,15 +10,20 @@ window.RenderEngine = (function() {
 
   function renderizar(items, areaId, grado, periodo) {
     const resSec = document.getElementById('resultados-principal');
-    
-    if (resSec) {
-      // 1. Reiniciar animación: quitamos la clase, forzamos un reflujo y la ponemos de nuevo
-      resSec.classList.remove('animar-entrada');
-      void resSec.offsetWidth; // Truco técnico para reiniciar animaciones CSS
-      resSec.classList.add('mostrar-block', 'animar-entrada');
+    const indicador = document.getElementById('indicador-periodo');
+    const configArea = window.APP_CONFIG.AREAS[areaId];
+
+    if (resSec) resSec.classList.add('mostrar-block');
+
+    // LÓGICA DEL INDICADOR DE PERIODO (Zoom-In)
+    if (indicador && configArea) {
+      indicador.style.display = 'block';
+      indicador.style.backgroundColor = configArea.color || '#9B7BB6';
+      indicador.innerHTML = `Periodo Consultado: ${periodo}°`;
       
-      // 2. Auto-Scroll: Desplazamos la vista suavemente al inicio de los resultados
-      resSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      indicador.classList.remove('animar-zoom');
+      void indicador.offsetWidth; // Force reflow
+      indicador.classList.add('animar-zoom');
     }
 
     if (!containerMalla) return;
