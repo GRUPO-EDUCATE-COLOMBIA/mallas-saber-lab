@@ -1,0 +1,85 @@
+{
+  "area": "lenguaje",
+  "grado": "-1",
+  "nombre_archivo": "t_lenguaje_-1_3_periodos.json",
+  "periodos": [
+    {
+      "periodo_id": 1,
+      "guias_por_componente": [
+        {
+          "componente": "Habilidades comunicativas",
+          "guia_didactica": {
+            "la_estrategia": "El Mural de mis Expresiones y Trazos",
+            "un_reto_sugerido": "Modelar figuras en arcilla que representen emociones y participar en un mural libre usando el agarre de pinza correcto.",
+            "ruta_de_exploracion": {
+              "explorar": "Taller de expresión con arcilla o plastilina para modelar figuras simples basadas en las emociones del niño.",
+              "visual": "Trabajo en murales verticales de gran formato con herramientas gruesas (ceras, pinceles) para fomentar el trazo amplio.",
+              "produccion": "Juego dramático de roles familiares para practicar la expresión oral y la dramatización con juguetes."
+            },
+            "para_pensar": [
+              "¿Cómo mis manos ayudan a que los demás sepan lo que estoy sintiendo?",
+              "¿Qué pasa con el dibujo si muevo mi brazo de forma muy grande?"
+            ],
+            "pistas_del_exito": [
+              "Demuestra un agarre funcional de tres dedos al utilizar herramientas de dibujo.",
+              "Participa activamente en dramatizaciones y juegos de roles simples."
+            ],
+            "un_refuerzo": "Ejercicios de psicomotricidad fina para asegurar el control motor necesario en el trazo dirigido de Transición."
+          }
+        }
+      ]
+    },
+    {
+      "periodo_id": 2,
+      "guias_por_componente": [
+        {
+          "componente": "Habilidades comunicativas",
+          "guia_didactica": {
+            "la_estrategia": "Exploradores del Eco y el Texto",
+            "un_reto_sugerido": "Identificar rimas en poemas conocidos y asociar al menos tres rótulos del salón con su función real.",
+            "ruta_de_exploracion": {
+              "explorar": "Juegos de discriminación auditiva para identificar sonidos del entorno y onomatopeyas de animales.",
+              "visual": "Recorridos por el aula para la lectura de logotipos, rótulos funcionales y la lista de asistencia.",
+              "produccion": "Sesiones de literatura rítmica donde se enfatizan los sonidos finales de las palabras en canciones y poesías."
+            },
+            "para_pensar": [
+              "¿Por qué algunas palabras suenan como si estuvieran bailando juntas al final?",
+              "¿Cómo sabemos qué dice un letrero si todavía no conocemos todas las letras?"
+            ],
+            "pistas_del_exito": [
+              "Identifica rimas en contextos musicales o literarios sencillos.",
+              "Asocia textos o logos con su propósito comunicativo en el aula."
+            ],
+            "un_refuerzo": "Actividades de conciencia rítmica como base fundamental para la segmentación silábica del próximo año."
+          }
+        }
+      ]
+    },
+    {
+      "periodo_id": 3,
+      "guias_por_componente": [
+        {
+          "componente": "Habilidades comunicativas",
+          "guia_didactica": {
+            "la_estrategia": "El Gran Álbum de mis Historias y Trazos",
+            "un_reto_sugerido": "Narrar una historia con orden lógico, escribir su nombre de forma reconocible y segmentar palabras con palmadas.",
+            "ruta_de_exploracion": {
+              "explorar": "Lectura dialógica de cuentos haciendo pausas para que los niños predigan la secuencia de eventos (inicio-fin).",
+              "visual": "Implementación de un rincón de escritura para la práctica del nombre propio y el trazado de figuras geométricas básicas.",
+              "produccion": "Proyecto 'Mi Historia': Creación de un álbum final donde el niño dibuja y 'escribe' con sus grafías una secuencia narrativa."
+            },
+            "para_pensar": [
+              "¿Cómo podemos contar una historia para que todos entiendan qué pasó primero?",
+              "¿Qué letras de mi nombre son más fáciles de dibujar y por qué?"
+            ],
+            "pistas_del_exito": [
+              "Segmenta palabras en sílabas utilizando palmadas de forma rítmica.",
+              "Narra eventos siguiendo un orden lógico y escribe su nombre de forma identificable."
+            ],
+            "un_refuerzo": "Afianzamiento final de la conciencia silábica y madurez gráfica como validación para el tránsito a Grado 0°."
+          }
+        }
+      ]
+    }
+  ]
+}
