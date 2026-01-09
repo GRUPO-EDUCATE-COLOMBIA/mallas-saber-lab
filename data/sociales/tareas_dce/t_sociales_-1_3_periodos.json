@@ -1,0 +1,85 @@
+{
+  "area": "Ciencias Sociales",
+  "grado": "-1",
+  "nombre_archivo": "t_sociales_-1_3_periodos.json",
+  "periodos": [
+    {
+      "periodo_id": 1,
+      "guias_por_componente": [
+        {
+          "componente": "Identidad y relaciones sociales",
+          "guia_didactica": {
+            "la_estrategia": "El Espejo de mis Sentimientos",
+            "un_reto_sugerido": "Representar su cuerpo a través de un dibujo y expresar facialmente ante un espejo tres emociones básicas que ha sentido en el Jardín.",
+            "ruta_de_exploracion": {
+              "explorar": "Actividad 'El Espejo Mágico': exploración de expresiones faciales y gestos corporales de alegría, tristeza y rabia.",
+              "visual": "Lectura de cuentos de emociones donde se identifiquen los sentimientos de los personajes y sus causas.",
+              "produccion": "Taller de dibujo de identidad para crear autorretratos y representar el esquema corporal con diversos colores."
+            },
+            "para_pensar": [
+              "¿Cómo se siente mi cuerpo cuando estoy feliz y cómo cambia cuando estoy triste?",
+              "¿Qué cosas me gustan mucho de venir a mi salón de clases?"
+            ],
+            "pistas_del_exito": [
+              "Nombra e identifica correctamente al menos tres emociones básicas en sí mismo.",
+              "Representa las partes principales de su cuerpo en sus producciones gráficas."
+            ],
+            "un_refuerzo": "Actividades de autoconocimiento como base fundamental para la regulación emocional que se profundizará en Transición."
+          }
+        }
+      ]
+    },
+    {
+      "periodo_id": 2,
+      "guias_por_componente": [
+        {
+          "componente": "Identidad y relaciones sociales",
+          "guia_didactica": {
+            "la_estrategia": "Mi Pequeña Comunidad y sus Roles",
+            "un_reto_sugerido": "Simular un oficio de su comunidad y describir qué hace cada miembro de su familia para cuidarse mutuamente.",
+            "ruta_de_exploracion": {
+              "explorar": "Juego de roles familiares (mamá, papá, hermanos) y representación de oficios simples (bombero, cocinero, profesor).",
+              "visual": "Galería de fotos: compartir imágenes de su casa y barrio para identificar características del lugar donde viven.",
+              "produccion": "Creación de un mural de la comunidad donde se ubiquen los roles y lugares más importantes identificados por los niños."
+            },
+            "para_pensar": [
+              "¿Quiénes son las personas que nos ayudan a estar seguros en nuestro barrio?",
+              "¿Qué pasaría si en la familia nadie ayudara a recoger u organizar la casa?"
+            ],
+            "pistas_del_exito": [
+              "Identifica y nombra al menos dos roles familiares y un oficio de su comunidad.",
+              "Reconoce su casa y su Jardín como espacios de pertenencia con características propias."
+            ],
+            "un_refuerzo": "Fomentar el sentido de pertenencia como base para el análisis de las organizaciones sociales en Grado 0°."
+          }
+        }
+      ]
+    },
+    {
+      "periodo_id": 3,
+      "guias_por_componente": [
+        {
+          "componente": "Identidad y relaciones sociales",
+          "guia_didactica": {
+            "la_estrategia": "Pequeños Ciudadanos Autónomos y Solidarios",
+            "un_reto_sugerido": "Elegir autónomamente una actividad de rincón, terminarla con constancia y compartir los materiales respetando el turno.",
+            "ruta_de_exploracion": {
+              "explorar": "Tiempo de rincones para la elección libre de actividades, fomentando la iniciativa y la toma de decisiones simples.",
+              "visual": "Uso de pictogramas para establecer acuerdos de convivencia sobre el uso de materiales y el respeto por el espacio ajeno.",
+              "produccion": "Juegos cooperativos y retos de constancia (como rompecabezas) que requieran atención sostenida y colaboración grupal."
+            },
+            "para_pensar": [
+              "¿Por qué es importante terminar lo que empezamos antes de ir a jugar a otra cosa?",
+              "¿Cómo nos sentimos cuando nuestros amigos nos prestan los juguetes y jugamos juntos?"
+            ],
+            "pistas_del_exito": [
+              "Demuestra constancia en la realización de tareas sencillas (10-15 minutos).",
+              "Asume actitudes solidarias, compartiendo materiales y respetando turnos en el juego."
+            ],
+            "un_refuerzo": "Validación de la autonomía y la convivencia colaborativa como cierre de los prerrequisitos para el tránsito a Grado 0°."
+          }
+        }
+      ]
+    }
+  ]
+}
