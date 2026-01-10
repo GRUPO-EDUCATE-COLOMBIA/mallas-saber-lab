@@ -1,0 +1,279 @@
+{
+  "area": "Ciencias Naturales",
+  "grado": "9",
+  "nombre_archivo": "t_ciencias_9_4_periodos.json",
+  "periodos": [
+    {
+      "periodo_id": 1,
+      "guias_por_componente": [
+        {
+          "componente": "Entorno Vivo",
+          "guia_didactica": {
+            "la_estrategia": "El Azar de la Herencia",
+            "un_reto_sugerido": "¿Cómo predecir la probabilidad de que un rasgo físico aparezca en la siguiente generación?",
+            "ruta_de_exploracion": {
+              "explorar": "Observar las variaciones de rasgos físicos (color de ojos, forma del lóbulo de la oreja, pico de viuda) entre los compañeros del salón y sus familiares.",
+              "visual": "Simular cruces genéticos usando dos monedas (donde cara es gen dominante y sello es recesivo) para completar cuadros de Punnett y calcular probabilidades fenotípicas.",
+              "produccion": "Predecir y explicar mediante proporciones matemáticas las características de una descendencia hipotética basándose en los principios mendelianos."
+            },
+            "para_pensar": [
+              "¿Por qué algunos rasgos 'desaparecen' en una generación y reaparecen en la siguiente?",
+              "¿Cómo ha utilizado el ser humano el conocimiento de la herencia para mejorar razas de animales o cultivos?"
+            ],
+            "pistas_del_exito": [
+              "El estudiante utiliza correctamente el cuadro de Punnett para predecir genotipos y fenotipos.",
+              "Explica la variabilidad genética como resultado de la transmisión de información de padres a hijos."
+            ],
+            "un_refuerzo": "Investigar qué es un árbol genealógico y construir uno propio basado en un rasgo específico (ej. capacidad de enrollar la lengua)."
+          }
+        },
+        {
+          "componente": "Entorno Físico/Entorno Químico",
+          "guia_didactica": {
+            "la_estrategia": "Carreras y Trayectorias",
+            "un_reto_sugerido": "¿Cómo podemos describir matemáticamente el movimiento de un objeto para predecir su posición exacta en el futuro?",
+            "ruta_ de_exploracion": {
+              "explorar": "Analizar videos de lanzamientos de proyectiles (un tiro libre en fútbol) y describir la forma de la trayectoria identificando cambios de velocidad.",
+              "visual": "Diseñar un experimento usando un plano inclinado y una canica, midiendo distancias y tiempos con un cronómetro para graficar el movimiento rectilíneo uniformemente acelerado.",
+              "produccion": "Interpretar gráficas de desplazamiento vs. tiempo y velocidad vs. tiempo, prediciendo el movimiento mediante expresiones matemáticas de MRUA y movimiento parabólico."
+            },
+            "para_pensar": [
+              "¿Por qué un objeto lanzado horizontalmente cae al mismo tiempo que uno que se deja caer verticalmente?",
+              "¿Cómo cambia nuestra percepción del movimiento si estamos dentro de un bus en marcha versus observándolo desde la calle?"
+            ],
+            "pistas_del_exito": [
+              "El estudiante diferencia entre movimiento rectilíneo, parabólico y circular usando gráficas.",
+              "Calcula la aceleración y velocidad de un cuerpo a partir de datos experimentales."
+            ],
+            "un_refuerzo": "Realizar una competencia de aviones de papel y analizar qué factores físicos influyen en que el vuelo sea más largo o parabólico."
+          }
+        },
+        {
+          "componente": "Ciencia, Tecnología y Sociedad",
+          "guia_didactica": {
+            "la_estrategia": "Sexualidad y Decisiones Tecnológicas",
+            "un_reto_sugerido": "¿De qué manera la tecnología y la cultura influyen en nuestras decisiones sobre la reproducción y la sexualidad?",
+            "ruta_de_exploracion": {
+              "explorar": "Investigar la evolución histórica de los métodos anticonceptivos y cómo han cambiado las percepciones culturales sobre la planificación familiar.",
+              "visual": "Realizar un debate grupal sobre el impacto de las redes sociales y la tecnología en la educación sexual de los jóvenes hoy en día.",
+              "produccion": "Elaborar un ensayo crítico sobre la importancia de la autonomía corporal y el acceso a información científica para una sexualidad responsable."
+            },
+            "para_pensar": [
+              "¿Cómo ha facilitado la tecnología el acceso a derechos reproductivos?",
+              "¿Qué mitos culturales persisten sobre la sexualidad a pesar de la evidencia científica?"
+            ],
+            "pistas_del_exito": [
+              "El estudiante identifica factores culturales y tecnológicos que inciden en la reproducción humana.",
+              "Propone argumentos basados en el respeto y la salud individual."
+            ],
+            "un_refuerzo": "Diseñar una campaña informativa para redes sociales que promueva el uso responsable de la tecnología en temas de salud sexual."
+          }
+        }
+      ]
+    },
+    {
+      "periodo_id": 2,
+      "guias_por_componente": [
+        {
+          "componente": "Entorno Vivo",
+          "guia_didactica": {
+            "la_estrategia": "El Laboratorio de Mendel",
+            "un_reto_sugerido": "¿Podemos replicar los hallazgos de Mendel con materiales cotidianos para validar sus leyes?",
+            "ruta_de_exploracion": {
+              "explorar": "Analizar los resultados de los experimentos de Mendel con guisantes y discutir por qué eligió rasgos específicos para observar.",
+              "visual": "Realizar una simulación de la meiosis usando hilos de colores (cromosomas) para demostrar cómo la segregación independiente (2da ley) ocurre durante la formación de gametos.",
+              "produccion": "Diseñar y documentar un experimento (ej. usando semillas de crecimiento rápido como lentejas con rasgos visibles) que demuestre una de las leyes de Mendel."
+            },
+            "para_pensar": [
+              "¿Qué relación hay entre la división celular (meiosis) y los resultados numéricos de las leyes de Mendel?",
+              "¿Por qué es importante la diversidad genética para la supervivencia de un cultivo agrícola?"
+            ],
+            "pistas_del_exito": [
+              "El estudiante explica la relación entre meiosis y las leyes de segregación e independencia.",
+              "Valida los resultados numéricos de Mendel mediante experiencias prácticas o simulaciones."
+            ],
+            "un_refuerzo": "Investigar casos de herencia post-mendeliana como la dominancia incompleta o codominancia (ej. color de flores en plantas dondiego de noche)."
+          }
+        },
+        {
+          "componente": "Entorno Físico/Entorno Químico",
+          "guia_didactica": {
+            "la_estrategia": "Ácidos y Bases en mi Vida",
+            "un_reto_sugerido": "¿Cómo identificar sustancias ácidas o básicas en casa sin usar laboratorios profesionales?",
+            "ruta_de_exploracion": {
+              "explorar": "Observar el cambio de color de una solución de repollo morado al mezclarla con jugo de limón y con jabón líquido.",
+              "visual": "Construir una escala de pH colorimétrica casera para clasificar sustancias del hogar (leche, soda, limpiavidrios, yogur) según su nivel de acidez.",
+              "produccion": "Explicar las teorías de Arrhenius y Brönsted-Lowry para interpretar por qué ciertas sustancias actúan como ácidos o bases en procesos biológicos como la digestión."
+            },
+            "para_pensar": [
+              "¿Por qué los antiácidos estomacales nos ayudan a aliviar la acidez después de comer?",
+              "¿Qué impacto tiene el pH del suelo en la productividad de los cultivos en Colombia?"
+            ],
+            "pistas_del_exito": [
+              "El estudiante determina la acidez y basicidad usando indicadores naturales.",
+              "Relaciona la escala de pH con el uso cotidiano e industrial de las sustancias."
+            ],
+            "un_refuerzo": "Investigar qué es la lluvia ácida y cómo afecta a los monumentos y ecosistemas acuáticos."
+          }
+        },
+        {
+          "componente": "Ciencia, Tecnología y Sociedad",
+          "guia_didactica": {
+            "la_estrategia": "Prevención y Salud Sexual",
+            "un_reto_sugerido": "¿Cómo la ciencia ayuda a prevenir enfermedades de transmisión sexual y embarazos no deseados?",
+            "ruta_de_exploracion": {
+              "explorar": "Investigar los tipos de ETS más comunes y cómo se transmiten, desmitificando creencias falsas.",
+              "visual": "Crear una infografía o folleto informativo sobre los diferentes métodos de barrera y su efectividad científica.",
+              "produccion": "Argumentar la importancia de las medidas de prevención para el mantenimiento de la salud individual y el bienestar colectivo."
+            },
+            "para_pensar": [
+              "¿Por qué la prevención es una responsabilidad compartida y no solo de una persona?",
+              "¿Cómo influye el acceso a servicios de salud en la reducción de las tasas de ETS?"
+            ],
+            "pistas_del_exito": [
+              "El estudiante identifica medidas efectivas de prevención de ETS y embarazo.",
+              "Propone estrategias de autocuidado y respeto en las relaciones interpersonales."
+            ],
+            "un_refuerzo": "Consultar a un profesional de salud (o video educativo) sobre el Virus del Papiloma Humano (VPH) y la importancia de la vacunación."
+          }
+        }
+      ]
+    },
+    {
+      "periodo_id": 3,
+      "guias_por_componente": [
+        {
+          "componente": "Entorno Vivo",
+          "guia_didactica": {
+            "la_estrategia": "La Fábrica de Proteínas",
+            "un_reto_sugerido": "¿Cómo se traduce el lenguaje del ADN en las características físicas de un organismo?",
+            "ruta_de_exploracion": {
+              "explorar": "Modelar la estructura de la doble hélice del ADN usando materiales reciclados, identificando el apareamiento de bases nitrogenadas.",
+              "visual": "Simular el proceso de traducción (síntesis de proteínas) usando fichas de colores para representar codones y aminoácidos, formando una 'cadena' proteica.",
+              "produccion": "Explicar cómo una pequeña mutación en la secuencia del ADN puede alterar la proteína resultante y cambiar el fenotipo del individuo."
+            },
+            "para_pensar": [
+              "¿Es posible que dos personas tengan el mismo genotipo pero diferente fenotipo? ¿Cómo influye el ambiente?",
+              "¿Por qué se dice que el ADN es el 'plano maestro' de la vida?"
+            ],
+            "pistas_del_exito": [
+              "El estudiante representa los pasos del proceso de síntesis de proteínas.",
+              "Relaciona la producción de proteínas con las características observables (fenotipo)."
+            ],
+            "un_refuerzo": "Investigar qué es el Proyecto Genoma Humano y cómo ha cambiado la medicina moderna."
+          }
+        },
+        {
+          "componente": "Entorno Físico/Entorno Químico",
+          "guia_didactica": {
+            "la_estrategia": "Mezclas y Soluciones Maestras",
+            "un_reto_sugerido": "¿Qué factores determinan que una sustancia se disuelva completamente en otra?",
+            "ruta_de_exploracion": {
+              "explorar": "Intentar disolver sal en agua fría y en agua caliente, observando y registrando las diferencias de velocidad y cantidad.",
+              "visual": "Preparar soluciones insaturadas, saturadas y sobresaturadas (usando azúcar y agua), y observar qué ocurre al enfriar una solución sobresaturada.",
+              "produccion": "Predecir y explicar cómo la temperatura y la agitación afectan la formación de soluciones basándose en la teoría cinético-molecular."
+            },
+            "para_pensar": [
+              "¿Por qué las bebidas gaseosas pierden el gas más rápido cuando están calientes?",
+              "¿Cómo se relaciona la solubilidad de los gases en el agua con la vida de los peces en ríos contaminados térmicamente?"
+            ],
+            "pistas_del_exito": [
+              "El estudiante diferencia entre soluciones saturadas e insaturadas.",
+              "Explica cómo variables como temperatura y presión modifican la solubilidad."
+            ],
+            "un_refuerzo": "Investigar cómo se preparan los sueros de hidratación oral y por qué es importante la proporción exacta de solutos."
+          }
+        },
+        {
+          "componente": "Ciencia, Tecnología y Sociedad",
+          "guia_didactica": {
+            "la_estrategia": "Química de las Adicciones",
+            "un_reto_sugerido": "¿Cómo afectan las sustancias psicoactivas el equilibrio químico de nuestro cerebro?",
+            "ruta_de_exploracion": {
+              "explorar": "Investigar los componentes químicos del tabaco y la cafeína y sus efectos inmediatos en el sistema nervioso central.",
+              "visual": "Analizar videos o testimonios sobre el impacto social y físico del consumo de drogas y alcohol a largo plazo.",
+              "produccion": "Redactar un manifiesto sobre la importancia de mantener un cuerpo libre de sustancias nocivas para potenciar el desarrollo personal."
+            },
+            "para_pensar": [
+              "¿Por qué sustancias legales como el tabaco y el alcohol también son consideradas peligrosas?",
+              "¿Cómo influye la presión de grupo en el inicio del consumo de sustancias psicoactivas?"
+            ],
+            "pistas_del_exito": [
+              "El estudiante reconoce los efectos nocivos de la cafeína, tabaco y alcohol.",
+              "Propone alternativas saludables de recreación frente al consumo de sustancias."
+            ],
+            "un_refuerzo": "Hacer un mapa conceptual que conecte el consumo de drogas con problemas de salud mental y estabilidad familiar."
+          }
+        }
+      ]
+    },
+    {
+      "periodo_id": 4,
+      "guias_por_componente": [
+        {
+          "componente": "Entorno Vivo",
+          "guia_didactica": {
+            "la_estrategia": "Huellas de la Evolución",
+            "un_reto_sugerido": "¿Qué evidencias científicas demuestran que todos los seres vivos compartimos un ancestro común?",
+            "ruta_de_exploracion": {
+              "explorar": "Observar imágenes de embriones de diferentes especies (pollo, humano, cerdo) y notar las similitudes en las etapas iniciales.",
+              "visual": "Simular la selección natural usando 'picos' (pinzas, cucharas) para recoger diferentes tipos de semillas, observando qué tipo de pico sobrevive mejor en cada 'ambiente'.",
+              "produccion": "Argumentar mediante el análisis de restos fósiles y comparaciones de ADN cómo la selección natural ha moldeado la diversidad biológica a través de las eras geológicas."
+            },
+            "para_pensar": [
+              "¿Por qué la evolución se considera una teoría científica y no una simple suposición?",
+              "¿Cómo influyen las mutaciones en la capacidad de una población para adaptarse a un cambio climático?"
+            ],
+            "pistas_del_exito": [
+              "El estudiante explica la teoría del ancestro común usando evidencias biológicas.",
+              "Describe el efecto de la selección natural en la variabilidad de fenotipos."
+            ],
+            "un_refuerzo": "Investigar una era geológica específica y dibujar la flora y fauna predominante, destacando una adaptación clave."
+          }
+        },
+        {
+          "componente": "Entorno Físico/Entorno Químico",
+          "guia_didactica": {
+            "la_estrategia": "Concentración y Fuerzas Invisibles",
+            "un_reto_sugerido": "¿Cómo calcular la cantidad exacta de una sustancia en una mezcla y qué mantiene unidas a las moléculas líquidas?",
+            "ruta_de_exploracion": {
+              "explorar": "Realizar un experimento de tensión superficial colocando clips sobre el agua y observando cómo flotan debido a los puentes de hidrógeno.",
+              "visual": "Preparar soluciones de agua con sal a diferentes concentraciones, calculando el % en masa y observando cambios en la densidad (haciendo flotar un huevo).",
+              "produccion": "Expresar cuantitativamente la concentración de soluciones caseras usando Molaridad y unidades físicas, y explicar las propiedades de los líquidos según sus fuerzas intermoleculares."
+            },
+            "para_pensar": [
+              "¿Por qué el hielo flota en el agua líquida si generalmente los sólidos son más densos?",
+              "¿Cómo ayuda la tensión superficial a que ciertos insectos caminen sobre el agua?"
+            ],
+            "pistas_del_exito": [
+              "El estudiante calcula concentraciones en % masa, % volumen y Molaridad.",
+              "Explica propiedades como punto de ebullición y densidad a partir de fuerzas intermoleculares."
+            ],
+            "un_refuerzo": "Realizar ejercicios prácticos de dilución (ej. cómo pasar de una solución de jugo muy concentrada a una más suave usando cálculos matemáticos)."
+          }
+        },
+        {
+          "componente": "Ciencia, Tecnología y Sociedad",
+          "guia_didactica": {
+            "la_estrategia": "Cuerpo en Movimiento, Mente Sana",
+            "un_reto_sugerido": "¿Cómo influye el deporte en la química interna de nuestro cerebro y en nuestra salud mental?",
+            "ruta_de_exploracion": {
+              "explorar": "Registrar el estado de ánimo y la energía antes y después de realizar 20 minutos de actividad física aeróbica.",
+              "visual": "Investigar la liberación de endorfinas y dopamina durante el ejercicio y su papel en la reducción del estrés.",
+              "produccion": "Diseñar un plan de bienestar semanal que integre el deporte como una herramienta científica para mejorar la salud física y mental."
+            },
+            "para_pensar": [
+              "¿Es el deporte solo para verse bien físicamente o tiene una función biológica más profunda?",
+              "¿Cómo puede la práctica deportiva comunitaria ayudar a prevenir problemas sociales en el barrio?"
+            ],
+            "pistas_del_exito": [
+              "El estudiante establece relaciones claras entre el deporte y la salud mental.",
+              "Propone rutinas de actividad física basadas en la evidencia del bienestar corporal."
+            ],
+            "un_refuerzo": "Entrevistar a un deportista o profesor de educación física sobre cómo el deporte ha transformado su disciplina y salud."
+          }
+        }
+      ]
+    }
+  ]
+}
