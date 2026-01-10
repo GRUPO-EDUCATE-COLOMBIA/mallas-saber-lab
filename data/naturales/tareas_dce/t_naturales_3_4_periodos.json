@@ -1,0 +1,279 @@
+{
+  "area": "Ciencias Naturales",
+  "grado": "3",
+  "nombre_archivo": "t_ciencias_3_4_periodos.json",
+  "periodos": [
+    {
+      "periodo_id": 1,
+      "guias_por_componente": [
+        {
+          "componente": "Entorno Vivo",
+          "guia_didactica": {
+            "la_estrategia": "Detectives del Ecosistema",
+            "un_reto_sugerido": "¿Qué diferencia a lo que tiene vida de lo que no la tiene en nuestro entorno regional?",
+            "ruta_de_exploracion": {
+              "explorar": "Realizar una caminata por el patio o parque cercano y recolectar (o fotografiar) 5 elementos vivos y 5 elementos no vivos.",
+              "visual": "Crear un 'Terrario de Observación' en una caja de zapatos, ubicando factores abióticos (piedras, tierra, agua) y bióticos (plantas pequeñas o insectos).",
+              "produccion": "Clasificar en una tabla comparativa los elementos recolectados, explicando cómo la luz y el agua (abióticos) ayudan a las plantas (bióticos) a crecer."
+            },
+            "para_pensar": [
+              "¿Podría una planta vivir si le quitamos el aire y la luz, aunque tenga mucha agua?",
+              "¿Cómo cuidan las personas de tu comunidad el suelo y el agua de los ecosistemas locales?"
+            ],
+            "pistas_del_exito": [
+              "El estudiante diferencia correctamente los factores bióticos de los abióticos (NAT-3-D5-E1).",
+              "Relaciona la influencia del clima en la flora y fauna de su región."
+            ],
+            "un_refuerzo": "Dibujar el ecosistema de su región y señalar con rojo lo que no tiene vida y con verde lo que sí tiene."
+          }
+        },
+        {
+          "componente": "Entorno Físico",
+          "guia_didactica": {
+            "la_estrategia": "Atrapando la Luz",
+            "un_reto_sugerido": "¿Por qué podemos ver a través de una ventana pero no a través de una pared?",
+            "ruta_de_exploracion": {
+              "explorar": "Usar una linterna para iluminar diferentes objetos del salón: un vidrio, una hoja de papel, un libro y un espejo.",
+              "visual": "Clasificar los materiales probados en cuatro cajas: Transparentes, Translúcidos, Opacos y Reflectivos, según cuánta luz dejan pasar.",
+              "produccion": "Escribir un pequeño manual de seguridad sobre por qué no debemos mirar directamente al sol o usar punteros láser en los ojos."
+            },
+            "para_pensar": [
+              "¿Qué tipo de material usarías para hacer el frasco de una medicina que se daña con la luz del sol?",
+              "¿Cómo viaja la luz de una linterna en la oscuridad? ¿Se dobla o va recta?"
+            ],
+            "pistas_del_exito": [
+              "El estudiante compara materiales según el paso de la luz (NAT-3-D1-E1).",
+              "Describe precauciones frente a la exposición a luz directa (NAT-3-D1-E3)."
+            ],
+            "un_refuerzo": "Investigar qué animales necesitan mucha luz para vivir y cuáles prefieren la oscuridad."
+          }
+        },
+        {
+          "componente": "Ciencia, Tecnología y Sociedad",
+          "guia_didactica": {
+            "la_estrategia": "Colombia y sus Climas",
+            "un_reto_sugerido": "¿Cómo influye el clima en la ropa que usamos y en lo que cultivamos en Colombia?",
+            "ruta_de_exploracion": {
+              "explorar": "Observar fotos de personas en el páramo, en la costa y en la selva, analizando sus vestimentas y viviendas.",
+              "visual": "Diseñar un 'Álbum de Climas Colombianos' recortando imágenes de productos agrícolas (café, banano, papa) y ubicándolos en el clima que necesitan.",
+              "produccion": "Explicar mediante un dibujo cómo el clima de su propio municipio afecta la forma de vida de su comunidad."
+            },
+            "para_pensar": [
+              "¿Por qué en las tierras calientes las casas suelen tener techos altos y muchas ventanas?",
+              "¿Cómo ayuda la tecnología a que podamos comer alimentos de clima frío cuando vivimos en clima cálido?"
+            ],
+            "pistas_del_exito": [
+              "El estudiante asocia el clima con la forma de vida de las comunidades.",
+              "Reconoce los principales ecosistemas colombianos y su variedad climática."
+            ],
+            "un_refuerzo": "Hacer una lista de 3 alimentos que solo se dan en climas fríos y 3 en climas cálidos."
+          }
+        }
+      ]
+    },
+    {
+      "periodo_id": 2,
+      "guias_por_componente": [
+        {
+          "componente": "Entorno Vivo",
+          "guia_didactica": {
+            "la_estrategia": "Vida en Armonía",
+            "un_reto_sugerido": "¿Qué pasaría si un factor del ecosistema cambiara de repente (por ejemplo, si dejara de llover)?",
+            "ruta_de_exploracion": {
+              "explorar": "Observar un hormiguero y describir qué necesitan las hormigas del suelo y del aire para sobrevivir.",
+              "visual": "Realizar un experimento con dos plantas iguales: a una se le da luz y agua, y a la otra se le deja en total oscuridad sin agua.",
+              "produccion": "Predecir y registrar qué ocurre con los organismos cuando se altera un factor abiótico (como el agua o la luz) en su mini-experimento."
+            },
+            "para_pensar": [
+              "¿Cómo afecta un incendio forestal a los animales que viven en el suelo?",
+              "¿Por qué el agua es el factor abiótico más importante para que existan animales en el desierto?"
+            ],
+            "pistas_del_exito": [
+              "El estudiante interpreta las relaciones entre factores bióticos y abióticos (NAT-3-D5-E2).",
+              "Predice efectos en los organismos ante la alteración de un factor del ecosistema (NAT-3-D5-E3)."
+            ],
+            "un_refuerzo": "Crear un cartel que invite a cuidar los recursos no vivos (agua y aire) para salvar a los seres vivos."
+          }
+        },
+        {
+          "componente": "Entorno Físico",
+          "guia_didactica": {
+            "la_estrategia": "Teatro de Sombras Científico",
+            "un_reto_sugerido": "¿Cómo podemos hacer que una sombra sea gigante o muy pequeña usando una sola lámpara?",
+            "ruta_de_exploracion": {
+              "explorar": "Usar las manos para crear formas de animales proyectadas en una pared usando una linterna.",
+              "visual": "Medir con una regla el tamaño de la sombra de un juguete al acercarlo y alejarlo de la linterna, registrando los datos en una tabla.",
+              "produccion": "Explicar por qué la sombra cambia de tamaño basándose en la distancia entre la luz, el objeto y la pared."
+            },
+            "para_pensar": [
+              "¿En qué dirección debe estar la linterna para que la sombra se proyecte hacia adelante?",
+              "¿Por qué al mediodía nuestra sombra es muy corta y por la tarde es muy larga?"
+            ],
+            "pistas_del_exito": [
+              "El estudiante predice la posición de la sombra según la fuente de luz (NAT-3-D2-E1).",
+              "Explica mediante mediciones cómo varía el tamaño de la sombra con la distancia (NAT-3-D2-E3)."
+            ],
+            "un_refuerzo": "Dibujar un objeto y su sombra, señalando dónde está el sol para que la sombra salga así."
+          }
+        },
+        {
+          "componente": "Ciencia, Tecnología y Sociedad",
+          "guia_didactica": {
+            "la_estrategia": "Escudo de Salud",
+            "un_reto_sugerido": "¿Cómo nos protege la ciencia de los microbios invisibles que nos rodean?",
+            "ruta_de_exploracion": {
+              "explorar": "Usar un poco de tiza en polvo o escarcha en las manos y saludar a otros para ver cómo se 'contagian' las manos rápidamente.",
+              "visual": "Realizar una práctica guiada de lavado de manos con jabón, asegurando limpiar entre los dedos y las uñas, observando cómo desaparece la 'escarcha'.",
+              "produccion": "Elaborar un 'Escudo de Cuidado' con una lista de 5 hábitos diarios de higiene necesarios para mantener el cuerpo sano."
+            },
+            "para_pensar": [
+              "¿Por qué es importante bañarse después de jugar en el parque o con mascotas?",
+              "¿Cómo ayuda el jabón (un invento tecnológico) a eliminar la suciedad que el agua sola no puede quitar?"
+            ],
+            "pistas_del_exito": [
+              "El estudiante identifica necesidades de cuidado de su cuerpo y el de otros.",
+              "Relaciona la higiene personal con la prevención de enfermedades comunes."
+            ],
+            "un_refuerzo": "Hacer un dibujo de los implementos de aseo (cepillo, jabón, toalla) y explicar la función de cada uno."
+          }
+        }
+      ]
+    },
+    {
+      "periodo_id": 3,
+      "guias_por_componente": [
+        {
+          "componente": "Entorno Vivo",
+          "guia_didactica": {
+            "la_estrategia": "Socios del Ecosistema",
+            "un_reto_sugerido": "¿Por qué algunos animales viven en grupos y otros prefieren estar solos?",
+            "ruta_de_exploracion": {
+              "explorar": "Observar imágenes de una abeja en una flor y de un león cazando, describiendo quién ayuda a quién.",
+              "visual": "Jugar a 'Parejas del Ecosistema': unir tarjetas que muestren relaciones de mutualismo (abeja-flor), parasitismo (pulga-perro) y depredación.",
+              "produccion": "Describir mediante un mural cómo las adaptaciones (como las garras o el camuflaje) ayudan a los animales a sobrevivir en las selvas de Colombia."
+            },
+            "para_pensar": [
+              "¿Podría un pájaro vivir sin los árboles donde hace su nido? ¿Qué relación es esa?",
+              "¿Por qué el camuflaje es una 'herramienta' tecnológica de la naturaleza para la supervivencia?"
+            ],
+            "pistas_del_exito": [
+              "El estudiante interpreta relaciones biológicas esenciales para la supervivencia (NAT-3-D6-E1).",
+              "Describe mecanismos de adaptación y camuflaje en seres vivos."
+            ],
+            "un_refuerzo": "Investigar qué es el gregarismo observando cómo caminan las hormigas o vuelan las aves en grupo."
+          }
+        },
+        {
+          "componente": "Entorno Físico",
+          "guia_didactica": {
+            "la_estrategia": "Música en las Moléculas",
+            "un_reto_sugerido": "¿Cómo viaja el sonido y por qué vibra nuestra garganta cuando hablamos?",
+            "ruta_de_exploracion": {
+              "explorar": "Poner los dedos en la garganta y decir 'Aaaaa' para sentir la vibración de las cuerdas vocales.",
+              "visual": "Construir un 'Teléfono de Vasos' usando dos vasos plásticos y una cuerda larga de lana, probando si se escucha mejor cuando la cuerda está estirada.",
+              "produccion": "Clasificar sonidos del entorno en 'Graves' o 'Agudos' y 'Fuertes' o 'Débiles' usando instrumentos caseros (tambor de tarro, flauta de pitillo)."
+            },
+            "para_pensar": [
+              "¿Por qué se escucha más fuerte el golpe de una mesa si ponemos el oído directamente sobre ella?",
+              "¿Cómo viaja el sonido en el agua? ¿Es igual que en el aire?"
+            ],
+            "pistas_del_exito": [
+              "El estudiante demuestra que el sonido es una vibración (NAT-3-D3-E1).",
+              "Describe y compara sonidos según su altura e intensidad (NAT-3-D3-E2)."
+            ],
+            "un_refuerzo": "Llenar 3 vasos con diferentes cantidades de agua y golpearlos con una cuchara para ver cuál suena más agudo."
+          }
+        },
+        {
+          "componente": "Ciencia, Tecnología y Sociedad",
+          "guia_didactica": {
+            "la_estrategia": "Viajeros en el Tiempo",
+            "un_reto_sugerido": "¿Cómo hacían los abuelos para comunicarse o cocinar sin los aparatos de hoy?",
+            "ruta_de_exploracion": {
+              "explorar": "Entrevistar a una persona mayor sobre qué herramientas usaba para estudiar o divertirse cuando era niño.",
+              "visual": "Dibujar una comparación entre un objeto antiguo (ej. telégrafo o máquina de escribir) y uno moderno (ej. smartphone o laptop).",
+              "produccion": "Crear una tabla que muestre cómo la tecnología ha facilitado las tareas del hogar, comparando el pasado con el presente."
+            },
+            "para_pensar": [
+              "¿Qué aparatos de hoy crees que ya no se usarán cuando tú seas adulto?",
+              "¿Cómo ha cambiado la forma de escuchar música desde los discos de vinilo hasta el streaming digital?"
+            ],
+            "pistas_del_exito": [
+              "El estudiante identifica aparatos actuales que no se usaban en épocas pasadas.",
+              "Describe la utilidad y evolución de las herramientas tecnológicas."
+            ],
+            "un_refuerzo": "Investigar cómo se inventó la bombilla eléctrica y qué usaban antes para iluminar las calles."
+          }
+        }
+      ]
+    },
+    {
+      "periodo_id": 4,
+      "guias_por_componente": [
+        {
+          "componente": "Entorno Vivo",
+          "guia_didactica": {
+            "la_estrategia": "Guardianes de la Población",
+            "un_reto_sugerido": "¿Qué pasaría con nosotros y con los animales si el agua del río se secara para siempre?",
+            "ruta_de_exploracion": {
+              "explorar": "Observar qué ocurre con una lombriz en tierra muy seca versus tierra húmeda (simulando cambio de entorno).",
+              "visual": "Realizar un juego de rol donde unos estudiantes son 'Recursos' (agua, comida) y otros son 'Animales', observando qué pasa si los recursos disminuyen.",
+              "produccion": "Registrar las relaciones que tenemos como humanos con nuestro ecosistema regional y proponer una acción para proteger a las especies locales."
+            },
+            "para_pensar": [
+              "¿Por qué los humanos dependemos de otros seres vivos para sobrevivir en la ciudad?",
+              "¿Cómo afecta el ruido y la basura a la supervivencia de los pájaros en nuestro barrio?"
+            ],
+            "pistas_del_exito": [
+              "El estudiante describe las relaciones que le permiten sobrevivir como humano en el ecosistema (NAT-3-D6-E4).",
+              "Predice cambios en las poblaciones ante variaciones en el entorno físico."
+            ],
+            "un_refuerzo": "Hacer una lista de 5 cosas que los humanos recibimos de la naturaleza (comida, aire, etc.) y cómo las cuidamos."
+          }
+        },
+        {
+          "componente": "Entorno Físico",
+          "guia_didactica": {
+            "la_estrategia": "El Viaje del Hielo",
+            "un_reto_sugerido": "¿Cómo puede el agua cambiar de forma y luego volver a ser la misma?",
+            "ruta_de_exploracion": {
+              "explorar": "Colocar un cubo de hielo en un plato al sol y observar cómo se convierte en líquido y luego desaparece (se evapora).",
+              "visual": "Observar (con ayuda de un adulto) el vapor que sale de una taza de agua caliente y cómo se forman gotas en una tapa fría (condensación).",
+              "produccion": "Utilizar un termómetro casero para medir la temperatura del agua fría, ambiente y tibia, explicando los cambios de estado observados."
+            },
+            "para_pensar": [
+              "¿Por qué los vidrios de un carro se empañan cuando llueve y hace frío?",
+              "¿A dónde se va el agua de la ropa mojada cuando la colgamos al sol?"
+            ],
+            "pistas_del_exito": [
+              "El estudiante explica fenómenos cotidianos de cambio de estado (NAT-3-D4-E2).",
+              "Utiliza instrumentos para medir masa, volumen y temperatura del agua (NAT-3-D4-E3)."
+            ],
+            "un_refuerzo": "Dibujar el ciclo del agua en la naturaleza usando los nombres de los estados: Sólido, Líquido y Gaseoso."
+          }
+        },
+        {
+          "componente": "Ciencia, Tecnología y Sociedad",
+          "guia_didactica": {
+            "la_estrategia": "Inventos que Cambian Vidas",
+            "un_reto_sugerido": "¿Qué invento tecnológico crees que ha sido el más importante para la humanidad?",
+            "ruta_de_exploracion": {
+              "explorar": "Explorar en libros o internet cómo se inventó la rueda o el fuego y cómo eso cambió la vida de los humanos primitivos.",
+              "visual": "Construir una pequeña maqueta de una herramienta antigua (como un hacha de piedra) usando palos y piedras.",
+              "produccion": "Presentar una propuesta de un 'Invento del Futuro' que solucione un problema actual como la basura o la falta de agua."
+            },
+            "para_pensar": [
+              "¿Cómo sería un día en tu vida si no existiera la electricidad ni los motores?",
+              "¿Los inventos siempre son buenos o a veces pueden dañar a la naturaleza?"
+            ],
+            "pistas_del_exito": [
+              "El estudiante identifica la evolución de aparatos tecnológicos a través del tiempo.",
+              "Reconoce el impacto de la tecnología en la satisfacción de necesidades humanas."
+            ],
+            "un_refuerzo": "Hacer una línea del tiempo con 4 inventos importantes de la historia."
+          }
+        }
+      ]
+    }
+  ]
+}
