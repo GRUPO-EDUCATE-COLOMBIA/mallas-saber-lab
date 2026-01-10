@@ -1,0 +1,279 @@
+{
+  "area": "Ciencias Naturales",
+  "grado": "8",
+  "nombre_archivo": "t_ciencias_8_4_periodos.json",
+  "periodos": [
+    {
+      "periodo_id": 1,
+      "guias_por_componente": [
+        {
+          "componente": "Entorno Vivo",
+          "guia_didactica": {
+            "la_estrategia": "El Cuerpo en Equilibrio (Homeostasis)",
+            "un_reto_sugerido": "¿Cómo coordina nuestro cuerpo tantos sistemas diferentes para mantenernos vivos y estables?",
+            "ruta_de_exploracion": {
+              "explorar": "Realizar una actividad física intensa (saltar cuerda) por 2 minutos y registrar cambios inmediatos en el ritmo cardíaco, la sudoración y la temperatura corporal.",
+              "visual": "Diseñar un modelo con botellas y mangueras que represente el sistema excretor filtrando 'impurezas' (agua con arena) para entender el papel del riñón en la regulación.",
+              "produccion": "Interpretar cómo los sistemas nervioso y endocrino actúan como directores de orquesta para recuperar el equilibrio (homeostasis) tras el esfuerzo físico."
+            },
+            "para_pensar": [
+              "¿Qué pasaría si el sistema nervioso dejara de enviar señales al sistema excretor durante un día?",
+              "¿Por qué sentimos sed después de sudar mucho? ¿Qué sistema está enviando esa orden?"
+            ],
+            "pistas_del_exito": [
+              "El estudiante relaciona los fenómenos homeostáticos con el funcionamiento coordinado de órganos.",
+              "Identifica el papel de la excreción en el equilibrio interno del organismo."
+            ],
+            "un_refuerzo": "Investigar qué es la retroalimentación negativa y dar un ejemplo con la regulación de la glucosa en la sangre."
+          }
+        },
+        {
+          "componente": "Entorno Físico",
+          "guia_didactica": {
+            "la_estrategia": "Máquinas Térmicas y Energía",
+            "un_reto_sugerido": "¿Cómo se transforma el calor en movimiento según las leyes de la termodinámica?",
+            "ruta_de_exploracion": {
+              "explorar": "Observar cómo el vapor de una olla a presión mueve la válvula y relacionarlo con el trabajo mecánico realizado por el gas.",
+              "visual": "Construir un 'barco de vapor' casero usando una lata de refresco, una vela y agua, observando la transformación de energía térmica en energía cinética.",
+              "produccion": "Explicar la Primera Ley de la Termodinámica (conservación de energía) y la Segunda Ley (eficiencia) a partir del funcionamiento de un motor de combustión."
+            },
+            "para_pensar": [
+              "¿Es posible que una máquina aproveche el 100% del calor que recibe para convertirlo en trabajo?",
+              "¿Hacia dónde se va el calor que 'pierde' el motor de un carro después de un viaje largo?"
+            ],
+            "pistas_del_exito": [
+              "El estudiante describe el cambio en la energía interna a partir del calor y el trabajo.",
+              "Explica el funcionamiento de un refrigerador como una máquina térmica inversa."
+            ],
+            "un_refuerzo": "Resolver ejercicios simples de balance de energía: ΔU = Q - W."
+          }
+        },
+        {
+          "componente": "Ciencia, Tecnología y Sociedad",
+          "guia_didactica": {
+            "la_estrategia": "Dilemas de la Ingeniería Genética",
+            "un_reto_sugerido": "¿Deberíamos modificar genéticamente a los seres vivos para nuestro beneficio?",
+            "ruta_de_exploracion": {
+              "explorar": "Investigar qué alimentos del supermercado son transgénicos (GMO) y qué modificaciones han recibido (resistencia a plagas, mayor tamaño).",
+              "visual": "Realizar un debate 'juicio a la tecnología' donde se expongan las ventajas (seguridad alimentaria) y desventajas (impacto ecológico) de la manipulación genética.",
+              "produccion": "Redactar una postura ética argumentada sobre el uso de la clonación o la terapia génica en humanos."
+            },
+            "para_pensar": [
+              "¿Qué riesgos corre la biodiversidad local si sembramos masivamente semillas modificadas?",
+              "¿Quién debería ser dueño de la información genética de una planta: la naturaleza o la empresa que la modificó?"
+            ],
+            "pistas_del_exito": [
+              "El estudiante argumenta ventajas y desventajas de la biotecnología moderna.",
+              "Demuestra pensamiento crítico sobre las implicaciones sociales de la genética."
+            ],
+            "un_refuerzo": "Investigar el caso de la oveja Dolly y por qué fue un hito científico y ético."
+          }
+        }
+      ]
+    },
+    {
+      "periodo_id": 2,
+      "guias_por_componente": [
+        {
+          "componente": "Entorno Vivo",
+          "guia_didactica": {
+            "la_estrategia": "Hormonas: Mensajeros Químicos",
+            "un_reto_sugerido": "¿Por qué reaccionamos con tanta fuerza ante un susto o una emoción intensa?",
+            "ruta_de_exploracion": {
+              "explorar": "Simular una situación de 'susto' controlado y describir las sensaciones físicas: dilatación de pupilas, aumento del pulso, tensión muscular.",
+              "visual": "Crear un mapa conceptual que conecte las glándulas endocrinas (suprarrenales, páncreas, tiroides) con las funciones que regulan.",
+              "produccion": "Explicar la respuesta de 'lucha o huida' como una interacción perfecta entre hormonas (adrenalina) y neuronas para mantener la homeostasis."
+            },
+            "para_pensar": [
+              "¿Cómo afecta el consumo excesivo de azúcar a la regulación de la insulina y el equilibrio del cuerpo?",
+              "¿Qué hábitos diarios (sueño, alimentación) ayudan a que nuestro sistema endocrino funcione correctamente?"
+            ],
+            "pistas_del_exito": [
+              "El estudiante explica el papel de las hormonas en la regulación de la presión y la digestión.",
+              "Relaciona hábitos no saludables con fallos en el sistema inmune y nervioso."
+            ],
+            "un_refuerzo": "Investigar qué es la diabetes tipo 2 y cómo se relaciona con la pérdida de homeostasis."
+          }
+        },
+        {
+          "componente": "Entorno Físico",
+          "guia_didactica": {
+            "la_estrategia": "El Lenguaje de las Reacciones Químicas",
+            "un_reto_sugerido": "¿Cómo saber si ha ocurrido una transformación química real frente a un simple cambio físico?",
+            "ruta_de_exploracion": {
+              "explorar": "Comparar la mezcla de agua y azúcar (físico) con la mezcla de vinagre y bicarbonato (químico), registrando evidencias como burbujeo o cambio de temperatura.",
+              "visual": "Realizar la oxidación controlada de una virulana (lana de acero) humedecida y observar el cambio de color y textura durante varios días.",
+              "produccion": "Representar mediante esquemas de esferas (modelos atómicos) cómo se rompen y forman nuevos enlaces en una reacción de combustión simple."
+            },
+            "para_pensar": [
+              "¿Por qué cuando quemamos madera las cenizas pesan menos que el tronco original? ¿Se perdió materia?",
+              "¿Cómo ayuda el conocimiento de los enlaces químicos a crear materiales más resistentes?"
+            ],
+            "pistas_del_exito": [
+              "El estudiante justifica si un cambio es físico o químico basado en evidencias observables.",
+              "Explica la formación de productos nuevos a partir de la recombinación de átomos."
+            ],
+            "un_refuerzo": "Balancear ecuaciones químicas sencillas por el método de tanteo para demostrar la ley de conservación de la masa."
+          }
+        },
+        {
+          "componente": "Ciencia, Tecnología y Sociedad",
+          "guia_didactica": {
+            "la_estrategia": "Colombia: Tesoro de Biodiversidad",
+            "un_reto_sugerido": "¿Por qué la biodiversidad de Colombia es clave para la economía y la salud del mundo?",
+            "ruta_de_exploracion": {
+              "explorar": "Identificar 5 especies endémicas de su región y los servicios ecosistémicos que prestan (agua, polinización, medicina).",
+              "visual": "Elaborar un mural digital o físico que muestre la relación entre la conservación de los páramos y el suministro de energía en el país.",
+              "produccion": "Proponer una estrategia local para proteger un ecosistema cercano, analizando el impacto social y económico de su recuperación."
+            },
+            "para_pensar": [
+              "¿Podría un país desarrollarse económicamente destruyendo sus recursos naturales?",
+              "¿De qué manera el ecoturismo puede ser una alternativa tecnológica y social sostenible?"
+            ],
+            "pistas_del_exito": [
+              "El estudiante establece la importancia de mantener la biodiversidad para el desarrollo nacional.",
+              "Identifica amenazas a la biodiversidad en su contexto cercano."
+            ],
+            "un_refuerzo": "Investigar qué es un 'Hotspot' de biodiversidad y por qué Colombia es considerado uno."
+          }
+        }
+      ]
+    },
+    {
+      "periodo_id": 3,
+      "guias_por_componente": [
+        {
+          "componente": "Entorno Vivo",
+          "guia_didactica": {
+            "la_estrategia": "Estrategias para la Vida: Reproducción",
+            "un_reto_sugerido": "¿Cuál es la ventaja de tener hijos diferentes a los padres frente a ser copias exactas?",
+            "ruta_de_exploracion": {
+              "explorar": "Observar la germinación de una semilla (sexual) y el crecimiento de un esqueje de planta (asexual), registrando tiempos y características.",
+              "visual": "Diseñar un juego de cartas de animales donde se comparen sus métodos de reproducción y el número de crías que logran sobrevivir.",
+              "produccion": "Argumentar por qué la reproducción sexual es fundamental para la variabilidad genética y la adaptación de las especies al cambio ambiental."
+            },
+            "para_pensar": [
+              "¿Por qué las bacterias se reproducen tan rápido de forma asexual? ¿Qué ventaja les da?",
+              "¿Qué pasaría con una especie si todos sus individuos fueran clones exactos ante una nueva enfermedad?"
+            ],
+            "pistas_del_exito": [
+              "El estudiante diferencia tipos de reproducción en plantas y animales.",
+              "Explica la importancia de la meiosis en la variabilidad genética."
+            ],
+            "un_refuerzo": "Investigar casos curiosos de reproducción como la partenogénesis en lagartijas."
+          }
+        },
+        {
+          "componente": "Entorno Físico",
+          "guia_didactica": {
+            "la_estrategia": "La Fuerza de los Enlaces",
+            "un_reto_sugerido": "¿Qué mantiene unidos a los átomos y por qué esto determina si un material es duro, soluble o conductor?",
+            "ruta_de_exploracion": {
+              "explorar": "Probar la conductividad eléctrica de agua con sal disuelta frente a agua con azúcar, usando un circuito simple con un LED.",
+              "visual": "Usar plastilina para modelar la transferencia de electrones en un enlace iónico (NaCl) y el compartir de electrones en uno covalente (H2O).",
+              "produccion": "Predecir las propiedades de una sustancia (punto de fusión, solubilidad) conociendo su tipo de enlace químico (iónico o covalente)."
+            },
+            "para_pensar": [
+              "¿Por qué el diamante y el grafito, siendo ambos carbono puro, tienen durezas tan diferentes?",
+              "¿Por qué la sal se disuelve en agua pero el aceite no, desde la perspectiva de los enlaces?"
+            ],
+            "pistas_del_exito": [
+              "El estudiante representa enlaces químicos usando estructuras de Lewis.",
+              "Relaciona la electronegatividad con la formación de compuestos."
+            ],
+            "un_refuerzo": "Clasificar una lista de compuestos comunes en iónicos o covalentes basándose en la tabla de electronegatividad."
+          }
+        },
+        {
+          "componente": "Ciencia, Tecnología y Sociedad",
+          "guia_didactica": {
+            "la_estrategia": "Microbios: Aliados Industriales",
+            "un_reto_sugerido": "¿Cómo podemos usar microorganismos para fabricar alimentos o limpiar el medio ambiente?",
+            "ruta_de_exploracion": {
+              "explorar": "Realizar un cultivo de levaduras con azúcar y agua tibia, observando la producción de gas (fermentación).",
+              "visual": "Elaborar un proceso de fabricación de yogur casero, explicando el papel de las bacterias lácticas en la transformación de la leche.",
+              "produccion": "Investigar y presentar un caso de biorremediación (uso de bacterias para limpiar derrames de petróleo o metales pesados)."
+            },
+            "para_pensar": [
+              "¿Son todos los microorganismos peligrosos para el ser humano? ¿Por qué?",
+              "¿Cómo ha cambiado la industria alimentaria gracias al uso de hongos y bacterias?"
+            ],
+            "pistas_del_exito": [
+              "El estudiante indaga sobre aplicaciones de la microbiología en la industria.",
+              "Describe el proceso de fermentación como una biotecnología tradicional."
+            ],
+            "un_refuerzo": "Visitar virtualmente una planta de tratamiento de aguas residuales para ver el papel de los microbios."
+          }
+        }
+      ]
+    },
+    {
+      "periodo_id": 4,
+      "guias_por_componente": [
+        {
+          "componente": "Entorno Vivo",
+          "guia_didactica": {
+            "la_estrategia": "Reproducción Humana y Responsabilidad",
+            "un_reto_sugerido": "¿Cuáles son los desafíos biológicos y sociales de un embarazo a temprana edad?",
+            "ruta_de_exploracion": {
+              "explorar": "Analizar datos estadísticos sobre el embarazo adolescente en su municipio y discutir las posibles causas sociales.",
+              "visual": "Construir modelos de los sistemas reproductores masculino y femenino, identificando las funciones de cada órgano en la fecundación.",
+              "produccion": "Explicar la importancia de los métodos de prevención y el cuidado del sistema reproductor para evitar patologías y asegurar el bienestar futuro."
+            },
+            "para_pensar": [
+              "¿Cómo cambia el proyecto de vida de un adolescente ante un embarazo no planeado?",
+              "¿Por qué la educación sexual es una herramienta de salud pública fundamental?"
+            ],
+            "pistas_del_exito": [
+              "El estudiante identifica riesgos físicos y psicológicos del embarazo adolescente.",
+              "Propone medidas preventivas para el mantenimiento de la salud reproductiva."
+            ],
+            "un_refuerzo": "Realizar un taller sobre el uso correcto de métodos de barrera y su efectividad biológica."
+          }
+        },
+        {
+          "componente": "Entorno Físico",
+          "guia_didactica": {
+            "la_estrategia": "Las Leyes del Mundo Invisible (Gases)",
+            "un_reto_sugerido": "¿Cómo interactúan la presión, el volumen y la temperatura en el aire que nos rodea?",
+            "ruta_de_exploracion": {
+              "explorar": "Colocar un globo en la boca de una botella fría y luego sumergirla en agua caliente para observar cómo se infla (Ley de Charles).",
+              "visual": "Usar una jeringa sellada para observar cómo disminuye el volumen del aire al aumentar la presión manual (Ley de Boyle).",
+              "produccion": "Explicar el funcionamiento de un globo aerostático o una olla a presión utilizando las leyes de los gases ideales y la teoría cinético-molecular."
+            },
+            "para_pensar": [
+              "¿Por qué las llantas de los carros parecen estar más desinfladas en las mañanas frías que al mediodía?",
+              "¿Qué le sucede a los pulmones de un buzo si asciende demasiado rápido a la superficie?"
+            ],
+            "pistas_del_exito": [
+              "El estudiante interpreta experimentos variando P, V y T en gases.",
+              "Explica eventos cotidianos usando las relaciones matemáticas de las leyes de los gases."
+            ],
+            "un_refuerzo": "Resolver problemas aplicados usando la ecuación de estado: PV = nRT."
+          }
+        },
+        {
+          "componente": "Ciencia, Tecnología y Sociedad",
+          "guia_didactica": {
+            "la_estrategia": "El pH en nuestra Vida Diaria",
+            "un_reto_sugerido": "¿Cómo afecta la acidez de las sustancias a nuestra salud y a los productos que usamos?",
+            "ruta_ de_exploracion": {
+              "explorar": "Preparar un indicador de pH natural con repollo morado y probarlo con sustancias como vinagre, jabón, leche y soda.",
+              "visual": "Crear una escala de colores propia y clasificar los productos del hogar según su nivel de acidez o basicidad.",
+              "produccion": "Investigar la importancia del pH en la piel humana y por qué los productos de aseo deben tener un pH neutro o balanceado."
+            },
+            "para_pensar": [
+              "¿Por qué la lluvia ácida es un problema tecnológico y ambiental para las ciudades?",
+              "¿Cómo influye el pH del estómago en una buena digestión?"
+            ],
+            "pistas_del_exito": [
+              "El estudiante identifica niveles de pH en productos cotidianos y explica sus usos.",
+              "Relaciona el concepto de pH con la neutralización en la vida diaria."
+            ],
+            "un_refuerzo": "Hacer una infografía sobre cómo los suelos ácidos o básicos afectan la agricultura en Colombia."
+          }
+        }
+      ]
+    }
+  ]
+}
