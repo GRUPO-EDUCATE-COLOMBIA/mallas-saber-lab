@@ -1,4 +1,4 @@
-// FILE: js/ui-filtros.js | VERSION: v7.9.4 Stable
+// FILE: js/ui-filtros.js | VERSION: v7.9.5 Stable
 document.addEventListener('DOMContentLoaded', () => {
   const areaSel = document.getElementById('area');
   const gradoSel = document.getElementById('grado');
@@ -12,18 +12,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnCerrarModal = document.getElementById('btn-cerrar-modal');
 
   function mostrarError(mensaje) {
-    modalMsg.textContent = mensaje;
-    modal.classList.add('mostrar-flex');
+    if (modalMsg) modalMsg.textContent = mensaje;
+    if (modal) modal.classList.add('mostrar-flex');
     window.RenderEngine.setCargando(false);
   }
 
-  btnCerrarModal.onclick = () => modal.classList.remove('mostrar-flex');
+  if (btnCerrarModal) btnCerrarModal.onclick = () => modal.classList.remove('mostrar-flex');
 
-  // LIMPIEZA INSTANTÁNEA AL CAMBIAR SELECTORES (Su propuesta UX)
+  // LIMPIEZA BLINDADA (v7.9.5)
   function resetResultados() {
-    document.getElementById('contenedor-malla').innerHTML = '';
-    document.getElementById('resultados-principal').style.display = 'none';
-    document.getElementById('indicador-periodo').style.display = 'none';
+    const contMalla = document.getElementById('contenedor-malla');
+    const resPrincipal = document.getElementById('resultados-principal');
+    const indPeriodo = document.getElementById('indicador-periodo');
+    
+    if (contMalla) contMalla.innerHTML = '';
+    if (resPrincipal) resPrincipal.classList.remove('mostrar-block');
+    if (indPeriodo) indPeriodo.style.display = 'none';
   }
 
   areaSel.addEventListener('change', () => {
@@ -42,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
   gradoSel.addEventListener('change', resetResultados);
 
   periodoSel.addEventListener('change', async () => {
-    resetResultados(); // Limpia antes de cargar el nuevo periodo
+    resetResultados();
     if (!periodoSel.value) return;
     
     window.RenderEngine.setCargando(true);
@@ -87,7 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const filtrados = compSel.value === "todos" ? items : items.filter(it => (it.componente || it.competencia) === compSel.value);
     
     window.RenderEngine.renderizar(filtrados, areaSel.value, gradoSel.value, periodoSel.value);
-    document.getElementById('resultados-principal').classList.add('mostrar-block');
   });
 
   btnProg.addEventListener('click', async () => {
@@ -104,13 +107,10 @@ document.addEventListener('DOMContentLoaded', () => {
     window.RenderEngine.setCargando(false);
   });
 
-  // LOGICA BOTON TOP RESTAURADA
   window.onscroll = () => { 
-    if (window.scrollY > 400) {
-      btnTop.style.display = 'block';
-    } else {
-      btnTop.style.display = 'none';
+    if (btnTop) {
+      btnTop.style.display = (window.scrollY > 400) ? 'block' : 'none';
     }
   };
-  btnTop.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+  if (btnTop) btnTop.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 });
