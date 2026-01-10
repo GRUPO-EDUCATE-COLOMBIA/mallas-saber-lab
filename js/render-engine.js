@@ -1,12 +1,10 @@
-// FILE: js/render-engine.js | VERSION: v7.9.4 Stable
+// FILE: js/render-engine.js | VERSION: v7.9.7 Stable
 window.RenderEngine = (function() {
   const containerMalla = document.getElementById('contenedor-malla');
 
-  // Transforma arreglos en listas HTML o devuelve el texto limpio
   function validarDato(dato) {
     const msg = '<em style="color:#999;font-weight:400;">Información en proceso de revisión...</em>';
     if (!dato || dato === "") return msg;
-    
     if (Array.isArray(dato)) {
       if (dato.length === 0) return msg;
       return `<ul>${dato.map(linea => `<li>${linea}</li>`).join('')}</ul>`;
@@ -14,17 +12,25 @@ window.RenderEngine = (function() {
     return dato;
   }
 
-  // Detecta códigos (DBA-XX o DBA X) y los separa en Badges
-  function formatearDBA(dato) {
+  /**
+   * FORMATEADOR DE BADGES (DBAs y Evidencias)
+   * Detecta códigos tipo DBA-X o MAT-X-EX y los separa visualmente
+   */
+  function formatearConBadges(dato) {
     if (!dato) return validarDato(dato);
     const lineas = Array.isArray(dato) ? dato : [dato];
     
     return lineas.map(linea => {
       const parts = linea.split(':');
-      if (parts.length > 1 && parts[0].toLowerCase().includes('dba')) {
-        return `<div class="dba-item-container"><span class="dba-badge">${parts[0].trim()}</span><div>${parts.slice(1).join(':').trim()}</div></div>`;
+      // Si tiene ":" y la parte izquierda parece un código técnico
+      if (parts.length > 1 && parts[0].trim().length < 25) {
+        return `
+          <div class="badge-container">
+            <span class="badge-id">${parts[0].trim()}</span>
+            <div class="badge-text">${parts.slice(1).join(':').trim()}</div>
+          </div>`;
       }
-      return `<div>${linea}</div>`;
+      return `<div style="margin-bottom:10px;">${linea}</div>`;
     }).join('');
   }
 
@@ -73,15 +79,18 @@ window.RenderEngine = (function() {
         </div>
         <div class="item-malla-contenido">
           <div class="campo"><strong>Estándar Curricular:</strong><div>${validarDato(item.estandar)}</div></div>
-          <div class="campo"><strong>DBA:</strong><div>${formatearDBA(item.dba)}</div></div>
-          <div class="campo"><strong>Evidencias de Aprendizaje:</strong><div>${validarDato(item.evidencias)}</div></div>
+          
+          <!-- DBA CON BADGES -->
+          <div class="campo"><strong>DBA:</strong><div>${formatearConBadges(item.dba)}</div></div>
+          
+          <!-- EVIDENCIAS CON BADGES -->
+          <div class="campo"><strong>Evidencias de Aprendizaje:</strong><div>${formatearConBadges(item.evidencias)}</div></div>
+          
           <div class="campo"><strong>Saberes / Contenidos:</strong><div>${validarDato(item.saberes)}</div></div>
 
           <div class="contenedor-fichas-cierre">
             <div class="ficha-cierre ficha-dce">
-              <div class="ficha-header ficha-header-dce">
-                <span>💡</span> GUÍA DIDÁCTICA: ${infoDCE ? infoDCE.la_estrategia : 'En proceso'}
-              </div>
+              <div class="ficha-header ficha-header-dce"><span>💡</span> GUÍA DIDÁCTICA: ${infoDCE ? infoDCE.la_estrategia : 'En proceso'}</div>
               <div class="ficha-body">
                 <div class="campo"><strong>Reto Sugerido:</strong><div>${validarDato(infoDCE?.un_reto_sugerido)}</div></div>
                 <div class="campo"><strong>Ruta de Exploración:</strong>
@@ -96,11 +105,8 @@ window.RenderEngine = (function() {
                 <div class="campo"><strong>Un Refuerzo:</strong><div>${validarDato(infoDCE?.un_refuerzo)}</div></div>
               </div>
             </div>
-
             <div class="ficha-cierre ficha-eco">
-              <div class="ficha-header ficha-header-eco">
-                <span>🧠</span> RESPONSABILIDAD SOCIOEMOCIONAL ECO
-              </div>
+              <div class="ficha-header ficha-header-eco"><span>🧠</span> RESPONSABILIDAD SOCIOEMOCIONAL ECO</div>
               <div class="ficha-body">
                 <div class="campo"><strong>Eje Central:</strong><div>${validarDato(infoECO?.eje_central)}</div></div>
                 <div class="campo"><strong>Habilidades:</strong><div>${validarDato(infoECO?.Habilidades)}</div></div>
