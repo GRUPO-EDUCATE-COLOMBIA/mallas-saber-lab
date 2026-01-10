@@ -255,7 +255,7 @@
         "saberes": [
           "Relación entre conservación del momento lineal e impulso en sistemas de objetos.",
           "Transformación de energía mecánica en energía térmica.",
-          "Modelado matemático del movimiento de objetos a partir de las fuerzas.",
+          "Modelado matemático del movimiento de objetos a partir de las fuerzas aplicadas.",
           "Relación entre voltaje, corriente y elementos en circuitos eléctricos complejos."
         ],
         "socioemocional": null,
@@ -301,8 +301,7 @@
         ],
         "saberes": [
           "La mutación, la selección natural y la herencia en la evolución de las especies.",
-          "El papel de la selección natural en la diversidad de especies actuales.",
-          "La selección natural y su contribución a la diversidad de especies actuales."
+          "El papel de la selección natural en la diversidad de especies actuales."
         ],
         "socioemocional": null,
         "diccionario": null,
