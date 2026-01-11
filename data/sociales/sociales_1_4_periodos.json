@@ -1,0 +1,262 @@
+{
+  "area": "Ciencias Sociales y Competencias Ciudadanas",
+  "grado": "1",
+  "tipo_malla": "Malla Periódica",
+  "numero_periodos": 4,
+  "periodos": {
+    "1": [
+      {
+        "componente": "Espacio y ambiente",
+        "estandar": ["Me ubico en el entorno físico y de representación (en mapas y planos) utilizando referentes espaciales como arriba, abajo, dentro, fuera, derecha, izquierda. (1)"],
+        "dba": ["Se ubica en el espacio que habita teniendo como referencia su propio cuerpo y los puntos cardinales. (1)"],
+        "evidencias": [
+          "Relaciona su izquierda-derecha, adelante– atrás con los puntos cardinales, al ubicar, en representaciones gráficas de la escuela, aquellos lugares como rectoría, cafetería, patio de recreo, coordinación y sala de profesores, entre otros.",
+          "Dibuja las instituciones sociales de carácter deportivo, educativo, religioso y político, existentes en su barrio, vereda o lugar donde vive."
+        ],
+        "saberes": ["Ubicación espacial", "Puntos cardinales", "Mapas", "Planos"],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Historia y cultura",
+        "estandar": ["Identifico y describo cambios y aspectos que se mantienen en mí y en las organizaciones de mi entorno. (3)"],
+        "dba": ["Describe el tiempo personal y se sitúa en secuencias de eventos propios y sociales. (3)"],
+        "evidencias": [
+          "Nombra ordenadamente los días de la semana y los meses del año.",
+          "Diferencia el ayer, el hoy y el mañana desde las actividades cotidianas que realiza y la duración de estas en horas y minutos mediante la lectura del reloj."
+        ],
+        "saberes": ["El tiempo", "Días de la semana", "Meses del año", "Diferencia entre ayer y hoy", "Actividades cotidianas"],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Ético político",
+        "estandar": ["Identifico y describo características y funciones básicas de organizaciones sociales y políticas de mi entorno (1)"],
+        "dba": ["Reconoce la noción de cambio a partir de las transformaciones que ha vivido en los últimos años a nivel personal, de su familia y del entorno barrial, veredal o del lugar donde vive. (4)"],
+        "evidencias": [
+          "Relata los principales acontecimientos sociales ocurridos en el aula de clase, por ejemplo, el inicio de la vida escolar, la celebración del día de los niños, las izadas de bandera o la celebración de cumpleaños, entre otros, diferenciando el antes y el ahora.",
+          "Señala las transformaciones recientes observadas en el entorno físico de su comunidad y el para qué se realizaron."
+        ],
+        "saberes": ["Diferencia entre antes y ahora", "Cambios en mi vida cotidiana", "Cambios en el entorno físico y comunitario"],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Competencias Ciudadanas",
+        "estandar": ["Participación y responsabilidad democrática"],
+        "dba": [
+          "Expreso mis ideas, sentimientos e intereses en el salón y escucho respetuosamente los de los demás miembros del grupo. (1)",
+          "Manifiesto mi punto de vista cuando se toman decisiones colectivas en la casa y en la vida escolar. (2)"
+        ],
+        "evidencias": [
+          "Comparte sus pensamientos e intereses en clase de forma respetuosa.",
+          "Escucha con atención las ideas de sus compañeros sin interrumpir.",
+          "Aporta su opinión en la toma de decisiones grupales en el hogar y el colegio."
+        ],
+        "saberes": ["Ideas y sentimientos en el salón", "Escucha respetuosa", "Toma de decisiones colectivas"],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      }
+    ],
+    "2": [
+      {
+        "componente": "Espacio y ambiente",
+        "estandar": ["Establezco relaciones entre los espacios físicos que ocupo (salón de clase, colegio, municipio…) y sus representaciones (mapas, planos, maquetas...). (2)"],
+        "dba": ["Se ubica en el espacio que habita teniendo como referencia su propio cuerpo y los puntos cardinales. (1)"],
+        "evidencias": [
+          "Localiza en representaciones gráficas o dibujos de su barrio, vereda o lugar donde vive, algunos referentes (tienda, iglesia, parque, escuela) teniendo en cuenta los puntos cardinales y conoce los acontecimientos que se dan en estos lugares.",
+          "Describe verbalmente el recorrido que realiza entre su casa y la institución educativa donde estudia, señalando aquellos lugares que considera representativos o muy conocidos en su comunidad y el porqué de su importancia."
+        ],
+        "saberes": ["Espacios físicos de mi entorno", "Localización en representaciones gráficas", "Recorrido y localización de lugares representativos", "Recorrido casa-colegio"],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Historia y cultura",
+        "estandar": ["Identifico y describo cambios y aspectos que se mantienen en mí y en las organizaciones de mi entorno. (3)"],
+        "dba": ["Describe el tiempo personal y se sitúa en secuencias de eventos propios y sociales. (3)"],
+        "evidencias": [
+          "Identifica los miembros de su familia y verbaliza quiénes nacieron antes o después de él.",
+          "Recuerda las fechas de los cumpleaños de sus padres, hermanos, amigos y compañeros de clase más cercanos, diferenciando las edades entre ellos."
+        ],
+        "saberes": ["Miembros de la familia", "Nacimientos familiares", "Fechas de cumpleaños"],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Ético político",
+        "estandar": ["Identifico y describo características y funciones básicas de organizaciones sociales y políticas de mi entorno. (1)"],
+        "dba": ["Reconoce la noción de cambio a partir de las transformaciones que ha vivido en los últimos años a nivel personal, de su familia y del entorno barrial, veredal o del lugar donde vive. (4)"],
+        "evidencias": [
+          "Describe aquellas organizaciones sociales a las que pertenece en su comunidad: familia, colegio y vecindario.",
+          "Plantea preguntas acerca de sucesos destacados que han tenido lugar en su comunidad."
+        ],
+        "saberes": ["La familia", "El colegio", "El barrio", "La vereda", "El corregimiento", "Resguardo", "Territorios afrocolombianos", "Sucesos destacados de la comunidad"],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Competencias Ciudadanas",
+        "estandar": ["Convivencia y paz"],
+        "dba": [
+          "Comprendo que todos los niños y niñas tenemos derecho a recibir buen trato, cuidado y amor. (1)",
+          "Reconozco las emociones básicas (alegría, tristeza, rabia, temor) en mí y en las otras personas. (2)",
+          "Expreso mis sentimientos y emociones mediante distintas formas y lenguajes (gestos, palabras, pintura, teatro, juegos, etc.). (3)"
+        ],
+        "evidencias": [
+          "Identifica situaciones donde se respeta o vulnera su derecho al buen trato.",
+          "Nombra y describe emociones básicas en sí mismo y en los demás.",
+          "Utiliza diferentes formas de expresión para comunicar sus estados de ánimo."
+        ],
+        "saberes": ["Derechos de los niños", "Buen trato", "Cuidado y amor", "Emociones básicas", "Expresión de sentimientos y emociones"],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      }
+    ],
+    "3": [
+      {
+        "componente": "Espacio y ambiente",
+        "estandar": ["Reconozco y describo las características físicas de las principales formas del paisaje. (4)"],
+        "dba": ["Describe las características del paisaje geográfico del barrio vereda o lugar donde viven sus componentes y formas. (2)"],
+        "evidencias": [
+          "Reconoce las diferentes formas de relieve en su entorno geográfico o lugar donde vive, por ejemplo: costas, islas, montañas, valles, llanuras y/o mesetas.",
+          "Diferencia los estados del tiempo atmosférico de acuerdo con las sensaciones de calor y frío manifiestas en su cuerpo y con base en los momentos de lluvia y sequía que se dan en el lugar donde vive.",
+          "Identifica aquellas obras de infraestructura que se han realizado en su comunidad y expresa las ventajas que estas traen.",
+          "Representa de diferentes maneras, aquellos problemas ambientales que afectan el entorno de la comunidad en el contexto del barrio, vereda o lugar donde vive."
+        ],
+        "saberes": ["Paisaje geográfico", "Relieve colombiano", "Estados del tiempo atmosférico", "Infraestructura comunitaria", "Problemas ambientales"],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Historia y cultura",
+        "estandar": ["Identifico algunas características físicas, sociales, culturales y emocionales que hacen de mí un ser único. (1)"],
+        "dba": ["Reconoce su individualidad y su pertenencia a los diferentes grupos sociales (5)"],
+        "evidencias": [
+          "Expresa algunas características físicas y emocionales que lo hacen un ser único.",
+          "Compara similitudes y diferencias entre sus gustos, costumbres y formas de comunicarse, con los demás integrantes del salón de clase."
+        ],
+        "saberes": ["Ser único e irrepetible", "Características individuales"],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Ético político",
+        "estandar": ["Reconozco algunas normas que han sido construidas entre compañeros y entre la familia. (7)"],
+        "dba": ["Participa en la construcción de acuerdos básicos sobre normas para el logro de metas comunes en su contexto cercano (compañeros y familia) y se compromete con su cumplimiento."],
+        "evidencias": [
+          "Presenta sus ideas, intereses y sentimientos frente a las normas establecidas en la familia, en el salón de clase y otros espacios.",
+          "Expresa sus opiniones y colabora activamente en la construcción de los acuerdos grupales para la convivencia.",
+          "Plantea alternativas de solución frente a situaciones conflictivas en su familia y salón de clase.",
+          "Reconoce la importancia del trabajo en equipo para el logro de las metas comunes."
+        ],
+        "saberes": ["Normas de convivencia", "Acuerdos", "Mis ideas y sentimientos", "Opinión personal", "Trabajo en equipo"],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Competencias Ciudadanas",
+        "estandar": ["Pluralidad, identidad y valoración de las diferencias"],
+        "dba": [
+          "Identifico las diferencias y semejanzas de género, aspectos físicos, grupo étnico, origen social, costumbres, gustos, ideas y tantas otras que hay entre las demás personas y yo.",
+          "Reconozco y acepto la existencia de grupos con diversas características de etnia, edad, género, oficio, lugar, situación socioeconómica, etc."
+        ],
+        "evidencias": [
+          "Menciona y valora las características que lo hacen diferente a sus pares.",
+          "Demuestra respeto hacia la diversidad de orígenes y costumbres en el aula.",
+          "Explica por qué es importante aceptar a personas con distintas condiciones socioeconómicas o de género."
+        ],
+        "saberes": ["Diversidad y respeto por las diferencias", "Género", "Etnias", "Costumbres", "Situación socioeconómica"],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      }
+    ],
+    "4": [
+      {
+        "componente": "Espacio y ambiente",
+        "estandar": ["Reconozco diversas formas de representación de la Tierra."],
+        "dba": ["Comprende cambios en las formas de habitar de los grupos humanos, desde el reconocimiento de los tipos de vivienda que se encuentran en el contexto de su barrio, vereda o lugar donde vive. (6)"],
+        "evidencias": [
+          "Señala los lugares de procedencia de su familia y comprende cómo llegaron a su vivienda actual.",
+          "Nombra los materiales utilizados en la construcción de la casa donde vive y la distribución de las habitaciones que hay en ella.",
+          "Identifica las viviendas que se destacan en su comunidad, que son patrimonio hoy y que deben conservarse.",
+          "Reconoce el valor de la vivienda como el espacio donde tiene lugar su hogar y donde recibe seguridad y cuidado de su familia."
+        ],
+        "saberes": ["Representación de la tierra", "Origen familiar", "Materiales de construcción", "Distribución de la vivienda", "Patrimonio comunitario", "Valor de la vivienda"],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Historia y cultura",
+        "estandar": ["Identifico y describo algunas características socioculturales de comunidades a las que pertenezco y de otras diferentes a las mías. (2)"],
+        "dba": ["Reconoce su individualidad y su pertenencia a los diferentes grupos sociales (5)"],
+        "evidencias": [
+          "Reconoce de sí mismo, de sus compañeros y de sus familiares aquellas cualidades que le ayudan a estar mejor entre los demás.",
+          "Reconoce las costumbres y tradiciones culturales de su comunidad mediante los relatos de los abuelos y personas mayores del barrio, vereda o lugar donde vive."
+        ],
+        "saberes": ["Pertenencia a una comunidad", "Cualidades personales", "Costumbres y tradiciones culturales"],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Ético político",
+        "estandar": ["Identifico situaciones cotidianas que indican cumplimiento o incumplimiento en las funciones de algunas organizaciones sociales y políticas de mi entorno. (2)"],
+        "dba": ["Establece relaciones de convivencia desde el reconocimiento y el respeto de sí mismo y de los demás. (8)"],
+        "evidencias": [
+          "Expresa el valor de sí mismo y de cada uno de los integrantes de la clase, explicando aquello que los diferencia y los identifica: el género, la procedencia, la edad, las ideas y creencias, entre otras.",
+          "Expresa aquello que lo hace igual a los demás en la institución, desde el conocimiento y el respeto a los deberes y derechos establecidos en el Manual de Convivencia.",
+          "Identifica situaciones de maltrato que se dan en su entorno consigo mismo y/o con otras personas y sabe a quiénes acudir para pedir ayuda y protección.",
+          "Participa de acciones que fomentan la sana convivencia en el entorno familiar y escolar."
+        ],
+        "saberes": ["Funciones de las organizaciones", "Igualdad y diferencia", "Deberes y derechos", "Manual de convivencia", "Prevención del maltrato infantil", "Sana convivencia"],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Competencias Ciudadanas",
+        "estandar": ["Participación y responsabilidad democrática"],
+        "dba": ["Reconozco que emociones como el temor o la rabia pueden afectar mi participación en clase (3)"],
+        "evidencias": [
+          "Identifica cuándo una emoción fuerte le impide trabajar bien en equipo.",
+          "Aplica estrategias sencillas para calmarse antes de opinar en clase.",
+          "Describe cómo sus emociones influyen en su relación con los compañeros de curso."
+        ],
+        "saberes": ["Emociones y participación en clase"],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      }
+    ]
+  }
+}
