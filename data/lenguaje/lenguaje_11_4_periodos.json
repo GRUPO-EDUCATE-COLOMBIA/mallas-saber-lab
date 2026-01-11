@@ -1,0 +1,438 @@
+{
+  "area": "Lenguaje",
+  "grado": "11",
+  "tipo_malla": "4_periodos",
+  "numero_periodos": 4,
+  "periodos": {
+    "1": [
+      {
+        "componente": "Producción Textual",
+        "estandar": [
+          "Evidencio en mis producciones textuales el conocimiento de los diferentes niveles de la lengua y el control sobre el uso que hago de ellos en contextos comunicativos."
+        ],
+        "dba": [
+          "Expresa por medio de producciones orales el dominio de un tema, un texto o la obra de un autor.",
+          "Produce textos académicos a partir de procedimientos sistemáticos de corrección lingüística, atendiendo al tipo de texto y al contexto comunicativo"
+        ],
+        "evidencias": [
+          "Construye relaciones de contenido entre temas, categorías y conceptos.",
+          "Emplea diferentes tipos de argumento para sustentar sus puntos de vista."
+        ],
+        "saberes": [
+          "Autoevaluación de textos",
+          "Valor del lenguaje en los procesos de construcción del conocimiento"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Comprensión e interpretación textual",
+        "estandar": [
+          "Comprendo e interpreto textos con actitud crítica y capacidad argumentativa."
+        ],
+        "dba": [
+          "Determina los textos que desea leer y la manera en que abordará su comprensión, con base en sus experiencias de formación e inclinaciones literarias.",
+          "Compara diversos tipos de texto, con capacidad crítica y argumentativa para establecer relaciones entre temáticas, características y los múltiples contextos"
+        ],
+        "evidencias": [
+          "Comprende las temáticas, características, estilos, tonos, sentido local y global de las obras literarias que lee."
+        ],
+        "saberes": [
+          "Textos en contextos sociales",
+          "Textos en contextos culturales",
+          "Textos en contextos políticos contemporáneos",
+          "Esquema de Interpretación"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Literatura",
+        "estandar": [
+          "Analizo crítica y creativamente diferentes manifestaciones literarias del contexto universal."
+        ],
+        "dba": [
+          "Identifica, en las producciones literarias clásicas, diferentes temas que le permiten establecer comparaciones con las visiones de mundo de otras épocas.",
+          "Determina los textos que desea leer y la manera en que abordará su comprensión, con base en sus experiencias de formación e inclinaciones literarias."
+        ],
+        "evidencias": [
+          "Asume una postura frente a la vigencia de las obras literarias clásicas.",
+          "Reconoce que en las obras clásicas se abordan temas que vinculan a los seres humanos de diferentes épocas."
+        ],
+        "saberes": [
+          "Obras de literatura universal y sus aspectos principales",
+          "Textos literarios de diversa índole",
+          "Género, temática y origen literario"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Ética de la Comunicación",
+        "estandar": [
+          "Expreso respeto por la diversidad cultural y social del mundo contemporáneo, en las situaciones comunicativas en las que intervengo."
+        ],
+        "dba": [
+          "Expresa, con sentido crítico, cómo se articulan los códigos verbales y no verbales en diversas manifestaciones humanas y da cuenta de sus implicaciones culturales, sociales e ideológicas."
+        ],
+        "evidencias": [
+          "Comprende el sentido literal y figurado de distintos símbolos empleados en los medios de comunicación."
+        ],
+        "saberes": [
+          "Desarrollos textuales de diferentes grupos humanos contemporáneos"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Medios de Comunicación y otros sistemas simbólicos",
+        "estandar": [
+          "Interpreto en forma crítica la información difundida por los medios de comunicación masiva.",
+          "Retomo críticamente los lenguajes no verbales para desarrollar procesos comunicativos intencionados."
+        ],
+        "dba": [
+          "Participa en escenarios académicos, políticos y culturales, asumiendo una posición crítica y propositiva frente a los discursos que le presentan los distintos medios."
+        ],
+        "evidencias": [
+          "Analiza la información difundida en los medios de comunicación institucionales y regionales, para participar en procesos democráticos."
+        ],
+        "saberes": [
+          "Medios de comunicación masiva en el contexto social",
+          "Contexto cultural, económico y político de las sociedades contemporáneas"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      }
+    ],
+    "2": [
+      {
+        "componente": "Producción Textual",
+        "estandar": [
+          "Evidencio en mis producciones textuales el conocimiento de los diferentes niveles de la lengua y el control sobre el uso que hago de ellos en contextos comunicativos."
+        ],
+        "dba": [
+          "Expresa por medio de producciones orales el dominio de un tema, un texto o la obra de un autor.",
+          "Produce textos académicos a partir de procedimientos sistemáticos de corrección lingüística, atendiendo al tipo de texto y al contexto comunicativo"
+        ],
+        "evidencias": [
+          "Emplea diferentes tipos de argumento para sustentar sus puntos de vista."
+        ],
+        "saberes": [
+          "Valor del lenguaje en los procesos de construcción del conocimiento"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Comprensión e interpretación textual",
+        "estandar": [
+          "Comprendo e interpreto textos con actitud crítica y capacidad argumentativa."
+        ],
+        "dba": [
+          "Compara diversos tipos de texto, con capacidad crítica y argumentativa para establecer relaciones entre temáticas, características y los múltiples contextos en los que fueron producidos."
+        ],
+        "evidencias": [
+          "Relaciona el significado del texto con los contextos sociales, culturales y políticos en los que fue producido y plantea su posición al respecto."
+        ],
+        "saberes": [
+          "Estrategias descriptivas",
+          "Estrategias explicativas",
+          "Estrategias analógicas"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Literatura",
+        "estandar": [
+          "Analizo crítica y creativamente diferentes manifestaciones literarias del contexto universal."
+        ],
+        "dba": [
+          "Identifica, en las producciones literarias clásicas, diferentes temas que le permiten establecer comparaciones con las visiones de mundo de otras épocas."
+        ],
+        "evidencias": [
+          "Asume una postura frente a la vigencia de las obras literarias clásicas."
+        ],
+        "saberes": [
+          "Obras de literatura universal y sus aspectos principales"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Ética de la Comunicación",
+        "estandar": [
+          "Expreso respeto por la diversidad cultural y social del mundo contemporáneo, en las situaciones comunicativas en las que intervengo."
+        ],
+        "dba": [
+          "Comprende que los argumentos de sus interlocutores involucran procesos de comprensión, crítica y proposición.",
+          "Determina los textos que desea leer y la manera en que abordará su comprensión, con base en sus experiencias de formación e inclinaciones literarias."
+        ],
+        "evidencias": [
+          "Comprende las posturas de un discurso sobre un tema de interés social y las relaciona con sus posturas previas.",
+          "Reconoce que en las obras clásicas se abordan temas que vinculan a los seres humanos de diferentes épocas."
+        ],
+        "saberes": [
+          "Diferencias ideológicas en grupos humanos",
+          "Relación intercultural con las comunidades indígenas y afrocolombianas"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Medios de Comunicación y otros sistemas simbólicos",
+        "estandar": [
+          "Interpreto en forma crítica la información difundida por los medios de comunicación masiva.",
+          "Retomo críticamente los lenguajes no verbales para desarrollar procesos comunicativos intencionados."
+        ],
+        "dba": [
+          "Participa en escenarios académicos, políticos y culturales, asumiendo una posición crítica y propositiva frente a los discursos que le presentan los distintos medios.",
+          "Expresa, con sentido crítico, cómo se articulan los códigos verbales y no verbales en diversas manifestaciones humanas."
+        ],
+        "evidencias": [
+          "Analiza la información difundida en los medios de comunicación institucionales y regionales.",
+          "Identifica la intencionalidad de los anuncios publicitarios, políticos y deportivos que se producen en el contexto social y cultural."
+        ],
+        "saberes": [
+          "Medios de información masiva y sus mecanismos ideológicos",
+          "Manifestaciones humanas y sus implicaciones culturales, sociales e ideológicas"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      }
+    ],
+    "3": [
+      {
+        "componente": "Producción Textual",
+        "estandar": [
+          "Evidencio en mis producciones textuales el conocimiento de los diferentes niveles de la lengua y el control sobre el uso que hago de ellos en contextos comunicativos."
+        ],
+        "dba": [
+          "Produce textos académicos a partir de procedimientos sistemáticos de corrección lingüística, atendiendo al tipo de texto y al contexto comunicativo"
+        ],
+        "evidencias": [
+          "Construye párrafos que tienen funciones específicas dentro del discurso como ampliar, introducir, sintetizar y concluir."
+        ],
+        "saberes": [
+          "Correcciones propias en textos"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Comprensión e interpretación textual",
+        "estandar": [
+          "Comprendo e interpreto textos con actitud crítica y capacidad argumentativa."
+        ],
+        "dba": [
+          "Participa en escenarios académicos, políticos y culturales, asumiendo una posición crítica y propositiva frente a los discursos que le presentan los distintos medios.",
+          "Compara diversos tipos de texto, con capacidad crítica y argumentativa para establecer relaciones entre temáticas, características y los múltiples contextos."
+        ],
+        "evidencias": [
+          "Infiere la relación de los mensajes emitidos por los medios de comunicación masiva dentro de contextos sociales, culturales y políticos.",
+          "Relaciona el significado del texto con los contextos sociales, culturales y políticos en los que fue producido."
+        ],
+        "saberes": [
+          "Evaluación de textos",
+          "Textos y contextos sociales"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Literatura",
+        "estandar": [
+          "Analizo crítica y creativamente diferentes manifestaciones literarias del contexto universal."
+        ],
+        "dba": [
+          "Participa en escenarios académicos, políticos y culturales, asumiendo una posición crítica y propositiva frente a los discursos que le presentan los distintos medios."
+        ],
+        "evidencias": [
+          "Comprende que la entonación revela la intención de resaltar o encubrir información de parte del interlocutor."
+        ],
+        "saberes": [
+          "Dimensiones éticas de los textos",
+          "Dimensiones estéticas de los textos",
+          "Dimensiones filosóficas de los textos"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Ética de la Comunicación",
+        "estandar": [
+          "Expreso respeto por la diversidad cultural y social del mundo contemporáneo, en las situaciones comunicativas en las que intervengo."
+        ],
+        "dba": [
+          "Comprende que los argumentos de sus interlocutores involucran procesos de comprensión, crítica y proposición."
+        ],
+        "evidencias": [
+          "Comprende las posturas de un discurso sobre un tema de interés social.",
+          "Comprende diferentes tipos de argumentos presentes en un discurso."
+        ],
+        "saberes": [
+          "Dialogo y argumentación en conversaciones",
+          "Diversidad de criterios"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Medios de Comunicación y otros sistemas simbólicos",
+        "estandar": [
+          "Interpreto en forma crítica la información difundida por los medios de comunicación masiva.",
+          "Retomo críticamente los lenguajes no verbales para desarrollar procesos comunicativos intencionados."
+        ],
+        "dba": [
+          "Participa en escenarios académicos, políticos y culturales, asumiendo una posición crítica y propositiva frente a los discursos que le presentan los distintos medios.",
+          "Expresa, con sentido crítico, cómo se articulan los códigos verbales y no verbales en diversas manifestaciones humanas."
+        ],
+        "evidencias": [
+          "Infiere la relación de los mensajes emitidos por los medios de comunicación masiva dentro de contextos sociales, culturales y políticos.",
+          "Clasifica los elementos simbólicos presentes en diferentes situaciones como una clase, un videoclip o un concierto musical."
+        ],
+        "saberes": [
+          "Medios de comunicación masiva y las implicaciones que tienen en el país",
+          "Códigos verbales y no verbales"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      }
+    ],
+    "4": [
+      {
+        "componente": "Producción Textual",
+        "estandar": [
+          "Evidencio en mis producciones textuales el conocimiento de los diferentes niveles de la lengua y el control sobre el uso que hago de ellos en contextos comunicativos."
+        ],
+        "dba": [
+          "Produce textos académicos a partir de procedimientos sistemáticos de corrección lingüística, atendiendo al tipo de texto y al contexto comunicativo."
+        ],
+        "evidencias": [
+          "Evalúa la adecuación del texto en relación con su rol como enunciatario, las estrategias discursivas utilizadas y la visión de mundo que proyecta.",
+          "Evalúa el seguimiento de un plan textual y el uso de la lengua en textos propios y producidos por sus compañeros."
+        ],
+        "saberes": [
+          "Estrategias descriptivas en textos",
+          "Estrategias explicativas en textos",
+          "Estrategias analógicas en textos",
+          "Ensayos argumentativos con ideas propias sobre un genero"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Comprensión e interpretación textual",
+        "estandar": [
+          "Comprendo e interpreto textos con actitud crítica y capacidad argumentativa."
+        ],
+        "dba": [
+          "Compara diversos tipos de texto, con capacidad crítica y argumentativa para establecer relaciones entre temáticas, características y los múltiples contextos en los que fueron producidos."
+        ],
+        "evidencias": [
+          "Contrasta textos, atendiendo a temáticas, características formales, estructura interna, léxico y estilo empleados."
+        ],
+        "saberes": [
+          "Actitud crítica frente a textos"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Literatura",
+        "estandar": [
+          "Analizo crítica y creativamente diferentes manifestaciones literarias del contexto universal."
+        ],
+        "dba": [
+          "Compara diversos tipos de texto, con capacidad crítica y argumentativa para establecer relaciones entre temáticas, características y los múltiples contextos en los que fueron producidos."
+        ],
+        "evidencias": [
+          "Contrasta textos, atendiendo a temáticas, características formales, estructura interna, léxico y estilo empleados."
+        ],
+        "saberes": [
+          "Textos y la teoría literaria"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Ética de la Comunicación",
+        "estandar": [
+          "Expreso respeto por la diversidad cultural y social del mundo contemporáneo, en las situaciones comunicativas en las que intervengo."
+        ],
+        "dba": [
+          "Produce textos académicos a partir de procedimientos sistemáticos de corrección lingüística, atendiendo al tipo de texto y al contexto comunicativo"
+        ],
+        "evidencias": [
+          "Evalúa la adecuación del texto en relación con su rol como enunciatario, las estrategias discursivas utilizadas y la visión de mundo que proyecta.",
+          "Evalúa el seguimiento de un plan textual y el uso de la lengua en textos propios y producidos por sus compañeros."
+        ],
+        "saberes": [
+          "Argumentos sobre su punto de vista"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Medios de Comunicación y otros sistemas simbólicos",
+        "estandar": [
+          "Interpreto en forma crítica la información difundida por los medios de comunicación masiva.",
+          "Retomo críticamente los lenguajes no verbales para desarrollar procesos comunicativos intencionados."
+        ],
+        "dba": [
+          "Produce textos académicos a partir de procedimientos sistemáticos de corrección lingüística, atendiendo al tipo de texto y al contexto comunicativo"
+        ],
+        "evidencias": [
+          "Construye párrafos que tienen funciones específicas dentro del discurso como ampliar, introducir, sintetizar y concluir.",
+          "Emplea diferentes tipos de argumento para sustentar sus puntos de vista."
+        ],
+        "saberes": [
+          "Elementos ideológicos en los medios de comunicación",
+          "Producción de textos con lenguaje verbal y no verbal"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      }
+    ]
+  }
+}

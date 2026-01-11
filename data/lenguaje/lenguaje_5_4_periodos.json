@@ -1,0 +1,414 @@
+{
+  "area": "Lenguaje",
+  "grado": "5",
+  "tipo_malla": "4_periodos",
+  "numero_periodos": 4,
+  "periodos": {
+    "1": [
+      {
+        "componente": "Producción Textual",
+        "estandar": [
+          "Produzco la primera versión de un texto informativo, atendiendo a requerimientos (formales y conceptuales) de la producción escrita en lengua castellana, con énfasis en algunos aspectos gramaticales (concordancia, tiempos verbales, nombres, pronombres, entre otros) y ortográficos.",
+          "Produzco un texto oral, teniendo en cuenta la entonación, la articulación y la organización de ideas que requiere la situación comunicativa."
+        ],
+        "dba": [
+          "Produce textos continuos y discontinuos empleando elementos verbales y no verbales a partir de procesos de planeación."
+        ],
+        "evidencias": [
+          "Elabora planes textuales que garantizan la progresión de las ideas que articula en un escrito."
+        ],
+        "saberes": [
+          "Propósito",
+          "Características de interlocución",
+          "Exigencias contextuales de un texto"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Comprensión e interpretación textual",
+        "estandar": [
+          "Utilizo estrategias de búsqueda, selección y almacenamiento de información para mis procesos de producción y comprensión textual."
+        ],
+        "dba": [
+          "Identifica el propósito comunicativo de los textos con los que interactúa a partir del análisis de su contenido y estructura."
+        ],
+        "evidencias": [
+          "Reconoce la función social de los textos que lee y las visiones de mundo que proponen."
+        ],
+        "saberes": [
+          "Tipos de textos (descriptivo, informativo, narrativo, explicativo y argumentativo)",
+          "Intención comunicativa de textos"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Literatura",
+        "estandar": [
+          "Comparo textos narrativos, líricos y dramáticos, teniendo en cuenta algunos de sus elementos constitutivos."
+        ],
+        "dba": [
+          "Reconoce en la lectura de los distintos géneros literarios diferentes posibilidades de recrear y ampliar su visión de mundo."
+        ],
+        "evidencias": [
+          "Reconoce las temáticas de los textos literarios que lee para relacionarlas con su contexto cotidiano."
+        ],
+        "saberes": [
+          "Textos literarios (relatos mitológicos, leyendas, cuentos, fábulas, poemas y obras teatrales)"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Ética de la Comunicación",
+        "estandar": [
+          "Identifico en situaciones comunicativas reales los roles, las intenciones de los interlocutores y el respeto por los principios básicos de la comunicación"
+        ],
+        "dba": [
+          "Construye textos orales atendiendo a los contextos de uso, los posibles interlocutores, las líneas temáticas y al propósito comunicativo."
+        ],
+        "evidencias": [
+          "Ordena la información en secuencias lógicas siguiendo la línea temática planteada."
+        ],
+        "saberes": [
+          "Elementos de la comunicación"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Medios de Comunicación y otros sistemas simbólicos",
+        "estandar": [
+          "Produzco textos orales y escritos con base en planes en los que utilizo la información recogida de los medios.",
+          "Reconozco y uso códigos no verbales en situaciones comunicativas auténticas."
+        ],
+        "dba": [
+          "Utiliza la información de diferentes medios de comunicación para fundamentar sus puntos de vista y exponer alternativas frente a problemáticas de diversa índole."
+        ],
+        "evidencias": [
+          "Caracteriza los diferentes medios de comunicación de acuerdo con la validez y pertinencia de la información."
+        ],
+        "saberes": [
+          "Información en medios de comunicación"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      }
+    ],
+    "2": [
+      {
+        "componente": "Producción Textual",
+        "estandar": [
+          "Produzco la primera versión de un texto informativo, atendiendo a requerimientos (formales y conceptuales) de la producción escrita en lengua castellana, con énfasis en algunos aspectos gramaticales (concordancia, tiempos verbales, nombres, pronombres, entre otros) y ortográficos.",
+          "Produzco un texto oral, teniendo en cuenta la entonación, la articulación y la organización de ideas que requiere la situación comunicativa."
+        ],
+        "dba": [
+          "Produce textos continuos y discontinuos empleando elementos verbales y no verbales a partir de procesos de planeación."
+        ],
+        "evidencias": [
+          "Establece relaciones de coherencia entre los conceptos a tratar, el tipo de texto a utilizar y el propósito comunicativo que media su producción."
+        ],
+        "saberes": [
+          "Plan de exposición"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Comprensión e interpretación textual",
+        "estandar": [
+          "Utilizo estrategias de búsqueda, selección y almacenamiento de información para mis procesos de producción y comprensión textual."
+        ],
+        "dba": [
+          "Identifica el propósito comunicativo de los textos con los que interactúa a partir del análisis de su contenido y estructura."
+        ],
+        "evidencias": [
+          "Aplica estrategias de comprensión para dar cuenta de las relaciones entre diversos segmentos del texto."
+        ],
+        "saberes": [
+          "Los aspectos formales y conceptuales de textos"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Literatura",
+        "estandar": [
+          "Comparo textos narrativos, líricos y dramáticos, teniendo en cuenta algunos de sus elementos constitutivos."
+        ],
+        "dba": [
+          "Identifica el propósito comunicativo de los textos con los que interactúa a partir del análisis de su contenido y estructura."
+        ],
+        "evidencias": [
+          "Organiza de forma jerárquica los contenidos de un texto en relación con la forma en que son presentados."
+        ],
+        "saberes": [
+          "Hipótesis predictivas sobre un texto"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Ética de la Comunicación",
+        "estandar": [
+          "Identifico en situaciones comunicativas reales los roles, las intenciones de los interlocutores y el respeto por los principios básicos de la comunicación"
+        ],
+        "dba": [
+          "Comprende el sentido global de los mensajes orales a partir de la relación entre la información explícita e implícita."
+        ],
+        "evidencias": [
+          "Interpreta mensajes orales teniendo en cuenta el lenguaje verbal y no verbal."
+        ],
+        "saberes": [
+          "Proceso comunicativo y sus partes"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Medios de Comunicación y otros sistemas simbólicos",
+        "estandar": [
+          "Produzco textos orales y escritos con base en planes en los que utilizo la información recogida de los medios.",
+          "Reconozco y uso códigos no verbales en situaciones comunicativas auténticas."
+        ],
+        "dba": [
+          "Utiliza la información de diferentes medios de comunicación para fundamentar sus puntos de vista y exponer alternativas frente a problemáticas de diversa índole."
+        ],
+        "evidencias": [
+          "Evalúa las estrategias empleadas por los diferentes medios de comunicación para presentar la información."
+        ],
+        "saberes": [
+          "Información en medios de comunicación"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      }
+    ],
+    "3": [
+      {
+        "componente": "Producción Textual",
+        "estandar": [
+          "Produzco la primera versión de un texto informativo, atendiendo a requerimientos (formales y conceptuales) de la producción escrita en lengua castellana, con énfasis en algunos aspectos gramaticales (concordancia, tiempos verbales, nombres, pronombres, entre otros) y ortográficos.",
+          "Produzco un texto oral, teniendo en cuenta la entonación, la articulación y la organización de ideas que requiere la situación comunicativa."
+        ],
+        "dba": [
+          "Produce textos continuos y discontinuos empleando elementos verbales y no verbales a partir de procesos de planeación."
+        ],
+        "evidencias": [
+          "Construye párrafos atendiendo a diferentes procedimientos de desarrollo: ejemplificar, detallar, describir, justificar, sintetizar."
+        ],
+        "saberes": [
+          "Producción de textos escritos",
+          "Corrección de textos gracias a la retroalimentación de terceros"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Comprensión e interpretación textual",
+        "estandar": [
+          "Utilizo estrategias de búsqueda, selección y almacenamiento de información para mis procesos de producción y comprensión textual."
+        ],
+        "dba": [
+          "Identifica el propósito comunicativo de los textos con los que interactúa a partir del análisis de su contenido y estructura."
+        ],
+        "evidencias": [
+          "Organiza de forma jerárquica los contenidos de un texto en relación con la forma en que son presentados."
+        ],
+        "saberes": [
+          "Los aspectos formales y conceptuales de textos",
+          "Estrategias de búsqueda, selección y almacenamiento de información para producción de textos"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Literatura",
+        "estandar": [
+          "Comparo textos narrativos, líricos y dramáticos, teniendo en cuenta algunos de sus elementos constitutivos."
+        ],
+        "dba": [
+          "Identifica el propósito comunicativo de los textos con los que interactúa a partir del análisis de su contenido y estructura."
+        ],
+        "evidencias": [
+          "Aplica estrategias de comprensión para dar cuenta de las relaciones entre diversos segmentos del texto."
+        ],
+        "saberes": [
+          "Textos literarios (relatos mitológicos, leyendas, cuentos, fábulas, poemas y obras teatrales)"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Ética de la Comunicación",
+        "estandar": [
+          "Identifico en situaciones comunicativas reales los roles, las intenciones de los interlocutores y el respeto por los principios básicos de la comunicación"
+        ],
+        "dba": [
+          "Comprende el sentido global de los mensajes orales a partir de la relación entre la información explícita e implícita."
+        ],
+        "evidencias": [
+          "Comprende la diferencia de diversos espacios de expresión oral como la mesa redonda, el panel, el foro y el debate, atendiendo a su respectiva estructura."
+        ],
+        "saberes": [
+          "Situaciones comunicativas reales"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Medios de Comunicación y otros sistemas simbólicos",
+        "estandar": [
+          "Produzco textos orales y escritos con base en planes en los que utilizo la información recogida de los medios.",
+          "Reconozco y uso códigos no verbales en situaciones comunicativas auténticas."
+        ],
+        "dba": [
+          "Comprende el sentido global de los mensajes orales a partir de la relación entre la información explícita e implícita."
+        ],
+        "evidencias": [
+          "Interpreta mensajes orales teniendo en cuenta el lenguaje verbal y no verbal"
+        ],
+        "saberes": [
+          "Obras no verbales"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      }
+    ],
+    "4": [
+      {
+        "componente": "Producción Textual",
+        "estandar": [
+          "Produzco la primera versión de un texto informativo, atendiendo a requerimientos (formales y conceptuales) de la producción escrita en lengua castellana, con énfasis en algunos aspectos gramaticales (concordancia, tiempos verbales, nombres, pronombres, entre otros) y ortográficos.",
+          "Produzco un texto oral, teniendo en cuenta la entonación, la articulación y la organización de ideas que requiere la situación comunicativa."
+        ],
+        "dba": [
+          "Construye textos orales atendiendo a los contextos de uso, los posibles interlocutores, las líneas temáticas y al propósito comunicativo."
+        ],
+        "evidencias": [
+          "Construye saberes en escenarios de intercambio oral en los que comparte sus argumentos y experiencias de formación.",
+          "Ordena la información en secuencias lógicas siguiendo la línea temática planteada."
+        ],
+        "saberes": [
+          "Plan de exposición"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Comprensión e interpretación textual",
+        "estandar": [
+          "Utilizo estrategias de búsqueda, selección y almacenamiento de información para mis procesos de producción y comprensión textual."
+        ],
+        "dba": [
+          "Identifica el propósito comunicativo de los textos con los que interactúa a partir del análisis de su contenido y estructura."
+        ],
+        "evidencias": [
+          "Reconoce la función social de los textos que lee y las visiones de mundo que proponen.",
+          "Aplica estrategias de comprensión para dar cuenta de las relaciones entre diversos segmentos del texto.",
+          "Organiza de forma jerárquica los contenidos de un texto en relación con la forma en que son presentados."
+        ],
+        "saberes": [
+          "Intención comunicativa de textos",
+          "Tipos de textos (descriptivo, informativo, narrativo, explicativo y argumentativo)"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Literatura",
+        "estandar": [
+          "Comparo textos narrativos, líricos y dramáticos, teniendo en cuenta algunos de sus elementos constitutivos."
+        ],
+        "dba": [
+          "Reconoce en la lectura de los textos literarios diferentes posibilidades de recrear y ampliar su visión de mundo."
+        ],
+        "evidencias": [
+          "Reconoce las temáticas de los textos literarios que lee para relacionarlas con su contexto cotidiano.",
+          "Manifiesta en producciones (orales y escritas) los conocimientos o experiencias relacionados con los textos literarios que ha leído."
+        ],
+        "saberes": [
+          "Textos literarios (relatos mitológicos, leyendas, cuentos, fábulas, poemas y obras teatrales)"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Ética de la Comunicación",
+        "estandar": [
+          "Identifico en situaciones comunicativas reales los roles, las intenciones de los interlocutores y el respeto por los principios básicos de la comunicación"
+        ],
+        "dba": [
+          "Identifica el propósito comunicativo de los textos con los que interactúa a partir del análisis de su contenido y estructura."
+        ],
+        "evidencias": [
+          "Comprende la diferencia de diversos espacios de expresión oral como la mesa redonda, el panel, el foro y el debate, atendiendo a su respectiva estructura."
+        ],
+        "saberes": [
+          "Situaciones comunicativas reales"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      },
+      {
+        "componente": "Medios de Comunicación y otros sistemas simbólicos",
+        "estandar": [
+          "Produzco textos orales y escritos con base en planes en los que utilizo la información recogida de los medios.",
+          "Reconozco y uso códigos no verbales en situaciones comunicativas auténticas."
+        ],
+        "dba": [
+          "Comprende el sentido global de los mensajes orales a partir de la relación entre la información explícita e implícita."
+        ],
+        "evidencias": [
+          "Comprende la diferencia de diversos espacios de expresión oral como la mesa redonda, el panel, el foro y el debate, atendiendo a su respectiva estructura."
+        ],
+        "saberes": [
+          "Estrategias de comunicación en el lenguaje no verbal"
+        ],
+        "socioemocional": null,
+        "diccionario": null,
+        "tareas_dce": null,
+        "fuente": null
+      }
+    ]
+  }
+}
