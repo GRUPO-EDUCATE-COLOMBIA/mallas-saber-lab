@@ -1,0 +1,447 @@
+{
+  "area": "Lenguaje",
+  "grado": "6",
+  "nombre_archivo": "t_lenguaje_6_4_periodos.json",
+  "periodos": [
+    {
+      "periodo_id": 1,
+      "guias_por_componente": [
+        {
+          "componente": "Producción Textual",
+          "guia_didactica": {
+            "la_estrategia": "El Noticiero del Barrio",
+            "un_reto_sugerido": "Escribir un relato narrativo basado en una noticia real de los medios de comunicación de tu entorno.",
+            "ruta_de_exploracion": {
+              "explorar": "Juego de 'El Mensaje Perdido': buscar en periódicos viejos o sitios web una noticia que parezca sacada de una película.",
+              "visual": "Diseñar un mapa de 'Almacén de Información' donde se clasifiquen: ¿Quién? ¿Qué? ¿Dónde? y ¿Cuándo?.",
+              "produccion": "Redactar el texto narrativo cuidando que los párrafos tengan un orden lógico y coherencia temática."
+            },
+            "para_pensar": [
+              "¿Por qué una misma noticia puede contarse como un informe serio o como un cuento emocionante?",
+              "¿Cómo ayuda organizar la información antes de empezar a escribir para que el lector no se pierda?"
+            ],
+            "pistas_del_exito": [
+              "Elige el tipo de texto que mejor funciona para contar la historia que seleccionó.",
+              "Escribe oraciones que sigan un orden temporal claro (inicio, nudo y desenlace)."
+            ],
+            "un_refuerzo": "Utilizar una lista de conectores temporales (Primero, Después, Finalmente) para unir las ideas."
+          }
+        },
+        {
+          "componente": "Comprensión e interpretación textual",
+          "guia_didactica": {
+            "la_estrategia": "Detective de Intenciones",
+            "un_reto_sugerido": "Descubrir si un texto quiere informar, convencer, narrar o describir analizando sus pistas ocultas.",
+            "ruta_de_exploracion": {
+              "explorar": "Ronda de acertijos: leer fragmentos muy cortos y adivinar '¿Qué quiere el autor que yo haga?' (comprar, reír, aprender).",
+              "visual": "Crear un 'Semáforo de Intenciones' coloreando los fragmentos según su tipo (Narrativo, Argumentativo, etc.).",
+              "produccion": "Presentar un breve reporte sobre las circunstancias en las que fue creado un texto elegido por el grupo."
+            },
+            "para_pensar": [
+              "¿Puede un texto tener dos intenciones al mismo tiempo?",
+              "¿Cómo cambia nuestra forma de leer si sabemos de antemano que el texto es para informarnos?"
+            ],
+            "pistas_del_exito": [
+              "Explica con sus palabras qué quería lograr el autor con el texto leído.",
+              "Identifica correctamente si un texto es una noticia o un cuento basado en su estructura."
+            ],
+            "un_refuerzo": "Comparar un anuncio publicitario con una noticia sobre el mismo producto para ver la diferencia de intención."
+          }
+        },
+        {
+          "componente": "Literatura",
+          "guia_didactica": {
+            "la_estrategia": "El Tesoro de la Tradición Oral",
+            "un_reto_sugerido": "Interpretar una leyenda o refrán local identificando el significado de los signos de puntuación especiales.",
+            "ruta_de_exploracion": {
+              "explorar": "Círculo de historias: escuchar un relato mitológico o una copla regional con los ojos cerrados.",
+              "visual": "Dibujar una 'Jerarquía de Ideas' del relato, poniendo la idea principal en la copa del árbol y los detalles en las raíces.",
+              "produccion": "Escribir un nuevo final para la leyenda utilizando correctamente corchetes, comillas y guiones."
+            },
+            "para_pensar": [
+              "¿Para qué sirven las negritas o las comillas dentro de un cuento que ya estamos leyendo?",
+              "¿Por qué las leyendas y coplas cambian un poco cada vez que alguien diferente las cuenta?"
+            ],
+            "pistas_del_exito": [
+              "Explica la importancia de la idea general que une a todos los párrafos de la historia.",
+              "Usa guiones de diálogo correctamente cuando los personajes hablan en su escrito."
+            ],
+            "un_refuerzo": "Hacer un juego de mímica basado en refranes populares para entender su sentido implícito."
+          }
+        },
+        {
+          "componente": "Ética de la Comunicación",
+          "guia_didactica": {
+            "la_estrategia": "Viajeros de la Imaginación",
+            "un_reto_sugerido": "Crear un personaje que hable una variante lingüística diferente y explicar cómo circula su conocimiento en su cultura.",
+            "ruta_de_exploracion": {
+              "explorar": "Escuchar grabaciones de personas de distintas regiones (costa, montaña, selva) y anotar las palabras 'extrañas'.",
+              "visual": "Mapa de 'Rutas del Conocimiento' donde se ubiquen los libros que han alimentado su imaginación.",
+              "produccion": "Redactar un diálogo corto donde dos personajes de distintas regiones se respetan y aprenden el uno del otro."
+            },
+            "para_pensar": [
+              "¿Por qué hablar diferente no significa que una persona sepa menos que otra?",
+              "¿De qué manera los libros nos ayudan a conocer mundos que nunca hemos visitado?"
+            ],
+            "pistas_del_exito": [
+              "Respeta el turno de palabra y la forma de hablar de sus compañeros durante la clase.",
+              "Relaciona lo que lee con la época y el lugar donde fue escrito el libro."
+            ],
+            "un_refuerzo": "Ver un fragmento de una película regional para notar cómo el lenguaje refleja la cultura."
+          }
+        },
+        {
+          "componente": "Medios de Comunicación y otros sistemas simbólicos",
+          "guia_didactica": {
+            "la_estrategia": "Curadores del Museo Invisible",
+            "un_reto_sugerido": "Organizar una galería de imágenes y obras no verbales (pintura, danza) explicando el mensaje que transmiten.",
+            "ruta_de_exploracion": {
+              "explorar": "Safari fotográfico: buscar símbolos o gestos en revistas que transmitan un mensaje sin usar palabras.",
+              "visual": "Crear un fichero alfabético con las características de la radio, la prensa y la televisión.",
+              "produccion": "Presentar una 'obra muda' (dibujo o gesto) que resuma un mensaje captado en un medio de comunicación masiva."
+            },
+            "para_pensar": [
+              "¿Qué información es más fácil de entender por televisión que por periódico?",
+              "¿Puede un edificio o una danza decirnos algo sobre la política o la historia de un país?"
+            ],
+            "pistas_del_exito": [
+              "Localiza datos específicos en una noticia o anuncio de forma rápida.",
+              "Explica qué siente o piensa al observar una obra de arte no verbal."
+            ],
+            "un_refuerzo": "Clasificar recortes de medios según si su mensaje es principalmente visual, auditivo o escrito."
+          }
+        }
+      ]
+    },
+    {
+      "periodo_id": 2,
+      "guias_por_componente": [
+        {
+          "componente": "Producción Textual",
+          "guia_didactica": {
+            "la_estrategia": "El Taller de los Editores",
+            "un_reto_sugerido": "Corregir y mejorar un texto propio basándose en los comentarios de un compañero para asegurar que los párrafos tengan jerarquía.",
+            "ruta_de_exploracion": {
+              "explorar": "Juego de 'El Párrafo Desordenado': tratar de armar un texto cuyas oraciones están mezcladas.",
+              "visual": "Esquema de 'Ladrillos de Ideas': poner la idea más importante arriba y las de apoyo abajo.",
+              "produccion": "Escribir una versión final del texto aplicando correcciones de puntuación y manejo de modos verbales."
+            },
+            "para_pensar": [
+              "¿Por qué es bueno que otra persona lea nuestro texto antes de que esté terminado?",
+              "¿Qué pasa con el sentido de un escrito si todos los párrafos dicen lo mismo sin jerarquía?"
+            ],
+            "pistas_del_exito": [
+              "Mejora la claridad de sus oraciones tras recibir sugerencias de sus pares.",
+              "Identifica la idea principal de cada párrafo en su propio escrito."
+            ],
+            "un_refuerzo": "Hacer un ejercicio de 'reescritura' cambiando solo el destinatario del texto para ver cómo cambia el tono."
+          }
+        },
+        {
+          "componente": "Comprensión e interpretación textual",
+          "guia_didactica": {
+            "la_estrategia": "Misterios Entre Líneas",
+            "un_reto_sugerido": "Interpretar el significado de signos como comillas o guiones en una lectura para entender mejor los diálogos y énfasis.",
+            "ruta_de_exploracion": {
+              "explorar": "Lectura dramática: leer un texto exagerando la entonación según los signos de puntuación encontrados.",
+              "visual": "Crear un 'Diccionario Visual de Signos' (ej: ¿Qué significan los corchetes en este párrafo?).",
+              "produccion": "Formular tres hipótesis sobre qué pasaría después en la historia basada en pistas no verbales del texto."
+            },
+            "para_pensar": [
+              "¿Cómo cambiaría el sentido de una frase si le quitamos las comillas?",
+              "¿Qué nos dicen los elementos no verbales sobre lo que el autor considera importante?"
+            ],
+            "pistas_del_exito": [
+              "Explica por qué el autor usó negritas o comillas en una parte específica del texto.",
+              "Plantea ideas lógicas sobre el mensaje del texto antes de terminar de leerlo."
+            ],
+            "un_refuerzo": "Leer un cómic y señalar cómo los signos de exclamación y nubes de pensamiento ayudan a la comprensión."
+          }
+        },
+        {
+          "componente": "Literatura",
+          "guia_didactica": {
+            "la_estrategia": "Casting de Personajes",
+            "un_reto_sugerido": "Definir los sentimientos y acciones de un personaje literario y declamar un poema relacionado con ritmo y rima.",
+            "ruta_de_exploracion": {
+              "explorar": "Reto de declamación: leer un poema siguiendo el ritmo de un metrónomo o aplausos.",
+              "visual": "Ficha de personaje: dibujar al protagonista y rodearlo de palabras que describan sus sentimientos.",
+              "produccion": "Crear un nuevo cuento corto usando el mismo tiempo y lugar de la obra leída en clase."
+            },
+            "para_pensar": [
+              "¿Cómo ayudan el ritmo y la rima a que un poema nos haga sentir tristes o alegres?",
+              "¿Por qué los personajes de los libros a veces actúan de formas que no esperamos?"
+            ],
+            "pistas_del_exito": [
+              "Describe el lugar y el tiempo donde ocurre la historia con detalles claros.",
+              "Mantiene el ritmo adecuado al leer versos frente a sus compañeros."
+            ],
+            "un_refuerzo": "Identificar las rimas en sus canciones favoritas y compararlas con poemas clásicos."
+          }
+        },
+        {
+          "componente": "Ética de la Comunicación",
+          "guia_didactica": {
+            "la_estrategia": "Ventanas al Mundo",
+            "un_reto_sugerido": "Investigar el contexto cultural de una obra literaria y explicar cómo influyó en los conocimientos que transmite.",
+            "ruta_de_exploracion": {
+              "explorar": "Debate: '¿Se puede aprender historia leyendo un libro de ficción?'",
+              "visual": "Infografía sobre el país y la época en que vivió el autor de la obra estudiada.",
+              "produccion": "Escribir un comentario sobre qué aprendió de una cultura diferente a través de la literatura."
+            },
+            "para_pensar": [
+              "¿Por qué es importante saber en qué época se escribió un libro para entenderlo bien?",
+              "¿Cómo la literatura puede ser un puente para entender problemas de otros países?"
+            ],
+            "pistas_del_exito": [
+              "Explica la relación entre la historia del libro y la vida real de esa época.",
+              "Usa ejemplos de la obra para sustentar sus opiniones en clase."
+            ],
+            "un_refuerzo": "Buscar en un mapa el lugar de origen del autor y ver fotos de esa región."
+          }
+        },
+        {
+          "componente": "Medios de Comunicación y otros sistemas simbólicos",
+          "guia_didactica": {
+            "la_estrategia": "Espejos Mediáticos",
+            "un_reto_sugerido": "Identificar la 'visión de mundo' de un presentador o locutor analizando cómo cuenta una noticia.",
+            "ruta_de_exploracion": {
+              "explorar": "Comparar cómo dos canales de YouTube diferentes hablan sobre el mismo videojuego o película.",
+              "visual": "Diagrama de 'Lentes de Opinión' para anotar qué cree el autor que es bueno o malo.",
+              "produccion": "Redactar un párrafo comparando dos visiones diferentes encontradas en los medios."
+            },
+            "para_pensar": [
+              "¿Por qué no todas las personas ven el mundo de la misma manera en las noticias?",
+              "¿Cómo influyen los medios en nuestra opinión sobre lo que es justo o injusto?"
+            ],
+            "pistas_del_exito": [
+              "Reconoce cuándo un comunicador está dando su opinión personal.",
+              "Diferencia el mensaje objetivo de la intención de convencer del medio."
+            ],
+            "un_refuerzo": "Hacer un ejercicio de 'cambio de rol': contar una noticia desde el punto de vista del villano."
+          }
+        }
+      ]
+    },
+    {
+      "periodo_id": 3,
+      "guias_por_componente": [
+        {
+          "componente": "Producción Textual",
+          "guia_didactica": {
+            "la_estrategia": "La Tribuna de Opinión",
+            "un_reto_sugerido": "Preparar y realizar un discurso oral donde se defienda una opinión usando descripciones detalladas.",
+            "ruta_de_exploracion": {
+              "explorar": "Juego 'El Vendedor de Humo': convencer a los demás de que un objeto inservible es maravilloso solo con palabras.",
+              "visual": "Mapa de 'Ideas Fuertes': seleccionar las 3 mejores razones para su discurso y conectarlas.",
+              "produccion": "Grabación de un video corto o presentación en vivo ajustando el lenguaje al público (compañeros y docente)."
+            },
+            "para_pensar": [
+              "¿Qué cambia en nuestra forma de hablar cuando le hablamos a un amigo vs. cuando hablamos en público?",
+              "¿Por qué describir bien algo ayuda a que los demás crean en nuestra opinión?"
+            ],
+            "pistas_del_exito": [
+              "Selecciona ideas claras y organizadas para su presentación oral.",
+              "Adecua su tono de voz y vocabulario según el tema que desarrolla."
+            ],
+            "un_refuerzo": "Realizar ejercicios de respiración y dicción antes de la presentación."
+          }
+        },
+        {
+          "componente": "Comprensión e interpretación textual",
+          "guia_didactica": {
+            "la_estrategia": "Arquitectos del Párrafo",
+            "un_reto_sugerido": "Comparar dos textos para encontrar semejanzas en la forma en que organizan sus ideas principales y secundarias.",
+            "ruta_de_exploracion": {
+              "explorar": "Reto 'Encuentra el Gemelo': buscar entre varios textos aquellos que tengan la misma estructura (ej: dos recetas).",
+              "visual": "Crear un esquema jerárquico que conecte el título, los párrafos y la idea general del texto.",
+              "produccion": "Escribir un resumen breve que destaque las diferencias de contenido entre un texto de tradición oral y uno moderno."
+            },
+            "para_pensar": [
+              "¿Por qué los textos informativos suelen tener una estructura más rígida que los cuentos?",
+              "¿Cómo se relacionan los párrafos entre sí para formar un mensaje completo?"
+            ],
+            "pistas_del_exito": [
+              "Señala la idea más importante de un texto y cómo se apoya en las secundarias.",
+              "Identifica semejanzas de lenguaje entre textos de diferentes autores."
+            ],
+            "un_refuerzo": "Marcar con colores la idea principal (verde) y las secundarias (amarillo) en un texto corto."
+          }
+        },
+        {
+          "componente": "Literatura",
+          "guia_didactica": {
+            "la_estrategia": "Escritores de Leyendas",
+            "un_reto_sugerido": "Transformar un argumento de una leyenda tradicional en un cuento moderno respetando la temática original.",
+            "ruta_de_exploracion": {
+              "explorar": "Escuchar una copla o refrán y tratar de imaginar qué historia hay detrás de esas pocas palabras.",
+              "visual": "Diseñar un 'Árbol de la Tradición' donde las raíces sean relatos antiguos y las hojas sean sus versiones nuevas.",
+              "produccion": "Escribir un relato corto que use elementos de la tradición oral pero en un escenario actual (ej: La Llorona en la ciudad)."
+            },
+            "para_pensar": [
+              "¿Qué elementos de las historias antiguas siguen dándonos miedo o risa hoy en día?",
+              "¿Por qué es importante que los jóvenes sigan creando nuevas historias basadas en las antiguas?"
+            ],
+            "pistas_del_exito": [
+              "Crea personajes basados en figuras de la tradición oral latinoamericana.",
+              "Mantiene el tema central de la leyenda original en su propia creación literaria."
+            ],
+            "un_refuerzo": "Ilustrar una escena del nuevo cuento para resaltar los elementos de la tradición."
+          }
+        },
+        {
+          "componente": "Ética de la Comunicación",
+          "guia_didactica": {
+            "la_estrategia": "El Mapa de las Lenguas",
+            "un_reto_sugerido": "Explicar cómo los párrafos de un texto literario organizan el conocimiento sobre una variante cultural específica.",
+            "ruta_de_exploracion": {
+              "explorar": "Competencia de jerga: ¿Cuántas formas diferentes hay de decir 'amigo' en los países de habla hispana?.",
+              "visual": "Diagrama de 'Cadenas de Ideas' que conecte frases regionales con sus significados universales.",
+              "produccion": "Exposición sobre cómo una obra literaria nos ayuda a respetar las diferencias de los demás."
+            },
+            "para_pensar": [
+              "¿Cómo influyen las palabras que usamos en la forma en que los demás nos perciben?",
+              "¿Por qué el respeto es la base para que un diálogo entre personas diferentes funcione?"
+            ],
+            "pistas_del_exito": [
+              "Identifica las ideas con diferente jerarquía en un texto sobre cultura.",
+              "Explica por qué una variante lingüística es valiosa para su comunidad."
+            ],
+            "un_refuerzo": "Crear un 'Diccionario de la Amistad' con palabras de diferentes regiones."
+          }
+        },
+        {
+          "componente": "Medios de Comunicación y otros sistemas simbólicos",
+          "guia_didactica": {
+            "la_estrategia": "Mini-Periodistas en Acción",
+            "un_reto_sugerido": "Producir una pieza informativa usando el formato de un medio de comunicación real (ej. un hilo de Twitter o un guion de radio).",
+            "ruta_de_exploracion": {
+              "explorar": "Analizar la estructura de un video de noticias corto en TikTok o YouTube.",
+              "visual": "Crear un 'Almacén de Datos' organizando la información recolectada por temas (Deportes, Cultura, Ciencia).",
+              "produccion": "Presentar una noticia del colegio siguiendo el modelo de intencionalidad de un medio masivo."
+            },
+            "para_pensar": [
+              "¿Qué formato es más efectivo para informar a personas de nuestra edad?",
+              "¿Por qué debemos organizar la información alfabética o temáticamente antes de publicarla?"
+            ],
+            "pistas_del_exito": [
+              "Utiliza la información de los medios para participar en debates de opinión.",
+              "Imita el formato de un medio de comunicación para crear su propio mensaje."
+            ],
+            "un_refuerzo": "Visitar la emisora escolar o la página web del colegio para ver cómo se organizan los mensajes."
+          }
+        }
+      ]
+    },
+    {
+      "periodo_id": 4,
+      "guias_por_componente": [
+        {
+          "componente": "Producción Textual",
+          "guia_didactica": {
+            "la_estrategia": "La Fábrica de Significados",
+            "un_reto_sugerido": "Diseñar un plan textual para un escrito donde se usen elementos no verbales (como negritas o guiones) para dar énfasis.",
+            "ruta_de_exploracion": {
+              "explorar": "Reto 'Texto Mudo': escribir un mensaje corto y luego decidir qué palabras deberían ir en negrita para que se entienda mejor.",
+              "visual": "Diseñar una plantilla de 'Plan de Escritura' con espacios para la tesis, los argumentos y la conclusión.",
+              "produccion": "Escribir un texto argumentativo aplicando su propia hipótesis sobre un tema escolar."
+            },
+            "para_pensar": [
+              "¿Cómo ayudan los signos visuales a que el lector sepa qué parte del texto es la más importante?",
+              "¿Por qué un buen plan textual evita que tengamos que borrar y empezar de nuevo muchas veces?"
+            ],
+            "pistas_del_exito": [
+              "Aplica elementos no verbales (comillas, guiones) para dar sentido a sus textos.",
+              "Sigue el plan de escritura que diseñó sin saltarse pasos importantes."
+            ],
+            "un_refuerzo": "Revisar el texto final con un compañero para verificar si los elementos no verbales cumplen su función."
+          }
+        },
+        {
+          "componente": "Comprensión e interpretación textual",
+          "guia_didactica": {
+            "la_estrategia": "Científicos de la Lectura",
+            "un_reto_sugerido": "Plantear hipótesis de interpretación para tres tipos de textos diferentes (científico, poético, instructivo) basándose en su contenido jerárquico.",
+            "ruta_de_exploracion": {
+              "explorar": "Adivinanzas de estructura: ver solo la 'silueta' de un texto y adivinar si es una carta, un poema o un informe.",
+              "visual": "Diagrama de 'Niveles de Ideas' que separe el tema general de los detalles curiosos.",
+              "produccion": "Presentar un cartel comparativo donde se expliquen los contenidos de los textos leídos durante el año."
+            },
+            "para_pensar": [
+              "¿Por qué nuestra hipótesis sobre un texto puede cambiar a medida que avanzamos en la lectura?",
+              "¿Qué hace que un grupo de párrafos se convierta en un 'texto' y no solo en una lista de frases?"
+            ],
+            "pistas_del_exito": [
+              "Propone explicaciones lógicas sobre lo que el autor quiso decir en textos complejos.",
+              "Reconoce la relación jerárquica entre las ideas de un mismo párrafo."
+            ],
+            "un_refuerzo": "Hacer un mapa conceptual de su cuento favorito resaltando las ideas principales."
+          }
+        },
+        {
+          "componente": "Literatura",
+          "guia_didactica": {
+            "la_estrategia": "Detectives del Contenido",
+            "un_reto_sugerido": "Inferir la intención comunicativa de un texto de tradición oral analizando las circunstancias en que fue creado.",
+            "ruta_de_exploracion": {
+              "explorar": "Juego 'Contexto Misterioso': adivinar en qué época y lugar se escribió una historia solo oyendo la descripción de sus párrafos.",
+              "visual": "Mural de 'Párrafos con Sentido' uniendo fragmentos literarios con su función (informar, emocionar, describir).",
+              "produccion": "Escribir un análisis corto sobre cómo los elementos no verbales (puntuación) cambian la emoción de un relato."
+            },
+            "para_pensar": [
+              "¿Cómo influye el lugar donde vive un autor en las historias que decide escribir?",
+              "¿Por qué los párrafos deben estar conectados entre sí para que la historia sea creíble?"
+            ],
+            "pistas_del_exito": [
+              "Deduce si el texto fue hecho para informar o para entretener basándose en su forma.",
+              "Interpreta correctamente el uso de guiones y corchetes en lecturas dramáticas."
+            ],
+            "un_refuerzo": "Comparar un relato de tradición oral con una noticia actual sobre un tema parecido."
+          }
+        },
+        {
+          "componente": "Ética de la Comunicación",
+          "guia_didactica": {
+            "la_estrategia": "Embajadores de Sentimientos",
+            "un_reto_sugerido": "Declamar un texto poético usando el ritmo y la rima para comunicar emociones, respetando las variantes culturales del grupo.",
+            "ruta_de_exploracion": {
+              "explorar": "Karaoke poético: leer poemas con música de fondo que combine con la emoción de los versos.",
+              "visual": "Mapa de 'Emociones y Ritmos' asociando colores a diferentes tipos de poemas.",
+              "produccion": "Participar en un recital escolar donde se valore la imaginación y la herencia cultural de los textos."
+            },
+            "para_pensar": [
+              "¿Por qué la poesía es una forma de conocimiento diferente a la ciencia?",
+              "¿Cómo ayuda el ritmo al hablar a que los demás entiendan nuestras emociones?"
+            ],
+            "pistas_del_exito": [
+              "Usa el tono de voz adecuado para transmitir tristeza, alegría o asombro al leer.",
+              "Valora la imaginación de sus compañeros al crear nuevos textos literarios."
+            ],
+            "un_refuerzo": "Practicar la lectura de poemas en parejas prestando atención a las pausas de las comas."
+          }
+        },
+        {
+          "componente": "Medios de Comunicación y otros sistemas simbólicos",
+          "guia_didactica": {
+            "la_estrategia": "Críticos del Espectáculo",
+            "un_reto_sugerido": "Proponer una hipótesis de interpretación para una obra pictórica o arquitectónica de su comunidad.",
+            "ruta_de_exploracion": {
+              "explorar": "Visita virtual o real a una iglesia, plaza o grafiti famoso para observar sus detalles.",
+              "visual": "Cuadro de interpretación: ¿Qué veo? ¿Qué creo que significa? ¿Qué mensaje me deja?.",
+              "produccion": "Informe visual donde se organice alfabéticamente la información de las obras analizadas."
+            },
+            "para_pensar": [
+              "¿Por qué un edificio puede ser considerado un medio de comunicación de la historia?",
+              "¿Cómo podemos organizar la información de lo que vemos para que otros puedan consultarla?"
+            ],
+            "pistas_del_exito": [
+              "Plantea ideas originales sobre el significado de una pintura o escultura.",
+              "Organiza sus hallazgos de forma temática para una consulta fácil."
+            ],
+            "un_refuerzo": "Dibujar su propio 'monumento' escolar y explicar qué valores representa para los estudiantes."
+          }
+        }
+      ]
+    }
+  ]
+}
