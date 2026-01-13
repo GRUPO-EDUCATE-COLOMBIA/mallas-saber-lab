@@ -1,0 +1,447 @@
+{
+  "area": "Lenguaje",
+  "grado": "1",
+  "nombre_archivo": "t_lenguaje_1_4_periodos.json",
+  "periodos": [
+    {
+      "periodo_id": 1,
+      "guias_por_componente": [
+        {
+          "componente": "Producción Textual",
+          "guia_didactica": {
+            "la_estrategia": "El Mural de los Nombres Mágicos",
+            "un_reto_sugerido": "Presentar oralmente su nombre y el de un objeto favorito, identificando las sílabas que los componen.",
+            "ruta_de_exploracion": {
+              "explorar": "Juego de 'Eco-Sílabas': El docente dice una palabra del abecedario y los niños repiten aplaudiendo por cada sílaba.",
+              "visual": "Modelado de la letra inicial de su nombre con plastilina o lana sobre cartulina.",
+              "produccion": "Grabación de un video corto o exposición frente al grupo mencionando su sustantivo (nombre) y un artículo (el/la)."
+            },
+            "para_pensar": [
+              "¿Por qué es importante que las palabras tengan un orden cuando hablamos?",
+              "¿Qué pasaría si a tu nombre le cambiamos la primera letra?"
+            ],
+            "pistas_del_exito": [
+              "Nombra correctamente las letras del abecedario presentes en su nombre.",
+              "Separa palabras sencillas en sílabas mediante golpes de voz."
+            ],
+            "un_refuerzo": "Lotería de sílabas asociando imágenes con la combinación de letras iniciales."
+          }
+        },
+        {
+          "componente": "Comprensión e interpretación textual",
+          "guia_didactica": {
+            "la_estrategia": "Detectives de Títulos e Imágenes",
+            "un_reto_sugerido": "Adivinar de qué trata un libro observando únicamente la ilustración de la portada y el tamaño de las letras del título.",
+            "ruta_de_exploracion": {
+              "explorar": "Observación de portadas de libros sin leer el texto; lluvia de ideas sobre los posibles personajes.",
+              "visual": "Dibujar 'lo que creo que pasará' basado en la imagen principal del texto.",
+              "produccion": "Relato oral de una nueva historia inspirada únicamente en una imagen mostrada por el docente."
+            },
+            "para_pensar": [
+              "¿Para qué sirven los dibujos en los libros si ya tienen letras?",
+              "¿Cómo nos ayuda el título a saber si la historia será de miedo o de risa?"
+            ],
+            "pistas_del_exito": [
+              "Explica la relación entre la imagen y el texto que escucha.",
+              "Identifica palabras nuevas y pregunta su significado durante la lectura."
+            ],
+            "un_refuerzo": "Actividad de emparejar títulos cortos con sus respectivas ilustraciones."
+          }
+        },
+        {
+          "componente": "Literatura",
+          "guia_didactica": {
+            "la_estrategia": "El Cofre de las Fábulas",
+            "un_reto_sugerido": "Escuchar una fábula y crear un final diferente usando solo dibujos y una oración corta.",
+            "ruta_de_exploracion": {
+              "explorar": "Rincón de lectura: Sentarse en círculo para escuchar un cuento con sonidos ambientales.",
+              "visual": "Crear una máscara de papel del personaje principal de la leyenda o fábula escuchada.",
+              "produccion": "Representación con títeres de dedo de la parte que más le gustó de la historia."
+            },
+            "para_pensar": [
+              "¿Qué nos enseñan los animales de las fábulas sobre nuestra vida?",
+              "¿En qué se parece este cuento a algo que te haya pasado a ti?"
+            ],
+            "pistas_del_exito": [
+              "Muestra interés y escucha atentamente relatos de diferentes culturas.",
+              "Identifica al personaje principal de un cuento corto."
+            ],
+            "un_refuerzo": "Escuchar el mismo cuento en formato de canción para reforzar la secuencia narrativa."
+          }
+        },
+        {
+          "componente": "Ética de la Comunicación",
+          "guia_didactica": {
+            "la_estrategia": "El Espejo de las Intenciones",
+            "un_reto_sugerido": "Identificar en un video corto quién es el que habla (emisor) y qué es lo que quiere lograr (pedir, saludar, informar).",
+            "ruta_de_exploracion": {
+              "explorar": "Juego de roles: Representar situaciones de la vida diaria (comprar pan, pedir permiso) sin usar palabras.",
+              "visual": "Análisis de un cartel publicitario: Encerrar en un círculo la imagen que más llama la atención.",
+              "produccion": "Explicación oral de por qué una imagen ayuda a entender un mensaje escrito."
+            },
+            "para_pensar": [
+              "¿Cómo sabemos si alguien está enojado o feliz antes de que empiece a hablar?",
+              "¿Por qué es importante mirar las fotos cuando leemos una noticia?"
+            ],
+            "pistas_del_exito": [
+              "Diferencia entre el dibujo y la letra en un texto continuo.",
+              "Usa palabras nuevas aprendidas en clase para describir una imagen."
+            ],
+            "un_refuerzo": "Asociar caritas de emociones con mensajes orales grabados."
+          }
+        },
+        {
+          "componente": "Medios de Comunicación y otros sistemas simbólicos",
+          "guia_didactica": {
+            "la_estrategia": "Mi Primera Pantalla",
+            "un_reto_sugerido": "Diferenciar entre ver una noticia en la televisión y verla en un afiche de la calle, explicando cuál le gusta más.",
+            "ruta_de_exploracion": {
+              "explorar": "Lluvia de ideas sobre sus programas favoritos de TV y qué aprenden en ellos.",
+              "visual": "Recortar y pegar logos de diferentes medios de comunicación (TV, Radio, Internet).",
+              "produccion": "Diseño de un afiche escolar para invitar a los compañeros a cuidar el agua."
+            },
+            "para_pensar": [
+              "¿Qué podemos hacer en internet que no podemos hacer en la radio?",
+              "¿Qué nos dicen los gestos de un presentador de noticias?"
+            ],
+            "pistas_del_exito": [
+              "Reconoce la diferencia entre una revista y un periódico.",
+              "Identifica la intención de un gesto (silencio, alegría, duda) en un interlocutor."
+            ],
+            "un_refuerzo": "Juego de mímica frente a un espejo para interpretar movimientos corporales."
+          }
+        }
+      ]
+    },
+    {
+      "periodo_id": 2,
+      "guias_por_componente": [
+        {
+          "componente": "Producción Textual",
+          "guia_didactica": {
+            "la_estrategia": "El Museo del Autorretrato",
+            "un_reto_sugerido": "Escribir un texto descriptivo sobre sí mismo (autorretrato) usando diminutivos y aumentativos para sus rasgos.",
+            "ruta_de_exploracion": {
+              "explorar": "Dinámica de 'El Espejo Curioso': Describir al compañero de al lado usando sinónimos (ej: bonito/bello).",
+              "visual": "Dibujo de su propio rostro en el centro de una hoja, rodeado de palabras que lo describen.",
+              "produccion": "Lectura en voz alta de su descripción frente al grupo, cuidando la claridad de las palabras."
+            },
+            "para_pensar": [
+              "¿Para qué nos sirven los antónimos cuando queremos describir algo opuesto?",
+              "¿Por qué el diccionario es como un mapa de palabras?"
+            ],
+            "pistas_del_exito": [
+              "Usa sinónimos y antónimos sencillos en su descripción.",
+              "Mantiene la estructura de un texto descriptivo básico."
+            ],
+            "un_refuerzo": "Búsqueda de palabras desconocidas en un diccionario ilustrado gigante."
+          }
+        },
+        {
+          "componente": "Comprensión e interpretación textual",
+          "guia_didactica": {
+            "la_estrategia": "Cazadores de Siluetas",
+            "un_reto_sugerido": "Identificar si un texto es informativo o literario observando únicamente la forma en que están organizados los párrafos.",
+            "ruta_de_exploracion": {
+              "explorar": "Comparar visualmente una página de un cuento con una página de un periódico.",
+              "visual": "Marcar con colores las partes de un texto informativo (Título, foto, cuerpo).",
+              "produccion": "Crear un 'periódico de una noticia' sobre algo ocurrido en el salón."
+            },
+            "para_pensar": [
+              "¿Cómo sabemos que un texto es una noticia antes de leerla?",
+              "¿Qué parte del texto nos dice de qué trata todo el escrito?"
+            ],
+            "pistas_del_exito": [
+              "Reconoce el propósito comunicativo de un texto informativo.",
+              "Señala el título y las ilustraciones como guías de lectura."
+            ],
+            "un_refuerzo": "Rompecabezas de un texto informativo para armar según su estructura lógica."
+          }
+        },
+        {
+          "componente": "Literatura",
+          "guia_didactica": {
+            "la_estrategia": "El Escenario de los Sueños",
+            "un_reto_sugerido": "Diferenciar entre un poema, un cuento y una obra de teatro mediante la lectura de fragmentos cortos.",
+            "ruta_de_exploracion": {
+              "explorar": "Escuchar una canción (poema) y ver un video corto de títeres (teatro).",
+              "visual": "Crear un cuadro comparativo con dibujos: El libro de cuentos vs. El guion de teatro.",
+              "produccion": "Dramatización relámpago de un diálogo de un cuento conocido."
+            },
+            "para_pensar": [
+              "¿Por qué los poemas suenan como música?",
+              "¿Qué hace que una obra de teatro sea diferente a leer un cuento en la cama?"
+            ],
+            "pistas_del_exito": [
+              "Nombra los elementos formales básicos de un poema (rima/verso).",
+              "Relaciona situaciones del cuento con experiencias de su vida."
+            ],
+            "un_refuerzo": "Taller de declamación de coplas populares con rimas sencillas."
+          }
+        },
+        {
+          "componente": "Ética de la Comunicación",
+          "guia_didactica": {
+            "la_estrategia": "El Teléfono de las Letras",
+            "un_reto_sugerido": "Descubrir cómo cambia el significado de una palabra al cambiar solo una letra (ej: Pato / Gato).",
+            "ruta_de_exploracion": {
+              "explorar": "Juego de 'Cambio de Sonido': El docente dice una palabra y los niños proponen una nueva cambiando la vocal.",
+              "visual": "Tarjetas con letras móviles para armar familias de palabras.",
+              "produccion": "Dictado de palabras sencillas enfocándose en la relación letra-sonido."
+            },
+            "para_pensar": [
+              "¿Por qué es importante pronunciar bien cada letra para que nos entiendan?",
+              "¿Cómo nos ayudan los títulos a no perdernos en la lectura?"
+            ],
+            "pistas_del_exito": [
+              "Asocia correctamente el fonema (sonido) con el grafema (letra).",
+              "Explica para qué sirve el título de un texto que leyó."
+            ],
+            "un_refuerzo": "Uso de un alfabeto fonético ilustrado para asociar sonidos con objetos."
+          }
+        },
+        {
+          "componente": "Medios de Comunicación y otros sistemas simbólicos",
+          "guia_didactica": {
+            "la_estrategia": "Mi Propia Historieta",
+            "un_reto_sugerido": "Crear una tira cómica de tres viñetas sobre un anuncio publicitario que le guste.",
+            "ruta_de_exploracion": {
+              "explorar": "Lectura colectiva de una historieta famosa, identificando los globos de texto.",
+              "visual": "Dibujar una caricatura de un compañero resaltando un rasgo divertido.",
+              "produccion": "Creación de un anuncio publicitario de un juguete imaginario usando dibujos y poco texto."
+            },
+            "para_pensar": [
+              "¿Por qué las historietas usan burbujas para que los personajes hablen?",
+              "¿Qué nos intentan vender los anuncios que vemos en la calle?"
+            ],
+            "pistas_del_exito": [
+              "Identifica la temática de una historieta sencilla.",
+              "Comprende que las imágenes fijas también cuentan una historia."
+            ],
+            "un_refuerzo": "Completar los diálogos vacíos en una historieta impresa."
+          }
+        }
+      ]
+    },
+    {
+      "periodo_id": 3,
+      "guias_por_componente": [
+        {
+          "componente": "Producción Textual",
+          "guia_didactica": {
+            "la_estrategia": "Arquitectos de Objetos",
+            "un_reto_sugerido": "Diseñar un plan textual para describir un objeto fantástico, listando sus características y su secuencia de uso.",
+            "ruta_de_exploracion": {
+              "explorar": "Observar un objeto 'misterioso' y decir 5 cualidades (color, forma, tamaño, para qué sirve).",
+              "visual": "Dibujar el objeto y escribir flechas con las palabras descriptivas (adjetivos).",
+              "produccion": "Escribir un texto de tres oraciones siguiendo el orden: Qué es, cómo es y qué hace."
+            },
+            "para_pensar": [
+              "¿Por qué debemos seguir un orden cuando explicamos cómo es un lugar?",
+              "¿Cómo ayudan los detalles a que el lector imagine lo que escribimos?"
+            ],
+            "pistas_del_exito": [
+              "Mantiene la secuencia de eventos en su relato escrito.",
+              "Utiliza vocabulario preciso para describir lugares y personas."
+            ],
+            "un_refuerzo": "Fichas de 'secuencia lógica' para ordenar historias antes de escribirlas."
+          }
+        },
+        {
+          "componente": "Comprensión e interpretación textual",
+          "guia_didactica": {
+            "la_estrategia": "La Feria de los Textos Diarios",
+            "un_reto_sugerido": "Identificar el propósito de una tarjeta de invitación, un afiche y un manual de instrucciones sencillo.",
+            "ruta_de_exploracion": {
+              "explorar": "Búsqueda del tesoro: Encontrar en el salón diferentes tipos de papeles (cartas, periódicos, manuales).",
+              "visual": "Crear un álbum de 'Formatos de Papel' clasificándolos por su función (invitar/informar).",
+              "produccion": "Redacción de una tarjeta de cumpleaños siguiendo el formato tradicional."
+            },
+            "para_pensar": [
+              "¿Qué pasaría si una receta no tuviera imágenes de los pasos?",
+              "¿A quién le escribirías una carta y por qué?"
+            ],
+            "pistas_del_exito": [
+              "Diferencia una invitación de una noticia por sus elementos visuales.",
+              "Explica qué información se encuentra en un manual de instrucciones."
+            ],
+            "un_refuerzo": "Juego de emparejar el tipo de texto con su lugar de circulación (ej: Menú -> Restaurante)."
+          }
+        },
+        {
+          "componente": "Literatura",
+          "guia_didactica": {
+            "la_estrategia": "Mi Línea del Tiempo Literaria",
+            "un_reto_sugerido": "Crear una autobiografía ilustrada en una línea de tiempo, inspirada en los personajes de los cuentos leídos.",
+            "ruta_de_exploracion": {
+              "explorar": "Relatar un evento importante de su vida (ayer, hoy, mañana).",
+              "visual": "Dibujar su propia línea de vida en un rollo de papel continuo.",
+              "produccion": "Escribir tres oraciones sobre su pasado, presente y lo que sueña para el futuro."
+            },
+            "para_pensar": [
+              "¿Por qué las historias tienen un inicio y un final?",
+              "¿Qué personajes de cuentos se parecen a personas de tu familia?"
+            ],
+            "pistas_del_exito": [
+              "Organiza eventos cronológicamente en su autobiografía.",
+              "Infiere sentimientos de los personajes a través de las ilustraciones."
+            ],
+            "un_refuerzo": "Lectura de cuentos donde el protagonista crece o cambia a través del tiempo."
+          }
+        },
+        {
+          "componente": "Ética de la Comunicación",
+          "guia_didactica": {
+            "la_estrategia": "Exploradores de Videos",
+            "un_reto_sugerido": "Responder preguntas de comprobación tras observar un video corto, diferenciando la información hablada de la visual.",
+            "ruta_de_exploracion": {
+              "explorar": "Ver un video en silencio y tratar de adivinar qué están diciendo los personajes.",
+              "visual": "Hacer un dibujo de la escena más importante del video analizado.",
+              "produccion": "Grabación de una opinión corta sobre el mensaje del video."
+            },
+            "para_pensar": [
+              "¿Qué aprendemos más fácil: lo que oímos o lo que vemos?",
+              "¿Para qué sirve que un video tenga títulos y música?"
+            ],
+            "pistas_del_exito": [
+              "Explica el propósito del video observado.",
+              "Relaciona los sonidos con las acciones de las imágenes."
+            ],
+            "un_refuerzo": "Actividad de 'Ver y Contar' usando videos de cuentos clásicos sin diálogos."
+          }
+        },
+        {
+          "componente": "Medios de Comunicación y otros sistemas simbólicos",
+          "guia_didactica": {
+            "la_estrategia": "El Lenguaje de los Gestos",
+            "un_reto_sugerido": "Crear una secuencia de viñetas donde los personajes se comuniquen únicamente con movimientos corporales.",
+            "ruta_de_exploracion": {
+              "explorar": "Juego de charadas: Adivinar acciones (bañarse, comer, dormir) sin hablar.",
+              "visual": "Diseñar 'Emoticones Gigantes' que representen intenciones (alto, adelante, cuidado).",
+              "produccion": "Presentación de una pequeña historieta muda frente a los compañeros."
+            },
+            "para_pensar": [
+              "¿Por qué los mimos pueden contar historias sin decir una sola palabra?",
+              "¿Cómo nos ayudan los gestos a entender lo que alguien quiere?"
+            ],
+            "pistas_del_exito": [
+              "Identifica la intención de un gesto en una viñeta.",
+              "Usa movimientos corporales para reforzar lo que dice oralmente."
+            ],
+            "un_refuerzo": "Taller de dibujo de expresiones faciales (triste, alegre, asombrado)."
+          }
+        }
+      ]
+    },
+    {
+      "periodo_id": 4,
+      "guias_por_componente": [
+        {
+          "componente": "Producción Textual",
+          "guia_didactica": {
+            "la_estrategia": "Pequeños Instructores",
+            "un_reto_sugerido": "Escribir un texto instructivo de 4 pasos para realizar una manualidad sencilla (ej: un avión de papel).",
+            "ruta_de_exploracion": {
+              "explorar": "Seguir instrucciones orales del docente para encontrar un objeto escondido.",
+              "visual": "Hacer dibujos de cada paso del proceso antes de ponerle palabras.",
+              "produccion": "Redacción del instructivo y prueba del mismo con un compañero para ver si funciona."
+            },
+            "para_pensar": [
+              "¿Por qué los pasos deben estar numerados en un instructivo?",
+              "¿Qué pasaría si en una receta de cocina ponemos el final al principio?"
+            ],
+            "pistas_del_exito": [
+              "Diferencia un texto narrativo de uno instructivo por su forma.",
+              "Utiliza verbos de acción (dobla, pega, corta) en sus escritos."
+            ],
+            "un_refuerzo": "Lectura dirigida de manuales de juegos de mesa conocidos."
+          }
+        },
+        {
+          "componente": "Comprensión e interpretación textual",
+          "guia_didactica": {
+            "la_estrategia": "El Festival de Juegos de Palabras",
+            "un_reto_sugerido": "Participar en un recital de trabalenguas y rimas, explicando el sentido de las palabras que riman.",
+            "ruta_de_exploracion": {
+              "explorar": "Competencia de trabalenguas rápidos en grupos pequeños.",
+              "visual": "Crear un 'árbol de rimas' donde las hojas sean palabras que suenan igual.",
+              "produccion": "Declamación de un poema corto ante el grupo con entonación lúdica."
+            },
+            "para_pensar": [
+              "¿Por qué los juegos de palabras nos ayudan a leer más rápido?",
+              "¿Cómo cambia el sentido de una rima si le quitamos la última palabra?"
+            ],
+            "pistas_del_exito": [
+              "Identifica palabras que riman en un texto lírico.",
+              "Plantea hipótesis lógicas sobre lo que tratará un poema por su título."
+            ],
+            "un_refuerzo": "Dominó de rimas (asociar 'piña' con 'niña', etc.)."
+          }
+        },
+        {
+          "componente": "Literatura",
+          "guia_didactica": {
+            "la_estrategia": "El Laboratorio Literario",
+            "un_reto_sugerido": "Identificar las diferencias de escritura entre un cuento (prosa) y un poema (versos cortos) mediante la observación visual.",
+            "ruta_de_exploracion": {
+              "explorar": "Observar dos textos de lejos: ¿Cuál parece una escalerita (poema) y cuál una sábana (cuento)?",
+              "visual": "Encerrar en colores diferentes las estrofas y los párrafos.",
+              "produccion": "Escritura de un microrrelato inspirado en una leyenda regional que escucharon."
+            },
+            "para_pensar": [
+              "¿Por qué crees que los poetas escriben líneas tan cortas?",
+              "¿Qué historias de tu familia podrían convertirse en una leyenda?"
+            ],
+            "pistas_del_exito": [
+              "Diferencia visualmente entre el formato de verso y prosa.",
+              "Relata con sus propias palabras una fábula leída en clase."
+            ],
+            "un_refuerzo": "Copia creativa de un poema corto decorando los bordes con imágenes del tema."
+          }
+        },
+        {
+          "componente": "Ética de la Comunicación",
+          "guia_didactica": {
+            "la_estrategia": "Detectives de Propósitos Finales",
+            "un_reto_sugerido": "Analizar tres imágenes diferentes (una señal de tránsito, una portada de cuento y un anuncio) y explicar qué quiere cada una.",
+            "ruta_de_exploracion": {
+              "explorar": "Juego '¿Para qué sirve?': El docente muestra un objeto y el niño dice su función comunicativa.",
+              "visual": "Hacer un collage de intenciones: Pegar imágenes que informen, que diviertan y que den órdenes.",
+              "produccion": "Creación de un cartel para la puerta del salón que informe quiénes están adentro."
+            },
+            "para_pensar": [
+              "¿Qué mensaje es más urgente: un cuento o una señal de pare?",
+              "¿Cómo ayudan los colores a que entendamos el propósito de un cartel?"
+            ],
+            "pistas_del_exito": [
+              "Explica la intención comunicativa de los textos que observa.",
+              "Identifica el papel del emisor en un anuncio publicitario."
+            ],
+            "un_refuerzo": "Taller de 'Semáforo de la Comunicación' (rojo: prohibido, amarillo: cuidado, verde: informativo)."
+          }
+        },
+        {
+          "componente": "Medios de Comunicación y otros sistemas simbólicos",
+          "guia_didactica": {
+            "la_estrategia": "Cazadores de Historias Gráficas",
+            "un_reto_sugerido": "Explicar a los compañeros una historieta de 4 viñetas asegurando que el lenguaje usado sea claro y coherente.",
+            "ruta_de_exploracion": {
+              "explorar": "Análisis de historietas mudas: ¿Qué está pasando aunque no haya letras?",
+              "visual": "Dibujar una historieta de su fin de semana usando globos de diálogo.",
+              "produccion": "Exposición oral del dibujo realizado, explicando la secuencia de inicio a fin."
+            },
+            "para_pensar": [
+              "¿Por qué es importante que las imágenes lleven un orden en la historieta?",
+              "¿Qué pasaría si cambiamos el globo de grito por uno de pensamiento?"
+            ],
+            "pistas_del_exito": [
+              "Mantiene la coherencia al relatar la secuencia de una historieta.",
+              "Utiliza expresiones adecuadas para iniciar y terminar su relato oral."
+            ],
+            "un_refuerzo": "Ordenar viñetas desordenadas de una tira cómica clásica."
+          }
+        }
+      ]
+    }
+  ]
+}
