@@ -1,9 +1,9 @@
-// FILE: js/data-loader.js | VERSION: v7.5 Stable
+// FILE: js/data-loader.js | VERSION: v10.8 Stable
 window.MallasData = {};
 
 /**
- * PRUEBA DE ESCRITORIO - Función Única de Normalización
- * "Matemáticas " -> "matematicas"
+ * REGLA DE ORO: NORMALIZACIÓN UNIFICADA
+ * Elimina acentos, espacios y convierte a minúsculas para vinculación exacta.
  */
 window.normalizarTexto = function(texto) {
     if (!texto) return "";
@@ -13,46 +13,68 @@ window.normalizarTexto = function(texto) {
                 .trim();
 };
 
+/**
+ * MOTOR DE CARGA ASÍNCRONA (TRÍADA PEDAGÓGICA)
+ * Gestiona la descarga de Malla Académica, Tareas DCE y Cátedra ECO.
+ */
 async function asegurarDatosGrado(areaKey, grado) {
   const config = window.APP_CONFIG;
   const area = config.AREAS[areaKey];
   const gradoStr = String(grado).trim();
-  const tipo = config.TIPO_MALLA;
+  const tipo = config.TIPO_MALLA; // "3_periodos" o "4_periodos"
 
   if (!area) return false;
 
   const llaveArea = normalizarTexto(area.nombre);
   const llaveEco = normalizarTexto(config.AREAS["proyecto-socioemocional"].nombre);
 
-  if (window.MallasData[llaveArea]?.[gradoStr]) return true;
+  // Verificación de integridad en memoria para evitar peticiones repetidas
+  if (window.MallasData[llaveArea]?.[gradoStr]?.[tipo]) return true;
 
-  const rutaBase = `data/${area.carpeta}/${area.prefijo}_${gradoStr}_${tipo}.json`;
-  const rutaTareas = `data/${area.carpeta}/tareas_dce/t_${area.prefijo}_${gradoStr}_${tipo}.json`;
-  const rutaEco = `data/${config.AREAS["proyecto-socioemocional"].carpeta}/${config.AREAS["proyecto-socioemocional"].prefijo}_${gradoStr}_${tipo}.json`;
+  // CACHE-BUSTING: Forzamos al navegador a pedir la versión más reciente del servidor
+  const buster = new Date().getTime();
+  
+  const rutaBase = `data/${area.carpeta}/${area.prefijo}_${gradoStr}_${tipo}.json?v=${buster}`;
+  const rutaTareas = `data/${area.carpeta}/tareas_dce/t_${area.prefijo}_${gradoStr}_${tipo}.json?v=${buster}`;
+  const rutaEco = `data/${config.AREAS["proyecto-socioemocional"].carpeta}/${config.AREAS["proyecto-socioemocional"].prefijo}_${gradoStr}_${tipo}.json?v=${buster}`;
 
   try {
+    // Carga paralela de la tríada de archivos
     const [resBase, resTareas, resEco] = await Promise.all([
       fetch(rutaBase).then(r => r.ok ? r.json() : null).catch(() => null),
       fetch(rutaTareas).then(r => r.ok ? r.json() : null).catch(() => null),
       fetch(rutaEco).then(r => r.ok ? r.json() : null).catch(() => null)
     ]);
 
-    if (!resBase) return false;
+    // Validación crítica: La Malla Académica es obligatoria
+    if (!resBase) {
+      console.error(`Error Crítico: No se encontró la malla académica en ${rutaBase}`);
+      return false;
+    }
 
+    // 1. Almacenamiento Malla Académica
     if (!window.MallasData[llaveArea]) window.MallasData[llaveArea] = {};
-    window.MallasData[llaveArea][gradoStr] = { [tipo]: resBase };
+    if (!window.MallasData[llaveArea][gradoStr]) window.MallasData[llaveArea][gradoStr] = {};
+    window.MallasData[llaveArea][gradoStr][tipo] = resBase;
 
+    // 2. Almacenamiento Tareas DCE (Si existen)
     if (resTareas) {
       const llaveDCE = `tareas_dce_${llaveArea}`;
       if (!window.MallasData[llaveDCE]) window.MallasData[llaveDCE] = {};
-      window.MallasData[llaveDCE][gradoStr] = { [tipo]: resTareas };
+      if (!window.MallasData[llaveDCE][gradoStr]) window.MallasData[llaveDCE][gradoStr] = {};
+      window.MallasData[llaveDCE][gradoStr][tipo] = resTareas;
     }
 
+    // 3. Almacenamiento Cátedra Socioemocional ECO (Nativa 3P o 4P)
     if (resEco) {
       if (!window.MallasData[llaveEco]) window.MallasData[llaveEco] = {};
-      window.MallasData[llaveEco][gradoStr] = { [tipo]: resEco };
+      if (!window.MallasData[llaveEco][gradoStr]) window.MallasData[llaveEco][gradoStr] = {};
+      window.MallasData[llaveEco][gradoStr][tipo] = resEco;
     }
+
     return true;
-  } catch (e) { return false; }
+  } catch (e) {
+    console.error("Fallo en el motor de carga de datos:", e);
+    return false;
+  }
 }
-// END OF FILE: js/data-loader.js | VERSION: v7.5 Stable
