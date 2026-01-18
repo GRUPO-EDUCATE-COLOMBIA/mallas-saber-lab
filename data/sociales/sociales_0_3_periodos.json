@@ -1,8 +1,8 @@
 {
   "area": "Ciencias Sociales y Competencias Ciudadanas",
   "grado": "0",
-  "tipo_malla": "4_periodos",
-  "numero_periodos": 4,
+  "tipo_malla": "3_periodos",
+  "numero_periodos": 3,
   "periodos": {
     "1": [
       {
@@ -47,35 +47,19 @@
     "3": [
       {
         "componente": "Identidad y relaciones sociales",
-        "estandar": "Prop. 1: Las niñas y los niños construyen su identidad en relación con los otros; se sienten queridos, y valoran positivamente pertenecer a una familia, cultura y mundo. Prop. 3: Las niñas y los niños disfrutan aprender; exploran y se relacionan con el mundo para comprenderlo y construirlo.",
+        "estandar": "Prop. 1: Las niñas y los niños construyen su identidad en relación con los otros; se sienten queridos, y valoran positivamente pertenecer a una familia, cultura y mundo. Prop. 3: Las niñas y los niños disfrutan aprender; exploran y se relacionan con el mundo para comprenderlo y construirlo. // Prop. 1: Las niñas y los niños construyen su identidad en relación con los otros; se sienten queridos, y valoran positivamente pertenecer a una familia, cultura y mundo.",
         "dba": [
-          "(identidad y relaciones sociales) DBA-0-Prop.3-14: Construye nociones de espacio, tiempo y medida a través de experiencias cotidianas."
-        ],
-        "evidencias": [
-          "DBA-0-Prop.3-14-EV-2: Reconoce el antes, el ahora y el después de un evento.",
-          "DBA-0-Prop.3-14-EV-3: Sitúa acontecimientos relevantes en el tiempo."
-        ],
-        "saberes": [
-          "Tiempo: Secuencia temporal (antes/después). Cultura: Costumbres y tradiciones, mi propia historia."
-        ],
-        "socioemocional": null,
-        "diccionario": null,
-        "tareas_dce": null,
-        "fuente": null
-      }
-    ],
-    "4": [
-      {
-        "componente": "Identidad y relaciones sociales",
-        "estandar": "Prop. 1: Las niñas y los niños construyen su identidad en relación con los otros; se sienten queridos, y valoran positivamente pertenecer a una familia, cultura y mundo.",
-        "dba": [
+          "(identidad y relaciones sociales) DBA-0-Prop.3-14: Construye nociones de espacio, tiempo y medida a través de experiencias cotidianas.",
           "(identidad y relaciones sociales) DBA-0-Prop.1-5: Participa en la construcción colectiva de acuerdos, objetivos y proyectos comunes."
         ],
         "evidencias": [
+          "DBA-0-Prop.3-14-EV-2: Reconoce el antes, el ahora y el después de un evento.",
+          "DBA-0-Prop.3-14-EV-3: Sitúa acontecimientos relevantes en el tiempo.",
           "DBA-0-Prop.1-5-EV-1: Propone su punto de vista en espacios de construcción colectiva.",
           "DBA-0-Prop.1-5-EV-4: Muestra respeto por los acuerdos de convivencia que se construyen en su familia, con sus pares y otros miembros de su comunidad."
         ],
         "saberes": [
+          "Tiempo: Secuencia temporal (antes/después). Cultura: Costumbres y tradiciones, mi propia historia.",
           "Derechos y Deberes: El valor del respeto y las diferencias. Participación: Votaciones simples. (OP) Tránsito."
         ],
         "socioemocional": null,
