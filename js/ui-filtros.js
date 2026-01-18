@@ -1,4 +1,4 @@
-// FILE: js/ui-filtros.js | VERSION: v10.3 Stable
+// FILE: js/ui-filtros.js | VERSION: v10.8 Stable
 document.addEventListener('DOMContentLoaded', () => {
   const areaSel = document.getElementById('area');
   const gradoSel = document.getElementById('grado');
@@ -7,22 +7,42 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnBuscar = document.getElementById('btn-buscar');
   const btnProg = document.getElementById('btn-progresion');
   const btnTop = document.getElementById('btn-top');
+  const radiosPeriodos = document.querySelectorAll('input[name="periodos"]');
+  
+  // Captura de elementos del Modal de Atención
   const modal = document.getElementById('modal-notificacion');
   const modalMsg = document.getElementById('modal-mensaje');
   const btnCerrarModal = document.getElementById('btn-cerrar-modal');
-  
-  // Captura de los botones de radio (3 P. / 4 P.)
-  const radiosPeriodos = document.querySelectorAll('input[name="periodos"]');
 
+  /**
+   * CAPA DE SEGURIDAD NACIONAL (v10.8)
+   * Bloquea copia, inspección y selección de texto
+   */
+  document.addEventListener('contextmenu', e => e.preventDefault());
+  document.addEventListener('keydown', e => {
+    if (e.ctrlKey && ['c','u','i','s','p'].includes(e.key.toLowerCase())) {
+      e.preventDefault();
+      mostrarError("Acceso Protegido - El contenido de esta malla no puede ser copiado.");
+    }
+  });
+
+  /**
+   * FUNCIÓN DE NOTIFICACIÓN (MODAL DE ATENCIÓN)
+   */
   function mostrarError(mensaje) {
     if (modalMsg) modalMsg.textContent = mensaje;
     if (modal) modal.classList.add('mostrar-flex');
     window.RenderEngine.setCargando(false);
   }
 
-  if (btnCerrarModal) btnCerrarModal.onclick = () => modal.classList.remove('mostrar-flex');
+  if (btnCerrarModal) {
+    btnCerrarModal.onclick = () => modal.classList.remove('mostrar-flex');
+  }
 
-  // LIMPIEZA DE INTERFAZ (UX Propuesta por el usuario)
+  /**
+   * LIMPIEZA INSTANTÁNEA DE INTERFAZ (UX Propuesta)
+   * Se ejecuta al cambiar cualquier criterio de búsqueda
+   */
   function resetResultados() {
     const contMalla = document.getElementById('contenedor-malla');
     const resPrincipal = document.getElementById('resultados-principal');
@@ -30,16 +50,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (contMalla) contMalla.innerHTML = '';
     if (resPrincipal) resPrincipal.classList.remove('mostrar-block');
     if (indPeriodo) indPeriodo.style.display = 'none';
+    btnProg.disabled = true; // El botón se deshabilita hasta cargar nuevos datos
   }
 
-  // --- LÓGICA DE ALTERNANCIA 3P / 4P ---
+  // --- LÓGICA BIMODAL (3 P. / 4 P.) ---
   radiosPeriodos.forEach(radio => {
     radio.addEventListener('change', (e) => {
-      // Actualiza la modalidad en la configuración global
-      const seleccion = e.target.value; // "3" o "4"
+      const seleccion = e.target.value;
       window.APP_CONFIG.TIPO_MALLA = window.APP_CONFIG.MODALIDADES_TIEMPO[seleccion];
-      
-      // Reset de selectores para obligar a una nueva carga limpia
       resetResultados();
       areaSel.value = "";
       gradoSel.innerHTML = '<option value="">Seleccionar</option>';
@@ -48,7 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
       periodoSel.disabled = true;
       compSel.innerHTML = '<option value="todos">Todos</option>';
       compSel.disabled = true;
-      btnProg.disabled = true;
     });
   });
 
@@ -57,9 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
     gradoSel.innerHTML = '<option value="">Seleccionar</option>';
     periodoSel.innerHTML = '<option value="">Seleccionar</option>';
     periodoSel.disabled = true;
-    compSel.innerHTML = '<option value="todos">Todos</option>';
-    compSel.disabled = true;
-
     if (areaSel.value) {
       window.APP_CONFIG.GRADOS.forEach(g => {
         const opt = document.createElement('option'); opt.value = g;
@@ -73,16 +87,10 @@ document.addEventListener('DOMContentLoaded', () => {
   gradoSel.addEventListener('change', () => {
     resetResultados();
     periodoSel.innerHTML = '<option value="">Seleccionar</option>';
-    compSel.innerHTML = '<option value="todos">Todos</option>';
-    compSel.disabled = true;
-
     if (gradoSel.value) {
-      // DETERMINACIÓN DINÁMICA DE PERIODOS (3 o 4)
       const maxP = window.APP_CONFIG.TIPO_MALLA === "3_periodos" ? 3 : 4;
       for (let i = 1; i <= maxP; i++) {
-        const opt = document.createElement('option'); 
-        opt.value = i; 
-        opt.textContent = `${i}° Periodo`;
+        const opt = document.createElement('option'); opt.value = i; opt.textContent = `${i}° Periodo`;
         periodoSel.appendChild(opt);
       }
       periodoSel.disabled = false;
@@ -90,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   periodoSel.addEventListener('change', async () => {
-    resetResultados();
+    resetResultados(); // Limpia información previa al detectar cambio de periodo
     if (!periodoSel.value) return;
     
     window.RenderEngine.setCargando(true);
@@ -98,20 +106,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if (exito) {
       const configArea = window.APP_CONFIG.AREAS[areaSel.value];
-      const llaveNormal = normalizarTexto(configArea.nombre);
-      const tipo = window.APP_CONFIG.TIPO_MALLA;
-      const dataGrado = window.MallasData[llaveNormal]?.[gradoSel.value]?.[tipo];
+      const dataGrado = window.MallasData[normalizarTexto(configArea.nombre)]?.[gradoSel.value]?.[window.APP_CONFIG.TIPO_MALLA];
       
-      if (dataGrado && dataGrado.periodos && dataGrado.periodos[periodoSel.value]) {
+      if (dataGrado?.periodos?.[periodoSel.value]) {
         const items = dataGrado.periodos[periodoSel.value];
-        
-        // BLINDAJE v10.3: Validación de lista
-        if (!Array.isArray(items)) {
-          mostrarError("Error de formato en el archivo JSON. Se esperaba una lista [ ].");
-          window.RenderEngine.setCargando(false);
-          return;
-        }
-
         compSel.innerHTML = '<option value="todos">Todos</option>';
         const componentesUnicos = [...new Set(items.map(it => it.componente || it.competencia))];
         componentesUnicos.forEach(n => {
@@ -121,23 +119,26 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         });
         compSel.disabled = false;
-        btnProg.disabled = false;
+        btnProg.disabled = false; // REACTIVACIÓN DEL BOTÓN DE PROGRESIÓN
       }
     }
     window.RenderEngine.setCargando(false);
   });
 
   btnBuscar.addEventListener('click', () => {
+    // VALIDACIÓN DE CRITERIOS (v10.8)
     if (!areaSel.value || !gradoSel.value || !periodoSel.value) {
-      mostrarError("Seleccione Área, Grado y Periodo.");
+      mostrarError("Faltan criterios de selección: Asegúrese de elegir Área, Grado y Periodo.");
       return;
     }
-    const config = window.APP_CONFIG.AREAS[areaSel.value];
-    const llaveNormal = normalizarTexto(config.nombre);
-    const tipo = window.APP_CONFIG.TIPO_MALLA;
-    const malla = window.MallasData[llaveNormal]?.[gradoSel.value]?.[tipo];
 
-    if (!malla) return;
+    const config = window.APP_CONFIG.AREAS[areaSel.value];
+    const malla = window.MallasData[normalizarTexto(config.nombre)]?.[gradoSel.value]?.[window.APP_CONFIG.TIPO_MALLA];
+    
+    if (!malla) {
+      mostrarError("No se encontraron datos para la combinación seleccionada.");
+      return;
+    }
 
     const items = malla.periodos[periodoSel.value] || [];
     const filtrados = compSel.value === "todos" ? items : items.filter(it => (it.componente || it.competencia) === compSel.value);
@@ -146,21 +147,23 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   btnProg.addEventListener('click', async () => {
+    if (!areaSel.value || !gradoSel.value) return;
     window.RenderEngine.setCargando(true);
     const g = parseInt(gradoSel.value);
-    const grados = [String(g)];
-    if (g > 1) grados.push(String(g - 1));
-    if (g < 11) grados.push(String(g + 1));
-    if (g <= 0) grados.push("-1", "0", "1");
+    // Precarga de grados adyacentes para suavizar la apertura del modal
+    const grados = [String(g), String(g-1), String(g+1), "0", "-1", "1"];
     try {
       await Promise.all(grados.map(gr => asegurarDatosGrado(areaSel.value, gr)));
       window.ProgresionMotor.abrir(window.APP_CONFIG.AREAS[areaSel.value].nombre, gradoSel.value, compSel.value);
-    } catch { mostrarError("Error en progresión."); }
+    } catch { 
+      mostrarError("Error de conexión al cargar la secuencia de progresión.");
+    }
     window.RenderEngine.setCargando(false);
   });
 
+  // RESTAURACIÓN BOTÓN FLECHA ARRIBA (v10.8)
   window.onscroll = () => { 
-    if (btnTop) btnTop.style.display = (window.scrollY > 400) ? 'block' : 'none';
+    if (btnTop) btnTop.style.display = (window.scrollY > 400) ? 'block' : 'none'; 
   };
   if (btnTop) btnTop.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 });
