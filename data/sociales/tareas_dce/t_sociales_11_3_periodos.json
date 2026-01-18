@@ -1,4 +1,5 @@
-  "area": "Ciencias Sociales",
+{
+"area": "Ciencias Sociales",
   "grado": "11",
   "nombre_archivo": "t_sociales_11_3_periodos.json",
   "periodos": [
@@ -270,4 +271,5 @@
       ]
     }
   ]
+
 }
